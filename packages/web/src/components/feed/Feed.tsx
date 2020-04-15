@@ -1,0 +1,45 @@
+import React from 'react';
+import { graphql } from 'react-relay';
+
+import { usePreloadedQuery, PreloadedQuery } from 'react-relay/hooks';
+
+import { Content } from '../ui';
+
+import PostComposer from './PostComposer';
+import { FeedQuery } from './__generated__/FeedQuery.graphql';
+
+import FeedList from './FeedList';
+import { useNewPostSubscription } from './useNewPostSubscription';
+
+type Props = {
+  prepared: {
+    feedQuery: PreloadedQuery<FeedQuery>;
+  };
+};
+const Feed = ({ prepared }: Props) => {
+  const data = usePreloadedQuery<FeedQuery>(
+    graphql`
+      query FeedQuery {
+        ...FeedList_query
+        me {
+          id
+          name
+        }
+      }
+    `,
+    prepared.feedQuery,
+  );
+
+  const { me } = data;
+
+  useNewPostSubscription(me);
+
+  return (
+    <Content>
+      <PostComposer />
+      <FeedList query={data} />
+    </Content>
+  );
+};
+
+export default Feed;

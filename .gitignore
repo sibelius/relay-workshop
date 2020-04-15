@@ -1,0 +1,74 @@
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+.idea/
+
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.map
+
+pids
+logs
+results
+test-results
+
+node_modules
+npm-debug.log
+
+dump.rdb
+bundle.js
+
+build
+dist
+coverage
+.nyc_output
+.env
+
+graphql.*.json
+junit.xml
+
+.vs
+
+test/globalConfig.json
+distTs
+
+# Random things to ignore
+ignore/
+package-lock.json
+/yarn-offline-cache
+.cache
+
+**/node_modules
+.idea
+yarn-error.log
+.vs/
+
+# IDE/Editor GraphQL Extensions
+.gqlconfig
+
+# Relay modern
+__generated__/
+
+# Flow log
+flow.log
+
+# Random things to ignore
+yarn-offline-cache
+
+hard-source-cache/
+**/hard-source-cache/
+
+# Cypress
+cypress/videos
+cypress/screenshots
+
+differencify_reports
+.parcel-cache
+
+.vscode
