@@ -10,13 +10,13 @@ import PostLikeButton from '../PostLikeButton';
 
 import ErrorBoundary from '../../../../ErrorBoundary';
 
-import { PostLikeButtonTestQuery } from './__generated__/PostLikeButtonTestQuery.graphql';
+import { PostLikeButtonSpecQuery } from './__generated__/PostLikeButtonSpecQuery.graphql';
 
 export const withProviders = ({ environment = Environment, Component, preload }) => {
   const UseQueryWrapper = () => {
-    const data = usePreloadedQuery<PostLikeButtonTestQuery>(
+    const data = usePreloadedQuery<PostLikeButtonSpecQuery>(
       graphql`
-        query PostLikeButtonTestQuery($id: ID!) @relay_test_operation {
+        query PostLikeButtonSpecQuery($id: ID!) @relay_test_operation {
           post: node(id: $id) {
             ...PostLikeButton_post
           }
@@ -42,11 +42,11 @@ export const withProviders = ({ environment = Environment, Component, preload })
 };
 
 it('should render post like button', async () => {
-  const PostLikeButtonTestQuery = require('./__generated__/PostLikeButtonTestQuery.graphql');
+  const PostLikeButtonSpecQuery = require('./__generated__/PostLikeButtonSpecQuery.graphql');
 
   const preload = preloadQuery(
     Environment,
-    PostLikeButtonTestQuery,
+    PostLikeButtonSpecQuery,
     {
       id: 'postId',
     },
