@@ -95,7 +95,8 @@
   },
   "workspaces": {
     "packages": [
-      "packages/*"
+      "packages/*",
+      "workshop/*"
     ]
   }
 }

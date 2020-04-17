@@ -6,7 +6,7 @@ import { Model, Types } from 'mongoose';
 
 import { buildMongoConditionsFromFilters } from '@entria/graphql-mongo-helpers';
 
-import { validateContextUser } from './validateContextUser';
+// import { validateContextUser } from './validateContextUser';
 import { withConnectionCursor } from './withConnectionCursor';
 
 const defaultViewerCanSee = (context, data) => data;
@@ -64,24 +64,24 @@ export const createLoader = <Context extends object>({
 
   const clearCache = ({ dataloaders }: Context, id: string) => dataloaders[loaderName].clear(id.toString());
 
-  const loadAll = validateContextUser(
-    withConnectionCursor(model, load, (context: Context, args: ConnectionArguments) => {
-      const builtMongoConditions = buildMongoConditionsFromFilters(context, args.filters, filterMapping);
+  // disable validate to simpify workshop
+  // const loadAll = validateContextUser(
+  const loadAll = withConnectionCursor(model, load, (context: Context, args: ConnectionArguments) => {
+    const builtMongoConditions = buildMongoConditionsFromFilters(context, args.filters, filterMapping);
 
-      const conditions = {
-        ...builtMongoConditions.conditions,
-      };
+    const conditions = {
+      ...builtMongoConditions.conditions,
+    };
 
-      const sort = {
-        createdAt: -1,
-      };
+    const sort = {
+      createdAt: -1,
+    };
 
-      return {
-        conditions,
-        sort,
-      };
-    }),
-  );
+    return {
+      conditions,
+      sort,
+    };
+  });
 
   return {
     Wrapper,

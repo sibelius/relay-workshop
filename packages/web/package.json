@@ -54,7 +54,8 @@
     "style-loader": "^0.23.1",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.9.0",
-    "webpack-plugin-serve": "^0.11.0"
+    "webpack-plugin-serve": "^0.11.0",
+    "error-overlay-webpack-plugin": "^0.4.1"
   },
   "main": "dist/index.js",
   "module": "src/index.ts",
@@ -64,6 +65,7 @@
     "start": "razzle start",
     "start:prod": "NODE_ENV=production node build/server.js",
     "start:serve": "webpack --watch --progress --config webpack.serve.config.js",
-    "start:webpack": "webpack-dev-server --hot --mode development"
+    "start:webpack": "webpack-dev-server --hot --mode development",
+    "jest": "jest"
   }
 }
