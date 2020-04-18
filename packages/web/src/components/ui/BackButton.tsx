@@ -3,7 +3,7 @@ import React from 'react';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import IconButton from '@material-ui/core/IconButton';
 
-import { useHistory } from '../../routing/useHistory';
+import { useHistory } from '@workshop/route';
 
 type Props = {
   path?: string;

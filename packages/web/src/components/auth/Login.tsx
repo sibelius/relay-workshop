@@ -8,12 +8,10 @@ import { useSnackbar } from 'notistack';
 
 import { Card, Content, Button, CardActions } from '@workshop/ui';
 
+import { useHistory, Link } from '@workshop/route';
+
 import { TextField } from '../form';
 import { useMutation } from '../../relay';
-
-import { useHistory } from '../../routing/useHistory';
-
-import Link from '../../routing/Link';
 
 import { UserLoginWithEmailMutation } from './__generated__/UserLoginWithEmailMutation.graphql';
 import { UserLoginWithEmail } from './UserLoginWithEmailMutation';

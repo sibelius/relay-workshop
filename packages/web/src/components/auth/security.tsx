@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 
-import { useHistory } from '../../routing/useHistory';
+import { useHistory } from '@workshop/route';
 
 export const TOKEN_KEY = 'reacteurope';
 

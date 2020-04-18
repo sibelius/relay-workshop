@@ -1,6 +1,7 @@
 import { preloadQuery } from 'react-relay/hooks';
 
-import JSResource from './routing/JSResource';
+import { JSResource } from '@workshop/route';
+
 import { Environment } from './relay';
 
 export const routes = [

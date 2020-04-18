@@ -2,7 +2,7 @@ import React, { useEffect, useTransition, Suspense, useState } from 'react';
 import { match } from 'react-router';
 import styled, { keyframes } from 'styled-components';
 
-import ErrorBoundary from '../ErrorBoundary';
+import ErrorBoundary from './ErrorBoundary';
 
 import { useRoutingContext } from './RoutingContext';
 import { Resource } from './JSResource';

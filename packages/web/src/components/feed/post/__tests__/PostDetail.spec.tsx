@@ -15,11 +15,9 @@ import { Environment } from '../../../../relay';
 import PostDetail from '../PostDetail';
 
 import ErrorBoundary from '../../../../ErrorBoundary';
-import createRouter from '../../../../routing/createRouter';
-import RoutingContext from '../../../../routing/RoutingContext';
-import JSResource from '../../../../routing/JSResource';
+
 // eslint-disable-next-line
-import RouterRenderer from '../../../../routing/RouteRenderer';
+import { RoutingContext, createRouter, RouterRenderer, JSResource } from '@workshop/route';
 
 export const withProviders = ({ environment = Environment, Component }) => {
   const routes = [

@@ -26,6 +26,7 @@ export const getMockHistory = ({ context = {}, location: loc = '/' }) => {
         // A PUSH is not technically valid in a static context because we can't
         // push a new URL onto the history stack in a stateless environment. They
         // most likely want a regular redirect so just warn them and carry on.
+        // eslint-disable-next-line
         console.warn(
           `You cannot perform a PUSH with a static router. You probably want a REPLACE instead.` +
             `\n\nTo avoid this warning, find the element that is calling \`navigate("${url}")\`` +

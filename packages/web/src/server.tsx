@@ -6,15 +6,12 @@ import Router from 'koa-router';
 import logger from 'koa-logger';
 import { renderToString } from 'react-dom/server';
 
+import { createRouter, getMockHistory, RoutingContext } from '@workshop/route';
+
 import App from './App';
-import createRouter from './routing/createRouter';
 import { routes } from './routes';
-import { getMockHistory } from './routing/getMockHistory';
-import RoutingContext from './routing/RoutingContext';
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
-
-console.log('process.env.RAZZLE_PUBLIC_DIR: ', process.env.RAZZLE_PUBLIC_DIR);
 
 // Initialize `koa-router` and setup a route listening on `GET /*`
 // Logic has been splitted into two chained middleware functions
@@ -59,8 +56,6 @@ router.get(
           <div id="root">${ctx.state.markup}</div>
       </body>
     </html>`;
-
-    console.log('body: ', ctx.body);
   },
 );
 

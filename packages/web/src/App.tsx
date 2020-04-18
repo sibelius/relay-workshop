@@ -6,8 +6,9 @@ import { RelayEnvironmentProvider } from 'react-relay/hooks';
 
 import { getTheme } from '@workshop/ui';
 
+import { RouterRenderer } from '@workshop/route';
+
 import Environment from './relay/Environment';
-import RouterRenderer from './routing/RouteRenderer';
 
 const App = () => {
   const theme = getTheme();

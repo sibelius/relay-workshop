@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button';
 
 import { useSnackbar } from 'notistack';
 
-import { useHistory } from '../../routing/useHistory';
+import { useHistory } from '@workshop/route';
 
 import { useSubscription } from '../../useSubscription';
 

@@ -3,9 +3,9 @@ import React from 'react';
 import { hydrate, createRoot } from 'react-dom';
 import { createBrowserHistory } from 'history';
 
+import { RoutingContext, createRouter } from '@workshop/route';
+
 import App from './App';
-import RoutingContext from './routing/RoutingContext';
-import createRouter from './routing/createRouter';
 import { routes } from './routes';
 
 // hydrate(

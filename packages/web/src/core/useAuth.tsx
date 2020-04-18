@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { graphql, readInlineData } from 'react-relay';
 
-import { useHistory } from '../routing/useHistory';
+import { useHistory } from '@workshop/route';
 
 import { useAuth_user } from './__generated__/useAuth_user.graphql';
 
