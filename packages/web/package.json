@@ -18,7 +18,6 @@
     "notistack": "^0.8.8",
     "react": "0.0.0-experimental-f42431abe",
     "react-dom": "0.0.0-experimental-f42431abe",
-    "react-hot-loader": "^4.12.10",
     "react-infinite-scroller": "1.2.4",
     "react-relay": "0.0.0-experimental-8cc94ddc",
     "react-router-config": "^5.0.1",
@@ -55,17 +54,17 @@
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.9.0",
     "webpack-plugin-serve": "^0.11.0",
-    "error-overlay-webpack-plugin": "^0.4.1"
+    "error-overlay-webpack-plugin": "^0.4.1",
+    "webpack-merge": "4.2.2"
   },
   "main": "dist/index.js",
   "module": "src/index.ts",
   "scripts": {
-    "build": "razzle build",
+    "razzle:build": "razzle build",
+    "razzle:start": "razzle start",
+    "razzle:prod": "NODE_ENV=production node build/server.js",
     "relay": "relay-compiler",
-    "start": "razzle start",
-    "start:prod": "NODE_ENV=production node build/server.js",
-    "start:serve": "webpack --watch --progress --config webpack.serve.config.js",
-    "start:webpack": "webpack-dev-server --hot --mode development",
+    "start": "webpack-dev-server --hot",
     "jest": "jest"
   }
 }
