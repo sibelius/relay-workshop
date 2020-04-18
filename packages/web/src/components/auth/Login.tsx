@@ -6,8 +6,9 @@ import { Flex } from 'rebass';
 
 import { useSnackbar } from 'notistack';
 
+import { Card, Content, Button, CardActions } from '@workshop/ui';
+
 import { TextField } from '../form';
-import { Card, Content, Button, CardActions } from '../ui';
 import { useMutation } from '../../relay';
 
 import { useHistory } from '../../routing/useHistory';

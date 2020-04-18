@@ -4,7 +4,7 @@ import { Flex, Text } from 'rebass';
 import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-import { theme } from '../../ui/theme';
+import { theme } from '@workshop/ui';
 
 import UserAvatar from '../UserAvatar';
 

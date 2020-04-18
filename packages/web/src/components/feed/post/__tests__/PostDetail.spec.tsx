@@ -9,6 +9,8 @@ import { SnackbarProvider } from 'notistack';
 import { RelayEnvironmentProvider, preloadQuery } from 'react-relay/hooks';
 import { createMemoryHistory } from 'history';
 
+import { getTheme } from '@workshop/ui';
+
 import { Environment } from '../../../../relay';
 import PostDetail from '../PostDetail';
 
@@ -18,7 +20,6 @@ import RoutingContext from '../../../../routing/RoutingContext';
 import JSResource from '../../../../routing/JSResource';
 // eslint-disable-next-line
 import RouterRenderer from '../../../../routing/RouteRenderer';
-import { getTheme } from '../../../ui/theme';
 
 export const withProviders = ({ environment = Environment, Component }) => {
   const routes = [

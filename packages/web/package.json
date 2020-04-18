@@ -44,6 +44,7 @@
     "cross-env": "^5.2.0",
     "css-loader": "3.2.0",
     "dotenv-webpack": "^1.7.0",
+    "error-overlay-webpack-plugin": "^0.4.1",
     "happypack": "^5.0.1",
     "html-webpack-plugin": "4.2.0",
     "razzle": "^3.0.0",
@@ -53,18 +54,17 @@
     "style-loader": "^0.23.1",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.9.0",
-    "webpack-plugin-serve": "^0.11.0",
-    "error-overlay-webpack-plugin": "^0.4.1",
-    "webpack-merge": "4.2.2"
+    "webpack-merge": "4.2.2",
+    "webpack-plugin-serve": "^0.11.0"
   },
   "main": "dist/index.js",
   "module": "src/index.ts",
   "scripts": {
+    "jest": "jest",
     "razzle:build": "razzle build",
-    "razzle:start": "razzle start",
     "razzle:prod": "NODE_ENV=production node build/server.js",
+    "razzle:start": "razzle start",
     "relay": "relay-compiler",
-    "start": "webpack-dev-server --hot",
-    "jest": "jest"
+    "start": "webpack-dev-server --hot"
   }
 }

@@ -5,7 +5,7 @@ import { graphql } from 'react-relay';
 import styled from 'styled-components';
 import { Text } from 'rebass';
 
-import { Card, CardActions } from '../../ui';
+import { Card, CardActions } from '@workshop/ui';
 
 import _Link from '../../../routing/Link';
 

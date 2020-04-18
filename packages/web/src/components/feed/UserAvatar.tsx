@@ -6,7 +6,7 @@ import { graphql } from 'react-relay';
 import { Text, Flex } from 'rebass';
 import Avatar from '@material-ui/core/Avatar';
 
-import { theme } from '../ui/theme';
+import { theme } from '@workshop/ui';
 
 import { UserAvatar_user$key } from './__generated__/UserAvatar_user.graphql';
 

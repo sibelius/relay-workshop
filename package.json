@@ -90,8 +90,7 @@
     "relay": "yarn workspace @workshop/web relay",
     "server": "yarn workspace @workshop/server start",
     "update-schema": "yarn workspace @workshop/server update-schema",
-    "web": "yarn workspace @workshop/web start:webpack",
-    "web:start": "yarn workspace @workshop/web start"
+    "web": "yarn workspace @workshop/web start"
   },
   "workspaces": {
     "packages": [

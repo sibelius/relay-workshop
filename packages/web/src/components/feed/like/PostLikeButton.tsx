@@ -9,7 +9,8 @@ import { graphql } from 'react-relay';
 
 import { Text } from 'rebass';
 
-import { theme } from '../../ui/theme';
+import { theme } from '@workshop/ui';
+
 import { useMutation } from '../../../relay';
 
 import { likeOptimisticResponse, PostLike } from './PostLikeMutation';

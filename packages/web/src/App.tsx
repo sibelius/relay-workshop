@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { SnackbarProvider } from 'notistack';
 import { RelayEnvironmentProvider } from 'react-relay/hooks';
 
-import { getTheme } from './components/ui/theme';
+import { getTheme } from '@workshop/ui';
 
 import Environment from './relay/Environment';
 import RouterRenderer from './routing/RouteRenderer';

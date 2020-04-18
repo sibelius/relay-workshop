@@ -3,7 +3,7 @@ import { graphql } from 'react-relay';
 
 import { usePreloadedQuery, PreloadedQuery } from 'react-relay/hooks';
 
-import { Content } from '../ui';
+import { Content } from '@workshop/ui';
 
 import PostComposer from './PostComposer';
 import { FeedQuery } from './__generated__/FeedQuery.graphql';

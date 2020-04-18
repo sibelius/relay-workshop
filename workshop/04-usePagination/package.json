@@ -2,8 +2,8 @@
   "name": "@workshop/04-usePagination",
   "version": "1.0.0",
   "scripts": {
-    "start": "webpack-dev-server --hot",
     "relay": "relay-compiler",
-    "relay:watch": "relay-compiler --watch"
+    "relay:watch": "relay-compiler --watch",
+    "start": "webpack-dev-server --hot"
   }
 }

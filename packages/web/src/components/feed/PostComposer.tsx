@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 
-import { Card, TextArea, CardActions } from '../ui';
+import { Card, TextArea, CardActions } from '@workshop/ui';
+
 import { useMutation } from '../../relay';
 
 import { PostCreate, updater } from './PostCreateMutation';
