@@ -32,7 +32,6 @@ module.exports = {
   },
   devServer: {
     contentBase: path.join(cwd, 'build'),
-    host: '0.0.0.0',
     disableHostCheck: true,
     historyApiFallback: {
       disableDotRule: true,
@@ -40,6 +39,7 @@ module.exports = {
     hot: true,
     hotOnly: false,
     compress: true,
+    open: true,
   },
   plugins: [
     new dotEnv({
