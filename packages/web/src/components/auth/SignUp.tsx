@@ -9,8 +9,9 @@ import { Card, Content, Button, CardActions } from '@workshop/ui';
 
 import { useHistory, Link } from '@workshop/route';
 
+import { useMutation } from '@workshop/relay';
+
 import { TextField } from '../form';
-import { useMutation } from '../../relay';
 
 import { UserRegisterWithEmail } from './UserRegisterWithEmailMutation';
 import { UserRegisterWithEmailMutation } from './__generated__/UserRegisterWithEmailMutation.graphql';

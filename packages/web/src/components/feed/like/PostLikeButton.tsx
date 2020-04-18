@@ -11,7 +11,7 @@ import { Text } from 'rebass';
 
 import { theme } from '@workshop/ui';
 
-import { useMutation } from '../../../relay';
+import { useMutation } from '@workshop/relay';
 
 import { likeOptimisticResponse, PostLike } from './PostLikeMutation';
 import { PostUnLike, unlikeOptimisticResponse } from './PostUnLikeMutation';

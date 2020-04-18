@@ -9,8 +9,9 @@ import { graphql } from 'react-relay';
 
 import Divider from '@material-ui/core/Divider';
 
+import { useMutation } from '@workshop/relay';
+
 import { TextFieldMaterial } from '../../form/TextField';
-import { useMutation } from '../../../relay';
 
 import UserAvatar from '../UserAvatar';
 

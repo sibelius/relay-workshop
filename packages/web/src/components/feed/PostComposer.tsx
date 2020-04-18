@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button';
 
 import { Card, TextArea, CardActions } from '@workshop/ui';
 
-import { useMutation } from '../../relay';
+import { useMutation } from '@workshop/relay';
 
 import { PostCreate, updater } from './PostCreateMutation';
 import { PostCreateMutation } from './__generated__/PostCreateMutation.graphql';
