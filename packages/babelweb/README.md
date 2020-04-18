@@ -1,3 +1,3 @@
-# @workshop/babel
+# @workshop/babelweb
 
-Default babel config to all workshop packages
+Default babel config with react-refresh
