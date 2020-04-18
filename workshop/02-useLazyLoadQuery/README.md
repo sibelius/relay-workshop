@@ -1,4 +1,4 @@
-# 01 - useLazyLoadQuery
+# 02 - useLazyLoadQuery
 
 Learn how to fetch GraphQL data with Relay
 
