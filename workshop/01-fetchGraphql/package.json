@@ -1,5 +1,5 @@
 {
-  "name": "@workshop/01-fetch-graphql",
+  "name": "@workshop/01-fetchGraphql",
   "version": "1.0.0",
   "scripts": {
     "start": "webpack-dev-server --hot"

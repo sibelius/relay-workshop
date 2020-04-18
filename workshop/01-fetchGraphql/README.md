@@ -7,7 +7,7 @@ Learn how to fetch GraphQL data without Relay
 Fetch the following query inside your App component using only React
 
 ```graphql
-query PostQuery {
+query {
     posts(first: 10) {
       edges {
         node {
