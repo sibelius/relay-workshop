@@ -1,5 +1,5 @@
 {
-  "name": "@workshop/02-useLazyLoadQuery",
+  "name": "@workshop/03-useFragment",
   "version": "1.0.0",
   "scripts": {
     "start": "webpack-dev-server --hot",
