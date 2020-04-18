@@ -2,6 +2,6 @@
   "name": "@workshop/01-fetch-graphql",
   "version": "1.0.0",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.js --progress"
+    "start": "webpack-dev-server --hot"
   }
 }

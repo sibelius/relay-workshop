@@ -1,5 +1,5 @@
 {
-  "name": "@workshop/babel",
+  "name": "@workshop/babelweb",
   "version": "1.0.0",
   "dependencies": {
     "@babel/cli": "7.8.4",
@@ -17,7 +17,7 @@
     "@babel/preset-flow": "7.8.3",
     "@babel/preset-react": "7.8.3",
     "@babel/preset-typescript": "7.8.3",
-    "babel-plugin-relay": "9.0.0"
+    "babel-plugin-relay": "8.0.0"
   },
   "main": "index.js"
 }

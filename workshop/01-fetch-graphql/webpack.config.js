@@ -2,7 +2,7 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const dotEnv = require('dotenv-webpack');
-const ErrorOverlayPlugin = require('error-overlay-webpack-plugin');
+const ReactRefreshPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 const cwd = process.cwd();
 
@@ -28,25 +28,8 @@ module.exports = {
         exclude: [/node_modules/],
         use: ['babel-loader?cacheDirectory'],
       },
-      // {
-      //   test: /\.(jpe?g|png|gif|svg|pdf|csv|xlsx|ttf|woff(2)?)$/i,
-      //   use: [
-      //     {
-      //       loader: 'file-loader',
-      //       options: {
-      //         name: '[name].[ext]',
-      //         outputPath: 'img/',
-      //       },
-      //     },
-      //   ],
-      // },
-      // {
-      //   test: /\.css$/,
-      //   use: ['style-loader', 'css-loader'],
-      // },
     ],
   },
-  watch: true,
   devServer: {
     contentBase: path.join(cwd, 'build'),
     host: '0.0.0.0',
@@ -62,9 +45,9 @@ module.exports = {
     new dotEnv({
       path: './.env',
     }),
+    new ReactRefreshPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
-    new ErrorOverlayPlugin(),
   ],
 };
