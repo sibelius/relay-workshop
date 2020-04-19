@@ -1,0 +1,9 @@
+{
+  "name": "@workshop/08-useSubscription",
+  "version": "1.0.0",
+  "scripts": {
+    "relay": "relay-compiler",
+    "relay:watch": "relay-compiler --watch",
+    "start": "webpack-dev-server --hot"
+  }
+}
