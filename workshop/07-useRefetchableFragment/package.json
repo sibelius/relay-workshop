@@ -1,5 +1,5 @@
 {
-  "name": "@workshop/06-useMutation",
+  "name": "@workshop/07-useRefetchableFragment",
   "version": "1.0.0",
   "scripts": {
     "relay": "relay-compiler",
