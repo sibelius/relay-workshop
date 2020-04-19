@@ -1,7 +1,7 @@
 import { graphql } from 'react-relay';
 import { ConnectionHandler, RecordSourceSelectorProxy, ROOT_ID } from 'relay-runtime';
 
-import { connectionUpdater } from '../../relay/mutationUtils';
+import { connectionUpdater } from '@workshop/relay';
 
 export const PostNew = graphql`
   subscription PostNewSubscription($input: PostNewInput!) {

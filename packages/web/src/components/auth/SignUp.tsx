@@ -5,13 +5,11 @@ import * as yup from 'yup';
 import { Flex } from 'rebass';
 import { useSnackbar } from 'notistack';
 
-import { Card, Content, Button, CardActions } from '@workshop/ui';
+import { Card, Content, Button, CardActions, TextField } from '@workshop/ui';
 
 import { useHistory, Link } from '@workshop/route';
 
 import { useMutation } from '@workshop/relay';
-
-import { TextField } from '../form';
 
 import { UserRegisterWithEmail } from './UserRegisterWithEmailMutation';
 import { UserRegisterWithEmailMutation } from './__generated__/UserRegisterWithEmailMutation.graphql';

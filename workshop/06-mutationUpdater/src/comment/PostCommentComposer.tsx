@@ -13,7 +13,7 @@ import { useMutation } from '@workshop/relay';
 
 import { TextFieldMaterial } from '@workshop/ui';
 
-import UserAvatar from '../UserAvatar';
+import UserAvatar from './UserAvatar';
 
 import { PostCommentComposer_post$key } from './__generated__/PostCommentComposer_post.graphql';
 

@@ -24,3 +24,4 @@ query {
 ## Extras
 
 - [ ] handle error
+- [ ] use variables

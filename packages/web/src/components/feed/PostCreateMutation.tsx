@@ -1,7 +1,7 @@
 import { graphql } from 'react-relay';
 import { SelectorStoreUpdater, ROOT_ID } from 'relay-runtime';
 
-import { connectionUpdater } from '../../relay/mutationUtils';
+import { connectionUpdater } from '@workshop/relay';
 
 export const PostCreate = graphql`
   mutation PostCreateMutation($input: PostCreateInput!) {

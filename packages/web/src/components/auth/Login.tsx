@@ -6,13 +6,11 @@ import { Flex } from 'rebass';
 
 import { useSnackbar } from 'notistack';
 
-import { Card, Content, Button, CardActions } from '@workshop/ui';
+import { Card, Content, Button, CardActions, TextField } from '@workshop/ui';
 
 import { useHistory, Link } from '@workshop/route';
 
 import { useMutation } from '@workshop/relay';
-
-import { TextField } from '../form';
 
 import { UserLoginWithEmailMutation } from './__generated__/UserLoginWithEmailMutation.graphql';
 import { UserLoginWithEmail } from './UserLoginWithEmailMutation';
