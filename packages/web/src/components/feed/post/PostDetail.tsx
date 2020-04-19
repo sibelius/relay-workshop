@@ -6,9 +6,7 @@ import { graphql } from 'react-relay';
 
 import { Text } from 'rebass';
 
-import { Card, Content } from '@workshop/ui';
-
-import { BackButton } from '../../ui/BackButton';
+import { Card, Content, BackButton } from '@workshop/ui';
 
 import Post from './Post';
 import { PostDetailQuery } from './__generated__/PostDetailQuery.graphql';
