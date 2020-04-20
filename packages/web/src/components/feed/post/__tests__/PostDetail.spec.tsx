@@ -1,28 +1,23 @@
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import React, { Suspense } from 'react';
+import React from 'react';
 import { MockPayloadGenerator } from 'relay-test-utils';
-import { StylesProvider } from '@material-ui/styles';
-import { ThemeProvider } from 'styled-components';
-import { SnackbarProvider } from 'notistack';
 
-import { RelayEnvironmentProvider, preloadQuery } from 'react-relay/hooks';
-import { createMemoryHistory } from 'history';
+import { preloadQuery } from 'react-relay/hooks';
 
-import { getTheme } from '@workshop/ui';
+import { JSResource } from '@workshop/route';
 
 import { Environment } from '../../../../relay';
 import PostDetail from '../PostDetail';
 
-import ErrorBoundary from '../../../../ErrorBoundary';
+import { withProviders } from '../../../../../test/withProviders';
 
-// eslint-disable-next-line
-import { RoutingContext, createRouter, RouterRenderer, JSResource } from '@workshop/route';
+it('should render post like button', async () => {
+  const postId = 'postId';
 
-export const withProviders = ({ environment = Environment, Component }) => {
   const routes = [
     {
-      component: JSResource('Component', () => new Promise(resolve => resolve(Component))),
+      component: JSResource('Component', () => new Promise(resolve => resolve(PostDetail))),
       path: '/post/:id',
       // TODO - make RouterRenderer work
       // prepare: (params: { id: string }) => {
@@ -44,42 +39,7 @@ export const withProviders = ({ environment = Environment, Component }) => {
     },
   ];
 
-  const postId = 'postId';
-  const router = createRouter(
-    routes,
-    createMemoryHistory({
-      initialEntries: [`/post/${postId}`],
-      initialIndex: 0,
-    }),
-  );
-
-  const theme = getTheme();
-
-  return props => {
-    // TODO - make RouterRenderer work
-    return (
-      <RoutingContext.Provider value={router.context}>
-        <RelayEnvironmentProvider environment={environment}>
-          <ThemeProvider theme={theme}>
-            <StylesProvider injectFirst>
-              <SnackbarProvider>
-                <ErrorBoundary>
-                  <Suspense fallback={'Loading fallback...'}>
-                    <Component {...props} />
-                    {/*<RouterRenderer />*/}
-                  </Suspense>
-                </ErrorBoundary>
-              </SnackbarProvider>
-            </StylesProvider>
-          </ThemeProvider>
-        </RelayEnvironmentProvider>
-      </RoutingContext.Provider>
-    );
-  };
-};
-
-it('should render post like button', async () => {
-  const postId = 'postId';
+  const initialEntries = [`/post/${postId}`];
 
   const PostDetailQuery = require('../__generated__/PostDetailQuery.graphql');
 
@@ -101,6 +61,8 @@ it('should render post like button', async () => {
   Environment.mock.queueOperationResolver(operation => MockPayloadGenerator.generate(operation, customMockResolvers));
 
   const Root = withProviders({
+    routes,
+    initialEntries,
     Component: PostDetail,
   });
 

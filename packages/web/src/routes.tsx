@@ -4,7 +4,15 @@ import { JSResource } from '@workshop/route';
 
 import { Environment } from './relay';
 
-export const routes = [
+export type Route = {
+  component: typeof JSResource;
+  path: string;
+  exact?: boolean;
+  routes: Route[];
+  prepare: (params: object) => object;
+};
+
+export const routes: Route[] = [
   {
     component: JSResource('Auth', () => import('./components/auth/AuthRoot')),
     path: '/auth',

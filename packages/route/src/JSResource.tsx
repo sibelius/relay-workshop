@@ -1,3 +1,4 @@
+type Loader = () => Promise<any>;
 /**
  * A cache of resources to avoid loading the same module twice. This is important
  * because Webpack dynamic imports only expose an asynchronous API for loading
@@ -11,7 +12,7 @@ const resourceMap = new Map();
  * argument - it allows accessing the state of the resource.
  */
 export class Resource {
-  constructor(loader) {
+  constructor(loader: Loader) {
     this._error = null;
     this._loader = loader;
     this._promise = null;
@@ -87,7 +88,7 @@ export class Resource {
  * @param {*} moduleId A globally unique identifier for the resource used for caching
  * @param {*} loader A method to load the resource's data if necessary
  */
-export default function JSResource(moduleId: string, loader) {
+export default function JSResource(moduleId: string, loader: Loader) {
   let resource = resourceMap.get(moduleId);
   if (resource == null) {
     resource = new Resource(loader);
