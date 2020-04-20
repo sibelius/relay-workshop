@@ -76,7 +76,7 @@ it('should render post like button', async () => {
   const { debug, getByText } = render(<Root prepared={prepared} />);
 
   // uncomment to check DOM
-  debug();
+  // debug();
 
   expect(getByText('Welcome to React Europe')).toBeTruthy();
 });

@@ -4,10 +4,7 @@ import '@testing-library/react/cleanup-after-each';
 window.scrollTo = () => {};
 
 jest.mock('../src/relay/Environment', () => {
-  // eslint-disable-next-line
-  // const { createMockEnvironment } = require('relay-test-utils');
-
-  const { createMockEnvironment } = require('./RelayModernMockEnvironment');
+  const { createMockEnvironment } = require('relay-test-utils');
 
   return createMockEnvironment();
 });

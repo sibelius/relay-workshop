@@ -5,11 +5,12 @@ import { MockPayloadGenerator } from 'relay-test-utils';
 
 import { usePreloadedQuery, graphql, preloadQuery } from 'react-relay/hooks';
 
+import { getMutationOperationVariables } from '@workshop/test';
+
 import { Environment } from '../../../../relay';
 import PostLikeButton from '../PostLikeButton';
 
 import { withProviders } from '../../../../../test/withProviders';
-import { getMutationOperationVariables } from '../../../../../test/getMutationOperationVariables';
 
 import { PostLikeButtonSpecQuery } from './__generated__/PostLikeButtonSpecQuery.graphql';
 
@@ -76,7 +77,7 @@ it('should render post like button and likes count', async () => {
   // eslint-disable-next-line
   const { debug, getByText, getByTestId } = render(<Root />);
 
-  debug();
+  // debug();
 
   // it should render likes count
   expect(getByText('10')).toBeTruthy();
