@@ -13,7 +13,7 @@ import { routes } from './routes';
 //   document.getElementById('root')
 // );
 
-// Uses the custom router setup to define a router instanace that we can pass through context
+// Uses the custom router setup to define a router instance that we can pass through context
 const router = createRouter(routes, createBrowserHistory());
 
 createRoot(document.getElementById('root')).render(
