@@ -3,7 +3,7 @@ import { createMemoryHistory } from 'history';
 import React, { Suspense } from 'react';
 import '@testing-library/jest-dom/extend-expect';
 
-import { RoutingContext, createRouter } from '@workshop/route';
+import { RoutingContext, createRouter, JSResource } from '@workshop/route';
 
 import ErrorBoundary from '../src/ErrorBoundary';
 import { Environment } from '../src/relay';
@@ -16,9 +16,24 @@ type WithProviders = {
   initialEntries: string[];
   routes: Route;
 };
-export const withProviders = ({ environment = Environment, Component, initialEntries, routes }: WithProviders) => {
+export const withProviders = ({
+  environment = Environment,
+  Component,
+  initialEntries = ['/'],
+  routes,
+}: WithProviders) => {
+  const defaultRoutes = [
+    {
+      path: '/',
+      exact: true,
+      component: JSResource('Component', () => new Promise(resolve => resolve(Component))),
+    },
+  ];
+
+  const testRoutes = routes || defaultRoutes;
+
   const router = createRouter(
-    routes,
+    testRoutes,
     createMemoryHistory({
       initialEntries,
       initialIndex: 0,

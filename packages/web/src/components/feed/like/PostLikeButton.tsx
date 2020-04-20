@@ -56,7 +56,7 @@ const PostLikeButton = (props: Props) => {
 
   return (
     <>
-      <IconButton onClick={handleLike}>
+      <IconButton onClick={handleLike} data-testid='likeButton'>
         <Icon style={{ color: theme.relayDark }} />
       </IconButton>
       {post.likesCount > 0 ? <Text>{post.likesCount}</Text> : null}

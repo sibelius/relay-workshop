@@ -1,18 +1,19 @@
-import { render } from '@testing-library/react';
+import { render, fireEvent, wait } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import React, { Suspense } from 'react';
+import React from 'react';
 import { MockPayloadGenerator } from 'relay-test-utils';
 
-import { RelayEnvironmentProvider, usePreloadedQuery, graphql, preloadQuery } from 'react-relay/hooks';
+import { usePreloadedQuery, graphql, preloadQuery } from 'react-relay/hooks';
 
 import { Environment } from '../../../../relay';
 import PostLikeButton from '../PostLikeButton';
 
-import ErrorBoundary from '../../../../ErrorBoundary';
+import { withProviders } from '../../../../../test/withProviders';
+import { getMutationOperationVariables } from '../../../../../test/getMutationOperationVariables';
 
 import { PostLikeButtonSpecQuery } from './__generated__/PostLikeButtonSpecQuery.graphql';
 
-export const withProviders = ({ environment = Environment, Component, preload }) => {
+export const getRoot = ({ preloadedQuery }) => {
   const UseQueryWrapper = () => {
     const data = usePreloadedQuery<PostLikeButtonSpecQuery>(
       graphql`
@@ -22,61 +23,74 @@ export const withProviders = ({ environment = Environment, Component, preload })
           }
         }
       `,
-      preload,
+      preloadedQuery,
     );
 
-    return <Component post={data.post} />;
+    return <PostLikeButton post={data.post} />;
   };
 
-  return props => {
-    return (
-      <RelayEnvironmentProvider environment={environment}>
-        <ErrorBoundary>
-          <Suspense fallback={'Loading fallback...'}>
-            <UseQueryWrapper {...props} />
-          </Suspense>
-        </ErrorBoundary>
-      </RelayEnvironmentProvider>
-    );
-  };
+  return withProviders({
+    Component: UseQueryWrapper,
+  });
 };
 
-it('should render post like button', async () => {
+it('should render post like button and likes count', async () => {
   const PostLikeButtonSpecQuery = require('./__generated__/PostLikeButtonSpecQuery.graphql');
 
-  const preload = preloadQuery(
+  const postId = 'postId';
+  const query = PostLikeButtonSpecQuery;
+  const variables = {
+    id: postId,
+  };
+
+  const customMockResolvers = {
+    Post: () => ({
+      id: postId,
+      likesCount: 10,
+      meHasLiked: false,
+    }),
+  };
+
+  // queue pending operation
+  Environment.mock.queuePendingOperation(query, variables);
+
+  // PostDetailQuery
+  Environment.mock.queueOperationResolver(operation => MockPayloadGenerator.generate(operation, customMockResolvers));
+
+  const preloadedQuery = preloadQuery(
     Environment,
     PostLikeButtonSpecQuery,
     {
-      id: 'postId',
+      id: postId,
     },
     {
       fetchPolicy: 'store-or-network',
     },
   );
 
-  const Root = withProviders({
+  const Root = getRoot({
     Component: PostLikeButton,
-    preload,
+    preloadedQuery,
   });
 
   // eslint-disable-next-line
-  const { debug, getByText, queryByText } = render(<Root />);
-
-  const customMockResolvers = {
-    Post: () => ({
-      likesCount: 10,
-    }),
-  };
+  const { debug, getByText, getByTestId } = render(<Root />);
 
   debug();
 
-  // PostLikeTestQuery
-  Environment.mock.resolveMostRecentOperation(operation =>
-    MockPayloadGenerator.generate(operation, customMockResolvers),
-  );
-
-  debug();
-
+  // it should render likes count
   expect(getByText('10')).toBeTruthy();
+
+  const likeButton = getByTestId('likeButton');
+
+  fireEvent.click(likeButton);
+
+  await wait(() => Environment.mock.getMostRecentOperation());
+
+  // PostLikeMutation
+  const mutationOperation = Environment.mock.getMostRecentOperation();
+
+  expect(getMutationOperationVariables(mutationOperation).input).toEqual({
+    post: postId,
+  });
 });
