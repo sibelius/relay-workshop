@@ -1,0 +1,9 @@
+{
+  "name": "@workshop/10-testUsePreloadQuery",
+  "version": "1.0.0",
+  "scripts": {
+    "relay": "relay-compiler",
+    "relay:watch": "relay-compiler --watch",
+    "start": "webpack-dev-server --hot"
+  }
+}

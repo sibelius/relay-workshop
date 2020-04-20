@@ -1,5 +1,9 @@
 module.exports = {
-  projects: ['<rootDir>/packages/server/jest.config.js', '<rootDir>/packages/web/jest.config.js'],
+  projects: [
+    '<rootDir>/packages/server/jest.config.js',
+    '<rootDir>/packages/web/jest.config.js',
+    '<rootDir>/workshop/10-testUsePreloadQuery/jest.config.js',
+  ],
   transform: {
     '^.+\\.(js|ts|tsx)?$': require('path').resolve('./customBabelTransformer'),
   },
