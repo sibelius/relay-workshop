@@ -1,6 +1,6 @@
-# 09 - test usePreloadedQuery
+# 10 - test usePreloadedQuery
 
-Learn how to use test components using usePreloadedQuery with @testing-library
+Learn how to test components using usePreloadedQuery with @testing-library
 
 ## Exercise
 
