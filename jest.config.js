@@ -9,4 +9,7 @@ module.exports = {
     '^.+\\.(js|ts|tsx)?$': require('path').resolve('./customBabelTransformer'),
   },
   moduleFileExtensions: ['js', 'css', 'ts', 'tsx'],
+  moduleNameMapper: {
+    '^@workshop/graphql$': '<rootDir>/packages/graphql/src/index.ts',
+  },
 };

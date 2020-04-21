@@ -1,4 +1,4 @@
-import { createLoader } from '../../graphql/createLoader';
+import { createLoader } from '@workshop/graphql';
 
 import { registerLoader } from '../loader/loaderRegister';
 

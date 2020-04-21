@@ -1,12 +1,13 @@
 import { GraphQLString, GraphQLNonNull } from 'graphql';
 import { mutationWithClientMutationId, toGlobalId } from 'graphql-relay';
 
+import { errorField, successField } from '@workshop/graphql';
+
 import PostModel from '../PostModel';
 
 import * as PostLoader from '../PostLoader';
 import { PostConnection } from '../PostType';
-import { errorField } from '../../../graphql/errorField';
-import { successField } from '../../../graphql/successField';
+
 import { GraphQLContext } from '../../../graphql/types';
 import pubSub, { EVENTS } from '../../../pubSub';
 

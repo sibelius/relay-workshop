@@ -1,14 +1,15 @@
 import { GraphQLNonNull, GraphQLID } from 'graphql';
 import { mutationWithClientMutationId } from 'graphql-relay';
 
+import { errorField, successField, getObjectId } from '@workshop/graphql';
+
 import PostModel from '../../post/PostModel';
 
 import * as PostLoader from '../../post/PostLoader';
-import { errorField } from '../../../graphql/errorField';
-import { successField } from '../../../graphql/successField';
+
 import { GraphQLContext } from '../../../graphql/types';
 import PostType from '../../post/PostType';
-import { getObjectId } from '../../../graphql/getObjectId';
+
 import LikeModel from '../LikeModel';
 
 type Args = {

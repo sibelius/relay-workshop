@@ -1,11 +1,12 @@
 import { GraphQLObjectType, GraphQLNonNull } from 'graphql';
 
+import { connectionArgs } from '@workshop/graphql';
+
 import { nodesField, nodeField } from '../modules/node/typeRegister';
 import UserType from '../modules/user/UserType';
 import * as UserLoader from '../modules/user/UserLoader';
 import { PostConnection } from '../modules/post/PostType';
 import * as PostLoader from '../modules/post/PostLoader';
-import { connectionArgs } from '../graphql/connectionDefinitions';
 
 const QueryType = new GraphQLObjectType({
   name: 'Query',

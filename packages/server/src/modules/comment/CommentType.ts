@@ -1,16 +1,15 @@
 import { GraphQLObjectType, GraphQLString, GraphQLNonNull, GraphQLInt, GraphQLBoolean } from 'graphql';
 import { globalIdField } from 'graphql-relay';
 
-import { connectionDefinitions } from '../../graphql/connectionDefinitions';
-import { nodeInterface, registerTypeLoader } from '../node/typeRegister';
+import { connectionDefinitions, mongooseIDResolver, timestamps } from '@workshop/graphql';
 
-import { mongooseIDResolver } from '../../graphql/mongooseIDResolver';
+import { nodeInterface, registerTypeLoader } from '../node/typeRegister';
 
 import { GraphQLContext } from '../../graphql/types';
 import UserType from '../user/UserType';
 import * as UserLoader from '../user/UserLoader';
 import * as PostLoader from '../post/PostLoader';
-import { timestamps } from '../../graphql/timestampResolvers';
+
 import LikeModel from '../like/LikeModel';
 import PostType from '../post/PostType';
 

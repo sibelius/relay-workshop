@@ -82,6 +82,9 @@
     "type": "git",
     "url": "https://github.com/sibelius/relay-workshop.git"
   },
+  "resolutions": {
+    "graphql": "15.0.0"
+  },
   "scripts": {
     "b": "babel-node --extensions \".es6,.js,.es,.jsx,.mjs,.ts,.tsx\"",
     "commitmsg": "commitlint -e $GIT_PARAMS",

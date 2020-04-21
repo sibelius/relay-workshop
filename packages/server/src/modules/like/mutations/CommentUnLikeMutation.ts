@@ -1,14 +1,15 @@
 import { GraphQLNonNull, GraphQLID } from 'graphql';
 import { mutationWithClientMutationId } from 'graphql-relay';
 
+import { errorField, successField, getObjectId } from '@workshop/graphql';
+
 import CommentModel from '../../comment/CommentModel';
 
 import * as CommentLoader from '../../comment/CommentLoader';
-import { errorField } from '../../../graphql/errorField';
-import { successField } from '../../../graphql/successField';
+
 import { GraphQLContext } from '../../../graphql/types';
 import CommentType from '../../comment/CommentType';
-import { getObjectId } from '../../../graphql/getObjectId';
+
 import LikeModel from '../LikeModel';
 
 type Args = {

@@ -1,11 +1,12 @@
 import { GraphQLString, GraphQLNonNull } from 'graphql';
 import { mutationWithClientMutationId } from 'graphql-relay';
 
+import { errorField, successField } from '@workshop/graphql';
+
 import { generateToken } from '../../../auth';
 
 import UserModel from '../UserModel';
-import { errorField } from '../../../graphql/errorField';
-import { successField } from '../../../graphql/successField';
+
 import * as UserLoader from '../UserLoader';
 import UserType from '../UserType';
 

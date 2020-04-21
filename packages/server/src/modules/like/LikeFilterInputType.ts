@@ -2,7 +2,7 @@ import { GraphQLID, GraphQLInputObjectType } from 'graphql';
 
 import { FILTER_CONDITION_TYPE } from '@entria/graphql-mongo-helpers';
 
-import { getObjectId } from '../../graphql/getObjectId';
+import { getObjectId } from '@workshop/graphql';
 
 export const likeFilterMapping = {
   user: {

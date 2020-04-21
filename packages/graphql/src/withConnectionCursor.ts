@@ -1,11 +1,11 @@
 import { connectionFromMongoCursor } from '@entria/graphql-mongoose-loader';
 import { Model } from 'mongoose';
 
-import { LoaderFn } from './types';
+export type LoaderFn = <Context extends object>(ctx: Context, id: string | ObjectId | object) => any;
 
-export const withConnectionCursor = (
+export const withConnectionCursor = <Context extends object>(
   model: Model<any>,
-  loader: LoaderFn,
+  loader: LoaderFn<Context>,
   condFn: (...p: any[]) => { conditions?: object; sort?: object },
 ) => (...params: any[]) => {
   const { conditions = {}, sort = {} } = condFn(...params);
