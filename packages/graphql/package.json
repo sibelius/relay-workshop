@@ -1,10 +1,10 @@
 {
   "name": "@workshop/graphql",
   "version": "1.0.0",
-  "main": "src/index.ts",
   "dependencies": {
     "@entria/graphql-mongo-helpers": "0.0.1",
     "@entria/graphql-mongoose-loader": "^4.2.0",
     "graphql-relay": "^0.6.0"
-  }
+  },
+  "main": "src/index.ts"
 }
