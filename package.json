@@ -96,7 +96,7 @@
     "relay": "yarn workspace @workshop/web relay",
     "seed": "yarn b ./packages/server/scripts/seed.ts",
     "server": "yarn workspace @workshop/server start",
-    "update-schema": "yarn workspace @workshop/server update-schema",
+    "update-schema": "yarn workspace @workshop/graphql build && yarn workspace @workshop/server update-schema",
     "web": "yarn workspace @workshop/web start"
   },
   "workspaces": {

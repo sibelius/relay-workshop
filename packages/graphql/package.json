@@ -6,5 +6,9 @@
     "@entria/graphql-mongoose-loader": "^4.2.0",
     "graphql-relay": "^0.6.0"
   },
-  "main": "src/index.ts"
+  "main": "dist/index.js",
+  "module": "src/index.ts",
+  "scripts": {
+    "build": "babel src --extensions \".es6,.js,.es,.jsx,.mjs,.ts,.tsx\" --ignore *.spec.js --out-dir dist --copy-files --source-maps --verbose"
+  }
 }
