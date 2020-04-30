@@ -1,0 +1,23 @@
+diff --git a/node_modules/mdx-deck/cli.js b/node_modules/mdx-deck/cli.js
+index 6755139..26bdb19 100755
+--- a/node_modules/mdx-deck/cli.js
++++ b/node_modules/mdx-deck/cli.js
+@@ -114,12 +114,12 @@ const opts = Object.assign(
+ )
+ 
+ opts.outDir = path.resolve(opts.outDir)
+-if (opts.webpack) {
+-  opts.webpack = require(path.resolve(opts.webpack))
+-} else {
+-  const webpackConfig = findup.sync('webpack.config.js', { cwd: opts.dirname })
+-  if (webpackConfig) opts.webpack = require(webpackConfig)
+-}
++// if (opts.webpack) {
++//   opts.webpack = require(path.resolve(opts.webpack))
++// } else {
++//   const webpackConfig = findup.sync('webpack.config.js', { cwd: opts.dirname })
++//   if (webpackConfig) opts.webpack = require(webpackConfig)
++// }
+ 
+ let dev
+ 

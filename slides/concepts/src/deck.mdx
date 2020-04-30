@@ -1,0 +1,527 @@
+import { Head, Image, Appear } from 'mdx-deck'
+import { Split, FullScreenCode } from 'mdx-deck/layouts'
+import { CodeSurfer } from "mdx-deck-code-surfer";
+
+import { Cover } from './Cover';
+import { Intro } from './Intro';
+import { Img } from './Img';
+import { InlineImg } from './InlineImg';
+import { Feedback } from './Feedback';
+
+export { default as theme } from './theme'
+
+<Head>
+  <title>GraphQL & Relay Concepts</title>
+</Head>
+
+<Cover />
+
+---
+
+<Intro />
+
+---
+
+## Overview
+
+<ul>
+    <Appear>
+        <li>
+          GraphQL Concepts
+        </li>
+        <li>
+          Relay Concepts
+        </li>
+    </Appear>
+</ul>
+
+---
+
+## GraphQL Concepts
+
+<ul>
+    <Appear>
+        <li>
+          GraphQL Schema
+        </li>
+        <li>
+          GraphQL Query
+        </li>
+        <li>
+          GraphQL Types
+        </li>
+        <li>
+          GraphQL Resolvers
+        </li>
+        <li>
+          GraphQL Context
+        </li>
+        <li>
+          GraphQL Mutation
+        </li>
+    </Appear>
+</ul>
+
+---
+
+## GraphQL Concepts
+
+<ul>
+    <Appear>
+         <li>
+           GraphQL Subscription
+         </li>
+         <li>
+           Code First vs Schema First
+         </li>
+        <li>
+          Node Identification
+        </li>
+        <li>
+          Connections
+        </li>
+        <li>
+          DataLoader
+        </li>
+    </Appear>
+</ul>
+
+---
+
+## GraphQL Schema
+
+<Img src='./img/schema.png' width={700} />
+
+---
+
+## GraphQL Schema
+
+- declares what operations (queries/mutations/subscriptions) someone can perform on the server
+
+---
+
+## GraphiQL / Playground
+
+<Img src='./img/playground.png' width={700} />
+
+---
+
+## GraphiQL / Playground
+
+- lets you explore your GraphQL
+- can be used as documentation
+
+---
+
+## GraphQL Query
+
+- define Types / Fields that can be queried
+- usually no side effects
+- read data
+
+---
+
+## GraphQL Query
+
+<Img src='./img/query.png' width={300} />
+
+---
+
+## GraphQL Type
+
+- entity to be consumed
+
+---
+
+## GraphQL Type
+
+<Img src='./img/userType.png' width={600} />
+
+---
+
+## GraphQL Resolver
+
+<Img src='./img/resolver.png' width={700} />
+
+---
+
+## GraphQL Resolver
+
+<Img src='./img/graphqlResolver.png' width={550} />
+
+---
+
+## GraphQL Resolver
+
+- source - object resolved by parent
+- args - arguments for the field
+- context - GraphQL Context
+- info - field information
+
+---
+
+## GraphQL Context
+
+- similar to React context
+- global data to be shared among resolvers
+- logged user
+- user language
+- dataLoaders
+
+---
+
+## GraphQL Mutation
+
+- define write operations to modify database
+- write followed by a read
+
+---
+
+## GraphQL Mutation
+
+<Img src='./img/mutation.png' width={450} />
+
+---
+
+## GraphQL Mutation
+
+- write a Post Like operation
+- read if logged user has liked and likesCount
+
+---
+
+## GraphQL Subscription
+
+- mutation of someone else
+- event of something
+
+---
+
+## GraphQL Subscription
+
+<Img src='./img/subscription.png' width={550} />
+
+---
+
+## Code First vs Schema First
+
+- schema first - define SDL first and then resolvers using simple functions
+- code first - define GraphQL schema in code and generate SDL
+
+---
+
+## Schema First
+
+<Img src='./img/graphqlSDL.png' width={550} />
+
+---
+
+## Code First
+
+<Img src='./img/graphqlJS.png' width={400} />
+
+---
+
+## Node Identification
+
+- identify any Node given a global unique ID
+- global id = base64(type:_id)
+
+---
+
+## Node Identification
+
+<Img src='./img/nodeIdentification.png' width={400} />
+
+---
+
+## Connections
+
+- handle pagination
+- cursor based (give me 10 items after a given cursor)
+- pageInfo
+
+---
+
+## Connections
+<Img src='./img/cursor.png' width={400} />
+
+---
+
+## DataLoader
+
+- fast and Maintainable pattern to access DB or APIs
+- cache requests
+- batch requests
+
+---
+
+## Relay Concepts
+
+<ul>
+    <Appear>
+         <li>
+           Data Driven Components
+         </li>
+         <li>
+            Relay Compiler
+          </li>
+         <li>
+           Relay Environment
+         </li>
+        <li>
+          Relay Store
+        </li>
+        <li>
+          Relay Network Layer (fetch, subscription)
+        </li>
+        <li>
+          usePreloadQuery
+        </li>
+    </Appear>
+</ul>
+
+---
+
+## Relay Concepts
+
+<ul>
+    <Appear>
+         <li>
+           useFragment
+         </li>
+         <li>
+           usePagination
+         </li>
+        <li>
+          useRefetchableFragment
+        </li>
+        <li>
+          useMutation
+        </li>
+        <li>
+          useSubscription
+        </li>
+    </Appear>
+</ul>
+
+---
+
+## Data Driven Components
+
+<Img src='./img/dataComponents.png' width={250} />
+
+---
+
+## Data Driven Components
+
+- each components declares the data they need
+- declarative data fetching
+- data fetching that scales
+
+---
+
+## Relay Compiler
+
+<Img src='./img/relayCompilerRepl.png' width={700} />
+
+---
+
+## Relay Compiler
+
+- compile your GraphQL fragments and queries to optimize GraphQL
+- better DX without compromising performance
+- polyfill of arguments for GraphQL fragments
+
+---
+
+## Relay Artifacts - Types
+
+<Img src='./img/generatedFragment.png' width={800} />
+
+---
+
+## Relay Artifacts - AST
+
+<Img src='./img/generatedAst.png' width={700} />
+
+---
+
+### Relay Artifacts - Full static Query/Mutation/Subscription
+
+<Img src='./img/generatedQueryCommented.png' width={450} />
+
+---
+
+## Relay Environment
+
+- store + Network config
+
+---
+
+## Relay Environment
+
+<Img src='./img/environment.png' width={800} />
+
+---
+
+## Relay Store
+
+- tell how Relay will store your cached data and garbage collector strategy
+
+---
+
+## Relay Network Layer
+
+- it configure how Relay will fetch query/mutation operations
+- it configure how Relay will handle subscriptions
+
+---
+
+## Relay Network Layer - fetchQuery
+
+- handle authentication on fetch Headers
+- handle fetch with retries
+- handle timeout
+- handle unauthorized calls
+- handle cache of queries (QueryResponseCache)
+- can resolve many values (Observable)
+
+---
+
+## Simple fetchQuery example
+
+<Img src='./img/fetchQuery.png' width={500} />
+
+---
+
+## Simple subscription setup
+
+<Img src='./img/setupSubscription.png' width={700} />
+
+---
+
+## useLazyLoadQuery / QueryRenderer
+
+- fetch/load data when mounted (execute query)
+- render-then-fetch pattern
+
+---
+
+## QueryRenderer
+
+<Img src='./img/QueryRenderer.png' width={500} />
+
+---
+
+## usePreloadQuery
+
+- use data that has already started loading–e.g. due to an event occurring, such as changing location”
+- render-as-you-fetch pattern
+
+---
+
+## usePreloadQuery
+
+<Img src='./img/usePreloadQuery.png' width={600} />
+
+---
+
+## useFragment / createFragmentContainer
+
+- declare component data requirements
+- do not fetch data directly
+
+---
+
+## useFragment / createFragmentContainer
+
+<Img src='./img/useFragmentExample.png' width={600} />
+
+---
+
+## usePagination / createPaginationContainer
+
+- declare component data dependencies
+- handle pagination patterns
+
+---
+
+## usePagination / createPaginationContainer
+
+<Img src='./img/usePagination.png' width={500} />
+
+---
+
+## useRefetchableFragment / createRefetchContainer
+
+- declare component data dependencies
+- let component execute a refetch query with different variables
+
+---
+
+## useRefetchableFragment / createRefetchContainer
+
+<Img src='./img/useRefetchableFragmentExample.png' width={500} />
+
+---
+
+## useMutation / commitMutation
+
+<Img src='./img/useMutation.png' width={700} />
+
+---
+
+## useSubscription / requestSubscription
+
+<Img src='./img/useSubscription.png' width={800} />
+
+---
+
+## Demo + Code Deep Dive
+
+- https://react-europe-relay-workshop.now.sh/
+
+---
+
+## References
+
+- [GraphQL Docs](https://graphql.org/)
+- [Relay Docs](https://relay.dev/)
+- [Practical GraphQL for Relay](https://github.com/sibelius/practical-graphql-relay)
+- [React Europe Relay Workshop Demo](https://react-europe-relay-workshop.now.sh/)
+- [The Problems of Schema First](https://www.prisma.io/blog/the-problems-of-schema-first-graphql-development-x1mn4cb0tyl3)
+
+---
+
+## References
+
+- [Relay Docs about GraphQL Server Specification](https://relay.dev/docs/en/graphql-server-specification)
+- [Object Identification](https://relay.dev/graphql/objectidentification.htm)
+- [Cursor Connections](https://relay.dev/graphql/connections.htm)
+- [Relay Mutations](https://relay.dev/graphql/mutations.htm)
+
+---
+
+## References
+
+- [Relay Mutations Guide](https://relay.dev/docs/en/mutations)
+- [Entria Playground](https://github.com/entria/entria-fullstack)
+- [GraphQL Relay 2015](https://pt-br.reactjs.org/blog/2015/02/20/introducing-relay-and-graphql.html)
+- [Building the New Facebook](https://developers.facebook.com/videos/2019/building-the-new-facebookcom-with-react-graphql-and-relay/)
+- [GraphQL Mongoose](https://github.com/entria/graphql-mongoose-loader#mongoose-dataloader-batch)
+
+---
+
+## References
+
+- [Fast Maintainable DB Patterns](https://sophiebits.com/2020/01/01/fast-maintainable-db-patterns.html)
+- [Introduction Relay and GraphQL](https://pt-br.reactjs.org/blog/2015/02/20/introducing-relay-and-graphql.html)
+- [Relay Compiler Repl](https://relay-compiler-repl.netlify.com/)
+- [Relay Modern Course](https://github.com/sibelius/relay-modern-course)
+- [Concurrent Mode Suspense](https://reactjs.org/docs/concurrent-mode-suspense.html)
+
+
+---
+
+<Feedback />

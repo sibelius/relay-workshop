@@ -1,0 +1,32 @@
+{
+  "name": "concepts",
+  "version": "1.0.0",
+  "dependencies": {
+    "gh-pages": "^2.0.1",
+    "mdx-code": "^1.1.3",
+    "mdx-deck": "^1.6.7",
+    "mdx-deck-code-surfer": "^0.5.5",
+    "mdx-deck-live-code": "^1.0.0",
+    "qrcode.react": "^0.9.3",
+    "raw-loader": "^3.1.0",
+    "rebass": "^3.1.1",
+    "styled-components": "^4.3.2",
+    "styled-system": "^5.0.15"
+  },
+  "devDependencies": {
+    "patch-package": "^6.1.2"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "build": "mdx-deck build ./src/deck.mdx",
+    "copy:static": "cp -r src/img dist",
+    "help": "mdx-deck",
+    "image": "mdx-deck screenshot src/deck.mdx",
+    "now-build": "mdx-deck build --no-html ./src/deck.mdx && cp -r ./src/img dist",
+    "pdf": "mdx-deck pdf src/deck.mdx",
+    "postinstall": "patch-package",
+    "publish:deck": "yarn build && yarn copy:static && gh-pages -d dist",
+    "start": "mdx-deck src/deck.mdx"
+  }
+}
