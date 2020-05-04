@@ -1,5 +1,8 @@
 {
   "name": "@workshop/relay",
   "version": "1.0.0",
-  "main": "src/index.tsx"
+  "main": "src/index.tsx",
+  "dependencies": {
+    "react-relay": "0.0.0-experimental-8cc94ddc"
+  }
 }
