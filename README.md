@@ -32,8 +32,10 @@ workshop - a set of practice exercises to really learn Relay
 - 11-testUseFragment - learn how to test a single component with useFragment
 - 12-testUseMutation - learn how to test mutations calls 
 
+solutions - the same folder of workshop but with my solutions
+
 slides - some slides to help in workshop
-- concepts - GraphQL and Relay Concepts
+- concepts - GraphQL and Relay Concepts 
 
 ## Requirements
 - yarn - we need to use yarn, as npm does not support workspaces yet

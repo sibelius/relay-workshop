@@ -89,18 +89,20 @@
   },
   "scripts": {
     "b": "babel-node --extensions \".es6,.js,.es,.jsx,.mjs,.ts,.tsx\"",
+    "build:server": "yarn workspace @workshop/graphql build && yarn workspace @workshop/server build",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "copy-envs": "cp packages/server/.env.example packages/server/.env && cp packages/web/.env.example packages/web/.env",
     "get-token": "yarn b ./packages/server/scripts/getToken.ts",
     "jest": "jest",
     "lint:staged": "lint-staged",
+    "postinstall": "yarn patch-package && yarn workspace @workshop/graphql build",
     "prettier": "prettier --write --single-quote true --trailing-comma all --print-width 120",
     "relay": "yarn workspace @workshop/web relay",
     "seed": "yarn b ./packages/server/scripts/seed.ts",
     "server": "yarn workspace @workshop/server start",
+    "server:serve": "yarn workspace @workshop/server serve",
     "update-schema": "yarn workspace @workshop/server update-schema",
-    "web": "yarn workspace @workshop/web start",
-    "postinstall": "yarn patch-package && yarn workspace @workshop/graphql build"
+    "web": "yarn workspace @workshop/web start"
   },
   "workspaces": {
     "packages": [

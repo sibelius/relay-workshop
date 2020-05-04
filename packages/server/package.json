@@ -40,6 +40,7 @@
   "scripts": {
     "build": "babel src --extensions \".es6,.js,.es,.jsx,.mjs,.ts,.tsx\" --ignore *.spec.js --out-dir dist --copy-files --source-maps --verbose",
     "jest": "jest",
+    "serve": "node ./dist/index.js",
     "start": "webpack --watch --progress --config webpack.config.server.js",
     "update-schema": "babel-node --extensions \".es6,.js,.es,.jsx,.mjs,.ts\" ./scripts/updateSchema.ts"
   }
