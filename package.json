@@ -106,6 +106,7 @@
     "packages": [
       "packages/*",
       "workshop/*",
+      "workshop-solutions/*",
       "slides/*"
     ]
   }
