@@ -4,6 +4,8 @@ This is a workshop repo to teach you about Relay
 
 ## Structure
 
+The workshop is a "huge" monorepo with many packages, let's see what's inside:
+
 packages - contains packages and code that make workshop exercises possible
 - babel - shared babel config
 - babelweb - shared babel config for web with react fast refresh
@@ -30,15 +32,48 @@ workshop - a set of practice exercises to really learn Relay
 - 11-testUseFragment - learn how to test a single component with useFragment
 - 12-testUseMutation - learn how to test mutations calls 
 
-## How to update GraphQL schema SDL (schema.graphql)
-```
-yarn update-schema
-```
+slides - some slides to help in workshop
+- concepts - GraphQL and Relay Concepts
+
+## Requirements
+- yarn - we need to use yarn, as npm does not support workspaces yet
+- node lts - we recommend using node LTS version, and nvm to manage your node version
+- mongo - you can 
+
+## Mongo
+### How to install mongo
+```sh
+brew tap mongodb/brew
+brew install mongodb-community
+``` 
+
+### How to run mongo in docker
+```sh
+docker run -d -p 27018:27017 --name mongo-workshop -d mongo:latest
+``` 
+
+### Use React Workshop mongo URI
+```sh
+mongodb+srv://sibelius:eYZlo2POmcyuUuRR@reacteurope-los0c.mongodb.net/test
+``` 
 
 ## Server
 
-```
+### Run
+Server runs at http://localhost:7500/graphql
+
+```sh
 yarn server
+```
+
+### How to update GraphQL schema SDL (schema.graphql)
+```sh
+yarn update-schema
+```
+
+### How to create a seed of posts
+```sh
+yarn seed
 ```
 
 ## How to update Relay artifacts
@@ -46,8 +81,33 @@ yarn server
 yarn relay
 ```
 
+## How to get an Authorization Token
+Useful for exercises that user should be logged in
+
+```
+yarn get-token
+```
+
+## Setup .env
+Web and workshops consumes a local .env, you just need to copy the .env.example to .env inside each package
+
+```sh
+cp .env.example .env
+```
+
 ## Web
 
 ```
 yarn web
+```
+
+## How to run Workshop exercises
+- go inside the workshop/<exercise>/
+- run yarn start
+
+Example for 01-fetchGraphQL
+
+```bash
+cd ./workshop/01-fetchGraphQL
+yarn start
 ```

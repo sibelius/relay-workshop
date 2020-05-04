@@ -1,11 +1,11 @@
 {
   "name": "@workshop/ui",
   "version": "1.0.0",
-  "main": "src/index.tsx",
   "dependencies": {
     "@material-ui/core": "4.3.2",
     "@material-ui/icons": "4.2.1",
     "@material-ui/styles": "4.3.0",
     "formik": "2.1.4"
-  }
+  },
+  "main": "src/index.tsx"
 }

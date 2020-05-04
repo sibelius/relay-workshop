@@ -1,9 +1,9 @@
 {
   "name": "@workshop/route",
   "version": "1.0.0",
-  "main": "src/index.tsx",
   "dependencies": {
     "react-router-config": "^5.0.1",
     "react-router-dom": "^5.0.1"
-  }
+  },
+  "main": "src/index.tsx"
 }

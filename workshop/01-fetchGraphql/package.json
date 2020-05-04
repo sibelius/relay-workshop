@@ -2,6 +2,7 @@
   "name": "@workshop/01-fetchGraphql",
   "version": "1.0.0",
   "scripts": {
+    "copy-env": "cp .env.example .env",
     "start": "webpack-dev-server --hot"
   }
 }
