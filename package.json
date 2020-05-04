@@ -5,6 +5,7 @@
   "devDependencies": {
     "@types/bcryptjs": "^2.4.1",
     "@types/dotenv-safe": "8.1.0",
+    "@types/dotenv-webpack": "1.7.0",
     "@types/graphql": "^14.2.2",
     "@types/graphql-relay": "^0.4.5",
     "@types/history": "4.7.5",

@@ -44,6 +44,7 @@ module.exports = {
   plugins: [
     new dotEnv({
       path: './.env',
+      safe: true,
     }),
     new ReactRefreshPlugin(),
     new HtmlWebpackPlugin({

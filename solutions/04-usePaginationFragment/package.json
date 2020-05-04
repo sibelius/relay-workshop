@@ -1,5 +1,5 @@
 {
-  "name": "@solutions/4-usePagination",
+  "name": "@solutions/4-usePaginationFragment",
   "version": "1.0.0",
   "scripts": {
     "copy-env": "cp .env.example .env",

@@ -22,5 +22,5 @@ query {
 ## Extras
 
 - [ ] handle error
-- [ ] handle retry
+- [ ] handle retry using a button to retry network request
 - [ ] handle pagination

@@ -2,31 +2,16 @@ import React from 'react';
 
 import { Flex, Text } from 'rebass';
 import { Card, Content } from '@workshop/ui';
-import { useLazyLoadQuery, graphql } from 'react-relay/hooks';
-
-import { AppQuery } from './__generated__/AppQuery.graphql';
 
 const App = () => {
-  const response = useLazyLoadQuery<AppQuery>(
-    graphql`
-      query AppQuery {
-        posts(first: 10) {
-          edges {
-            node {
-              id
-              content
-            }
-          }
-        }
-      }
-    `,
-    {},
-    {
-      fetchPolicy: 'network-only',
-    },
-  );
+  const posts = {
+    edges: [],
+  };
 
-  const { posts } = response;
+  /**
+   * @TODO
+   * Fetch posts to be rendered in this component using `useLazyLoadQuery`
+   */
 
   return (
     <Content>

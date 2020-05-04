@@ -47,12 +47,24 @@ slides - some slides to help in workshop
 ```sh
 brew tap mongodb/brew
 brew install mongodb-community
+brew services start mongodb-community
 ``` 
 
 ### How to run mongo in docker
 ```sh
-docker run -d -p 27018:27017 --name mongo-workshop -d mongo:latest
+docker run -d -p PORT:27017 --name CONTAINER_NAME -d mongo:latest - run mongo:latest image in detached mode
 ``` 
+
+docker tips
+```
+docker ps: list all running containers
+docker ps -a: list all containers (including the exited ones)
+docker stop CONTAINER_NAME: stop the container
+docker start CONTAINER_NAME: start the container
+docker rm CONTAINER_NAME: delete the container to free disk space
+docker image ls: list all downloaded images
+docker rmi IMAGE_NAME:TAG: remove image from your computer to free disk space
+```
 
 ### Use React Workshop mongo URI
 ```sh
