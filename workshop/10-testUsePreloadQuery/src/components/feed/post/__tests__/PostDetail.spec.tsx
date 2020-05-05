@@ -1,12 +1,15 @@
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import React from 'react';
+// eslint-disable-next-line
 import { MockPayloadGenerator } from 'relay-test-utils';
 
+// eslint-disable-next-line
 import { preloadQuery } from 'react-relay/hooks';
 
 import { JSResource } from '@workshop/route';
 
+// eslint-disable-next-line
 import { Environment } from '../../../../relay';
 import PostDetail from '../PostDetail';
 
@@ -19,23 +22,6 @@ it('should render post like button', async () => {
     {
       component: JSResource('Component', () => new Promise(resolve => resolve(PostDetail))),
       path: '/post/:id',
-      // TODO - make RouterRenderer work
-      // prepare: (params: { id: string }) => {
-      //   const PostDetailQuery = require('../__generated__/PostDetailQuery.graphql');
-      //
-      //   return {
-      //     postDetailQuery: preloadQuery(
-      //       Environment,
-      //       PostDetailQuery,
-      //       {
-      //         id: params.id,
-      //       },
-      //       {
-      //         fetchPolicy: 'store-or-network',
-      //       },
-      //     ),
-      //   };
-      // },
     },
   ];
 
@@ -43,22 +29,31 @@ it('should render post like button', async () => {
 
   const PostDetailQuery = require('../__generated__/PostDetailQuery.graphql');
 
+  // eslint-disable-next-line
   const query = PostDetailQuery;
+  // eslint-disable-next-line
   const variables = {
     id: postId,
   };
 
+  /**
+   * TODO
+   * mock content of Post
+   */
+  // eslint-disable-next-line
   const customMockResolvers = {
-    Post: () => ({
-      content: 'Welcome to React Europe',
-    }),
+    Post: () => ({}),
   };
 
-  // queue pending operation
-  Environment.mock.queuePendingOperation(query, variables);
+  /**
+   * TODO
+   * queue a pending operation, this would be a preloadQuery call
+   */
 
-  // PostDetailQuery
-  Environment.mock.queueOperationResolver(operation => MockPayloadGenerator.generate(operation, customMockResolvers));
+  /**
+   * TODO
+   * mock a queued operation
+   */
 
   const Root = withProviders({
     routes,
@@ -67,16 +62,18 @@ it('should render post like button', async () => {
   });
 
   const prepared = {
-    postDetailQuery: preloadQuery(Environment, PostDetailQuery, variables, {
-      fetchPolicy: 'store-or-network',
-    }),
+    /**
+     * TODO
+     * preload query
+     */
+    postDetailQuery: {},
   };
 
   // eslint-disable-next-line
   const { debug, getByText } = render(<Root prepared={prepared} />);
 
   // uncomment to check DOM
-  // debug();
+  debug();
 
   expect(getByText('Welcome to React Europe')).toBeTruthy();
 });
