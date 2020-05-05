@@ -11,3 +11,19 @@ Learn how to use useMutation to modify GraphQL data
 
 - [ ] implement PostUnLike mutation
 - [ ] add optimistic response to provide a fast feedback to user
+
+## Code Helpers
+
+PostLikeMutation
+```
+mutation PostLikeMutation($input: PostLikeInput!) {
+    PostLike(input: $input) {
+      success
+      error
+      post {
+        meHasLiked
+        likesCount
+      }
+    }
+  }
+```

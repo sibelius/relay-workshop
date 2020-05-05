@@ -4,8 +4,8 @@ Learn how to use usePaginationFragment to paginate a list of posts
 
 ## Exercise
 
-- Create a new Component PostList/Feed that will contain pagination logic of posts
-- Create a button to fetch next page
+- use usePaginationFragment on Feed.tsx component to fetch a list of posts and later on paginate it
+- implement pagination on loadMore callback
 
 ## Extras
 

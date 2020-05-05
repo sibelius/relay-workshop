@@ -6,13 +6,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import IconButton from '@material-ui/core/IconButton';
 
-import { useMutation } from '@workshop/relay';
-
 import { Post_post, Post_post$key } from './__generated__/Post_post.graphql';
-import { likeOptimisticResponse, PostLike } from './PostLikeMutation';
-import { unlikeOptimisticResponse, PostUnLike } from './PostUnLikeMutation';
-import { PostLikeMutation } from './__generated__/PostLikeMutation.graphql';
-import { PostUnLikeMutation } from './__generated__/PostUnLikeMutation.graphql';
 
 type Props = {
   post: Post_post;
@@ -33,24 +27,31 @@ const Post = (props: Props) => {
     props.post,
   );
 
-  const [postLike] = useMutation<PostLikeMutation>(PostLike);
-  const [postUnLike] = useMutation<PostUnLikeMutation>(PostUnLike);
+  /**
+   * TODO
+   * useMutation from @workshop/relay
+   */
 
   const Icon = post.meHasLiked ? FavoriteIcon : FavoriteBorderIcon;
 
   const handleLike = useCallback(() => {
+    // eslint-disable-next-line
     const config = {
       variables: {
         input: {
           post: post.id,
         },
       },
-      optimisticResponse: post.meHasLiked ? unlikeOptimisticResponse(post) : likeOptimisticResponse(post),
+      /**
+       * TODO
+       * add optimistic update to mutation config
+       */
     };
 
-    const mutationFn = post.meHasLiked ? postUnLike : postLike;
-
-    mutationFn(config);
+    /**
+     * TODO
+     * call post like mutation
+     */
   }, [post]);
 
   return (
