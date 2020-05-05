@@ -1,29 +1,28 @@
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import React from 'react';
-import { MockPayloadGenerator } from 'relay-test-utils';
 
+// eslint-disable-next-line
+import { MockPayloadGenerator } from 'relay-test-utils';
+// eslint-disable-next-line
 import { usePreloadedQuery, graphql, preloadQuery } from 'react-relay/hooks';
 
+// eslint-disable-next-line
 import { Environment } from '../../../../relay';
 import PostLikeButton from '../PostLikeButton';
 
 import { withProviders } from '../../../../../test/withProviders';
 
-import { PostLikeButtonSpecQuery } from './__generated__/PostLikeButtonSpecQuery.graphql';
-
+// eslint-disable-next-line
 export const getRoot = ({ preloadedQuery }) => {
   const UseQueryWrapper = () => {
-    const data = usePreloadedQuery<PostLikeButtonSpecQuery>(
-      graphql`
-        query PostLikeButtonSpecQuery($id: ID!) @relay_test_operation {
-          post: node(id: $id) {
-            ...PostLikeButton_post
-          }
-        }
-      `,
-      preloadedQuery,
-    );
+    /**
+     * TODO
+     * add usePreloadQuery of a test operation
+     */
+    const data = {
+      post: {},
+    };
 
     return <PostLikeButton post={data.post} />;
   };
@@ -37,35 +36,37 @@ it('should render post like button and likes count', async () => {
   const PostLikeButtonSpecQuery = require('./__generated__/PostLikeButtonSpecQuery.graphql');
 
   const postId = 'postId';
+  // eslint-disable-next-line
   const query = PostLikeButtonSpecQuery;
+  // eslint-disable-next-line
   const variables = {
     id: postId,
   };
 
+  /**
+   * TODO
+   * properly mock resolvers
+   */
+  // eslint-disable-next-line
   const customMockResolvers = {
-    Post: () => ({
-      id: postId,
-      likesCount: 10,
-      meHasLiked: false,
-    }),
+    Post: () => ({}),
   };
 
-  // queue pending operation
-  Environment.mock.queuePendingOperation(query, variables);
+  /**
+   * TODO
+   * queue a pending operation, this would be a preloadQuery call
+   */
 
-  // PostDetailQuery
-  Environment.mock.queueOperationResolver(operation => MockPayloadGenerator.generate(operation, customMockResolvers));
+  /**
+   * TODO
+   * mock a queued operation
+   */
 
-  const preloadedQuery = preloadQuery(
-    Environment,
-    PostLikeButtonSpecQuery,
-    {
-      id: postId,
-    },
-    {
-      fetchPolicy: 'store-or-network',
-    },
-  );
+  /**
+   * TODO
+   * preloadQuery test GraphQL operation
+   */
+  const preloadedQuery = {};
 
   const Root = getRoot({
     Component: PostLikeButton,
@@ -75,7 +76,7 @@ it('should render post like button and likes count', async () => {
   // eslint-disable-next-line
   const { debug, getByText, getByTestId } = render(<Root />);
 
-  // debug();
+  debug();
 
   // it should render likes count
   expect(getByText('10')).toBeTruthy();
