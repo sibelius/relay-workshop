@@ -1,4 +1,6 @@
+// eslint-disable-next-line
 import React, { useMemo } from 'react';
+// eslint-disable-next-line
 import Button from '@material-ui/core/Button';
 
 import { useSnackbar } from 'notistack';
@@ -15,7 +17,9 @@ import { PostNewSubscription, PostNewSubscriptionResponse } from './__generated_
 // TODO - use @inline for me
 type Me = AppQueryResponse['me'];
 
+// eslint-disable-next-line
 export const useNewPostSubscription = (me: Me) => {
+  // eslint-disable-next-line
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
 
   const postNewConfig = useMemo<GraphQLSubscriptionConfig<PostNewSubscription>>(
@@ -32,37 +36,12 @@ export const useNewPostSubscription = (me: Me) => {
         // eslint-disable-next-line
         console.log('onError: ', args);
       },
+      // eslint-disable-next-line
       onNext: ({ PostNew }: PostNewSubscriptionResponse) => {
-        const { post } = PostNew;
-        const { author } = post;
-
-        // new post, check if from another user
-        if (author.id !== me.id) {
-          const action = (key: string) => (
-            <>
-              <Button
-                color='primary'
-                onClick={() => {
-                  closeSnackbar(key);
-                }}
-              >
-                See
-              </Button>
-              <Button
-                onClick={() => {
-                  closeSnackbar(key);
-                }}
-              >
-                Dismiss
-              </Button>
-            </>
-          );
-
-          enqueueSnackbar(`New Post from ${author.name}`, {
-            variant: 'success',
-            action,
-          });
-        }
+        /**
+         * TODO
+         * show a snackbar info message with new post data
+         */
       },
       updater,
     }),

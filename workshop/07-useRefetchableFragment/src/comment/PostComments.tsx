@@ -1,5 +1,5 @@
-import React, { useTransition } from 'react';
-import { graphql, useRefetchableFragment } from 'react-relay/hooks';
+import React from 'react';
+import { graphql, useFragment } from 'react-relay/hooks';
 import { Flex, Text } from 'rebass';
 import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
@@ -9,19 +9,25 @@ import { theme } from '@workshop/ui';
 import UserAvatar from './UserAvatar';
 
 import { PostComments_post$key } from './__generated__/PostComments_post.graphql';
-import { PostCommentsRefetchQuery } from './__generated__/PostCommentsRefetchQuery.graphql';
 
 type Props = {
   post: PostComments_post$key;
 };
 const PostComments = (props: Props) => {
-  const [startTransition, isPending] = useTransition();
+  /**
+   * TODO
+   * use useTransition hook to "suspend" if refetch took too long
+   */
+  const isPending = false;
 
-  const [post, refetch] = useRefetchableFragment<PostCommentsRefetchQuery, _>(
+  /**
+   * TODO
+   * use useRefetchableFragment to be able to fetch newer/older comments of this post
+   */
+  const post = useFragment<PostComments_post$key>(
     graphql`
       fragment PostComments_post on Post
-        @argumentDefinitions(first: { type: Int, defaultValue: 1 }, after: { type: String })
-        @refetchable(queryName: "PostCommentsRefetchQuery") {
+        @argumentDefinitions(first: { type: Int, defaultValue: 3 }, after: { type: String }) {
         id
         comments(first: $first, after: $after) @connection(key: "PostComments_comments", filters: []) {
           endCursorOffset
@@ -58,19 +64,11 @@ const PostComments = (props: Props) => {
     return null;
   }
 
-  const loadMore = () => {
-    startTransition(() => {
-      const after = pageInfo.endCursor;
-
-      const variables = {
-        id: post.id,
-        first: 1,
-        after,
-      };
-
-      refetch(variables, { fetchPolicy: 'store-or-network' });
-    });
-  };
+  /**
+   * TODO
+   * complete loadMore to use startTransition and refetch to fetch more comments
+   */
+  const loadMore = () => {};
 
   const isDisabled = !pageInfo.hasNextPage;
 

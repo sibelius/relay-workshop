@@ -14,6 +14,7 @@ Learn how to use usePaginationFragment to paginate a list of posts
 ## Code Helpers
 
 - usePagination query
+```graphql
 fragment Feed_query on Query {
     posts(first: $first, after: $after) @connection(key: "Feed_posts", filters: []) {
       endCursorOffset
@@ -33,6 +34,23 @@ fragment Feed_query on Query {
       }
     }
 }
+```
+
+- @arguments
+Use @arguments to declare "local" arguments to your fragments.
+```jsx 
+@argumentDefinitions(
+  first: { type: Int, defaultValue: 1 }, 
+  after: { type: String }
+)
+```
+
+- @refetchable
+Use @refetchable to let Relay generate a refetch query for your pagination or refetch fragments
+
+```jsx
+@refetchable(queryName: "FeedPaginationQuery")
+```
 
 - infinite scroll usage
 ```jsx

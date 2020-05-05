@@ -10,3 +10,11 @@ Learn how to use refetch any query using useRefetchableFragment
 ## Extras
 
 - [ ] add a button to refetch new comments
+
+## Code Helpers
+
+- useTransition
+useTransition hook let you "suspend" based on an action, usually a data fetch
+```
+const [startTransition, isPending] = useTransition();
+```
