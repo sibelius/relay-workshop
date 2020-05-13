@@ -1,6 +1,16 @@
 # Relay Workshop
 
-This is a workshop repo to teach you about Relay
+You are going to learn Relay and build a mini social network at the end of this workshop
+
+## Welcome 👋
+
+Each lesson including the exercise description can be found in each of the directories of /workshop.
+
+I will explain everything during the intro.
+
+## Code
+
+Most of it is written in TypeScript (not particularily well typed). Feel free to use plain JavaScript if you prefer that.
 
 ## Structure
 
