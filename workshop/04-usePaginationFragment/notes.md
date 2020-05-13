@@ -72,13 +72,30 @@ export function usePaginationFragment<
     TKey extends KeyType
 >(
     fragmentInput: GraphQLTaggedNode,
-    parentFragmentRef: TKey | null,
+    fragmentRef: TKey | null,
 ): // tslint:disable-next-line no-unnecessary-generics
 ReturnType<TQuery, TKey | null, $Call<KeyReturnType<TKey>> | null>;
+
+export interface ReturnType<TQuery extends OperationType, TKey, TFragmentData> {
+    data: TFragmentData;
+    loadNext: LoadMoreFn;
+    loadPrevious: LoadMoreFn;
+    hasNext: boolean;
+    hasPrevious: boolean;
+    isLoadingNext: boolean;
+    isLoadingPrevious: boolean;
+    refetch: RefetchFnDynamic<TQuery, TKey>;
+}
 ```
 
-`usePaginationFragment` receives the fragment definition and also the parentFragmentRef.
-The `parentFragmentRef` contains the data to be extracted by `usePaginationFragment`. 
+`usePaginationFragment` receives the fragment definition and also the fragmentRef.
+The `fragmentRef` contains the data to be extracted by `usePaginationFragment`.
+This hook returns:
+- `data`: fragment data
+- `loadNext` and `loadPrevious` to paginate forward and backward
+- `hasNext` and `hasPrevious` to check whether you can paginate or not
+- `isLoadingNext` and `isLoadingPrevious` to show loading information
+- `refetch` to refetch the whole connection 
 
 ## References
 
