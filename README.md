@@ -135,3 +135,6 @@ Example for 01-fetchGraphQL
 cd ./workshop/01-fetchGraphQL
 yarn start
 ```
+
+## Feedback Form
+https://forms.gle/uxkoyyeuUSjADC3s7
