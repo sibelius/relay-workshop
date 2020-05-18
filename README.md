@@ -138,3 +138,10 @@ yarn start
 
 ## Feedback Form
 https://forms.gle/uxkoyyeuUSjADC3s7
+
+## Remote Workshop
+If you are interested in this workshop as a remote workshop (live), send an email to sibeliusseraphini@gmail.com
+I can run this workshop in English/Portuguese (I'm still learning Spanish)
+
+## Donation
+You can donate to me on Patreon (https://www.patreon.com/sibelius), or Bitcoin
