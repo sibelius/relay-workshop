@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 
 import { Flex } from 'rebass';
-import { Button } from '@workshop/ui';
+import InfiniteScroll from 'react-infinite-scroller';
 import { graphql } from 'react-relay/hooks';
 
 import { usePaginationFragment } from 'react-relay/lib/hooks';
