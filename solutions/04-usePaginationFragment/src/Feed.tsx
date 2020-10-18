@@ -6,6 +6,7 @@ import { graphql } from 'react-relay/hooks';
 
 import { usePaginationFragment } from 'react-relay/lib/hooks';
 
+import Loading from './Loading';
 import Post from './Post';
 
 import { Feed_query, Feed_query$key } from './__generated__/Feed_query.graphql';
