@@ -9,8 +9,8 @@ import { AppQuery } from './__generated__/AppQuery.graphql';
 const App = () => {
   const response = useLazyLoadQuery<AppQuery>(
     graphql`
-      query AppQuery {
-        posts(first: 10) {
+      query AppQuery ($first: Number) {
+        posts(first: $first) {
           edges {
             node {
               id
@@ -20,7 +20,7 @@ const App = () => {
         }
       }
     `,
-    {},
+    { first: 5 },
     {
       fetchPolicy: 'network-only',
     },
