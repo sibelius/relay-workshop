@@ -49,17 +49,20 @@ const Feed = (props: Props) => {
     if (isLoadingNext) {
       return;
     }
-    loadNext(1);
+    loadNext(10);
   }, [isLoadingNext, loadNext]);
 
   return (
     <Flex flexDirection='column'>
-      {posts.edges.map(({ node }) => (
-        <Post key={node.id} post={node} />
-      ))}
-      <Button mt='10px' onClick={loadMore}>
-        Load More
-      </Button>
+      <InfiniteScroll
+        pageStart={0}
+        loadMore={loadMore}
+        hasMore={posts.pageInfo.hasNextPage}
+        loader={<Loading />}
+        useWindow
+      >
+      {posts.edges.map(({ node }) => <Post key={node.id} post={node} />)}
+      </InfiniteScroll>
     </Flex>
   );
 };
