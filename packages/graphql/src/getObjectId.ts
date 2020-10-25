@@ -1,13 +1,13 @@
 import { fromGlobalId } from 'graphql-relay';
-import { Model, Types } from 'mongoose';
+import { Types, Document } from 'mongoose';
 
 // returns an ObjectId given an param of unknown type
-export const getObjectId = (target: string | Model<any> | Types.ObjectId): Types.ObjectId | null => {
+export const getObjectId = (target: string | Document | Types.ObjectId): Types.ObjectId | null => {
   if (target instanceof Types.ObjectId) {
     return new Types.ObjectId(target.toString());
   }
 
-  if (typeof target === 'object') {
+  if (typeof target === 'object' && target instanceof Document) {
     return target && target._id ? new Types.ObjectId(target._id) : null;
   }
 

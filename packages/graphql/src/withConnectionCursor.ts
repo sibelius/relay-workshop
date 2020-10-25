@@ -1,7 +1,9 @@
 import { connectionFromMongoCursor } from '@entria/graphql-mongoose-loader';
 import { Model } from 'mongoose';
 
-export type LoaderFn = <Context extends object>(ctx: Context, id: string | ObjectId | object) => any;
+import { DataLoaderKey } from './createLoader';
+
+export type LoaderFn<Context extends object> = (ctx: Context, id: DataLoaderKey) => any;
 
 export const withConnectionCursor = <Context extends object>(
   model: Model<any>,
@@ -18,6 +20,6 @@ export const withConnectionCursor = <Context extends object>(
     cursor,
     context,
     args,
-    loader,
+    loader: loader as any,
   });
 };

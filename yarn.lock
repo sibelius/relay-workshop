@@ -3448,6 +3448,13 @@
   dependencies:
     "@types/node" "*"
 
+"@types/kcors@^2.2.3":
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/@types/kcors/-/kcors-2.2.3.tgz#e6532132492173a8681dd85774f380834b96f571"
+  integrity sha512-ICwth6ZODezC22Yvkk5fMIESkAHhbjoqNn+yIBPJPKfG2sP9+fPmMWGBUrI3h1wjTBmbrQ1fBE6qoUMmG7yo9w==
+  dependencies:
+    "@types/koa" "*"
+
 "@types/keygrip@*":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@types/keygrip/-/keygrip-1.0.2.tgz#513abfd256d7ad0bf1ee1873606317b33b1b2a72"
@@ -3480,6 +3487,16 @@
   integrity sha512-bqWPbf/MNHx5rwOdQXEkQxL7/DvD1sMQRC+PUDqnYf/i4WPUeLhePRssexznT9uQSNWhtfFi1lDanoY/srFb5g==
   dependencies:
     "@types/koa" "*"
+
+"@types/koa-graphql@^0.8.4":
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/@types/koa-graphql/-/koa-graphql-0.8.4.tgz#519f74399de2097b9d442f19b2d7a8551ed4d2ce"
+  integrity sha512-BnjmDTwfP+Fd7SQnXB83NPi4J6v5pWtVF8Tm9hEVxbxAPj1BGPvJh78rh09Cr9xoqAqRsjdem6ifoM3HERWzjQ==
+  dependencies:
+    "@types/koa" "*"
+    "@types/node" "*"
+    express-graphql "^0.9.0"
+    graphql "^15.1.0"
 
 "@types/koa-logger@^3.1.0":
   version "3.1.1"
@@ -4258,7 +4275,7 @@ abbrev@1:
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
   integrity sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==
 
-accepts@^1.3.5, accepts@~1.3.4, accepts@~1.3.5, accepts@~1.3.7:
+accepts@^1.3.5, accepts@^1.3.7, accepts@~1.3.4, accepts@~1.3.5, accepts@~1.3.7:
   version "1.3.7"
   resolved "https://registry.yarnpkg.com/accepts/-/accepts-1.3.7.tgz#531bc726517a3b2b41f850021c6cc15eaab507cd"
   integrity sha512-Il80Qs2WjYlJIBNzNkK6KYqlVMTbZLXgHx2oT0pU/fjRHyEp+PEfEPY0R3WCwAGVOtauxh1hOxNgIf5bv7dQpA==
@@ -8776,6 +8793,16 @@ express-graphql@0.7.1:
     http-errors "^1.7.1"
     raw-body "^2.3.3"
 
+express-graphql@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/express-graphql/-/express-graphql-0.9.0.tgz#00fd8552f866bac5c9a4612b2c4c82076107b3c2"
+  integrity sha512-wccd9Lb6oeJ8yHpUs/8LcnGjFUUQYmOG9A5BNLybRdCzGw0PeUrtBxsIR8bfiur6uSW4OvPkVDoYH06z6/N9+w==
+  dependencies:
+    accepts "^1.3.7"
+    content-type "^1.0.4"
+    http-errors "^1.7.3"
+    raw-body "^2.4.1"
+
 express@^4.16.2, express@^4.17.1:
   version "4.17.1"
   resolved "https://registry.yarnpkg.com/express/-/express-4.17.1.tgz#4491fc38605cf51f8629d39c2b5d026f98a4c134"
@@ -9926,10 +9953,10 @@ graphql-playground-middleware-koa@^1.6.4:
   dependencies:
     graphql-playground-html "1.6.15"
 
-graphql-relay-subscription@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/graphql-relay-subscription/-/graphql-relay-subscription-0.2.1.tgz#d17f984e35f2132fbf64a1b13abf0517f8e0325a"
-  integrity sha512-4/Q+wPoWBTz/ikLTBMYUT8jYs9bbKHtpW+Rpv+vRjjnrENSmj2h9cEyRGrjmG+YXubltWxh7KFBA3fMaWu889Q==
+graphql-relay-subscription@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/graphql-relay-subscription/-/graphql-relay-subscription-0.3.1.tgz#9645760294f1d4b09573e2889085bf251810c492"
+  integrity sha512-np9ez07ct0l6JkoM6cqiqoEtUNccETAAQNmkOSxkvdEm864CzfBBLmQorGhvhA5nnbLsckMCRJt0Vm0auGevDw==
 
 graphql-relay@^0.6.0:
   version "0.6.0"
@@ -9945,7 +9972,7 @@ graphql-subscriptions@^1.1.0:
   dependencies:
     iterall "^1.2.1"
 
-graphql@*, graphql@15.0.0, graphql@^14.0.0, graphql@^14.5.3:
+graphql@*, graphql@15.0.0, graphql@^14.0.0, graphql@^14.5.3, graphql@^15.1.0:
   version "15.0.0"
   resolved "https://registry.yarnpkg.com/graphql/-/graphql-15.0.0.tgz#042a5eb5e2506a2e2111ce41eb446a8e570b8be9"
   integrity sha512-ZyVO1xIF9F+4cxfkdhOJINM+51B06Friuv4M66W7HzUOeFd+vNzUn4vtswYINPi6sysjf1M2Ri/rwZALqgwbaQ==
@@ -10443,6 +10470,17 @@ http-errors@1.7.3, http-errors@^1.3.1, http-errors@^1.6.3, http-errors@^1.7.1, h
     depd "~1.1.2"
     inherits "2.0.4"
     setprototypeof "1.1.1"
+    statuses ">= 1.5.0 < 2"
+    toidentifier "1.0.0"
+
+http-errors@^1.7.3:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/http-errors/-/http-errors-1.8.0.tgz#75d1bbe497e1044f51e4ee9e704a62f28d336507"
+  integrity sha512-4I8r0C5JDhT5VkvI47QktDW75rNlGVsUf/8hzjCC/wkWI/jdTRmBb9aI7erSG82r1bjKY3F6k28WnsVxB1C73A==
+  dependencies:
+    depd "~1.1.2"
+    inherits "2.0.4"
+    setprototypeof "1.2.0"
     statuses ">= 1.5.0 < 2"
     toidentifier "1.0.0"
 
@@ -16956,7 +16994,7 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-raw-body@^2.3.3:
+raw-body@^2.3.3, raw-body@^2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/raw-body/-/raw-body-2.4.1.tgz#30ac82f98bb5ae8c152e67149dac8d55153b168c"
   integrity sha512-9WmIKF6mkvA0SLmA2Knm9+qj89e+j1zqgyn8aXGd7+nAduPoqgI9lO57SAZNn/Byzo5P7JhXTyg9PzaJbH73bA==
@@ -18418,6 +18456,11 @@ setprototypeof@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/setprototypeof/-/setprototypeof-1.1.1.tgz#7e95acb24aa92f5885e0abef5ba131330d4ae683"
   integrity sha512-JvdAWfbXeIGaZ9cILp38HntZSFSo3mWg6xGcJJsd+d4aRMOqauag1C63dJfDw7OaMYwEbHMOxEZ1lqVRYP2OAw==
+
+setprototypeof@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/setprototypeof/-/setprototypeof-1.2.0.tgz#66c9a24a73f9fc28cbe66b09fed3d33dcaf1b424"
+  integrity sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==
 
 sha.js@^2.4.0, sha.js@^2.4.8:
   version "2.4.11"
@@ -19970,10 +20013,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@3.7.2:
-  version "3.7.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.7.2.tgz#27e489b95fa5909445e9fef5ee48d81697ad18fb"
-  integrity sha512-ml7V7JfiN2Xwvcer+XAf2csGO1bPBdRbFCkYBczNZggrBZ9c7G3riSUeJmqEU5uOtXNPMhE3n+R4FA/3YOAWOQ==
+typescript@3.8.3:
+  version "3.8.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.8.3.tgz#409eb8544ea0335711205869ec458ab109ee1061"
+  integrity sha512-MYlEfn5VrLNsgudQTVJeNaQFUAI7DkhnOjdpAp4T+ku1TfQClewlbSuTVHiA+8skNBgaf02TL/kLOvig4y3G8w==
 
 ua-parser-js@^0.7.18:
   version "0.7.21"

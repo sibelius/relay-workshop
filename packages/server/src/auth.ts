@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken';
 import { config } from './config';
 import User, { IUser } from './modules/user/UserModel';
 
-export const getUser = async (token: string) => {
+export const getUser = async (token: string | null | undefined) => {
   if (!token) return { user: null };
 
   try {

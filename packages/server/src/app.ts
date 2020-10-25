@@ -1,5 +1,5 @@
 import 'isomorphic-fetch';
-import Koa from 'koa';
+import Koa, { Request } from 'koa';
 import Router from 'koa-router';
 import logger from 'koa-logger';
 import cors from 'kcors';
@@ -9,8 +9,8 @@ import { GraphQLError } from 'graphql';
 import koaPlayground from 'graphql-playground-middleware-koa';
 
 import { schema } from './schema/schema';
-import { getDataloaders } from './modules/loader/loaderRegister';
 import { getUser } from './auth';
+import { getContext } from './getContext';
 
 const router = new Router();
 
@@ -33,16 +33,13 @@ router.get('/', async ctx => {
 const graphqlSettingsPerReq = async (req: Request) => {
   const { user } = await getUser(req.header.authorization);
 
-  const dataloaders = getDataloaders();
-
   return {
     graphiql: process.env.NODE_ENV !== 'production',
     schema,
-    context: {
-      user,
+    context: await getContext({
       req,
-      dataloaders,
-    },
+      user,
+    }),
     formatError: (error: GraphQLError) => {
       // eslint-disable-next-line
       console.log(error.message);
@@ -57,7 +54,7 @@ const graphqlSettingsPerReq = async (req: Request) => {
         stack: error.stack,
       };
     },
-  };
+  } as graphqlHttp.OptionsData;
 };
 
 const graphqlServer = graphqlHttp(graphqlSettingsPerReq);

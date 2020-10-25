@@ -28,9 +28,9 @@ type ConnectionParams = {
   SubscriptionServer.create(
     {
       onConnect: async (connectionParams: ConnectionParams) => {
-        const { user } = await getUser(connectionParams?.authorization);
+        const { user } = await getUser(connectionParams.authorization);
 
-        return getContext({ user });
+        return await getContext({ user });
       },
       // eslint-disable-next-line
       onDisconnect: () => console.log('Client subscription disconnected!'),

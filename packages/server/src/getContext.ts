@@ -1,20 +1,20 @@
+import { Request } from 'koa';
+
 import { IUser } from './modules/user/UserModel';
 import { getDataloaders } from './modules/loader/loaderRegister';
 import { GraphQLContext } from './graphql/types';
 
 type ContextVars = {
   user?: IUser | null;
+  req?: Request;
 };
-export const getContext = async (ctx: ContextVars = {}) => {
-  const context: GraphQLContext = {
-    ...ctx,
-  };
 
+export const getContext = async (ctx: ContextVars) => {
   const dataloaders = getDataloaders();
 
   return {
-    req: {},
+    req: ctx.req,
     dataloaders,
-    ...context,
-  };
+    user: ctx.user,
+  } as GraphQLContext;
 };
