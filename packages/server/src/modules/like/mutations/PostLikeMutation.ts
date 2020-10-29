@@ -41,7 +41,7 @@ const mutation = mutationWithClientMutationId({
     }
 
     const hasLiked = await LikeModel.findOne({
-      post,
+      post: post._id,
       user: context.user._id,
     });
 

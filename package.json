@@ -65,7 +65,7 @@
     "lint-staged": "^9.2.1",
     "pre-commit": "^1.2.2",
     "prettier": "1.19.1",
-    "typescript": "3.7.2"
+    "typescript": "3.8.3"
   },
   "license": "MIT",
   "lint-staged": {
@@ -86,10 +86,10 @@
     "url": "https://github.com/sibelius/relay-workshop.git"
   },
   "resolutions": {
-    "graphql": "15.0.0",
-    "react": "0.0.0-experimental-f42431abe",
-    "react-dom": "0.0.0-experimental-f42431abe",
-    "styled-system": "5.1.5"
+    "**/graphql": "15.0.0",
+    "**/react": "0.0.0-experimental-f42431abe",
+    "**/react-dom": "0.0.0-experimental-f42431abe",
+    "**/styled-system": "5.1.5"
   },
   "scripts": {
     "b": "babel-node --extensions \".es6,.js,.es,.jsx,.mjs,.ts,.tsx\"",
