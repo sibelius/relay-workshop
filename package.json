@@ -89,7 +89,8 @@
     "graphql": "15.4.0",
     "react": "0.0.0-experimental-f42431abe",
     "react-dom": "0.0.0-experimental-f42431abe",
-    "styled-system": "5.1.5"
+    "styled-system": "5.1.5",
+    "webpack": "5.3.1"
   },
   "scripts": {
     "b": "babel-node --extensions \".es6,.js,.es,.jsx,.mjs,.ts,.tsx\"",
