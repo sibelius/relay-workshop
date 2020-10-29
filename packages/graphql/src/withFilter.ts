@@ -1,9 +1,11 @@
 import { ConnectionArguments } from 'graphql-relay';
 
-type ArgsWithFilter = {
+export type ArgsWithFilter = ConnectionArguments & {
   filters: { [key: string]: string };
-} & { [key: string]: string } & ConnectionArguments;
-export const withFilter = (args: ArgsWithFilter, filters: object) => ({
+  [key: string]: any;
+};
+
+export const withFilter = (args: ArgsWithFilter | { [key: string]: any }, filters: object) => ({
   ...args,
   filters: {
     ...(args.filters || {}),

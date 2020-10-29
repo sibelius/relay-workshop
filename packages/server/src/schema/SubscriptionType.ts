@@ -5,7 +5,7 @@ import PostNew from '../modules/post/subscription/PostNewSubscription';
 const SubscriptionType = new GraphQLObjectType({
   name: 'Subscription',
   fields: {
-    PostNew,
+    PostNew: PostNew as any,
   },
 });
 

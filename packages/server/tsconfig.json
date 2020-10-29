@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.shared.json",
+  "compilerOptions": {
+    /* Redirect output structure to the directory. */
+    "outDir": "./build/tsc",
+    /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
+    "rootDir": "./src",
+    /* Enable project compilation */
+    "composite": true,
+    /* Specify file to store incremental compilation information */
+    "tsBuildInfoFile": "./build/tsconfig.tsbuildinfo"
+  },
+  "references": [
+    { "path": "../graphql" }
+  ],
+  "include": ["src/**/*.ts"],
+  "exclude": ["src/**/*.spec.ts", "src/**/__tests__/**/*", "src/modules/*/fixture/*", "test/**/*"]
+}

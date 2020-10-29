@@ -72,7 +72,7 @@ const pageInfoType = new GraphQLObjectType({
 });
 
 function resolveMaybeThunk<T>(thingOrThunk: Thunk<T>): T {
-  return typeof thingOrThunk === 'function' ? thingOrThunk() : thingOrThunk;
+  return typeof thingOrThunk === 'function' ? (thingOrThunk as () => T)() : thingOrThunk;
 }
 
 export function connectionDefinitions(config: ConnectionConfig): GraphQLConnectionDefinitions {

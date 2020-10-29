@@ -1,3 +1,12 @@
+declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
+  namespace NodeJS {
+    interface Global {
+      __COUNTERS__: Record<string, 0>;
+    }
+  }
+}
+
 export const getCounter = (key: string) => {
   if (key in global.__COUNTERS__) {
     global.__COUNTERS__[key]++;

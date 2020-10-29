@@ -3,17 +3,18 @@ import { subscriptionWithClientId } from 'graphql-relay-subscription';
 import PostType from '../PostType';
 import pubSub, { EVENTS } from '../../../pubSub';
 import * as PostLoader from '../PostLoader';
+import { GraphQLContext } from '../../../graphql/types';
 
 type PostNew = {
   postId: string;
 };
-const PostNewSubscription = subscriptionWithClientId({
+const PostNewSubscription = subscriptionWithClientId<PostNew, GraphQLContext>({
   name: 'PostNew',
   inputFields: {},
   outputFields: {
     post: {
       type: PostType,
-      resolve: async ({ id }, _, context) => await PostLoader.load(context, id),
+      resolve: async ({ id }: any, _, context) => await PostLoader.load(context, id),
     },
   },
   subscribe: (input, context) => {
@@ -22,7 +23,7 @@ const PostNewSubscription = subscriptionWithClientId({
 
     return pubSub.asyncIterator(EVENTS.POST.NEW);
   },
-  getPayload: async (obj: PostNew) => {
+  getPayload: (obj: PostNew) => {
     return {
       id: obj.postId,
     };
