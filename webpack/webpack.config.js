@@ -18,14 +18,13 @@ export default {
     libraryTarget: 'commonjs2',
     path: outputPath,
     filename: outputFilename,
-    futureEmitAssets: true,
   },
   target: 'node',
   externals: [
     nodeExternals(),
     nodeExternals({
       modulesDir: path.resolve(__dirname, '../node_modules'),
-      whitelist: [/@feedback/],
+      allowlist: [/@workshop/],
     }),
   ],
   module: {

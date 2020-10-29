@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "scripts": {
     "copy-env": "cp .env.example .env",
-    "start": "webpack-dev-server --hot"
+    "start": "webpack serve --hot"
   }
 }

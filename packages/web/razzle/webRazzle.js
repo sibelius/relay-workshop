@@ -12,7 +12,7 @@ function modify(baseConfig, env, webpack, userOptions = {}) {
   const options = { ...defaultOptions, ...userOptions };
   const webpackConfig = { ...baseConfig };
 
-  webpackConfig.devtool = 'cheap-eval-source-map';
+  webpackConfig.devtool = 'eval-cheap-source-map';
   webpackConfig.resolve.extensions = [...webpackConfig.resolve.extensions, '.ts', '.tsx'];
 
   // Client: ts optimization on development
@@ -33,7 +33,6 @@ function modify(baseConfig, env, webpack, userOptions = {}) {
       ...webpackConfig.output,
       filename: 'static/js/[chunkhash].js',
       chunkFilename: 'static/js/chunk-[id]-[chunkhash].js',
-      futureEmitAssets: true,
     };
   }
 
