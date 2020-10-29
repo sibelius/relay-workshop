@@ -1,11 +1,12 @@
 import React, { useCallback } from 'react';
 
 import { Flex } from 'rebass';
-import { Button } from '@workshop/ui';
+import InfiniteScroll from 'react-infinite-scroller';
 import { graphql } from 'react-relay/hooks';
 
 import { usePaginationFragment } from 'react-relay/lib/hooks';
 
+import Loading from './Loading';
 import Post from './Post';
 
 import { Feed_query, Feed_query$key } from './__generated__/Feed_query.graphql';
@@ -49,17 +50,20 @@ const Feed = (props: Props) => {
     if (isLoadingNext) {
       return;
     }
-    loadNext(1);
+    loadNext(10);
   }, [isLoadingNext, loadNext]);
 
   return (
     <Flex flexDirection='column'>
-      {posts.edges.map(({ node }) => (
-        <Post key={node.id} post={node} />
-      ))}
-      <Button mt='10px' onClick={loadMore}>
-        Load More
-      </Button>
+      <InfiniteScroll
+        pageStart={0}
+        loadMore={loadMore}
+        hasMore={posts.pageInfo.hasNextPage}
+        loader={<Loading />}
+        useWindow
+      >
+      {posts.edges.map(({ node }) => <Post key={node.id} post={node} />)}
+      </InfiniteScroll>
     </Flex>
   );
 };
