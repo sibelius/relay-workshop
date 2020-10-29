@@ -72,3 +72,5 @@ differencify_reports
 .parcel-cache
 
 .vscode
+.yarn
+.yarnrc
