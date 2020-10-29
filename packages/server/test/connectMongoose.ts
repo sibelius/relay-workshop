@@ -16,6 +16,7 @@ const mongooseOptions = {
   connectTimeoutMS: 10000,
   useNewUrlParser: true,
   useCreateIndex: true,
+  useUnifiedTopology: true,
 };
 
 export async function connectMongoose() {

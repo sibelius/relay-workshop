@@ -15,8 +15,6 @@ module.exports = {
     path: path.join(cwd, 'build'),
     publicPath: '/',
     pathinfo: false,
-    // https://github.com/webpack/webpack/pull/8642
-    futureEmitAssets: true,
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json', '.mjs'],
