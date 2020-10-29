@@ -5,7 +5,7 @@ import webpack from 'webpack';
 
 import config, { outputPath, outputFilename } from './webpack/webpack.config';
 
-const compilerRunPromise = compiler =>
+const compilerRunPromise = (compiler) =>
   new Promise((resolve, reject) => {
     compiler.run((err, stats) => {
       if (err) {
@@ -20,29 +20,30 @@ const compilerRunPromise = compiler =>
     });
   });
 
-const runProgram = () => {
+export function onExit(childProcess: ChildProcess): Promise<void> {
+  return new Promise((resolve, reject) => {
+    childProcess.once('exit', (code: number) => {
+      if (code === 0) {
+        resolve(undefined);
+      } else {
+        reject(new Error(`Exit with error code: ${code}`));
+      }
+    });
+    childProcess.once('error', (err: Error) => {
+      reject(err);
+    });
+  });
+}
+
+const runProgram = async () => {
   const outputFile = path.join(outputPath, outputFilename);
+  const execArgs = process.argv.slice(3);
 
-  const program = spawn(process.execPath, [outputFile], {
-    std: 'inherit',
-    shell: true,
+  const childProcess = spawn(process.execPath, [outputFile, ...execArgs], {
+    stdio: [process.stdin, process.stdout, process.stderr],
   });
 
-  program.stdout.setEncoding('utf8');
-  program.stdout.on('data', data => {
-    // eslint-disable-next-line
-    console.log(data);
-  });
-
-  program.stderr.setEncoding('utf8');
-  program.stderr.on('data', data => {
-    // eslint-disable-next-line
-    console.log(data);
-  });
-
-  program.on('exit', code => {
-    process.exit(code);
-  });
+  await onExit(childProcess);
 };
 
 (async () => {
@@ -54,12 +55,13 @@ const runProgram = () => {
 
     const compiler = webpack(wpConfig);
 
+    // eslint-disable-next-line
     const stats = await compilerRunPromise(compiler);
 
     // eslint-disable-next-line
-    console.log(stats.toString());
+    // console.log(stats.toString());
 
-    runProgram();
+    await runProgram();
   } catch (err) {
     // eslint-disable-next-line
     console.log('err: ', err);

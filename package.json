@@ -105,8 +105,9 @@
     "seed": "yarn b ./packages/server/scripts/seed.ts",
     "server": "yarn workspace @workshop/server start",
     "server:serve": "yarn workspace @workshop/server serve",
-    "update-schema": "yarn workspace @workshop/server update-schema",
+    "update-schema": "yarn w ./packages/server/scripts/updateSchema.ts",
     "web": "yarn workspace @workshop/web start",
+    "w": "yarn b webpackx.ts",
     "start": "concurrently --kill-others \"yarn workspace @workshop/web start\" \"yarn workspace @workshop/server start\""
   },
   "workspaces": {
