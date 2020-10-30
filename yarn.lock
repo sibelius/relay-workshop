@@ -3168,10 +3168,10 @@
   dependencies:
     dotenv "^8.2.0"
 
-"@types/dotenv-webpack@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@types/dotenv-webpack/-/dotenv-webpack-3.0.0.tgz#9a9156d5b569a61d61f42bf7dbe3903eee8e59b7"
-  integrity sha512-f3gFAkxOWAjsDemXp8y3gMeSfr8QilpFRt6g808hi5dQGXGU7M53Ty/INwLos7IpeJkt1fHMI+qcZ4QGnGUbGA==
+"@types/dotenv-webpack@5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@types/dotenv-webpack/-/dotenv-webpack-5.0.0.tgz#df0df8f8ee06ea67c78b0242fd6b649f21b0b38e"
+  integrity sha512-gp8J0NxbxrrrL/8+72dp4zcI7VRFQQ5IWVgVgwJTiDG414wKe36w/XPvqv+RiAGv4SRxcMAgy6e8lNWuHNpYWg==
   dependencies:
     "@types/webpack" "*"
 
