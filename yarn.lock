@@ -9865,10 +9865,10 @@ html-webpack-plugin@4.5.0, html-webpack-plugin@^4.0.4:
     tapable "^1.1.3"
     util.promisify "1.0.0"
 
-html-webpack-plugin@5.0.0-alpha.7:
-  version "5.0.0-alpha.7"
-  resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-5.0.0-alpha.7.tgz#192713f346f2db8d9e18a2bf9612306e4722d33a"
-  integrity sha512-3sdfEqSjuJ41YpIzweFkTDepTVIuIflvfOh8MhACNk92gE2MsOXL/7MYTVvIHEAeXp+9yTx0DTkYlInCUmtP/g==
+html-webpack-plugin@5.0.0-alpha.9:
+  version "5.0.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-5.0.0-alpha.9.tgz#6d04b3be2186756530730e1fb160b04aa0e32383"
+  integrity sha512-DrV19vE3DMSBx374Me0AAS8uhVY4JZtn206g0zfE/iWh+ZCMXgtnR+6uabPF71fkZtnG2HvDUQerHPUNKchszg==
   dependencies:
     "@types/html-minifier-terser" "^5.0.0"
     "@types/tapable" "^1.0.5"
