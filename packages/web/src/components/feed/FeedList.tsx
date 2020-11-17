@@ -16,8 +16,8 @@ const FeedList = (props: Props) => {
   const { data, loadNext, isLoadingNext } = usePaginationFragment<FeedListPaginationQuery, _>(
     graphql`
       fragment FeedList_query on Query
-        @argumentDefinitions(first: { type: Int, defaultValue: 3 }, after: { type: String })
-        @refetchable(queryName: "FeedListPaginationQuery") {
+      @argumentDefinitions(first: { type: Int, defaultValue: 3 }, after: { type: String })
+      @refetchable(queryName: "FeedListPaginationQuery") {
         posts(first: $first, after: $after) @connection(key: "Feed_posts", filters: []) {
           endCursorOffset
           startCursorOffset

@@ -20,8 +20,8 @@ const PostComments = (props: Props) => {
   const [post, refetch] = useRefetchableFragment<PostCommentsRefetchQuery, _>(
     graphql`
       fragment PostComments_post on Post
-        @argumentDefinitions(first: { type: Int, defaultValue: 3 }, after: { type: String })
-        @refetchable(queryName: "PostCommentsRefetchQuery") {
+      @argumentDefinitions(first: { type: Int, defaultValue: 3 }, after: { type: String })
+      @refetchable(queryName: "PostCommentsRefetchQuery") {
         id
         comments(first: $first, after: $after) @connection(key: "PostComments_comments", filters: []) {
           endCursorOffset

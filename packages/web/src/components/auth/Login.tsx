@@ -60,10 +60,7 @@ const Login = () => {
     },
     validateOnMount: true,
     validationSchema: yup.object().shape({
-      email: yup
-        .string()
-        .email()
-        .required('Email is required'),
+      email: yup.string().email().required('Email is required'),
       password: yup.string().required('Password is required'),
     }),
     onSubmit,

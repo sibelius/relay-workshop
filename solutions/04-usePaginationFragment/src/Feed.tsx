@@ -19,8 +19,8 @@ const Feed = (props: Props) => {
   const { data, loadNext, isLoadingNext } = usePaginationFragment<FeedPaginationQuery, Feed_query$key>(
     graphql`
       fragment Feed_query on Query
-        @argumentDefinitions(first: { type: Int, defaultValue: 1 }, after: { type: String })
-        @refetchable(queryName: "FeedPaginationQuery") {
+      @argumentDefinitions(first: { type: Int, defaultValue: 1 }, after: { type: String })
+      @refetchable(queryName: "FeedPaginationQuery") {
         posts(first: $first, after: $after) @connection(key: "Feed_posts", filters: []) {
           endCursorOffset
           startCursorOffset
@@ -62,7 +62,9 @@ const Feed = (props: Props) => {
         loader={<Loading />}
         useWindow
       >
-      {posts.edges.map(({ node }) => <Post key={node.id} post={node} />)}
+        {posts.edges.map(({ node }) => (
+          <Post key={node.id} post={node} />
+        ))}
       </InfiniteScroll>
     </Flex>
   );
