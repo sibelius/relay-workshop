@@ -27,7 +27,7 @@ jobs:
           CI: true
 
       - name: Format
-        run: yarn prettier
+        run: yarn prettier **/src/**/*.(ts|tsx)
         env:
           CI: true
 
