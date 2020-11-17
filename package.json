@@ -101,7 +101,7 @@
     "jest": "jest",
     "lint:staged": "lint-staged",
     "postinstall": "yarn patch-package && yarn workspace @workshop/graphql build",
-    "prettier": "prettier --write",
+    "prettier": "prettier --write **/src/**/*.ts && prettier --write **/src/**/*.tsx",
     "relay": "yarn workspace @workshop/web relay",
     "seed": "yarn b ./packages/server/scripts/seed.ts",
     "server": "yarn workspace @workshop/server start",
