@@ -44,7 +44,7 @@
     "eslint-config-okonet": "7.0.2",
     "eslint-config-prettier": "^6.15.0",
     "eslint-config-shellscape": "2.1.0",
-    "eslint-import-resolver-lerna": "^1.1.0",
+    "eslint-import-resolver-lerna": "^2.0.0",
     "eslint-import-resolver-typescript": "2.3.0",
     "eslint-import-resolver-webpack": "0.13.0",
     "eslint-plugin-cypress": "2.11.2",
