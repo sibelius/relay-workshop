@@ -4,7 +4,7 @@ import { flexbox, space, layout } from 'styled-system';
 
 export const Card = styled(_Card)`
   display: flex;
-  flexDirection: row;
+  flex-direction: row;
   ${flexbox}
   ${space}
   ${layout}

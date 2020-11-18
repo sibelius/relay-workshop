@@ -26,11 +26,7 @@ const env = new Environment({
 
 if (__DEV__) {
   window.relayEnvironment = env;
-  window.debugRelayStore = () =>
-    env
-      .getStore()
-      .getSource()
-      .toJSON();
+  window.debugRelayStore = () => env.getStore().getSource().toJSON();
 }
 
 export default env;

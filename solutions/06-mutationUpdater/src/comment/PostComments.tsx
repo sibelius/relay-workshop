@@ -15,7 +15,7 @@ const PostComments = (props: Props) => {
   const post = useFragment<PostComments_post$key>(
     graphql`
       fragment PostComments_post on Post
-        @argumentDefinitions(first: { type: Int, defaultValue: 3 }, after: { type: String }) {
+      @argumentDefinitions(first: { type: Int, defaultValue: 3 }, after: { type: String }) {
         id
         comments(first: $first, after: $after) @connection(key: "PostComments_comments", filters: []) {
           endCursorOffset
