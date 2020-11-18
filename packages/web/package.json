@@ -19,7 +19,7 @@
     "react": "0.0.0-experimental-f42431abe",
     "react-dom": "0.0.0-experimental-f42431abe",
     "react-infinite-scroller": "1.2.4",
-    "react-relay": "0.0.0-experimental-8cc94ddc",
+    "react-relay": "10.1.0",
     "react-router-config": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "4.0.0",

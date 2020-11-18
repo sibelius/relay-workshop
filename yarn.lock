@@ -8650,20 +8650,6 @@ fbjs@^0.8.0, fbjs@^0.8.12:
     setimmediate "^1.0.5"
     ua-parser-js "^0.7.18"
 
-fbjs@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-1.0.0.tgz#52c215e0883a3c86af2a7a776ed51525ae8e0a5a"
-  integrity sha512-MUgcMEJaFhCaF1QtWGnmq9ZDRAzECTCRAF7O6UZIlAlkTs1SasiX9aP0Iw7wfD2mJ7wDTNfg2w7u5fSCwJk1OA==
-  dependencies:
-    core-js "^2.4.1"
-    fbjs-css-vars "^1.0.0"
-    isomorphic-fetch "^2.1.1"
-    loose-envify "^1.0.0"
-    object-assign "^4.1.0"
-    promise "^7.1.1"
-    setimmediate "^1.0.5"
-    ua-parser-js "^0.7.18"
-
 fbjs@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-3.0.0.tgz#0907067fb3f57a78f45d95f1eacffcacd623c165"
@@ -16413,15 +16399,15 @@ react-refresh@^0.8.1, react-refresh@^0.8.3:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
   integrity sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
 
-react-relay@0.0.0-experimental-8cc94ddc:
-  version "0.0.0-experimental-8cc94ddc"
-  resolved "https://registry.yarnpkg.com/react-relay/-/react-relay-0.0.0-experimental-8cc94ddc.tgz#bafb71953fb41ebf9c122cb0443e96ab8df3e710"
-  integrity sha512-1yrSsajW8dOQlCWa8EHc7YcxgXnlyypPKtdooCZ7Oq6gQ3FawR4Ft5wvCiILoORDwI343BcpG5NZ4Ed7ae0O8Q==
+react-relay@10.1.0:
+  version "10.1.0"
+  resolved "https://registry.yarnpkg.com/react-relay/-/react-relay-10.1.0.tgz#49c6d34b50cf7f99c3d28327bb804ee9bf756023"
+  integrity sha512-xtjgtrVTxIji2VWtlOA+93eVo3uNtZI1aFgRAOaQ58ITLNB3gMAlFX6V4u25XJKKWCIEL1GmVdGSiZQ0So6zYA==
   dependencies:
     "@babel/runtime" "^7.0.0"
-    fbjs "^1.0.0"
+    fbjs "^3.0.0"
     nullthrows "^1.1.1"
-    relay-runtime "9.0.0"
+    relay-runtime "10.1.0"
 
 react-router-config@^5.0.1:
   version "5.1.1"
@@ -16968,14 +16954,6 @@ relay-runtime@10.1.0:
   dependencies:
     "@babel/runtime" "^7.0.0"
     fbjs "^3.0.0"
-
-relay-runtime@9.0.0:
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/relay-runtime/-/relay-runtime-9.0.0.tgz#03633be24dc3c8b56e472062de6f103954e3d296"
-  integrity sha512-bBNeNmwMOnqtCvuPnWdgflFSVwuUbGV7m7os8qHCUCSJ52DT5B/m6K4wisVh3eZ0QWYr7hheRDfmR/3UEdUe5A==
-  dependencies:
-    "@babel/runtime" "^7.0.0"
-    fbjs "^1.0.0"
 
 relay-test-utils@10.1.0:
   version "10.1.0"
