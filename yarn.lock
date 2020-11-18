@@ -16545,7 +16545,7 @@ react-transition-group@^4.4.0:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react@0.0.0-experimental-f42431abe, react@^16.8.2:
+react@0.0.0-experimental-f42431abe, react@0.14.0, react@^16.8.2:
   version "0.0.0-experimental-f42431abe"
   resolved "https://registry.yarnpkg.com/react/-/react-0.0.0-experimental-f42431abe.tgz#bacc0acb4722a2a4c92e4a33cce76978005b3f76"
   integrity sha512-uKx0z0+j6E9NU43cd8IwGM05dgAClJ0Sa3JVk7nx5k5S4yxNDVdVTw0/1ibS5Y7fRI6ZatBk4IYA6g49QdXApA==
