@@ -71,12 +71,10 @@
   "lint-staged": {
     "*.{js,ts,tsx}": [
       "yarn prettier",
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ],
     "*.yml": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   },
   "pre-commit": "lint:staged",
