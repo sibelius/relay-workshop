@@ -1,11 +1,57 @@
 import path from 'path';
-import { spawn } from 'child_process';
+import { spawn, ChildProcess } from 'child_process';
+import webpack, { Compiler, Configuration } from 'webpack';
+import nodeExternals from 'webpack-node-externals';
 
-import webpack from 'webpack';
+const cwd = process.cwd();
 
-import config, { outputPath, outputFilename } from './webpack/webpack.config';
+export const outputPath = path.join(cwd, '.webpack');
+export const outputFilename = 'bundle.js';
 
-const compilerRunPromise = (compiler) =>
+const config: Configuration = {
+  context: cwd,
+  mode: 'development',
+  devtool: false,
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.json', '.mjs'],
+  },
+  output: {
+    libraryTarget: 'commonjs2',
+    path: outputPath,
+    filename: outputFilename,
+  },
+  target: 'node',
+  externals: [
+    nodeExternals(),
+    nodeExternals({
+      modulesDir: path.resolve(__dirname, '../node_modules'),
+      allowlist: [/@workshop/],
+    }),
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.mjs$/,
+        type: 'javascript/auto',
+      },
+      {
+        test: /\.(js|jsx|ts|tsx)?$/,
+        use: {
+          loader: 'babel-loader?cacheDirectory',
+        },
+        exclude: [/node_modules/, path.resolve(__dirname, '.serverless'), path.resolve(__dirname, '.webpack')],
+      },
+    ],
+  },
+  plugins: [],
+  node: {
+    global: false,
+    __dirname: false,
+    __filename: false,
+  },
+};
+
+const compilerRunPromise = (compiler: Compiler) =>
   new Promise((resolve, reject) => {
     compiler.run((err, stats) => {
       if (err) {
@@ -48,18 +94,9 @@ const runProgram = async () => {
 
 (async () => {
   try {
-    const wpConfig = {
-      ...config,
-      entry: path.join(__dirname, process.argv[2]),
-    };
+    const compiler = webpack(config, () => path.join(__dirname, process.argv[2]));
 
-    const compiler = webpack(wpConfig);
-
-    // eslint-disable-next-line
-    const stats = await compilerRunPromise(compiler);
-
-    // eslint-disable-next-line
-    // console.log(stats.toString());
+    await compilerRunPromise(compiler);
 
     await runProgram();
   } catch (err) {
