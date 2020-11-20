@@ -8,17 +8,19 @@ import { schema as schemaGraphql } from '../src/schema/schema';
 
 const writeFileAsync = promisify(fs.writeFile);
 
+const cwd = process.cwd();
+
 (async () => {
   const configs = [
     {
       schema: schemaGraphql,
-      path: '../schema',
+      path: path.join(cwd, `./packages/server/schema/schema.graphql`),
     },
   ];
 
   await Promise.all([
     ...configs.map(async config => {
-      await writeFileAsync(path.join(__dirname, `${config.path}/schema.graphql`), printSchema(config.schema));
+      await writeFileAsync(config.path, printSchema(config.schema));
     }),
   ]);
 
