@@ -97,6 +97,7 @@
     "copy-envs": "cp packages/server/.env.example packages/server/.env && cp packages/web/.env.example packages/web/.env",
     "get-token": "yarn b ./packages/server/scripts/getToken.ts",
     "jest": "jest",
+    "lint": "yarn eslint --fix",
     "lint:staged": "lint-staged",
     "postinstall": "yarn patch-package && yarn workspace @workshop/graphql build",
     "prettier": "prettier --write **/src/**/*.ts && prettier --write **/src/**/*.tsx",
