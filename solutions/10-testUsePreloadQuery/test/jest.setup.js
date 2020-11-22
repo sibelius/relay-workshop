@@ -1,6 +1,3 @@
-import '@testing-library/jest-dom';
-import '@testing-library/react/cleanup-after-each';
-
 window.scrollTo = () => {};
 
 jest.mock('../src/relay/Environment', () => {
