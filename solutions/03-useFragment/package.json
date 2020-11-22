@@ -6,5 +6,9 @@
     "relay": "relay-compiler",
     "relay:watch": "relay-compiler --watch",
     "start": "webpack serve --hot"
+  },
+  "devDependencies": {
+    "relay-compiler": "10.1.0",
+    "webpack": "5.6.0"
   }
 }
