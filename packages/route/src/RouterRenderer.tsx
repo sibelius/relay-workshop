@@ -1,4 +1,4 @@
-import React, { useEffect, useTransition, Suspense, useState } from 'react';
+import React, { useEffect, unstable_useTransition as useTransition, Suspense, useState } from 'react';
 import { match } from 'react-router';
 import styled, { keyframes } from 'styled-components';
 
