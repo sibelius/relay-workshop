@@ -2,8 +2,8 @@
   "name": "@workshop/babelweb",
   "version": "1.0.0",
   "dependencies": {
-    "@babel/cli": "7.12.1",
-    "@babel/core": "7.12.3",
+    "@babel/cli": "7.12.7",
+    "@babel/core": "7.12.7",
     "@babel/node": "7.12.6",
     "@babel/plugin-proposal-async-generator-functions": "7.12.1",
     "@babel/plugin-proposal-class-properties": "7.12.1",
@@ -11,12 +11,12 @@
     "@babel/plugin-proposal-export-namespace-from": "7.12.1",
     "@babel/plugin-proposal-nullish-coalescing-operator": "7.12.1",
     "@babel/plugin-proposal-object-rest-spread": "7.12.1",
-    "@babel/plugin-proposal-optional-chaining": "7.12.1",
+    "@babel/plugin-proposal-optional-chaining": "7.12.7",
     "@babel/plugin-transform-async-to-generator": "7.12.1",
-    "@babel/preset-env": "7.12.1",
+    "@babel/preset-env": "7.12.7",
     "@babel/preset-flow": "7.12.1",
-    "@babel/preset-react": "7.12.5",
-    "@babel/preset-typescript": "7.12.1",
+    "@babel/preset-react": "7.12.7",
+    "@babel/preset-typescript": "7.12.7",
     "babel-plugin-relay": "10.1.0"
   },
   "main": "index.js"
