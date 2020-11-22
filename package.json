@@ -84,7 +84,7 @@
     "url": "https://github.com/sibelius/relay-workshop.git"
   },
   "resolutions": {
-    "graphql": "15.4.0",
+    "graphql": "15.4.0-experimental-stream-defer.1",
     "react": "0.0.0-experimental-f77c7b9d7",
     "react-dom": "0.0.0-experimental-f77c7b9d7",
     "styled-system": "5.1.5",
