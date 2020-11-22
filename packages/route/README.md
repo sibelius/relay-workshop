@@ -28,7 +28,7 @@ export const routes = [
         const RootQuery = require('./components/feed/__generated__/RootQuery.graphql');
   
         return {
-          rootQuery: preloadQuery(
+          rootQuery: loadQuery(
             Environment,
             RootQuery,
             {},
@@ -47,7 +47,7 @@ export const routes = [
               const PostDetailQuery = require('./components/feed/post/__generated__/PostDetailQuery.graphql');
     
               return {
-                postDetailQuery: preloadQuery(
+                postDetailQuery: loadQuery(
                   Environment,
                   PostDetailQuery,
                   {

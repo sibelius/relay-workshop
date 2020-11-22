@@ -1,4 +1,4 @@
-import { preloadQuery } from 'react-relay/hooks';
+import { loadQuery } from '@workshop/relay';
 
 import { JSResource } from '@workshop/route';
 
@@ -38,7 +38,7 @@ export const routes: Route[] = [
       const RootQuery = require('./components/feed/__generated__/RootQuery.graphql');
 
       return {
-        rootQuery: preloadQuery(
+        rootQuery: loadQuery(
           Environment,
           RootQuery,
           {},
@@ -57,7 +57,7 @@ export const routes: Route[] = [
           const FeedQuery = require('./components/feed/__generated__/FeedQuery.graphql');
 
           return {
-            feedQuery: preloadQuery(
+            feedQuery: loadQuery(
               Environment,
               FeedQuery,
               {},
@@ -76,7 +76,7 @@ export const routes: Route[] = [
           const PostDetailQuery = require('./components/feed/post/__generated__/PostDetailQuery.graphql');
 
           return {
-            postDetailQuery: preloadQuery(
+            postDetailQuery: loadQuery(
               Environment,
               PostDetailQuery,
               {
