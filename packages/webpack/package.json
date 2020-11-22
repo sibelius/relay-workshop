@@ -1,5 +1,15 @@
 {
   "name": "@workshop/webpack",
   "version": "1.0.0",
-  "main": "src/webpackConfig.js"
+  "main": "src/webpackConfig.js",
+  "devDependencies": {
+    "@pmmmwh/react-refresh-webpack-plugin": "0.4.3",
+    "css-loader": "5.0.1",
+    "dotenv-webpack": "^5.1.0",
+    "html-webpack-plugin": "5.0.0-alpha.14",
+    "webpack-cli": "^4.1.0",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "5.4.0",
+    "webpack-plugin-serve": "^1.2.0"
+  }
 }

@@ -4,5 +4,8 @@
   "scripts": {
     "copy-env": "cp .env.example .env",
     "start": "webpack serve --hot"
+  },
+  "devDependencies": {
+    "webpack": "5.6.0"
   }
 }
