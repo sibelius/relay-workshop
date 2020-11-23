@@ -22,7 +22,7 @@
     "react-relay": "0.0.0-experimental-c818bac3",
     "react-router-config": "^5.0.1",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "4.0.0",
+    "react-scripts": "4.0.1",
     "rebass": "4.0.7",
     "relay-compiler": "10.1.0",
     "relay-compiler-language-typescript": "13.0.2",
