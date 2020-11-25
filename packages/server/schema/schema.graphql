@@ -1,32 +1,53 @@
-"""The root of all... queries"""
+"""
+The root of all... queries
+"""
 type Query {
-  """Fetches an object given its ID"""
+  """
+  Fetches an object given its ID
+  """
   node(
-    """The ID of an object"""
+    """
+    The ID of an object
+    """
     id: ID!
   ): Node
 
-  """Fetches objects given their IDs"""
+  """
+  Fetches objects given their IDs
+  """
   nodes(
-    """The IDs of objects"""
+    """
+    The IDs of objects
+    """
     ids: [ID!]!
   ): [Node]!
   me: User
   posts(after: String, first: Int, before: String, last: Int): PostConnection!
+  searchPosts(query: String!): [String!]
 }
 
-"""An object with an ID"""
+"""
+An object with an ID
+"""
 interface Node {
-  """The id of the object."""
+  """
+  The id of the object.
+  """
   id: ID!
 }
 
-"""User data"""
+"""
+User data
+"""
 type User implements Node {
-  """The ID of an object"""
+  """
+  The ID of an object
+  """
   id: ID!
 
-  """mongoose _id"""
+  """
+  mongoose _id
+  """
   _id: String!
   name: String
   email: String
@@ -36,9 +57,13 @@ type User implements Node {
   updatedAt: String
 }
 
-"""A connection to a list of items."""
+"""
+A connection to a list of items.
+"""
 type PostConnection {
-  """Number of items in this connection"""
+  """
+  Number of items in this connection
+  """
   count: Int
 
   """
@@ -49,49 +74,79 @@ type PostConnection {
   """
   totalCount: Int
 
-  """Offset from start"""
+  """
+  Offset from start
+  """
   startCursorOffset: Int!
 
-  """Offset till end"""
+  """
+  Offset till end
+  """
   endCursorOffset: Int!
 
-  """Information to aid in pagination."""
+  """
+  Information to aid in pagination.
+  """
   pageInfo: PageInfoExtended!
 
-  """A list of edges."""
+  """
+  A list of edges.
+  """
   edges: [PostEdge]!
 }
 
-"""Information about pagination in a connection."""
+"""
+Information about pagination in a connection.
+"""
 type PageInfoExtended {
-  """When paginating forwards, are there more items?"""
+  """
+  When paginating forwards, are there more items?
+  """
   hasNextPage: Boolean!
 
-  """When paginating backwards, are there more items?"""
+  """
+  When paginating backwards, are there more items?
+  """
   hasPreviousPage: Boolean!
 
-  """When paginating backwards, the cursor to continue."""
+  """
+  When paginating backwards, the cursor to continue.
+  """
   startCursor: String
 
-  """When paginating forwards, the cursor to continue."""
+  """
+  When paginating forwards, the cursor to continue.
+  """
   endCursor: String
 }
 
-"""An edge in a connection."""
+"""
+An edge in a connection.
+"""
 type PostEdge {
-  """The item at the end of the edge"""
+  """
+  The item at the end of the edge
+  """
   node: Post
 
-  """A cursor for use in pagination"""
+  """
+  A cursor for use in pagination
+  """
   cursor: String!
 }
 
-"""Post data"""
+"""
+Post data
+"""
 type Post implements Node {
-  """The ID of an object"""
+  """
+  The ID of an object
+  """
   id: ID!
 
-  """mongoose _id"""
+  """
+  mongoose _id
+  """
   _id: String!
   content: String
   author: User
@@ -99,15 +154,21 @@ type Post implements Node {
   commentsCount: Int!
   comments(after: String, first: Int, before: String, last: Int): CommentConnection!
 
-  """whether logged user liked this post"""
+  """
+  whether logged user liked this post
+  """
   meHasLiked: Boolean!
   createdAt: String
   updatedAt: String
 }
 
-"""A connection to a list of items."""
+"""
+A connection to a list of items.
+"""
 type CommentConnection {
-  """Number of items in this connection"""
+  """
+  Number of items in this connection
+  """
   count: Int
 
   """
@@ -118,41 +179,63 @@ type CommentConnection {
   """
   totalCount: Int
 
-  """Offset from start"""
+  """
+  Offset from start
+  """
   startCursorOffset: Int!
 
-  """Offset till end"""
+  """
+  Offset till end
+  """
   endCursorOffset: Int!
 
-  """Information to aid in pagination."""
+  """
+  Information to aid in pagination.
+  """
   pageInfo: PageInfoExtended!
 
-  """A list of edges."""
+  """
+  A list of edges.
+  """
   edges: [CommentEdge]!
 }
 
-"""An edge in a connection."""
+"""
+An edge in a connection.
+"""
 type CommentEdge {
-  """The item at the end of the edge"""
+  """
+  The item at the end of the edge
+  """
   node: Comment
 
-  """A cursor for use in pagination"""
+  """
+  A cursor for use in pagination
+  """
   cursor: String!
 }
 
-"""Comment data"""
+"""
+Comment data
+"""
 type Comment implements Node {
-  """The ID of an object"""
+  """
+  The ID of an object
+  """
   id: ID!
 
-  """mongoose _id"""
+  """
+  mongoose _id
+  """
   _id: String!
   body: String
   user: User
   post: Post
   likesCount: Int!
 
-  """whether logged user liked this post"""
+  """
+  whether logged user liked this post
+  """
   meHasLiked: Boolean!
   createdAt: String
   updatedAt: String

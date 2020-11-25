@@ -1,0 +1,16 @@
+{
+  "name": "@workshop/13-useQueryLoader",
+  "version": "1.0.0",
+  "scripts": {
+    "copy-env": "cp .env.example .env",
+    "relay": "relay-compiler",
+    "relay:watch": "relay-compiler --watch",
+    "start": "webpack serve --hot"
+  },
+  "devDependencies": {
+    "webpack": "5.6.0"
+  },
+  "dependencies": {
+    "use-debounce": "^5.1.0"
+  }
+}
