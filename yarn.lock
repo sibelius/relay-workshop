@@ -18720,7 +18720,7 @@ react-dev-utils@^9.0.3:
     strip-ansi "5.2.0"
     text-table "0.2.0"
 
-react-dom@0.0.0-experimental-f77c7b9d7, react-dom@^0.0.0-experimental-4ead6b530, react-dom@^16.8.6:
+react-dom@0.0.0-experimental-f77c7b9d7, react-dom@^16.8.6:
   version "0.0.0-experimental-f77c7b9d7"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-0.0.0-experimental-f77c7b9d7.tgz#1e6efbeb8520d1b6f244837be87d1e51e1cdd107"
   integrity sha512-PD2/RrECWX2rlmE+h6qFF0stpwjPkrCZ6T9ePGzCPV7KpuoJRDBO1PU5fLoCjSTPE9SsoFc6f6usuY1EMkbhng==
@@ -18958,7 +18958,7 @@ react-transition-group@^4.4.0:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react@0.0.0-experimental-f77c7b9d7, react@^0.0.0-experimental-4ead6b530, react@^16.8.6:
+react@0.0.0-experimental-f77c7b9d7, react@^16.8.6:
   version "0.0.0-experimental-f77c7b9d7"
   resolved "https://registry.yarnpkg.com/react/-/react-0.0.0-experimental-f77c7b9d7.tgz#24beef9c87e519d3c5f464762d532f08d63ce229"
   integrity sha512-eZAnAbmYQoScvxzAmGYGv83us/imQkh+zjiMeqkFxSUahnvl9PmQJ6jDBQF9ErpgJsxWga7164YFkv/0SA8rjQ==
@@ -20046,14 +20046,6 @@ saxes@^5.0.0:
   integrity sha512-5LBh1Tls8c9xgGjw3QrMwETmTMVk0oFgvrFSvWx62llR2hcEInrKNZ2GZCCuuy2lvWrdl5jhbpeqc5hRYKFOcw==
   dependencies:
     xmlchars "^2.2.0"
-
-scheduler@0.0.0-experimental-4ead6b530:
-  version "0.0.0-experimental-4ead6b530"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.0.0-experimental-4ead6b530.tgz#0dca3287308d34caed0651941f1ce7c9d64a0824"
-  integrity sha512-AzUR6EiDuY32oAnfELgVFPasfovJw4+NtRy7RIam0IUOSgNZKcazqcHzsoW1zDw3AzIBlD1VlRvl5SPJRSlTPg==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
 
 scheduler@0.0.0-experimental-f77c7b9d7:
   version "0.0.0-experimental-f77c7b9d7"

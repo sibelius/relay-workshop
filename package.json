@@ -118,9 +118,5 @@
       "workshop-solutions/*",
       "slides/*"
     ]
-  },
-  "dependencies": {
-    "react": "^0.0.0-experimental-4ead6b530",
-    "react-dom": "^0.0.0-experimental-4ead6b530"
   }
 }

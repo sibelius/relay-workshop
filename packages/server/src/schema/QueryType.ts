@@ -1,4 +1,4 @@
-import { GraphQLObjectType, GraphQLNonNull } from 'graphql';
+import { GraphQLObjectType, GraphQLNonNull, GraphQLString, GraphQLList } from 'graphql';
 
 import { connectionArgs } from '@workshop/graphql';
 
@@ -24,6 +24,15 @@ const QueryType = new GraphQLObjectType({
         ...connectionArgs,
       },
       resolve: async (_, args, context) => await PostLoader.loadAll(context, args),
+    },
+    searchPosts: {
+      type: GraphQLList(GraphQLNonNull(GraphQLString)),
+      args: {
+        query: {
+          type: GraphQLNonNull(GraphQLString),
+        },
+      },
+      resolve: () => [],
     },
   }),
 });
