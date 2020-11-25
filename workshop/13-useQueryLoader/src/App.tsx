@@ -34,9 +34,13 @@ const App = () => {
   const [query, setQuery] = React.useState('');
   const [debouncedQuery] = useDebounce(query, 1000);
 
+  const [startTransition] = React.unstable_useTransition({ timeoutMs: 1550 } as any);
+
   React.useEffect(() => {
     if (debouncedQuery) {
-      loadQuery({ query: debouncedQuery });
+      startTransition(() => {
+        loadQuery({ query: debouncedQuery });
+      });
     } else {
       disposeQuery();
     }
@@ -45,9 +49,15 @@ const App = () => {
   return (
     <Content>
       <Box sx={{ position: 'relative' }}>
-        <TextFieldMaterial fullWidth variant='outlined' value={query} onChange={e => setQuery(e.target.value)} />
+        <TextFieldMaterial
+          fullWidth
+          variant='outlined'
+          value={query}
+          onChange={e => setQuery(e.target.value)}
+          placeholder='What do you want to search?'
+        />
         {searchPostsQueryReference && (
-          <React.Suspense fallback={<Text>Loading</Text>}>
+          <React.Suspense fallback={<Text>Suspense Loading...</Text>}>
             <Flex sx={{ position: 'absolute', width: '100%' }}>
               <Results queryReference={searchPostsQueryReference} />
             </Flex>
