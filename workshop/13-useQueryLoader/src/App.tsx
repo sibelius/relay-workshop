@@ -1,21 +1,23 @@
 import React from 'react';
 
-import { graphql, usePreloadedQuery, useQueryLoader } from 'react-relay/hooks';
+import { graphql } from 'react-relay/hooks';
 import { Box, Flex, Text } from 'rebass';
-import { useDebounce } from 'use-debounce';
 
 import { Content, TextFieldMaterial } from '@workshop/ui';
 
-import { AppSearchPostsQuery } from './__generated__/AppSearchPostsQuery.graphql';
-
-const searchPostsQuery = graphql`
-  query AppSearchPostsQuery($query: String!) {
-    searchPosts(query: $query)
-  }
-`;
+/**
+ * TODO: Create $searchPostsQuery.
+ */
+const searchPostsQuery = graphql``;
 
 const Results = ({ queryReference }: { queryReference: any }) => {
-  const { searchPosts } = usePreloadedQuery<AppSearchPostsQuery>(searchPostsQuery, queryReference);
+  /**
+   * TODO: Add usePreloadedQuery that takes $searchPostsQuery and $queryReference to
+   * retrieve $searchPosts values.
+   *
+   * @see {@link https://relay.dev/docs/en/experimental/api-reference#usepreloadedquery|usepreloadedquery}
+   */
+  const searchPosts: string[] = [];
 
   return (
     <Flex backgroundColor='lightblue' width='100%' flexDirection='column' padding={3}>
@@ -29,22 +31,17 @@ const Results = ({ queryReference }: { queryReference: any }) => {
 };
 
 const App = () => {
-  const [searchPostsQueryReference, loadQuery, disposeQuery] = useQueryLoader<AppSearchPostsQuery>(searchPostsQuery);
+  /**
+   * TODO: use useQueryLoader to get the values of the variables below.
+   *
+   * You may want to use useEffect to perform loadQuery() every time that
+   * query state changes.
+   *
+   * @see {@link https://relay.dev/docs/en/experimental/api-reference#usequeryloader|usequeryloader}
+   */
+  const [searchPostsQueryReference, loadQuery, disposeQuery] = [{}, '', () => null];
 
   const [query, setQuery] = React.useState('');
-  const [debouncedQuery] = useDebounce(query, 1000);
-
-  const [startTransition] = React.unstable_useTransition({ timeoutMs: 1550 } as any);
-
-  React.useEffect(() => {
-    if (debouncedQuery) {
-      startTransition(() => {
-        loadQuery({ query: debouncedQuery });
-      });
-    } else {
-      disposeQuery();
-    }
-  }, [debouncedQuery]);
 
   return (
     <Content>

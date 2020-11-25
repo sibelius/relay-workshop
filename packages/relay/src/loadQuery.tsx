@@ -3,6 +3,4 @@ import { loadQuery as loadQueryModule } from 'react-relay/hooks';
 
 const { loadQuery } = loadQueryModule;
 
-export {
-  loadQuery,
-};
+export { loadQuery };
