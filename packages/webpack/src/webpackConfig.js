@@ -38,6 +38,7 @@ module.exports = {
     hotOnly: false,
     compress: true,
     open: true,
+    port: '8007',
   },
   plugins: [
     new dotEnv({
