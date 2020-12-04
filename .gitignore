@@ -41,12 +41,10 @@ distTs
 # Random things to ignore
 ignore/
 package-lock.json
-/yarn-offline-cache
 .cache
 
 **/node_modules
 .idea
-yarn-error.log
 .vs/
 
 # IDE/Editor GraphQL Extensions
@@ -58,12 +56,6 @@ __generated__/
 # Flow log
 flow.log
 
-# Random things to ignore
-yarn-offline-cache
-
-hard-source-cache/
-**/hard-source-cache/
-
 # Cypress
 cypress/videos
 cypress/screenshots
@@ -72,5 +64,20 @@ differencify_reports
 .parcel-cache
 
 .vscode
-.yarn
-.yarnrc
+
+# yarn berry 2 ignore strategies
+## Zero Installs
+.yarn/*
+# !.yarn/cache - disable zero installs for now \o/
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+## non Zero Installs
+#.yarn/*
+#!.yarn/releases
+#!.yarn/plugins
+#!.yarn/sdks
+#!.yarn/versions
+#.pnp.*
