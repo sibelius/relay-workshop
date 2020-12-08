@@ -26,7 +26,7 @@
     "rebass": "4.0.7",
     "relay-compiler": "10.1.0",
     "relay-compiler-language-typescript": "13.0.2",
-    "relay-config": "10.1.0",
+    "relay-config": "10.1.1",
     "relay-runtime": "10.1.0",
     "styled-components": "5.2.1",
     "styled-system": "5.1.5",
