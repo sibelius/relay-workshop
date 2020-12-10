@@ -9928,10 +9928,10 @@ fd@~0.0.2:
   resolved "https://registry.yarnpkg.com/fd/-/fd-0.0.3.tgz#b3240de86dbf5a345baae7382a07d4713566ff0c"
   integrity sha512-iAHrIslQb3U68OcMSP0kkNWabp7sSN6d2TBSb2JO3gcLJVDd4owr/hKM4SFJovFOUeeXeItjYgouEDTMWiVAnA==
 
-fetch-multipart-graphql@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/fetch-multipart-graphql/-/fetch-multipart-graphql-2.2.0.tgz#fc31216ef446e5936ef9900aa986e5c8eff928f6"
-  integrity sha512-uhYtKnAvrenJHub5q36ydrZI1mtQ6J9UD7L1+dnif7crVAo1dL0ulWmv65FEtpVkbdJ5NynHhfJL+micdSLqkA==
+fetch-multipart-graphql@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/fetch-multipart-graphql/-/fetch-multipart-graphql-3.0.0.tgz#61c9c1623beb4a7330e86ee72e6906148cd20acf"
+  integrity sha512-asrZG9CMaRUJmzqU+jqyBp52IB3MEzO38bhrPVB73BNAZ8ShBYgQUPOR9d/kYO4dfIrJIki/sTjeNYbUGuqOzQ==
 
 figgy-pudding@^3.4.1, figgy-pudding@^3.5.1:
   version "3.5.2"
