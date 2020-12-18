@@ -7,7 +7,7 @@
     "@material-ui/icons": "4.11.2",
     "@material-ui/styles": "4.11.2",
     "@types/yup": "^0.29.9",
-    "fetch-multipart-graphql": "^2.2.0",
+    "fetch-multipart-graphql": "^3.0.0",
     "formik": "2.2.5",
     "identity-obj-proxy": "^3.0.0",
     "isomorphic-fetch": "^3.0.0",
