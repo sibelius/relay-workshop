@@ -9149,15 +9149,15 @@ eslint-config-react-app@^6.0.0:
   dependencies:
     confusing-browser-globals "^1.0.10"
 
-eslint-config-shellscape@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-shellscape/-/eslint-config-shellscape-2.1.0.tgz#a581548bb839ad6eb3a653369b389e267209688a"
-  integrity sha512-FRIx9ZWNdOsP4rAAHSK3bGwzxizIUAmFSlpMIvTHA841xazV3gZlAtkwVn0p/Hpl1MloQmvkty5aBFBfvWJvqQ==
+eslint-config-shellscape@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-shellscape/-/eslint-config-shellscape-3.0.0.tgz#ad78e3ca803b1a0d97632f163bfb2c88fdb00edc"
+  integrity sha512-n6dw2nQ6tPyfIifgVbDHNS7ruMwXCvwPTb+6CZgqjYkoC6o6RUL7Fr7sNDsYfvxW6f0ys6CG1KurmqN40Foq1A==
   dependencies:
-    eslint "^6.2.2"
+    eslint "^7.16.0"
     eslint-plugin-import "^2.14.0"
     eslint-plugin-prettier "^3.1.0"
-    prettier "^1.14.2"
+    prettier "^2.2.1"
 
 eslint-import-resolver-lerna@^2.0.0:
   version "2.0.0"
@@ -9411,7 +9411,7 @@ eslint-webpack-plugin@^2.1.0:
     micromatch "^4.0.2"
     schema-utils "^2.7.0"
 
-eslint@7.16.0, eslint@^7.11.0:
+eslint@7.16.0, eslint@^7.11.0, eslint@^7.16.0:
   version "7.16.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.16.0.tgz#a761605bf9a7b32d24bb7cde59aeb0fd76f06092"
   integrity sha512-iVWPS785RuDA4dWuhhgXTNrGxHHK3a8HLSMBgbbU59ruJDubUraXN8N5rn7kb8tG6sjg74eE0RA3YWT51eusEw==
@@ -9454,7 +9454,7 @@ eslint@7.16.0, eslint@^7.11.0:
     text-table "^0.2.0"
     v8-compile-cache "^2.0.3"
 
-eslint@^6.2.2, eslint@^6.8.0:
+eslint@^6.8.0:
   version "6.8.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-6.8.0.tgz#62262d6729739f9275723824302fb227c8c93ffb"
   integrity sha512-K+Iayyo2LtyYhDSYwz5D5QdWw0hCacNzyq1Y821Xna2xSJj7cijoLLYmLxTQgcgZ9mC61nryMy9S7GRbYpI5Ig==
@@ -18142,12 +18142,12 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@2.2.1, prettier@^2.0.5:
+prettier@2.2.1, prettier@^2.0.5, prettier@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.2.1.tgz#795a1a78dd52f073da0cd42b21f9c91381923ff5"
   integrity sha512-PqyhM2yCjg/oKkFPtTGUojv7gnZAoG80ttl45O6x2Ug/rMJw4wcc9k6aaf2hibP7BGVCCM33gZoGjyvt9mm16Q==
 
-prettier@^1.14.2, prettier@^1.16.0:
+prettier@^1.16.0:
   version "1.19.1"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.19.1.tgz#f7d7f5ff8a9cd872a7be4ca142095956a60797cb"
   integrity sha512-s7PoyDv/II1ObgQunCbB9PdLmUcBZcnWOcxDh7O0N/UwDEsHyqkW+Qh28jW+mVuCdx7gLB0BotYI1Y6uI9iyew==
