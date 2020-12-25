@@ -18846,15 +18846,15 @@ react-refresh@^0.8.1, react-refresh@^0.8.3:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
   integrity sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
 
-react-relay@0.0.0-experimental-c818bac3:
-  version "0.0.0-experimental-c818bac3"
-  resolved "https://registry.yarnpkg.com/react-relay/-/react-relay-0.0.0-experimental-c818bac3.tgz#a6a1d88e106142aea23d24efbdd457c79bd38d1a"
-  integrity sha512-vVHYNXc+AfifV2EqDiAH7H3wZVrp1umVANx5yh9xPLi6OhNG5g3pDGfOT7TNqj4TFGI6Z2VlAGZHikFaAp/O1Q==
+react-relay@10.1.2:
+  version "10.1.2"
+  resolved "https://registry.yarnpkg.com/react-relay/-/react-relay-10.1.2.tgz#b7da7f739cebe42d2a708775b03c554eb535afc5"
+  integrity sha512-MQ5lnEKTGMtDMLfKKPrRdHAR/zRPvXPbo1F5+MjSTpsNN4ThlPs6pj53hQs4+sI7rlqcGLTMew57EPKMdNM1UQ==
   dependencies:
     "@babel/runtime" "^7.0.0"
     fbjs "^3.0.0"
     nullthrows "^1.1.1"
-    relay-runtime "10.1.0"
+    relay-runtime "10.1.2"
 
 react-router-config@^5.0.1:
   version "5.1.1"
@@ -19456,14 +19456,6 @@ relay-config@10.1.2:
   integrity sha512-QElkqvk/rMWb9ZCL/A5in1T0vxC7F1gM8pVXjeoRaNRO8bfUd7VrpnwYrYMv4XgqEIIuV2F8DbppaI6uyK5/Yg==
   dependencies:
     cosmiconfig "^5.0.5"
-
-relay-runtime@10.1.0:
-  version "10.1.0"
-  resolved "https://registry.yarnpkg.com/relay-runtime/-/relay-runtime-10.1.0.tgz#4753bf36e95e8d862cef33608e3d98b4ed730d16"
-  integrity sha512-bxznLnQ1ST6APN/cFi7l0FpjbZVchWQjjhj9mAuJBuUqNNCh9uV+UTRhpQF7Q8ycsPp19LHTpVyGhYb0ustuRQ==
-  dependencies:
-    "@babel/runtime" "^7.0.0"
-    fbjs "^3.0.0"
 
 relay-runtime@10.1.2:
   version "10.1.2"
