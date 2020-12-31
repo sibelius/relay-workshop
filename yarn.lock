@@ -18544,10 +18544,10 @@ razzle-dev-utils@latest:
     strip-ansi "6.0.0"
     webpack-dev-server "~3.10.3"
 
-razzle-plugin-typescript@3.3.8:
-  version "3.3.8"
-  resolved "https://registry.yarnpkg.com/razzle-plugin-typescript/-/razzle-plugin-typescript-3.3.8.tgz#f7111cf92d9a97a7dbe601937c79ec0254002d92"
-  integrity sha512-SlwU1phiJm/kO5yEwdEVcmlVrjRSeFvyktEfDItx38ZkFPMO5skErccB/wEgW4F9V6F35xjwYPjIT/lUL/QSpA==
+razzle-plugin-typescript@3.3.9:
+  version "3.3.9"
+  resolved "https://registry.yarnpkg.com/razzle-plugin-typescript/-/razzle-plugin-typescript-3.3.9.tgz#39c6ace1493f722d1b3c448375494ae8a38112cd"
+  integrity sha512-33oWPYDMD57sVaxWKFo5ojpjoreRsHKKQaqscS+bgmVEw9dTn403RaXsQh2ejs03myVjUDSM1KtiuDVePI2aRw==
   dependencies:
     fork-ts-checker-webpack-plugin "^3.1.1"
     razzle-dev-utils latest
