@@ -2,7 +2,7 @@
   "name": "@workshop/graphql",
   "version": "1.0.0",
   "dependencies": {
-    "@entria/graphql-mongo-helpers": "0.0.1",
+    "@entria/graphql-mongo-helpers": "1.0.0",
     "@entria/graphql-mongoose-loader": "^4.3.2",
     "graphql-relay": "^0.6.0"
   },
