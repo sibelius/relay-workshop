@@ -1514,10 +1514,10 @@
     ts-node "^9"
     tslib "^2"
 
-"@entria/graphql-mongo-helpers@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@entria/graphql-mongo-helpers/-/graphql-mongo-helpers-1.0.0.tgz#069b097566ff90b0c585783c6cb7598f7c160b2f"
-  integrity sha512-N1thTLhzUUDQ3fGX4U81A79fIpULVsGlC3/Ku6SlognD1JsPUWqiLzO03CSF3r621yIkc2PaowDD6bQVlVNX0Q==
+"@entria/graphql-mongo-helpers@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@entria/graphql-mongo-helpers/-/graphql-mongo-helpers-1.0.1.tgz#dbc6506f08e7dac629451fd42f6f260ee36cc178"
+  integrity sha512-6VG0Ht5qiG7Q2/A/exXnQ6QY5Tr5aWVAwq9Zd+98ou2RXbvggNHmKlFa3WVCrq/x0g1JV4X8vS/kAHpbwxs6dg==
   dependencies:
     "@entria/graphql-mongoose-loader" "^4.3.2"
     "@types/graphql" "14.5.0"
