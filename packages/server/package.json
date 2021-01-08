@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "@babel/polyfill": "7.12.1",
-    "@entria/graphql-mongo-helpers": "1.0.0",
+    "@entria/graphql-mongo-helpers": "1.0.1",
     "@entria/graphql-mongoose-loader": "^4.3.2",
     "bcryptjs": "2.4.3",
     "dataloader": "2.0.0",
