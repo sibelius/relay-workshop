@@ -24,7 +24,7 @@
     "mongodb-memory-server-global": "6.9.3",
     "mongoose": "^5.10.15",
     "subscriptions-transport-ws": "^0.9.18",
-    "supertest": "6.0.1"
+    "supertest": "6.1.1"
   },
   "devDependencies": {
     "@types/kcors": "^2.2.3",
