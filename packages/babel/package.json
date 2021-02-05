@@ -2,7 +2,7 @@
   "name": "@workshop/babel",
   "version": "1.0.0",
   "dependencies": {
-    "@babel/cli": "7.12.10",
+    "@babel/cli": "7.12.13",
     "@babel/core": "7.12.10",
     "@babel/node": "7.12.13",
     "@babel/plugin-proposal-async-generator-functions": "7.12.12",
