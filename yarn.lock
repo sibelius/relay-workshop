@@ -371,7 +371,7 @@
   dependencies:
     lodash "^4.17.19"
 
-"@babel/helper-remap-async-to-generator@^7.12.1", "@babel/helper-remap-async-to-generator@^7.12.13":
+"@babel/helper-remap-async-to-generator@^7.12.13":
   version "7.12.13"
   resolved "https://registry.yarnpkg.com/@babel/helper-remap-async-to-generator/-/helper-remap-async-to-generator-7.12.13.tgz#170365f4140e2d20e5c88f8ba23c24468c296878"
   integrity sha512-Qa6PU9vNcj1NZacZZI1Mvwt+gXDH6CTfgAkSjeRMLE8HxtDK76+YDId6NQR+z7Rgd5arhD2cIbS74r0SxD6PDA==
@@ -503,13 +503,13 @@
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.12.14.tgz#4adb7c5eef1d437ef965ad1569cd826db8c11dc9"
   integrity sha512-xcfxDq3OrBnDsA/Z8eK5/2iPcLD8qbOaSSfOw4RA6jp4i7e6dEQ7+wTwxItEwzcXPQcsry5nZk96gmVPKletjQ==
 
-"@babel/plugin-proposal-async-generator-functions@7.12.12", "@babel/plugin-proposal-async-generator-functions@^7.12.1":
-  version "7.12.12"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-async-generator-functions/-/plugin-proposal-async-generator-functions-7.12.12.tgz#04b8f24fd4532008ab4e79f788468fd5a8476566"
-  integrity sha512-nrz9y0a4xmUrRq51bYkWJIO5SBZyG2ys2qinHsN0zHDHVsUaModrkpyWWWXfGqYQmOL3x9sQIcTNN/pBGpo09A==
+"@babel/plugin-proposal-async-generator-functions@7.12.13", "@babel/plugin-proposal-async-generator-functions@^7.12.1":
+  version "7.12.13"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-async-generator-functions/-/plugin-proposal-async-generator-functions-7.12.13.tgz#d1c6d841802ffb88c64a2413e311f7345b9e66b5"
+  integrity sha512-1KH46Hx4WqP77f978+5Ye/VUbuwQld2hph70yaw2hXS2v7ER2f3nlpNMu909HO2rbvP0NKLlMVDPh9KXklVMhA==
   dependencies:
-    "@babel/helper-plugin-utils" "^7.10.4"
-    "@babel/helper-remap-async-to-generator" "^7.12.1"
+    "@babel/helper-plugin-utils" "^7.12.13"
+    "@babel/helper-remap-async-to-generator" "^7.12.13"
     "@babel/plugin-syntax-async-generators" "^7.8.0"
 
 "@babel/plugin-proposal-class-properties@7.12.1", "@babel/plugin-proposal-class-properties@^7.0.0", "@babel/plugin-proposal-class-properties@^7.12.1", "@babel/plugin-proposal-class-properties@^7.8.3":
