@@ -9442,12 +9442,12 @@ eslint-plugin-react@7.22.0, eslint-plugin-react@^7.20.6, eslint-plugin-react@^7.
     resolve "^1.18.1"
     string.prototype.matchall "^4.0.2"
 
-eslint-plugin-relay@1.8.1:
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-relay/-/eslint-plugin-relay-1.8.1.tgz#7363b1c134cfa3468377d46eadaa3a2b9b73dfcf"
-  integrity sha512-7xhyLDq3Bv5q+lKZUMYcRHq1OdFsgjuY5hAu3NNY+TkPPsdcp80de7eEJ8Ux5M3YJpnyr2UAHGksx5Exx6+I7g==
+eslint-plugin-relay@1.8.2:
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-relay/-/eslint-plugin-relay-1.8.2.tgz#925f59231e39dfc076b3cbb39ef793c13381579e"
+  integrity sha512-bqIfXJnPMd6iHPitONSi8JqxrWQWaX4Rqk1shusKDlUu5vswUgoqOEGgqE8nDu6SmejBUZMz0vY+ROvq5wqOsw==
   dependencies:
-    graphql "^14.0.0 || ^15.0.0-rc.1"
+    graphql "^14.0.0 || ^15.0.0"
 
 eslint-plugin-testing-library@^3.9.2:
   version "3.9.2"
@@ -11525,7 +11525,7 @@ graphql-type-json@^0.3.2:
   resolved "https://registry.yarnpkg.com/graphql-type-json/-/graphql-type-json-0.3.2.tgz#f53a851dbfe07bd1c8157d24150064baab41e115"
   integrity sha512-J+vjof74oMlCWXSvt0DOf2APEdZOCdubEvGDUAlqH//VBYcOYsGgRW7Xzorr44LvkjiuvecWc8fChxuZZbChtg==
 
-graphql@*, graphql@15.4.0, graphql@15.4.0-experimental-stream-defer.1, "graphql@^14.0.0 || ^15.0.0-rc.1", "graphql@^14.5.3 || ^15.0.0", graphql@^14.6.0, graphql@^14.7.0, graphql@^15.1.0:
+graphql@*, graphql@15.4.0, graphql@15.4.0-experimental-stream-defer.1, "graphql@^14.0.0 || ^15.0.0", "graphql@^14.5.3 || ^15.0.0", graphql@^14.6.0, graphql@^14.7.0, graphql@^15.1.0:
   version "15.4.0-experimental-stream-defer.1"
   resolved "https://registry.yarnpkg.com/graphql/-/graphql-15.4.0-experimental-stream-defer.1.tgz#46ae3fd2b532284575e7ddcf6c4f08aa7fe53fa3"
   integrity sha512-zlGgY7aLlIofjO0CfTpCYK/tMccnj+5jvjnkTnW5qOxYhgEltuCvpMNYOJ67gz6L1flTIigt5BVEM8JExgtW3w==
