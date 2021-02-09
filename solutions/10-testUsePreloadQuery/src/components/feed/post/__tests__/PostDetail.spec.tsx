@@ -3,7 +3,7 @@ import '@testing-library/jest-dom/extend-expect';
 import React from 'react';
 import { MockPayloadGenerator } from 'relay-test-utils';
 
-import { preloadQuery } from 'react-relay/hooks';
+import { loadQuery } from 'react-relay/hooks';
 
 import { JSResource } from '@workshop/route';
 
@@ -24,7 +24,7 @@ it('should render post like button', async () => {
       //   const PostDetailQuery = require('../__generated__/PostDetailQuery.graphql');
       //
       //   return {
-      //     postDetailQuery: preloadQuery(
+      //     postDetailQuery: loadQuery(
       //       Environment,
       //       PostDetailQuery,
       //       {
@@ -67,7 +67,7 @@ it('should render post like button', async () => {
   });
 
   const prepared = {
-    postDetailQuery: preloadQuery(Environment, PostDetailQuery, variables, {
+    postDetailQuery: loadQuery(Environment, PostDetailQuery, variables, {
       fetchPolicy: 'store-or-network',
     }),
   };

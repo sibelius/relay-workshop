@@ -5,7 +5,8 @@ import React from 'react';
 // eslint-disable-next-line
 import { MockPayloadGenerator } from 'relay-test-utils';
 // eslint-disable-next-line
-import { usePreloadedQuery, graphql, preloadQuery } from 'react-relay/hooks';
+import { usePreloadedQuery, graphql } from 'react-relay/hooks';
+import { loadQuery } from '@workshop/relay';
 
 // eslint-disable-next-line
 import { Environment } from '../../../../relay';

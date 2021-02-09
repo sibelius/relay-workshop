@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import { preloadQuery } from 'react-relay/hooks';
+import { loadQuery } from '@workshop/relay';
 
 import { JSResource } from '@workshop/route';
 

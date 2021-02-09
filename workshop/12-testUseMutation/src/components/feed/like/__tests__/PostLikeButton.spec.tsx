@@ -4,7 +4,8 @@ import '@testing-library/jest-dom/extend-expect';
 import React from 'react';
 import { MockPayloadGenerator } from 'relay-test-utils';
 
-import { usePreloadedQuery, graphql, preloadQuery } from 'react-relay/hooks';
+import { usePreloadedQuery, graphql } from 'react-relay/hooks';
+import { loadQuery } from '@workshop/relay';
 
 import { Environment } from '../../../../relay';
 import PostLikeButton from '../PostLikeButton';
@@ -60,7 +61,7 @@ it('should render post like button and likes count', async () => {
   // PostDetailQuery
   Environment.mock.queueOperationResolver(operation => MockPayloadGenerator.generate(operation, customMockResolvers));
 
-  const preloadedQuery = preloadQuery(
+  const preloadedQuery = loadQuery(
     Environment,
     PostLikeButtonSpecQuery,
     {
