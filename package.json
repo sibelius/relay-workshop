@@ -65,7 +65,7 @@
     "lint-staged": "^10.5.0",
     "pre-commit": "^1.2.2",
     "prettier": "2.2.1",
-    "typescript": "4.1.4"
+    "typescript": "4.1.5"
   },
   "license": "MIT",
   "lint-staged": {
