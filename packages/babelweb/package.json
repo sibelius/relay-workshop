@@ -13,7 +13,7 @@
     "@babel/plugin-proposal-object-rest-spread": "7.12.13",
     "@babel/plugin-proposal-optional-chaining": "7.12.16",
     "@babel/plugin-transform-async-to-generator": "7.12.13",
-    "@babel/preset-env": "7.12.13",
+    "@babel/preset-env": "7.12.16",
     "@babel/preset-flow": "7.12.13",
     "@babel/preset-react": "7.12.13",
     "@babel/preset-typescript": "7.12.13",
