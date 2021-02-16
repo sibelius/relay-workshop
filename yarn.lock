@@ -372,7 +372,7 @@
   resolved "https://registry.yarnpkg.com/@babel/helper-validator-identifier/-/helper-validator-identifier-7.12.11.tgz#c9a1f021917dcb5ccf0d4e453e399022981fc9ed"
   integrity sha512-np/lG3uARFybkoHokJUmf1QfEvRVCPbmQeUQpKow5cQ3xWrV9i3rUHodKDJPQfTVX61qKi+UdYk8kik84n7XOw==
 
-"@babel/helper-validator-option@^7.12.1", "@babel/helper-validator-option@^7.12.11", "@babel/helper-validator-option@^7.12.16":
+"@babel/helper-validator-option@^7.12.1", "@babel/helper-validator-option@^7.12.16":
   version "7.12.16"
   resolved "https://registry.yarnpkg.com/@babel/helper-validator-option/-/helper-validator-option-7.12.16.tgz#f73cbd3bbba51915216c5dea908e9b206bb10051"
   integrity sha512-uCgsDBPUQDvzr11ePPo4TVEocxj8RXjUVSC/Y8N1YpVAI/XDdUwGJu78xmlGhTxj2ntaWM7n9LQdRtyhOzT2YQ==
@@ -19444,10 +19444,10 @@ relateurl@^0.2.7:
   resolved "https://registry.yarnpkg.com/relateurl/-/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
   integrity sha1-VNvzd+UUQKypCkzSdGANP/LYiKk=
 
-relay-compiler-language-typescript@13.0.4:
-  version "13.0.4"
-  resolved "https://registry.yarnpkg.com/relay-compiler-language-typescript/-/relay-compiler-language-typescript-13.0.4.tgz#f48429f9d5da6ee93a49143c39dfa08d31088b70"
-  integrity sha512-R6IIf1TvdBlKBFU6bgABOXIfYToLLbFa3BAaeElOOVJbCZfugn8azgXPgeDxv33x54zWLoQqAbEHJ+e1UUTU4w==
+relay-compiler-language-typescript@13.0.6:
+  version "13.0.6"
+  resolved "https://registry.yarnpkg.com/relay-compiler-language-typescript/-/relay-compiler-language-typescript-13.0.6.tgz#9ecdced7e5a036754cb8554abf73adcf3676935a"
+  integrity sha512-oASBz2tPWu+11oBPPjIDHlsEFBeIsd4Y0pfsn5TEYs6rW0F9ZvNIV1pdBXbVFjOPH1c16bgx03tkknClQuKUfQ==
   dependencies:
     immutable "^4.0.0-rc.12"
     invariant "^2.2.4"
