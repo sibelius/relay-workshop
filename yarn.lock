@@ -414,10 +414,10 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/node@7.12.16":
-  version "7.12.16"
-  resolved "https://registry.yarnpkg.com/@babel/node/-/node-7.12.16.tgz#f07d9a7c3b96bf3d1fa21b71d1275b0010f0a568"
-  integrity sha512-liaUYuO5FL9+wP7tSkFdwNSma/gj2H9c4jqOxTIN82m5R08QJRVoYJRCrgXpahaLLoB7icyRXSkg9uGJC6iJgQ==
+"@babel/node@7.12.17":
+  version "7.12.17"
+  resolved "https://registry.yarnpkg.com/@babel/node/-/node-7.12.17.tgz#f892e4a16a108a62f7d4cc327f1608d8dae0d556"
+  integrity sha512-NLe32pSqoweEFvCEHxvJq3DgBx3oBLtgNfdW5936pMEc5TE2P8jVmDiY6JXQccn/4tt9sBLMUuh+tF3VXWyMhA==
   dependencies:
     "@babel/register" "^7.12.13"
     commander "^4.0.1"
