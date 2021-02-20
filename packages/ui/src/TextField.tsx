@@ -1,18 +1,21 @@
 import React from 'react';
 import { useField } from 'formik';
-import _TextFieldMaterial from '@material-ui/core/TextField';
+import _TextFieldMaterial, { TextFieldProps as MaterialUITextFieldProps } from '@material-ui/core/TextField';
 import styled from 'styled-components';
-import { flexbox, space } from 'styled-system';
+import { flexbox, FlexProps, space, SpaceProps } from 'styled-system';
 
-export const TextFieldMaterial = styled(_TextFieldMaterial)`
+type TextFieldProps = MaterialUITextFieldProps &
+  FlexProps &
+  SpaceProps & {
+    name: string;
+  };
+
+export const TextFieldMaterial = styled(_TextFieldMaterial)<TextFieldProps>`
   ${flexbox}
   ${space}
 `;
 
-type Props = {
-  name: string;
-};
-const TextField = (props: Props) => {
+const TextField = (props: TextFieldProps) => {
   const { name, ...rest } = props;
 
   const [field] = useField(name);

@@ -1,11 +1,12 @@
 import styled from 'styled-components';
-import { flexbox, space, layout } from 'styled-system';
+import { flexbox, space, layout, LayoutProps, SpaceProps, FlexProps, compose } from 'styled-system';
 
-export const Content = styled.div`
+interface ContentProps extends FlexProps, SpaceProps, LayoutProps {}
+
+export const Content = styled.div<ContentProps>`
   max-width: 500px;
   margin: 0 auto;
   padding: 35px;
-  ${flexbox}
-  ${space}
-  ${layout}
+
+  ${compose(flexbox, space, layout)}
 `;
