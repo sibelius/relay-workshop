@@ -21,7 +21,7 @@ export const getInitials = (name: string) => {
 };
 
 type Props = {
-  showName: boolean;
+  showName?: boolean;
   user: UserAvatar_user$key;
 };
 const UserAvatar = (props: Props) => {
@@ -37,7 +37,7 @@ const UserAvatar = (props: Props) => {
     props.user,
   );
 
-  const initials = getInitials(user.name);
+  const initials = user?.name ? getInitials(user.name) : getInitials('Guest');
 
   return (
     <Flex alignItems='center'>

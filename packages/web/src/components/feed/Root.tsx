@@ -18,7 +18,7 @@ import { FeedQuery } from './__generated__/FeedQuery.graphql';
 type Props = {
   children: React.ReactNode;
   prepared: {
-    rootQuery: any;
+    rootQuery: unknown;
   };
 };
 const Root = ({ children, prepared }: Props) => {

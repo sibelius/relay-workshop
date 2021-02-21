@@ -46,7 +46,7 @@ const PostDetail = ({ prepared }: Props) => {
   return (
     <Content>
       <BackButton />
-      <Post post={data.post} me={me} isDetail={true} />
+      <Post post={post} me={me} isDetail={true} />
     </Content>
   );
 };

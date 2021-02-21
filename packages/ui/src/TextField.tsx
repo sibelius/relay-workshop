@@ -2,10 +2,10 @@ import React from 'react';
 import { useField } from 'formik';
 import _TextFieldMaterial, { TextFieldProps as MaterialUITextFieldProps } from '@material-ui/core/TextField';
 import styled from 'styled-components';
-import { flexbox, FlexProps, space, SpaceProps } from 'styled-system';
+import { flexbox, FlexboxProps, space, SpaceProps } from 'styled-system';
 
 type TextFieldProps = MaterialUITextFieldProps &
-  FlexProps &
+  FlexboxProps &
   SpaceProps & {
     name: string;
   };
