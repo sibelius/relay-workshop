@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import _Card from '@material-ui/core/Card';
-import { flexbox, space, layout } from 'styled-system';
+import { flexbox, space, layout, FlexboxProps, SpaceProps, compose, LayoutProps } from 'styled-system';
 
-export const Card = styled(_Card)`
+interface CardProps extends FlexboxProps, SpaceProps, LayoutProps {}
+
+export const Card = styled(_Card)<CardProps>`
   display: flex;
   flex-direction: row;
-  ${flexbox}
-  ${space}
-  ${layout}
+  ${compose(flexbox, space, layout)}
 `;

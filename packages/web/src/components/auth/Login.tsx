@@ -12,7 +12,10 @@ import { useHistory, Link } from '@workshop/route';
 
 import { useMutation } from '@workshop/relay';
 
-import { UserLoginWithEmailMutation } from './__generated__/UserLoginWithEmailMutation.graphql';
+import {
+  UserLoginWithEmailMutation,
+  UserLoginWithEmailMutationResponse,
+} from './__generated__/UserLoginWithEmailMutation.graphql';
 import { UserLoginWithEmail } from './UserLoginWithEmailMutation';
 import { updateToken } from './security';
 
@@ -37,14 +40,16 @@ const Login = () => {
           password: values.password,
         },
       },
-      onCompleted: ({ UserLoginWithEmail }) => {
-        if (UserLoginWithEmail.error) {
+      onCompleted: ({ UserLoginWithEmail }: UserLoginWithEmailMutationResponse) => {
+        if (UserLoginWithEmail?.error) {
           enqueueSnackbar(UserLoginWithEmail.error);
           return;
         }
 
-        enqueueSnackbar(UserLoginWithEmail.success);
-        updateToken(UserLoginWithEmail.token);
+        enqueueSnackbar(UserLoginWithEmail?.success);
+        if (UserLoginWithEmail?.token) {
+          updateToken(UserLoginWithEmail.token);
+        }
 
         history.push('/');
       },
@@ -84,7 +89,7 @@ const Login = () => {
                 color='primary'
                 mt='10px'
                 type='submit'
-                onClick={handleSubmit}
+                onClick={() => handleSubmit()}
                 disabled={isSubmitDisabled}
               >
                 Login

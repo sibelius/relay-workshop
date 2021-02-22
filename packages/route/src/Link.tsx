@@ -9,7 +9,7 @@ import { useRoutingContext } from './RoutingContext';
 type Props = {
   to: string;
   children: React.ReactNode;
-  className: string;
+  className?: string;
 };
 const Link = (props: Props) => {
   const router = useRoutingContext();
