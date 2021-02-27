@@ -75,5 +75,5 @@ it('should render post like button', async () => {
   // uncomment to check DOM
   debug();
 
-  expect(getByText('Welcome to React Europe')).toBeTruthy();
+  expect(getByText('Welcome to Relay Workshop')).toBeTruthy();
 });

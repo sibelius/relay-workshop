@@ -50,7 +50,7 @@ it('should render post like button', async () => {
 
   const customMockResolvers = {
     Post: () => ({
-      content: 'Welcome to React Europe',
+      content: 'Welcome to Relay Workshop',
     }),
   };
 
@@ -78,5 +78,5 @@ it('should render post like button', async () => {
   // uncomment to check DOM
   // debug();
 
-  expect(getByText('Welcome to React Europe')).toBeTruthy();
+  expect(getByText('Welcome to Relay Workshop')).toBeTruthy();
 });

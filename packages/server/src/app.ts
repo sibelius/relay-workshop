@@ -27,7 +27,7 @@ app.use(logger());
 app.use(cors());
 
 router.get('/', async ctx => {
-  ctx.body = 'Welcome to React Europe Relay Workshop';
+  ctx.body = 'Welcome to Relay Workshop';
 });
 
 const graphqlSettingsPerReq = async (req: Request) => {
