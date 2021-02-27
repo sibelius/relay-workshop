@@ -42,7 +42,7 @@ For instance, if you need a specific `Post` content, you can mock like this:
 ```jsx
 const mockResolvers = {
     Post: () => ({
-      content: 'Welcome to React Europe',
+      content: 'Welcome to Relay Workshop',
     }),
 };
 ```
@@ -72,7 +72,7 @@ const { debug, getByText } = render(<Post />);
 
 const mockResolvers = {
     Post: () => ({
-      content: 'Welcome to React Europe',
+      content: 'Welcome to',
     }),
 };
 // resolve component query using a mock generator
@@ -82,7 +82,7 @@ Environment.mock.resolveMostRecentOperation(operation =>
 );
 
 // assert DOM contains the component code
-expect(getByText('Welcome to React Europe')).toBeTruthy();
+expect(getByText('Welcome to')).toBeTruthy();
 ```
 
 ### Testing preloadQuery code
@@ -115,7 +115,7 @@ preloadQuery(Environment, PostDetailQuery, variables, {
 const { debug, getByText } = render(<Post />);
 
 // assert DOM contains the component code
-expect(getByText('Welcome to React Europe')).toBeTruthy();
+expect(getByText('Welcome to')).toBeTruthy();
 ```
 
 As you can see, you mock and resolve operation before calling `preloadQuery`

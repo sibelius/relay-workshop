@@ -46,7 +46,7 @@ const Root = ({ children, prepared }: Props) => {
       <CssBaseline />
       <AppBar position='static' color='primary'>
         <Toolbar>
-          <Text flexGrow={1}>Welcome to React Europe Relay Workshop</Text>
+          <Text flexGrow={1}>Welcome to Relay Workshop</Text>
           <IconButton color='inherit' onClick={logout}>
             <ExitToAppIcon />
           </IconButton>

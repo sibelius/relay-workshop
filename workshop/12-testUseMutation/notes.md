@@ -12,7 +12,7 @@ const { debug, getByText } = render(<Post />);
 
 const mockResolvers = {
     Post: () => ({
-      content: 'Welcome to React Europe',
+      content: 'Welcome to Relay Workshop',
     }),
 };
 // resolve component query using a mock generator

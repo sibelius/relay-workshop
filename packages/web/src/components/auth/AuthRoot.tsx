@@ -10,7 +10,7 @@ const AuthRoot = ({ children }) => {
       <CssBaseline />
       <AppBar position='static'>
         <Toolbar>
-          <Text flexGrow={1}>Welcome to React Europe Relay Workshop</Text>
+          <Text flexGrow={1}>Welcome to Relay Workshop</Text>
         </Toolbar>
       </AppBar>
       {children}
