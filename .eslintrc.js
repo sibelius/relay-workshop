@@ -25,7 +25,7 @@ module.exports = {
     'plugin:relay/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    'prettier/@typescript-eslint',
+    'prettier',
   ],
   rules: {
     'comma-dangle': [2, 'always-multiline'],
