@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 
 import { Flex } from 'rebass';
 import { Button } from '@workshop/ui';
-import { graphql } from 'react-relay/hooks';
+import { graphql } from 'react-relay';
 
 import { usePaginationFragment } from 'react-relay/lib/hooks';
 

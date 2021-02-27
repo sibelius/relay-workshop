@@ -3,7 +3,7 @@ import '@testing-library/jest-dom/extend-expect';
 import React from 'react';
 import { MockPayloadGenerator } from 'relay-test-utils';
 
-import { usePreloadedQuery, graphql, loadQuery } from 'react-relay/hooks';
+import { usePreloadedQuery, graphql, loadQuery } from 'react-relay';
 
 import { Environment } from '../../../../relay';
 import PostLikeButton from '../PostLikeButton';

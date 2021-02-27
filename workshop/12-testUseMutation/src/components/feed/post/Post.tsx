@@ -1,6 +1,6 @@
 import React from 'react';
 import CardContent from '@material-ui/core/CardContent';
-import { useFragment } from 'react-relay/hooks';
+import { useFragment } from 'react-relay';
 import { graphql } from 'react-relay';
 import styled from 'styled-components';
 import { Text } from 'rebass';

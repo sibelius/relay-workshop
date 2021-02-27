@@ -1,5 +1,5 @@
 import React from 'react';
-import { useFragment } from 'react-relay/hooks';
+import { useFragment } from 'react-relay';
 import { graphql } from 'react-relay';
 
 import { Text, Flex } from 'rebass';

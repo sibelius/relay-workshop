@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Flex, Text } from 'rebass';
 import { Card, Content } from '@workshop/ui';
-import { useLazyLoadQuery, graphql } from 'react-relay/hooks';
+import { useLazyLoadQuery, graphql } from 'react-relay';
 
 import { AppQuery } from './__generated__/AppQuery.graphql';
 

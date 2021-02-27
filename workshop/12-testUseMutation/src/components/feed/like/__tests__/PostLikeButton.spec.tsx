@@ -4,7 +4,7 @@ import '@testing-library/jest-dom/extend-expect';
 import React from 'react';
 import { MockPayloadGenerator } from 'relay-test-utils';
 
-import { usePreloadedQuery, graphql } from 'react-relay/hooks';
+import { usePreloadedQuery, graphql } from 'react-relay';
 import { loadQuery } from '@workshop/relay';
 
 import { Environment } from '../../../../relay';
