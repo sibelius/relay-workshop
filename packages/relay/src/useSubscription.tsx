@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { GraphQLSubscriptionConfig, requestSubscription } from 'relay-runtime';
-import { useRelayEnvironment } from 'react-relay/hooks';
+import { useRelayEnvironment } from 'react-relay';
 
 export const useSubscription = <TSubscriptionPayload extends object>(
   config: GraphQLSubscriptionConfig<TSubscriptionPayload>,

@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, useFragment } from 'react-relay/hooks';
+import { graphql, useFragment } from 'react-relay';
 import { Flex, Text } from 'rebass';
 
 import { theme } from '@workshop/ui';

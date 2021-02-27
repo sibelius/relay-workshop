@@ -6,7 +6,7 @@ import { Text } from 'rebass';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import IconButton from '@material-ui/core/IconButton';
 
-import { usePreloadedQuery } from 'react-relay/hooks';
+import { usePreloadedQuery } from 'react-relay';
 
 import { graphql } from 'react-relay';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { RelayEnvironmentProvider } from 'react-relay/hooks';
+import { RelayEnvironmentProvider } from 'react-relay';
 
 import { ThemeProvider } from 'styled-components';
 import { StylesProvider } from '@material-ui/styles';

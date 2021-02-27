@@ -1,5 +1,5 @@
 import { useState, useRef, useCallback, useEffect } from 'react';
-import { useRelayEnvironment } from 'react-relay/hooks';
+import { useRelayEnvironment } from 'react-relay';
 
 import {
   GraphQLTaggedNode,

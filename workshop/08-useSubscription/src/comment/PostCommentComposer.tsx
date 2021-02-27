@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useFragment } from 'react-relay/hooks';
+import { useFragment } from 'react-relay';
 
 import { Flex } from 'rebass';
 

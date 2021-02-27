@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { usePreloadedQuery } from 'react-relay/hooks';
+import { usePreloadedQuery } from 'react-relay';
 
 import { graphql } from 'react-relay';
 

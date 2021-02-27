@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { useFragment, graphql } from 'react-relay/hooks';
+import { useFragment, graphql } from 'react-relay';
 import { Text } from 'rebass';
 import { Card, CardActions, theme } from '@workshop/ui';
 import FavoriteIcon from '@material-ui/icons/Favorite';

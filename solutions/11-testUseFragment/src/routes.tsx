@@ -1,4 +1,4 @@
-import { loadQuery } from 'react-relay/hooks';
+import { loadQuery } from 'react-relay';
 
 import { JSResource } from '@workshop/route';
 

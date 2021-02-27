@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, useFragment } from 'react-relay/hooks';
+import { graphql, useFragment } from 'react-relay';
 import { Flex, Text } from 'rebass';
 import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';

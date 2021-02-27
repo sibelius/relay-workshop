@@ -3,7 +3,7 @@ import '@testing-library/jest-dom/extend-expect';
 import React from 'react';
 import { MockPayloadGenerator } from 'relay-test-utils';
 
-import { loadQuery } from 'react-relay/hooks';
+import { loadQuery } from 'react-relay';
 
 import { JSResource } from '@workshop/route';
 
