@@ -10,7 +10,7 @@ import { Card, Content, Button, CardActions, TextField } from '@workshop/ui';
 
 import { useHistory, Link } from '@workshop/route';
 
-import { useMutation } from '@workshop/relay';
+import { useMutation } from 'react-relay';
 
 import {
   UserLoginWithEmailMutation,

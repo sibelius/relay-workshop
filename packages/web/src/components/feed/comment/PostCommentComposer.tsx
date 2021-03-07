@@ -9,7 +9,7 @@ import { graphql } from 'react-relay';
 
 import Divider from '@material-ui/core/Divider';
 
-import { useMutation } from '@workshop/relay';
+import { useMutation } from 'react-relay';
 
 import { TextFieldMaterial } from '@workshop/ui';
 

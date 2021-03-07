@@ -5,7 +5,7 @@ import { useSnackbar } from 'notistack';
 
 import { useHistory } from '@workshop/route';
 
-import { useSubscription } from '@workshop/relay';
+import { useSubscription } from 'react-relay';
 
 import { GraphQLSubscriptionConfig } from 'relay-runtime';
 
