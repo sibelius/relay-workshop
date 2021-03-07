@@ -4,7 +4,7 @@ import React from 'react';
 import { MockPayloadGenerator } from 'relay-test-utils';
 
 import { usePreloadedQuery, graphql } from 'react-relay';
-import { loadQuery } from '@workshop/relay';
+import { loadQuery } from 'react-relay';
 
 import { getMutationOperationVariables } from '@workshop/test';
 
