@@ -11643,10 +11643,10 @@ header-case@^1.0.0:
     no-case "^2.2.0"
     upper-case "^1.1.3"
 
-helmet@^4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/helmet/-/helmet-4.1.1.tgz#751f0e273d809ace9c172073e0003bed27d27a4a"
-  integrity sha512-Avg4XxSBrehD94mkRwEljnO+6RZx7AGfk8Wa6K1nxaU+hbXlFOhlOIMgPfFqOYQB/dBCsTpootTGuiOG+CHiQA==
+helmet@^4.4.1:
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/helmet/-/helmet-4.4.1.tgz#a17e1444d81d7a83ddc6e6f9bc6e2055b994efe7"
+  integrity sha512-G8tp0wUMI7i8wkMk2xLcEvESg5PiCitFMYgGRc/PwULB0RVhTP5GFdxOwvJwp9XVha8CuS8mnhmE8I/8dx/pbw==
 
 hex-color-regex@^1.1.0:
   version "1.1.0"
@@ -14412,11 +14412,11 @@ koa-graphql@^0.8.0:
     thenify "^3.3.0"
 
 koa-helmet@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/koa-helmet/-/koa-helmet-6.0.0.tgz#c24053b0a44467f898b63ff21b4bbeb011430b67"
-  integrity sha512-W7HSrf3FtCGFy1EdzEk4qOIIJrzms2QSv0/QQ6aZVoDUgPTRZAxdAQNSPgDHSxVjK3zyGv2vwZhgc0FJPdk0+g==
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/koa-helmet/-/koa-helmet-6.1.0.tgz#5ace72266b4b86c21c7a435ffcdaf3999e2d3a6d"
+  integrity sha512-WymEv4qo/7ghh15t+1qTjvZBmZkmVlTtfnpe5oxn8m8mO2Q2rKJ3eMvWuQGW/6yVxN9+hQ75evuWcg3XBbFLbg==
   dependencies:
-    helmet "^4.1.1"
+    helmet "^4.4.1"
 
 koa-is-json@^1.0.0:
   version "1.0.0"
