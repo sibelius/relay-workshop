@@ -8605,9 +8605,9 @@ dotenv-safe@^8.1.0:
     dotenv "^8.2.0"
 
 dotenv-webpack@^7.0.1:
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/dotenv-webpack/-/dotenv-webpack-7.0.1.tgz#11e1a1c182c180e4a4c24e17c0ea14c45531954a"
-  integrity sha512-UT7Oqs0UlStNMtAdj8hqTlh0uy5qWni2vXNywMvvnST/weV8Ok170cOQsVvSIGx1Ty3jJOzH8TuyPWW0y8XmoQ==
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/dotenv-webpack/-/dotenv-webpack-7.0.2.tgz#1bf2e407e92c10fbb08d815b12c991028f10f81c"
+  integrity sha512-RY+/5uM/XY4bGtih9f9ic8hlrUDxVcZZBPWlnX/aHhaKxcVVX9SH/5VH7CSmvVo9GL6PKvQOA0X1bc552rnatQ==
   dependencies:
     dotenv-defaults "^2.0.1"
 
