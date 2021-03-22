@@ -17591,15 +17591,15 @@ razzle-plugin-typescript@4.0.3:
     ts-loader "^8.0.4"
     typescript ">=4.0.3"
 
-razzle-start-server-webpack-plugin@4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/razzle-start-server-webpack-plugin/-/razzle-start-server-webpack-plugin-4.0.2.tgz#1d2d65571ed52a577c27fd70664f24252e7b75e8"
-  integrity sha512-yDzbUZPe/wNbK6fFECEr6biE7tC6YIJxWSZoD5IjymS5Gpm1ca3yGlz4hgGeH7g4zvRZVWK4WNQlF3b7TxixPA==
+razzle-start-server-webpack-plugin@4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/razzle-start-server-webpack-plugin/-/razzle-start-server-webpack-plugin-4.0.3.tgz#e92169e31c87781d47a2818ecbe1416455e4decd"
+  integrity sha512-sgtlejRAoEBxomu7jHCnqQRopvuRgypSb4hbhsLe2Hfcg9DzTVsP4YC9MytxpMYsC2DcojD49qXoYrfUZwPc6A==
 
 razzle@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/razzle/-/razzle-4.0.2.tgz#f353bd78dc474d1b9dcf3da0699f178595a01196"
-  integrity sha512-SE4WclOMES3X+FWIkDnBUv63CP08AomSixjexC9e2uuG9/xgvOkS78vYShwGwqrMr4NjBoFfhktD5zH1u2lVuw==
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/razzle/-/razzle-4.0.3.tgz#514f66379f6e29b139edbcc737c5c89f2faf4b2f"
+  integrity sha512-ft+8ho3S+OjiokzaS6H29hDL/Qtlob7wD9CdyJenxPFKxCjVbNa3e4lo50uuPIjiXvFQUVzwi14eAg+bGoBXLQ==
   dependencies:
     "@babel/plugin-transform-modules-commonjs" "^7.12.1"
     "@pmmmwh/react-refresh-webpack-plugin" "0.4.3"
@@ -17627,7 +17627,7 @@ razzle@^4.0.2:
     postcss-load-config "3.0.0"
     postcss-loader "4.2.0"
     process "0.11.10"
-    razzle-start-server-webpack-plugin "4.0.2"
+    razzle-start-server-webpack-plugin "4.0.3"
     react-dev-utils "11.0.4"
     react-refresh "0.9.0"
     resolve "1.17.0"
