@@ -27,7 +27,7 @@
     "relay-compiler": "11.0.0",
     "relay-compiler-language-typescript": "13.0.6",
     "relay-config": "11.0.0",
-    "relay-runtime": "11.0.0",
+    "relay-runtime": "11.0.1",
     "styled-components": "5.2.1",
     "styled-system": "5.1.5",
     "subscriptions-transport-ws": "^0.9.18",
