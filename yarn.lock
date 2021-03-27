@@ -5271,10 +5271,10 @@ babel-plugin-polyfill-regenerator@^0.1.2:
   dependencies:
     "@babel/helper-define-polyfill-provider" "^0.1.4"
 
-babel-plugin-relay@11.0.0:
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-relay/-/babel-plugin-relay-11.0.0.tgz#82c6049bd94d84ebddc3b63ffe4fb4baceb90d39"
-  integrity sha512-pTNnFK5R7j8QxNZTx6w2TtV7MDL83+ncsGY9GOy8HdbAWpwQNFO1nRCUrLF1UrByHF2ARei+0yCNM+gxI8ezwg==
+babel-plugin-relay@11.0.1:
+  version "11.0.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-relay/-/babel-plugin-relay-11.0.1.tgz#946425bc7c8b76aecc1990c8a19926aecc8659fe"
+  integrity sha512-93cqLn9httSBTMS2fZFUiVBukTbbZd5mGJUSdpz8fz2iG/K7h1wEBXjjGpwVlrm1Y7P6XGdG9Frp44YhMfhsjw==
   dependencies:
     babel-plugin-macros "^2.0.0"
 
