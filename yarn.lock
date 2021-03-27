@@ -18497,10 +18497,10 @@ relay-compiler-language-typescript@13.0.6:
     immutable "^4.0.0-rc.12"
     invariant "^2.2.4"
 
-relay-compiler@11.0.0:
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/relay-compiler/-/relay-compiler-11.0.0.tgz#265bded552b0938ad597ea14b9488e3d818b99cf"
-  integrity sha512-xAVcnWBNtkIJqRwae2agY+riDhh00bV/HqwbcBYijK/S9jKPEFLx9FguGG1V8EWgS/barBsBMtE7CG916GtSrA==
+relay-compiler@11.0.1:
+  version "11.0.1"
+  resolved "https://registry.yarnpkg.com/relay-compiler/-/relay-compiler-11.0.1.tgz#157849f2ee0f54447acfe718a629301d5f44124e"
+  integrity sha512-oFtnkbF2pzRISlfnNE87sy+vv+nqwLTZO/coF3SotOPFqPVgMJFT/lR9pIDeGzMuNrLn33eVbOBP//LDV31DFQ==
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/generator" "^7.5.0"
@@ -18515,7 +18515,7 @@ relay-compiler@11.0.0:
     glob "^7.1.1"
     immutable "~3.7.6"
     nullthrows "^1.1.1"
-    relay-runtime "11.0.0"
+    relay-runtime "11.0.1"
     signedsource "^1.0.0"
     yargs "^15.3.1"
 
