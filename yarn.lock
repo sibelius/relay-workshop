@@ -18526,14 +18526,6 @@ relay-config@11.0.0:
   dependencies:
     cosmiconfig "^5.0.5"
 
-relay-runtime@11.0.0:
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/relay-runtime/-/relay-runtime-11.0.0.tgz#cb3244dc4e2919a51fdcbedddd5d13a20cf393e8"
-  integrity sha512-7oeyW4hulyK3p4eB63Rsllo/es83xflCAt2HMWCpH2q0fi21iJBR02kK3wCPM/yFwi3i0K83W+UksLFQdE0CaQ==
-  dependencies:
-    "@babel/runtime" "^7.0.0"
-    fbjs "^3.0.0"
-
 relay-runtime@11.0.1:
   version "11.0.1"
   resolved "https://registry.yarnpkg.com/relay-runtime/-/relay-runtime-11.0.1.tgz#0816b7a102dc5cea1c778a4c21a4f26bacdffa3e"
@@ -18542,14 +18534,14 @@ relay-runtime@11.0.1:
     "@babel/runtime" "^7.0.0"
     fbjs "^3.0.0"
 
-relay-test-utils@11.0.0:
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/relay-test-utils/-/relay-test-utils-11.0.0.tgz#c764efc05b27e611c84873706b5275ecab0ac2a1"
-  integrity sha512-DhIgIfwwqQy4mOM7bJ6FhJycHsHfvc6mYA0+pr+T93LdB1xUdRKXhm87QyIxKJpGipfhfAGf3r3jxMJWdqlZrA==
+relay-test-utils@11.0.1:
+  version "11.0.1"
+  resolved "https://registry.yarnpkg.com/relay-test-utils/-/relay-test-utils-11.0.1.tgz#e4413bda39e3e320bb537d486232fc260de7ea2f"
+  integrity sha512-FX6dzFHmrwdRBXnNrNuqln5hkLMb+Qa+wVFpQiupMkI4zhnpErW9bbj9bLtgS5BZTyk90pin7r8xTFJqNujgcw==
   dependencies:
     "@babel/runtime" "^7.0.0"
     fbjs "^3.0.0"
-    relay-runtime "11.0.0"
+    relay-runtime "11.0.1"
 
 reload-server-webpack-plugin@^1.0.1:
   version "1.0.1"
