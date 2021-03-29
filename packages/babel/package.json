@@ -4,7 +4,7 @@
   "dependencies": {
     "@babel/cli": "7.13.10",
     "@babel/core": "7.13.10",
-    "@babel/node": "7.13.12",
+    "@babel/node": "7.13.13",
     "@babel/plugin-proposal-async-generator-functions": "7.13.8",
     "@babel/plugin-proposal-class-properties": "7.13.0",
     "@babel/plugin-proposal-export-default-from": "7.12.13",
