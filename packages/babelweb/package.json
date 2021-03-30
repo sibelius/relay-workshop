@@ -15,7 +15,7 @@
     "@babel/plugin-transform-async-to-generator": "7.13.0",
     "@babel/preset-env": "7.13.12",
     "@babel/preset-flow": "7.12.13",
-    "@babel/preset-react": "7.12.13",
+    "@babel/preset-react": "7.13.13",
     "@babel/preset-typescript": "7.13.0",
     "babel-plugin-relay": "11.0.1"
   },
