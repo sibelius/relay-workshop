@@ -34,7 +34,7 @@
     "@types/relay-test-utils": "^6.0.3",
     "@types/styled-components": "5.1.9",
     "@types/styled-system": "5.1.10",
-    "@types/supertest": "2.0.10",
+    "@types/supertest": "2.0.11",
     "@typescript-eslint/eslint-plugin": "4.21.0",
     "@typescript-eslint/parser": "4.20.0",
     "babel-jest": "26.6.3",
