@@ -4016,10 +4016,10 @@
     "@types/styled-system" "*"
     "@types/styled-system__css" "*"
 
-"@types/relay-runtime@*", "@types/relay-runtime@10.1.10":
-  version "10.1.10"
-  resolved "https://registry.yarnpkg.com/@types/relay-runtime/-/relay-runtime-10.1.10.tgz#6d4da929129d7ad39c4932ca36bb5281bf301729"
-  integrity sha512-IyEqvYzMdNcsvhjIVsCvbwQsYT2KMpZrZcw4hQu+2k2MsQNmFSwN0ycWi1Q861qNKMv2rmcMn39O7xtoNhZ8Eg==
+"@types/relay-runtime@*", "@types/relay-runtime@11.0.0":
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/@types/relay-runtime/-/relay-runtime-11.0.0.tgz#7ddbe41152d46b614d1f3f7f0672cfb721eb93f1"
+  integrity sha512-D5JNxDhkcPSIMZc2j3N/fh61399O309ph9RVmzbF+Fsyvepsqy7FirFKcJ2CMfYxE/kb8ZD/Xdzs3CYZEiQc4w==
 
 "@types/relay-test-utils@^6.0.3":
   version "6.0.3"
