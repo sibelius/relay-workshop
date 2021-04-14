@@ -25,7 +25,7 @@
     "react-scripts": "4.0.3",
     "rebass": "4.0.7",
     "relay-compiler": "11.0.1",
-    "relay-compiler-language-typescript": "13.0.6",
+    "relay-compiler-language-typescript": "14.0.0",
     "relay-config": "11.0.1",
     "relay-runtime": "11.0.1",
     "styled-components": "5.2.1",
