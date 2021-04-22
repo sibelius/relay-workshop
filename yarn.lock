@@ -18520,10 +18520,10 @@ relay-compiler-language-typescript@14.0.0:
     immutable "^4.0.0-rc.12"
     invariant "^2.2.4"
 
-relay-compiler@11.0.1:
-  version "11.0.1"
-  resolved "https://registry.yarnpkg.com/relay-compiler/-/relay-compiler-11.0.1.tgz#157849f2ee0f54447acfe718a629301d5f44124e"
-  integrity sha512-oFtnkbF2pzRISlfnNE87sy+vv+nqwLTZO/coF3SotOPFqPVgMJFT/lR9pIDeGzMuNrLn33eVbOBP//LDV31DFQ==
+relay-compiler@11.0.2:
+  version "11.0.2"
+  resolved "https://registry.yarnpkg.com/relay-compiler/-/relay-compiler-11.0.2.tgz#e1e09a1c881d169a7a524ead728ad6a89c7bd4af"
+  integrity sha512-nDVAURT1YncxSiDOKa39OiERkAr0DUcPmlHlg+C8zD+EiDo2Sgczf2R6cDsN4UcDvucYtkLlDLFErPwgLs8WzA==
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/generator" "^7.5.0"
@@ -18537,8 +18537,9 @@ relay-compiler@11.0.1:
     fbjs "^3.0.0"
     glob "^7.1.1"
     immutable "~3.7.6"
+    invariant "^2.2.4"
     nullthrows "^1.1.1"
-    relay-runtime "11.0.1"
+    relay-runtime "11.0.2"
     signedsource "^1.0.0"
     yargs "^15.3.1"
 
@@ -18556,6 +18557,15 @@ relay-runtime@11.0.1:
   dependencies:
     "@babel/runtime" "^7.0.0"
     fbjs "^3.0.0"
+
+relay-runtime@11.0.2:
+  version "11.0.2"
+  resolved "https://registry.yarnpkg.com/relay-runtime/-/relay-runtime-11.0.2.tgz#c3650477d45665b9628b852b35f203e361ad55e8"
+  integrity sha512-xxZkIRnL8kNE1cxmwDXX8P+wSeWLR+0ACFyAiAhvfWWAyjXb+bhjJ2FSsRGlNYfkqaTNEuDqpnodQV1/fF7Idw==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    fbjs "^3.0.0"
+    invariant "^2.2.4"
 
 relay-test-utils@11.0.1:
   version "11.0.1"
