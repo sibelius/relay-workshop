@@ -18542,10 +18542,10 @@ relay-compiler@11.0.1:
     signedsource "^1.0.0"
     yargs "^15.3.1"
 
-relay-config@11.0.1:
-  version "11.0.1"
-  resolved "https://registry.yarnpkg.com/relay-config/-/relay-config-11.0.1.tgz#3c009245e70d34639ff2dff7c15f6e7f686b6ba8"
-  integrity sha512-QWnDOrQOA1QgMwJbBDMMvY0YWe1uj30CyYVlpcvonMsL4okmUUXTm0VzzucfXHayO4waGU9PC4OWAwxcqLj+pQ==
+relay-config@11.0.2:
+  version "11.0.2"
+  resolved "https://registry.yarnpkg.com/relay-config/-/relay-config-11.0.2.tgz#d1e5bbac795dfe0a414ed61c94faabdef7db99c5"
+  integrity sha512-j/bl04lGwZ+xSM/21KN87lPXY6t7YWkStfST63dQhJN35F6gQKZevmxVVPlEJ7Qs41AyrY1kilGBIfbEZPPdSA==
   dependencies:
     cosmiconfig "^5.0.5"
 
