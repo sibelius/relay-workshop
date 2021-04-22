@@ -9,6 +9,6 @@
   },
   "devDependencies": {
     "relay-compiler": "11.0.2",
-    "webpack": "5.33.2"
+    "webpack": "5.35.0"
   }
 }
