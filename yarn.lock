@@ -4554,9 +4554,9 @@ acorn@^7.1.0, acorn@^7.1.1, acorn@^7.4.0:
   integrity sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==
 
 acorn@^8.0.4:
-  version "8.2.1"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.2.1.tgz#0d36af126fb6755095879c1dc6fd7edf7d60a5fb"
-  integrity sha512-z716cpm5TX4uzOzILx8PavOE6C6DKshHDw1aQN52M/yNSqE9s5O8SMfyhCCfCJ3HmTL0NkVOi+8a/55T7YB3bg==
+  version "8.2.2"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.2.2.tgz#c4574e4fea298d6e6ed4b85ab844b06dd59f26d6"
+  integrity sha512-VrMS8kxT0e7J1EX0p6rI/E0FbfOVcvBpbIqHThFv+f8YrZIlMfVotYcXKVPmTvPW8sW5miJzfUFrrvthUZg8VQ==
 
 add-stream@^1.0.0:
   version "1.0.0"
@@ -18107,7 +18107,7 @@ react-transition-group@^4.4.0:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react@0.0.0-experimental-f77c7b9d7, react@^16.8.6:
+react@0.0.0-experimental-f77c7b9d7, react@17.0.2, react@^16.8.6:
   version "0.0.0-experimental-f77c7b9d7"
   resolved "https://registry.yarnpkg.com/react/-/react-0.0.0-experimental-f77c7b9d7.tgz#24beef9c87e519d3c5f464762d532f08d63ce229"
   integrity sha512-eZAnAbmYQoScvxzAmGYGv83us/imQkh+zjiMeqkFxSUahnvl9PmQJ6jDBQF9ErpgJsxWga7164YFkv/0SA8rjQ==
