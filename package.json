@@ -21,7 +21,7 @@
     "@types/koa-logger": "^3.1.0",
     "@types/koa-multer": "^1.0.0",
     "@types/koa-router": "^7.4.1",
-    "@types/mockdate": "^2.0.0",
+    "@types/mockdate": "^3.0.0",
     "@types/mongoose": "^5.10.1",
     "@types/node": "^15.0.1",
     "@types/react": "^17.0.0",

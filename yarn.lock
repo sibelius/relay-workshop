@@ -3898,10 +3898,12 @@
   dependencies:
     "@types/node" "*"
 
-"@types/mockdate@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@types/mockdate/-/mockdate-2.0.0.tgz#aaf388a1ead3b0f5ed6dc1611956ea7b40a57d3c"
-  integrity sha1-qvOIoerTsPXtbcFhGVbqe0ClfTw=
+"@types/mockdate@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@types/mockdate/-/mockdate-3.0.0.tgz#ed140c46c4542964621e553d181faf62cadc973a"
+  integrity sha512-p2mDrXSBlcpz1JFRTzeF12g4yGpHgh8HKoOWUw6gE/+W/s+oXPfip/n1Z+qLyE7wU1NSWCslexEEd1FAlNCWPQ==
+  dependencies:
+    mockdate "*"
 
 "@types/mongodb@*", "@types/mongodb@^3.5.27":
   version "3.5.34"
@@ -14971,6 +14973,11 @@ mkdirp@^1.0.3, mkdirp@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-1.0.4.tgz#3eb5ed62622756d79a5f0e2a221dfebad75c2f7e"
   integrity sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
+
+mockdate@*:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/mockdate/-/mockdate-3.0.5.tgz#789be686deb3149e7df2b663d2bc4392bc3284fb"
+  integrity sha512-iniQP4rj1FhBdBYS/+eQv7j1tadJ9lJtdzgOpvsOHng/GbcDh2Fhdeq+ZRldrPYdXvCyfFUmFeEwEGXZB5I/AQ==
 
 modify-values@^1.0.0:
   version "1.0.1"
