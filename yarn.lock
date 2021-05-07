@@ -4071,9 +4071,9 @@
   integrity sha512-D5JNxDhkcPSIMZc2j3N/fh61399O309ph9RVmzbF+Fsyvepsqy7FirFKcJ2CMfYxE/kb8ZD/Xdzs3CYZEiQc4w==
 
 "@types/relay-test-utils@^6.0.3":
-  version "6.0.3"
-  resolved "https://registry.yarnpkg.com/@types/relay-test-utils/-/relay-test-utils-6.0.3.tgz#aea2fa30e754c94f0d45b4abe78dfb2e35e2b45d"
-  integrity sha512-vVI8RcdnrP9pBaIN6Sg/ngni9Yh509WGbbX4tjPYlpNwsHGXs/O0e2Bjd4GZGQdInFvsrs/OOiGUG0dxoLscDQ==
+  version "6.0.4"
+  resolved "https://registry.yarnpkg.com/@types/relay-test-utils/-/relay-test-utils-6.0.4.tgz#32c778d773686f201010da3ce9d24c9bbdb2547a"
+  integrity sha512-us1yNKMdHlTldiatBeixw4BHIa2PXqG7kJOXVxT7kqlxoRXi4QfQBNAoRjqbcUjDIWG79JuZPXIwAiOlPMGjhg==
   dependencies:
     "@types/react" "*"
     "@types/react-relay" "*"
