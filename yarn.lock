@@ -3557,12 +3557,14 @@
   dependencies:
     dotenv "^8.2.0"
 
-"@types/dotenv-webpack@7.0.1":
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/@types/dotenv-webpack/-/dotenv-webpack-7.0.1.tgz#f9d5cd7a552b8338bb46f4192772ef6a9c2208ed"
-  integrity sha512-gpKrNjSWcU2NIJJ/BKFvJt80UJ7NrFxhj0nV0MKrbfsWiFKGgSPzrLJ8/aUgMXSmryEadCDjlPpDC5hGglqJnQ==
+"@types/dotenv-webpack@7.0.2":
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/@types/dotenv-webpack/-/dotenv-webpack-7.0.2.tgz#65f0e38bfdd9471ddb14e30cddc493fcf30a457a"
+  integrity sha512-7GdkjjhUu7lFxOzvYpC9ncychx25igXBwQxM7nJSy8b6b/x8B+CQ/BknkOKkmNlx/UkIK1KEDjYezK33RhfkNA==
   dependencies:
-    "@types/webpack" "^4"
+    "@types/node" "*"
+    tapable "^2.2.0"
+    webpack "^5"
 
 "@types/eslint-scope@^3.7.0":
   version "3.7.0"
@@ -4198,7 +4200,7 @@
     "@types/source-list-map" "*"
     source-map "^0.6.1"
 
-"@types/webpack@^4", "@types/webpack@^4.4.31":
+"@types/webpack@^4.4.31":
   version "4.41.28"
   resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-4.41.28.tgz#0069a2159b7ad4d83d0b5801942c17d54133897b"
   integrity sha512-Nn84RAiJjKRfPFFCVR8LC4ueTtTdfWAMZ03THIzZWRJB+rX24BD3LqPSFnbMscWauEsT4segAsylPDIaZyZyLQ==
@@ -22154,7 +22156,7 @@ webpack-virtual-modules@^0.2.2:
   dependencies:
     debug "^3.0.0"
 
-webpack@4.44.2, webpack@5.24.2, webpack@5.36.2, webpack@^4.44.1:
+webpack@4.44.2, webpack@5.24.2, webpack@5.36.2, webpack@^4.44.1, webpack@^5:
   version "5.24.2"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.24.2.tgz#33790dad631e8b639f4246d762e257720875fe54"
   integrity sha512-uxxKYEY4kMNjP+D2Y+8aw5Vd7ar4pMuKCNemxV26ysr1nk0YDiQTylg9U3VZIdkmI0YHa0uC8ABxL+uGxGWWJg==

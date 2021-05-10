@@ -6,7 +6,7 @@
     "@babel/preset-modules": "0.1.4",
     "@types/bcryptjs": "^2.4.1",
     "@types/dotenv-safe": "8.1.1",
-    "@types/dotenv-webpack": "7.0.1",
+    "@types/dotenv-webpack": "7.0.2",
     "@types/graphql": "^14.2.2",
     "@types/graphql-relay": "^0.6.0",
     "@types/history": "4.7.8",
