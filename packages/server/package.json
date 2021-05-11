@@ -32,7 +32,7 @@
     "@workshop/babel": "*",
     "babel-loader": "^8.2.1",
     "reload-server-webpack-plugin": "^1.0.1",
-    "webpack": "5.36.2",
+    "webpack": "5.37.0",
     "webpack-cli": "4.7.0",
     "webpack-node-externals": "3.0.0",
     "webpack-plugin-serve": "1.4.1"
