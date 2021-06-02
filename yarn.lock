@@ -4131,9 +4131,9 @@
     "@types/node" "*"
 
 "@types/mongoose@^5.10.1":
-  version "5.11.30"
-  resolved "https://registry.yarnpkg.com/@types/mongoose/-/mongoose-5.11.30.tgz#0834a5475f20c58ff6b3785fd7df5ba56b999b37"
-  integrity sha512-v9DNPHg3Cq+4pxAPf1XcQ6R8VCXUQmGzBc/rkgQl78lDGcp5csHNENWGZFEnJ0Kejius3E1hT6LT4Zeu3XRXbg==
+  version "5.11.31"
+  resolved "https://registry.yarnpkg.com/@types/mongoose/-/mongoose-5.11.31.tgz#78c1fccfd7010f91e2178650b2a64bffb9e8d34d"
+  integrity sha512-05hLo6opc89LXw3DRbFZJJc45WzrWaHTY6qEpABCygRwu3IaQFXiWbA02oeSHCbsPEKXHC0U0yTayE9tMUoheg==
   dependencies:
     mongoose "*"
 
