@@ -4,7 +4,7 @@
   "dependencies": {
     "@entria/graphql-mongo-helpers": "1.0.1",
     "@entria/graphql-mongoose-loader": "^4.3.2",
-    "graphql-relay": "^0.6.0"
+    "graphql-relay": "^0.7.0"
   },
   "main": "dist/index.js",
   "module": "src/index.ts",
