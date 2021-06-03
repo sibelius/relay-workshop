@@ -4050,9 +4050,9 @@
     "@types/node" "*"
 
 "@types/mongoose@^5.11.58":
-  version "5.11.58"
-  resolved "https://registry.yarnpkg.com/@types/mongoose/-/mongoose-5.11.58.tgz#1749b11893d2b155855ce4719c4361d5e1de4a0e"
-  integrity sha512-MIlKGaDcZ3Q9lNLUnvyRFKZ/NGXNk8IMrK0p7nAcWJWOFfCLlwT+Aq+TQcgM5nqDJ9whgFvZInWcuyx5xNcBhw==
+  version "5.11.69"
+  resolved "https://registry.yarnpkg.com/@types/mongoose/-/mongoose-5.11.69.tgz#6ec7a9afeb621301f207a11efafced2ced2b5fe5"
+  integrity sha512-GAwymbq2s3Cu8ZMHHvvx3iheJkj8KtONpHwlTi+6zPdJn5BowjH71c9lmkCMSVftt5DXtxCWFUXT3oUguP3Q2A==
   dependencies:
     mongoose "*"
 
@@ -14902,11 +14902,6 @@ micromatch@^4.0.0, micromatch@^4.0.2, micromatch@^4.0.4:
   dependencies:
     braces "^3.0.1"
     picomatch "^2.2.3"
-
-mime-db@1.45.0:
-  version "1.45.0"
-  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.45.0.tgz#cceeda21ccd7c3a745eba2decd55d4b73e7879ea"
-  integrity sha512-CkqLUxUk15hofLoLyljJSrukZi8mAtgd+yE5uO4tqRZsdsAJKv0O+rFMhVDRJgozy+yG6md5KwuXhD4ocIoP+w==
 
 mime-db@1.48.0, "mime-db@>= 1.43.0 < 2":
   version "1.48.0"
