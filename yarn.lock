@@ -4660,19 +4660,14 @@
     form-data "^3.0.0"
 
 "@types/node@*", "@types/node@>= 8", "@types/node@^15.9.0":
-  version "15.9.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.9.0.tgz#0b7f6c33ca5618fe329a9d832b478b4964d325a8"
-  integrity sha512-AR1Vq1Ei1GaA5FjKL5PBqblTZsL5M+monvGSZwe6sSIdGiuu7Xr/pNwWJY+0ZQuN8AapD/XMB5IzBAyYRFbocA==
+  version "15.12.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.12.0.tgz#6a459d261450a300e6865faeddb5af01c3389bb3"
+  integrity sha512-+aHJvoCsVhO2ZCuT4o5JtcPrCPyDE3+1nvbDprYes+pPkEsbjH7AGUCNtjMOXS0fqH14t+B7yLzaqSz92FPWyw==
 
-"@types/node@^14.14.28":
+"@types/node@^14.14.28", "@types/node@^14.14.41":
   version "14.17.2"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.17.2.tgz#1e94476db57ec93a372c7f7d29aa5707cfb92339"
   integrity sha512-sld7b/xmFum66AAKuz/rp/CUO8+98fMpyQ3SBfzzBNGMd/1iHBTAg9oyAvcYlAj46bpc74r91jSw2iFdnx29nw==
-
-"@types/node@^14.14.41":
-  version "14.14.43"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.43.tgz#26bcbb0595b305400e8ceaf9a127a7f905ae49c8"
-  integrity sha512-3pwDJjp1PWacPTpH0LcfhgjvurQvrZFBrC6xxjaUEZ7ifUtT32jtjPxEMMblpqd2Mvx+k8haqQJLQxolyGN/cQ==
 
 "@types/node@^8.5.7":
   version "8.10.66"
