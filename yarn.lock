@@ -4652,9 +4652,9 @@
     "@types/node" "*"
 
 "@types/mongoose@^5.11.58":
-  version "5.11.69"
-  resolved "https://registry.yarnpkg.com/@types/mongoose/-/mongoose-5.11.69.tgz#6ec7a9afeb621301f207a11efafced2ced2b5fe5"
-  integrity sha512-GAwymbq2s3Cu8ZMHHvvx3iheJkj8KtONpHwlTi+6zPdJn5BowjH71c9lmkCMSVftt5DXtxCWFUXT3oUguP3Q2A==
+  version "5.11.97"
+  resolved "https://registry.yarnpkg.com/@types/mongoose/-/mongoose-5.11.97.tgz#80b0357f3de6807eb597262f52e49c3e13ee14d8"
+  integrity sha512-cqwOVYT3qXyLiGw7ueU2kX9noE8DPGRY6z8eUxudhXY8NZ7DMKYAxyZkLSevGfhCX3dO/AoX5/SO9lAzfjon0Q==
   dependencies:
     mongoose "*"
 
