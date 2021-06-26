@@ -65,23 +65,41 @@ brew tap mongodb/brew
 brew install mongodb-community
 brew services start mongodb-community
 ```
-
 ### How to run mongo in docker
 
 ```sh
-docker run -d -p PORT:27017 --name CONTAINER_NAME -d mongo:latest - run mongo:latest image in detached mode
+# Run MongoDB image in detached mode.
+docker run -d -p PORT:27017 --name CONTAINER_NAME -d mongo:latest
 ```
 
-docker tips
+where
 
-```
-docker ps: list all running containers
-docker ps -a: list all containers (including the exited ones)
-docker stop CONTAINER_NAME: stop the container
-docker start CONTAINER_NAME: start the container
-docker rm CONTAINER_NAME: delete the container to free disk space
-docker image ls: list all downloaded images
-docker rmi IMAGE_NAME:TAG: remove image from your computer to free disk space
+- `PORT` is must be replace to the port that will you'll expose in your computer.
+- `CONTAINER_NAME` the name of the container that will be created.
+
+Docker tips:
+
+```bash
+# List all running containers.
+docker ps
+
+# list all containers (including the exited ones).
+docker ps -a
+
+# Stop the container.
+$ docker stop CONTAINER_NAME:
+
+# Start the container.
+docker start CONTAINER_NAME
+
+# Delete the container to free disk space.
+docker rm CONTAINER_NAME
+
+# List all downloaded images.
+docker image ls
+
+# Remove image from your computer to free disk space.
+docker rmi IMAGE_NAME:TAG
 ```
 
 ### Use React Workshop mongo URI
