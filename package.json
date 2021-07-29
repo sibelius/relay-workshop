@@ -23,7 +23,7 @@
     "@types/koa-router": "^7.4.1",
     "@types/mockdate": "^3.0.0",
     "@types/mongoose": "^5.11.58",
-    "@types/node": "^15.9.0",
+    "@types/node": "^16.4.6",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/react-infinite-scroller": "^1.2.1",
