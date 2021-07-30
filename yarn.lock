@@ -19698,7 +19698,7 @@ react-dev-utils@^4.2.3:
     strip-ansi "3.0.1"
     text-table "0.2.0"
 
-react-dom@0.0.0-experimental-f77c7b9d7, react-dom@^16.8.6, react-dom@^17.0.1:
+react-dom@0.0.0-experimental-f77c7b9d7, react-dom@17.0.2, react-dom@^16.8.6, react-dom@^17.0.1:
   version "0.0.0-experimental-f77c7b9d7"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-0.0.0-experimental-f77c7b9d7.tgz#1e6efbeb8520d1b6f244837be87d1e51e1cdd107"
   integrity sha512-PD2/RrECWX2rlmE+h6qFF0stpwjPkrCZ6T9ePGzCPV7KpuoJRDBO1PU5fLoCjSTPE9SsoFc6f6usuY1EMkbhng==
