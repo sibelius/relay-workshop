@@ -19606,10 +19606,10 @@ raw-loader@^4.0.2:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
 
-razzle-plugin-typescript@4.0.4:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/razzle-plugin-typescript/-/razzle-plugin-typescript-4.0.4.tgz#a01383579ff62f6f044026c1e01656541a7cab38"
-  integrity sha512-JxMhZI6DmzHz9/N8+Gq6/VjZOPpZ7p1kBHYqkKDTBRVyYicLyu7SwtbznapgdjCyEXqI2or/6dY04osGPrXNdw==
+razzle-plugin-typescript@4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/razzle-plugin-typescript/-/razzle-plugin-typescript-4.0.5.tgz#622b41175f8e4ba3a5fc57579685fdfce8f51b20"
+  integrity sha512-pzdRUPpLzUkY75YUKYs6J/d3RrLoiYwlHFbjUEHXEVIrgJwhVnAi5u+CvpcvHJCIHXhsm+fMH30t1AOzq2Gsyg==
   dependencies:
     fork-ts-checker-webpack-plugin "^5.2.0"
     ts-loader "^8.0.4"
