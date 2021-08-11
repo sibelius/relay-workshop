@@ -4894,9 +4894,9 @@
     safe-buffer "*"
 
 "@types/rebass@^4.0.7":
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/@types/rebass/-/rebass-4.0.8.tgz#06d7f1ae0078aa6fb08168fe2336b9383c7bea68"
-  integrity sha512-IxYGm8KlZ1c7VHlybGFRpkF+CPVaBZXtkHlZ/4qGjk89cZ82MK7gV26Dolmd1i1kY05Yy5ebh5YUET4ko588Nw==
+  version "4.0.9"
+  resolved "https://registry.yarnpkg.com/@types/rebass/-/rebass-4.0.9.tgz#526b6e2ceab2b7e76e45cbeed264e250118b8036"
+  integrity sha512-1GN4RF4vPpM/PTjodmqgG3rMbx+RAYqv/c6DQSmtjC6CPjpl/EPZRFh2NBkl7/2/AVeTQtWvcC609Ly6xmOVEw==
   dependencies:
     "@types/react" "*"
     "@types/styled-components" "*"
