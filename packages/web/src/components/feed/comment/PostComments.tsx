@@ -1,4 +1,4 @@
-import React, { unstable_useTransition as useTransition } from 'react';
+import React, { useTransition } from 'react';
 import { graphql, useRefetchableFragment } from 'react-relay';
 import { Flex, Text } from 'rebass';
 import Button from '@material-ui/core/Button';
