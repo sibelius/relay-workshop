@@ -15,7 +15,7 @@ type Props = {
   post: PostComments_post$key;
 };
 const PostComments = (props: Props) => {
-  const [startTransition, isPending] = useTransition();
+  const [isPending, startTransition] = useTransition();
 
   const [post, refetch] = useRefetchableFragment<PostCommentsRefetchQuery, _>(
     graphql`
