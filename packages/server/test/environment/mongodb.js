@@ -1,8 +1,8 @@
 /* eslint-disable */
-const MMS = require('mongodb-memory-server-global');
+const MMS = require('mongodb-memory-server');
 const NodeEnvironment = require('jest-environment-node');
 
-const { default: MongodbMemoryServer, MongoMemoryReplSet } = MMS;
+const { MongoMemoryServer } = MMS;
 
 class MongoDbEnvironment extends NodeEnvironment {
   constructor(config) {
@@ -10,7 +10,7 @@ class MongoDbEnvironment extends NodeEnvironment {
 
     // TODO - enable replset if needed
     // this.mongod = new MongoMemoryReplSet({
-    this.mongod = new MongodbMemoryServer({
+    this.mongod = new MongoMemoryServer({
       instance: {
         // settings here
         // dbName is null, so it's random
@@ -28,8 +28,8 @@ class MongoDbEnvironment extends NodeEnvironment {
     await super.setup();
     // console.error('\n# MongoDB Environment Setup #\n');
     await this.mongod.start();
-    this.global.__MONGO_URI__ = await this.mongod.getConnectionString();
-    this.global.__MONGO_DB_NAME__ = await this.mongod.getDbName();
+    this.global.__MONGO_URI__ = await this.mongod.getUri();
+    // this.global.__MONGO_DB_NAME__ = await this.mongod.getDbName();
     this.global.__COUNTERS__ = {
       user: 0,
       company: 0,

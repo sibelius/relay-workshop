@@ -1,4 +1,4 @@
-import { render, fireEvent, wait } from '@testing-library/react';
+import { render, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import React from 'react';
 import { MockPayloadGenerator } from 'relay-test-utils';
@@ -87,7 +87,7 @@ it('should render post like button and likes count', async () => {
 
   fireEvent.click(likeButton);
 
-  await wait(() => Environment.mock.getMostRecentOperation());
+  await waitFor(() => Environment.mock.getMostRecentOperation());
 
   // PostLikeMutation
   const mutationOperation = Environment.mock.getMostRecentOperation();

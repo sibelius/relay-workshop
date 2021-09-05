@@ -9,6 +9,7 @@ module.exports = {
   transform: {
     '^.+\\.(js|ts|tsx)?$': '<rootDir>/test/babel-transformer',
   },
+  testEnvironment: 'jsdom',
   testRegex: '(/__tests__/.*|(\\.|/)(test))\\.(j|t)sx?$',
   moduleFileExtensions: ['js', 'css', 'ts', 'tsx', 'json'],
   collectCoverageFrom: ['src/**/*.tsx'],
