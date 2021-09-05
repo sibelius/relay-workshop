@@ -4893,9 +4893,9 @@
     "@types/koa" "*"
 
 "@types/koa@*", "@types/koa@^2.11.6":
-  version "2.13.3"
-  resolved "https://registry.yarnpkg.com/@types/koa/-/koa-2.13.3.tgz#5b44c0956d7f7bf41f74ccfb530fec60fbed45ca"
-  integrity sha512-TaujBV+Dhe/FvmSMZJtCFBms+bqQacgUebk/M2C2tq8iGmHE/DDf4DcW2Hc7NqusVZmy5xzrWOjtdPKNP+fTfw==
+  version "2.13.4"
+  resolved "https://registry.yarnpkg.com/@types/koa/-/koa-2.13.4.tgz#10620b3f24a8027ef5cbae88b393d1b31205726b"
+  integrity sha512-dfHYMfU+z/vKtQB7NUrthdAEiSvnLebvBjwHtfFmpZmB7em2N3WVQdHgnFq+xvyVgxW5jKDmjWfLD3lw4g4uTw==
   dependencies:
     "@types/accepts" "*"
     "@types/content-disposition" "*"
@@ -4975,20 +4975,15 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.4.7.tgz#f7afa78769d4b477f5092d7c3468e2e8653d779c"
   integrity sha512-aDDY54sst8sx47CWT6QQqIZp45yURq4dic0+HCYfYNcY5Ejlb/CLmFnRLfy3wQuYafOeh3lB/DAKaqRKBtcZmA==
 
-"@types/node@14.x || 15.x":
-  version "15.14.4"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.14.4.tgz#aaf18436ef67f24676d92b8bbe0f5f41b08db3e8"
-  integrity sha512-yblJrsfCxdxYDUa2fM5sP93ZLk5xL3/+3MJei+YtsNbIdY75ePy2AiCfpq+onepzax+8/Yv+OD/fLNleWpCzVg==
+"@types/node@14.x || 15.x", "@types/node@^15.0.1":
+  version "15.14.5"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.14.5.tgz#7b5b3532053fd14c771ad6598a4ee2c7a85aceca"
+  integrity sha512-6ewfMNmkumZieB/EeJ4cdP1bbJyOlOt5MTwbKMr7WKxyCt2j09H8YWRK6zOd/Jh35Vu/gls39ZUmeu4vHu1WKQ==
 
 "@types/node@^14.14.41":
   version "14.17.2"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.17.2.tgz#1e94476db57ec93a372c7f7d29aa5707cfb92339"
   integrity sha512-sld7b/xmFum66AAKuz/rp/CUO8+98fMpyQ3SBfzzBNGMd/1iHBTAg9oyAvcYlAj46bpc74r91jSw2iFdnx29nw==
-
-"@types/node@^15.0.1":
-  version "15.14.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.14.5.tgz#7b5b3532053fd14c771ad6598a4ee2c7a85aceca"
-  integrity sha512-6ewfMNmkumZieB/EeJ4cdP1bbJyOlOt5MTwbKMr7WKxyCt2j09H8YWRK6zOd/Jh35Vu/gls39ZUmeu4vHu1WKQ==
 
 "@types/node@^8.5.7":
   version "8.10.66"
