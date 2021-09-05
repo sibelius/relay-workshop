@@ -51,7 +51,7 @@
     "razzle-plugin-typescript": "4.0.6",
     "react-refresh": "0.10.0",
     "relay-test-utils": "11.0.2",
-    "style-loader": "^2.0.0",
+    "style-loader": "^3.2.1",
     "webpack-cli": "^4.1.0",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "5.8.0",
