@@ -1,4 +1,4 @@
-import React, { useEffect, unstable_useTransition as useTransition, Suspense, useState } from 'react';
+import React, { useEffect, useTransition, Suspense, useState } from 'react';
 import { match } from 'react-router';
 import styled, { keyframes } from 'styled-components';
 
@@ -6,8 +6,6 @@ import ErrorBoundary from './ErrorBoundary';
 
 import { useRoutingContext } from './RoutingContext';
 import { Resource } from './JSResource';
-
-const SUSPENSE_CONFIG = { timeoutMs: 2000 };
 
 const makeVisible = keyframes`
   to {
@@ -33,7 +31,7 @@ const RouterRenderer = () => {
   // Improve the route transition UX by delaying transitions: show the previous route entry
   // for a brief period while the next route is being prepared. See
   // https://reactjs.org/docs/concurrent-mode-patterns.html#transitions
-  const [startTransition, isPending] = useTransition(SUSPENSE_CONFIG);
+  const [isPending, startTransition] = useTransition();
 
   // Store the active entry in state - this allows the renderer to use features like
   // useTransition to delay when state changes become visible to the user.

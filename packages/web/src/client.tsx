@@ -1,6 +1,6 @@
 import React from 'react';
 // eslint-disable-next-line
-import { hydrate, unstable_createRoot as createRoot } from 'react-dom';
+import { createRoot } from 'react-dom';
 import { createBrowserHistory } from 'history';
 
 import { RoutingContext, createRouter } from '@workshop/route';
