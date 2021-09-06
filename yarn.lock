@@ -4592,10 +4592,10 @@
   dependencies:
     dotenv "^8.2.0"
 
-"@types/dotenv-webpack@7.0.2":
-  version "7.0.2"
-  resolved "https://registry.yarnpkg.com/@types/dotenv-webpack/-/dotenv-webpack-7.0.2.tgz#65f0e38bfdd9471ddb14e30cddc493fcf30a457a"
-  integrity sha512-7GdkjjhUu7lFxOzvYpC9ncychx25igXBwQxM7nJSy8b6b/x8B+CQ/BknkOKkmNlx/UkIK1KEDjYezK33RhfkNA==
+"@types/dotenv-webpack@7.0.3":
+  version "7.0.3"
+  resolved "https://registry.yarnpkg.com/@types/dotenv-webpack/-/dotenv-webpack-7.0.3.tgz#43eaf6a2ee6161e9c79d58c3704d4a1a054e6082"
+  integrity sha512-NGmfRWp/5hTnnhl4glRbgQhtpJeVN8EUafxvOjVSEKiq8WCcfCH4MyiwRYHspwbIL9Ke+bptp3uTfBHiYIhEWw==
   dependencies:
     "@types/node" "*"
     tapable "^2.2.0"
