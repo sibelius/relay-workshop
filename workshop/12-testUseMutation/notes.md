@@ -26,7 +26,7 @@ const likeButton = getByTestId('likeButton');
 // click the button that will call the mutation
 fireEvent.click(likeButton);
 // wait the mutation to be called
-await wait(() => Environment.mock.getMostRecentOperation());
+await waitFor(() => Environment.mock.getMostRecentOperation());
 
 // get the mutation
 // PostLikeMutation
