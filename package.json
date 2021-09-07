@@ -9,7 +9,7 @@
     "@types/dotenv-webpack": "7.0.3",
     "@types/graphql": "^14.2.2",
     "@types/graphql-relay": "^0.6.0",
-    "@types/history": "4.7.8",
+    "@types/history": "4.7.9",
     "@types/isomorphic-fetch": "0.0.35",
     "@types/jest": "^27.0.1",
     "@types/jscodeshift": "^0.11.0",
