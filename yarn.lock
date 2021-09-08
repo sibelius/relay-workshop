@@ -20231,7 +20231,7 @@ react-transition-group@^4.4.0:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react@18.0.0-alpha-e4e8226c6-20210812, react@^16.8.6, react@^17.0.1:
+react@18.0.0-alpha-310187264-20210716, react@18.0.0-alpha-e4e8226c6-20210812, react@^16.8.6, react@^18.0.0-alpha-310187264-20210716:
   version "18.0.0-alpha-e4e8226c6-20210812"
   resolved "https://registry.yarnpkg.com/react/-/react-18.0.0-alpha-e4e8226c6-20210812.tgz#3969c20295c358366bc6f89f4791e19f8bc0b581"
   integrity sha512-qw98kQqpb4zzm9C2aKviCf0ijwNTLdMVyANltCY9wIzcevhWPJKmriRTAL67LKx5PdWRQPAUz9zFhAOMst9/7g==
