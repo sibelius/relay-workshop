@@ -8,7 +8,7 @@
     "start": "webpack serve --hot"
   },
   "devDependencies": {
-    "relay-compiler": "11.0.2",
+    "relay-compiler": "12.0.0",
     "webpack": "5.47.1"
   }
 }
