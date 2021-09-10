@@ -1,7 +1,13 @@
-import 'isomorphic-fetch';
 import React from 'react';
-import { unstable_createRoot as createRoot } from 'react-dom';
+import 'isomorphic-fetch';
+import ReactDOM from 'react-dom';
 
 import Root from './Root';
 
-createRoot(document.getElementById('root')).render(<Root />);
+const container = document.getElementById('root');
+
+if (!container) throw new Error('Failed to find the root element');
+
+const root = ReactDOM.createRoot(container);
+
+root.render(<Root />);
