@@ -44,6 +44,7 @@
     "jest": "jest",
     "serve": "node ./dist/index.js",
     "start": "webpack --watch --progress --config webpack.config.server.js",
-    "update-schema": "babel-node --extensions \".es6,.js,.es,.jsx,.mjs,.ts\" ./scripts/updateSchema.ts"
+    "update-schema": "babel-node --extensions \".es6,.js,.es,.jsx,.mjs,.ts\" ./scripts/updateSchema.ts",
+    "seed": "babel-node --extensions \".ts\" ./scripts/seed.ts"
   }
 }
