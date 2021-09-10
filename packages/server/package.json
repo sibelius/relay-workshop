@@ -22,7 +22,7 @@
     "koa-logger": "^3.2.1",
     "koa-router": "^10.0.0",
     "mongodb-memory-server": "7.4.0",
-    "mongoose": "^5.10.15",
+    "mongoose": "^6.0.5",
     "subscriptions-transport-ws": "^0.9.18",
     "supertest": "6.1.4"
   },
