@@ -26,6 +26,11 @@ jobs:
         env:
           CI: true
 
+      - name: Relay (generate types)
+        run: yarn relay
+        env:
+          CI: true
+
       - name: Format
         run: yarn prettier
         env:
