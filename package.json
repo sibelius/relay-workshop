@@ -110,13 +110,14 @@
     "update-schema": "yarn w ./packages/server/scripts/updateSchema.ts",
     "web": "yarn workspace @workshop/web start",
     "w": "yarn b webpackx.ts",
-    "start": "concurrently --kill-others \"yarn workspace @workshop/web start\" \"yarn workspace @workshop/server start\""
+    "start": "concurrently --kill-others \"yarn workspace @workshop/web start\" \"yarn workspace @workshop/server start\"",
+    "all:relay": "lerna run relay --parallel --ignore @workshop/0* --ignore @workshop/1*"
   },
   "workspaces": {
     "packages": [
       "packages/*",
       "workshop/*",
-      "workshop-solutions/*",
+      "solutions/*",
       "slides/*"
     ]
   }
