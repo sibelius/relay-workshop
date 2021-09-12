@@ -27,7 +27,7 @@ jobs:
           CI: true
 
       - name: Relay (generate types)
-        run: yarn relay
+        run: yarn all:relay
         env:
           CI: true
 

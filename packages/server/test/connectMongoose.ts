@@ -10,19 +10,10 @@ declare global {
   }
 }
 
-const mongooseOptions = {
-  autoIndex: false,
-  autoReconnect: false,
-  connectTimeoutMS: 10000,
-  useNewUrlParser: true,
-  useCreateIndex: true,
-  useUnifiedTopology: true,
-};
-
 export async function connectMongoose() {
   jest.setTimeout(20000);
   return mongoose.connect(global.__MONGO_URI__, {
-    ...mongooseOptions,
+    connectTimeoutMS: 10000,
     dbName: global.__MONGO_DB_NAME__,
   });
 }

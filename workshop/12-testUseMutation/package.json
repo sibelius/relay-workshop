@@ -1,5 +1,5 @@
 {
-  "name": "@solutions/12-testUseMutation",
+  "name": "@workshop/12-testUseMutation",
   "version": "1.0.0",
   "scripts": {
     "copy-env": "cp .env.example .env",
