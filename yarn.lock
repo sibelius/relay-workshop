@@ -4885,9 +4885,9 @@
     "@types/koa" "*"
 
 "@types/koa-graphql@^0.8.4":
-  version "0.8.4"
-  resolved "https://registry.yarnpkg.com/@types/koa-graphql/-/koa-graphql-0.8.4.tgz#519f74399de2097b9d442f19b2d7a8551ed4d2ce"
-  integrity sha512-BnjmDTwfP+Fd7SQnXB83NPi4J6v5pWtVF8Tm9hEVxbxAPj1BGPvJh78rh09Cr9xoqAqRsjdem6ifoM3HERWzjQ==
+  version "0.8.5"
+  resolved "https://registry.yarnpkg.com/@types/koa-graphql/-/koa-graphql-0.8.5.tgz#8bd2ee2cdf8027eabb31103ed79959875e094203"
+  integrity sha512-N3lOMP3v3IGETc0LzFUyYM0N/V2Vv2Gw3Q9EpDD/i0XHsDXKshyH1FIQVU3O7xYDdUB6wtq4e1//en9IxCpedA==
   dependencies:
     "@types/koa" "*"
     "@types/node" "*"
