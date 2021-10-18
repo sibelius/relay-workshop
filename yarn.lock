@@ -4920,9 +4920,9 @@
     graphql "^15.1.0"
 
 "@types/koa-logger@^3.1.0":
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/@types/koa-logger/-/koa-logger-3.1.1.tgz#bf759ba2f25b7562ffa30b09616bb1c1e5070fea"
-  integrity sha512-wp2HaskkPugfwgXgNnc+idnReuJZSTTYQbkcxXjsMhp1kTc342PxDzTL9FXDgBfEvgt9NX1CCGjkwPKX2dlEKQ==
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@types/koa-logger/-/koa-logger-3.1.2.tgz#91e890f405ddb0626bc385767e4cc0cd7226d1a8"
+  integrity sha512-sioTA1xlKYiIgryANWPRHBkG3XGbWftw9slWADUPC+qvPIY/yRLSrhvX7zkJwMrntub5dPO0GuAoyGGf0yitfQ==
   dependencies:
     "@types/koa" "*"
 
