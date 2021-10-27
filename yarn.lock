@@ -4825,9 +4825,9 @@
     "@types/node" "*"
 
 "@types/kcors@^2.2.3":
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/@types/kcors/-/kcors-2.2.3.tgz#e6532132492173a8681dd85774f380834b96f571"
-  integrity sha512-ICwth6ZODezC22Yvkk5fMIESkAHhbjoqNn+yIBPJPKfG2sP9+fPmMWGBUrI3h1wjTBmbrQ1fBE6qoUMmG7yo9w==
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/@types/kcors/-/kcors-2.2.5.tgz#a68a117a528a319b949bacf405d6d54bfebc063e"
+  integrity sha512-vjTxngDYnOi1ezwzmD8OgW92tC3N1xvckgfo4B0005RgWOW2ezg8+SqTt6t33iptPZ6jDcFPp9lxQpQ1JtUVmQ==
   dependencies:
     "@types/koa" "*"
 
