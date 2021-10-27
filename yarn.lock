@@ -5047,10 +5047,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-relay@*", "@types/react-relay@11.0.1":
-  version "11.0.1"
-  resolved "https://registry.yarnpkg.com/@types/react-relay/-/react-relay-11.0.1.tgz#5750409b4323f871910a52b514daab09aa4f4c75"
-  integrity sha512-mp9HUfaFcuynWNGpuS6GJEgIkQMeUvaVZ0KNLeJp21aAwsSajeU7vVH4uttSHk9iEvfw8ZyF5fqZHzKpCOeIDQ==
+"@types/react-relay@*", "@types/react-relay@11.0.2":
+  version "11.0.2"
+  resolved "https://registry.yarnpkg.com/@types/react-relay/-/react-relay-11.0.2.tgz#e66f7e62d07aab1ca3a7c2a258ad27540ff02879"
+  integrity sha512-g6lrdgvcjDKxUA4S3ZzZc/+Vtl5KOJPLgTTO2s20wKClV0Pws8OIkmuptMQkTucID4nozfrkVJo0D+xBff3Qmw==
   dependencies:
     "@types/react" "*"
     "@types/relay-runtime" "*"
