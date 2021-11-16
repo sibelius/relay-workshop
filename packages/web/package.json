@@ -17,7 +17,7 @@
     "koa-static": "^5.0.0",
     "notistack": "^1.0.1",
     "react": "18.0.0-alpha-e4e8226c6-20210812",
-    "react-dom": "18.0.0-alpha-e4e8226c6-20210812",
+    "react-dom": "18.0.0-beta-96ca8d915-20211115",
     "react-infinite-scroller": "1.2.4",
     "react-relay": "11.0.2",
     "react-router-config": "^5.0.1",
