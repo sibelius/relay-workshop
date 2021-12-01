@@ -12,7 +12,7 @@
     "graphql-playground-middleware-koa": "^1.6.21",
     "graphql-relay": "^0.7.0",
     "graphql-relay-subscription": "^0.3.1",
-    "graphql-subscriptions": "^1.1.0",
+    "graphql-subscriptions": "^2.0.0",
     "isomorphic-fetch": "^3.0.0",
     "jsonwebtoken": "8.5.1",
     "kcors": "^2.2.2",
