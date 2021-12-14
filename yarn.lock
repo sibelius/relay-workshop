@@ -4931,13 +4931,13 @@
     "@types/koa" "*"
 
 "@types/koa-graphql@^0.8.4":
-  version "0.8.5"
-  resolved "https://registry.yarnpkg.com/@types/koa-graphql/-/koa-graphql-0.8.5.tgz#8bd2ee2cdf8027eabb31103ed79959875e094203"
-  integrity sha512-N3lOMP3v3IGETc0LzFUyYM0N/V2Vv2Gw3Q9EpDD/i0XHsDXKshyH1FIQVU3O7xYDdUB6wtq4e1//en9IxCpedA==
+  version "0.8.6"
+  resolved "https://registry.yarnpkg.com/@types/koa-graphql/-/koa-graphql-0.8.6.tgz#9480757580528a75d4cb5b78176d7dcc663e0a0d"
+  integrity sha512-Pvtvu+XmcobCU5Xyf1zv62NTP9ot1NvNxGwJsZBSX0enZpye0glnASjxYKBHMNPW81vjMyxBauscj565pium5g==
   dependencies:
     "@types/koa" "*"
     "@types/node" "*"
-    express-graphql "^0.9.0"
+    express-graphql "^0.10.0"
     graphql "^15.1.0"
 
 "@types/koa-logger@^3.1.0":
@@ -10875,6 +10875,16 @@ express-graphql@0.7.1:
     http-errors "^1.7.1"
     raw-body "^2.3.3"
 
+express-graphql@^0.10.0:
+  version "0.10.2"
+  resolved "https://registry.yarnpkg.com/express-graphql/-/express-graphql-0.10.2.tgz#1b83a9f2a07cb04e59b34fd0396bba81a2c67121"
+  integrity sha512-OV8L1li3e2kFegslfyxY/Geh0JCRy/pmZUQmiRP+B3LUuRq4w8D+esjZodhW4vh8N0SeA5fFZ1UvbnVkt/fGOw==
+  dependencies:
+    accepts "^1.3.7"
+    content-type "^1.0.4"
+    http-errors "1.8.0"
+    raw-body "^2.4.1"
+
 express-graphql@^0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/express-graphql/-/express-graphql-0.9.0.tgz#00fd8552f866bac5c9a4612b2c4c82076107b3c2"
@@ -13129,7 +13139,7 @@ http-errors@1.7.3, http-errors@~1.7.2:
     statuses ">= 1.5.0 < 2"
     toidentifier "1.0.0"
 
-http-errors@^1.6.3, http-errors@^1.7.1, http-errors@^1.7.3:
+http-errors@1.8.0, http-errors@^1.6.3, http-errors@^1.7.1, http-errors@^1.7.3:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/http-errors/-/http-errors-1.8.0.tgz#75d1bbe497e1044f51e4ee9e704a62f28d336507"
   integrity sha512-4I8r0C5JDhT5VkvI47QktDW75rNlGVsUf/8hzjCC/wkWI/jdTRmBb9aI7erSG82r1bjKY3F6k28WnsVxB1C73A==
