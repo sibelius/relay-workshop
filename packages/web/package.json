@@ -19,7 +19,7 @@
     "react": "18.0.0-alpha-e4e8226c6-20210812",
     "react-dom": "18.0.0-alpha-e4e8226c6-20210812",
     "react-infinite-scroller": "1.2.4",
-    "react-relay": "11.0.2",
+    "react-relay": "12.0.0",
     "react-router-config": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "4.0.3",
