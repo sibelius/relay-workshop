@@ -5150,10 +5150,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-relay@*", "@types/react-relay@11.0.2":
-  version "11.0.2"
-  resolved "https://registry.yarnpkg.com/@types/react-relay/-/react-relay-11.0.2.tgz#e66f7e62d07aab1ca3a7c2a258ad27540ff02879"
-  integrity sha512-g6lrdgvcjDKxUA4S3ZzZc/+Vtl5KOJPLgTTO2s20wKClV0Pws8OIkmuptMQkTucID4nozfrkVJo0D+xBff3Qmw==
+"@types/react-relay@*", "@types/react-relay@11.0.3":
+  version "11.0.3"
+  resolved "https://registry.yarnpkg.com/@types/react-relay/-/react-relay-11.0.3.tgz#95097049203f2f814e1330453d037841a2a310e5"
+  integrity sha512-hgKmTCswmZclKOqju/3pcVgJG3FtNrwfLLq4wtpZuQ/UJAyVeQ90SS6GiGZBr6hDZmcxNMIQCNyJ0YK5eE9Ceg==
   dependencies:
     "@types/react" "*"
     "@types/relay-runtime" "*"
