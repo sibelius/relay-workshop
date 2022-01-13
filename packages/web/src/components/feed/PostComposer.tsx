@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import CardContent from '@mui/material';
-import Button from '@mui/material';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
 
 import { Card, TextArea, CardActions } from '@workshop/ui';
 

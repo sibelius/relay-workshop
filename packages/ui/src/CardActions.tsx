@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import _CardActions from '@mui/material';
+import _CardActions from '@mui/material/CardActions';
 import { flexbox, FlexboxProps, space, SpaceProps } from 'styled-system';
 
 interface CardActionsProps extends FlexboxProps, SpaceProps {}

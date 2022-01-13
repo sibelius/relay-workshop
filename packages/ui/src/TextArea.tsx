@@ -1,4 +1,4 @@
-import TextField from '@mui/material';
+import TextField from '@mui/material/TextField';
 import styled from 'styled-components';
 
 export const TextArea = styled(TextField).attrs({
