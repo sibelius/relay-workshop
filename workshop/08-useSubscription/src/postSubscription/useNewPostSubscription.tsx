@@ -1,7 +1,6 @@
 // eslint-disable-next-line
 import React, { useMemo } from 'react';
-// eslint-disable-next-line
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material';
 
 import { useSnackbar } from 'notistack';
 

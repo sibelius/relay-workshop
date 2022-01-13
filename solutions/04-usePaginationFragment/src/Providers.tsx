@@ -2,7 +2,7 @@ import React from 'react';
 import { RelayEnvironmentProvider } from 'react-relay';
 
 import { ThemeProvider } from 'styled-components';
-import { StylesProvider } from '@material-ui/styles';
+import StylesProvider from '@mui/styles/StylesProvider';
 import { getTheme } from '@workshop/ui';
 
 import Environment from './relay/Environment';

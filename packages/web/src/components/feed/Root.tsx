@@ -1,10 +1,10 @@
 import React, { Suspense } from 'react';
-import { CssBaseline } from '@material-ui/core';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
+import CssBaseline from '@mui/material/CssBaseline';
+import AppBar from '@mui/material';
+import Toolbar from '@mui/material';
 import { Text } from 'rebass';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import IconButton from '@material-ui/core/IconButton';
+import ExitToAppIcon from '@mui/icons-material';
+import IconButton from '@mui/material';
 
 import { usePreloadedQuery } from 'react-relay';
 
