@@ -1,8 +1,8 @@
 import React, { useTransition } from 'react';
 import { graphql, useRefetchableFragment } from 'react-relay';
 import { Flex, Text } from 'rebass';
-import Button from '@material-ui/core/Button';
-import CircularProgress from '@material-ui/core/CircularProgress';
+import Button from '@mui/material';
+import CircularProgress from '@mui/material';
 
 import { theme } from '@workshop/ui';
 

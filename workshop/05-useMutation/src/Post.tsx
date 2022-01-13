@@ -2,9 +2,9 @@ import React, { useCallback } from 'react';
 import { useFragment, graphql } from 'react-relay';
 import { Text } from 'rebass';
 import { Card, CardActions, theme } from '@workshop/ui';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-import IconButton from '@material-ui/core/IconButton';
+import FavoriteIcon from '@mui/icons-material';
+import FavoriteBorderIcon from '@mui/icons-material';
+import IconButton from '@mui/material';
 
 import { Post_post, Post_post$key } from './__generated__/Post_post.graphql';
 

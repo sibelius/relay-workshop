@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { flexbox, FlexboxProps, space, SpaceProps } from 'styled-system';
-import _Button from '@material-ui/core/Button';
+import _Button from '@mui/material';
 
 interface ButtonProps extends FlexboxProps, SpaceProps {}
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useField } from 'formik';
-import _TextFieldMaterial, { TextFieldProps as MaterialUITextFieldProps } from '@material-ui/core/TextField';
+import _TextFieldMaterial from '@mui/material';
+import MaterialUITextFieldProps from '@mui/material/TextFieldProps';
 import styled from 'styled-components';
 import { flexbox, FlexboxProps, space, SpaceProps } from 'styled-system';
 

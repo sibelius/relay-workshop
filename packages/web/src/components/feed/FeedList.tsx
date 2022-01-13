@@ -2,7 +2,7 @@ import React from 'react';
 import { usePaginationFragment, graphql } from 'react-relay/lib/hooks';
 
 import InfiniteScroll from 'react-infinite-scroller';
-import CircularProgress from '@material-ui/core/CircularProgress';
+import CircularProgress from '@mui/material';
 import { Flex } from 'rebass';
 
 import Post from './post/Post';

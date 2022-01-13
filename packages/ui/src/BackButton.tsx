@@ -1,7 +1,7 @@
 import React from 'react';
 
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import IconButton from '@material-ui/core/IconButton';
+import ArrowBackIcon from '@mui/icons-material';
+import IconButton from '@mui/material';
 
 import { useHistory } from '@workshop/route';
 

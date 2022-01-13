@@ -1,5 +1,5 @@
 import React from 'react';
-import CardContent from '@material-ui/core/CardContent';
+import CardContent from '@mui/material';
 import { useFragment } from 'react-relay';
 import { graphql } from 'react-relay';
 import styled from 'styled-components';

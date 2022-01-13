@@ -4,7 +4,7 @@ import { useFragment } from 'react-relay';
 import { graphql } from 'react-relay';
 
 import { Text, Flex } from 'rebass';
-import Avatar from '@material-ui/core/Avatar';
+import Avatar from '@mui/material';
 
 import { theme } from '@workshop/ui';
 
