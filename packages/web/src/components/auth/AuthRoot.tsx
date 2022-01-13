@@ -1,7 +1,7 @@
 import React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
-import AppBar from '@mui/material';
-import Toolbar from '@mui/material';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
 import { Text } from 'rebass';
 
 const AuthRoot = ({ children }) => {

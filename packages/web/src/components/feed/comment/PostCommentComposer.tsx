@@ -3,11 +3,11 @@ import { useFragment } from 'react-relay';
 
 import { Flex } from 'rebass';
 
-import SendIcon from '@mui/icons-material';
-import IconButton from '@mui/material';
+import SendIcon from '@mui/icons-material/Send';
+import IconButton from '@mui/material/IconButton';
 import { graphql } from 'react-relay';
 
-import Divider from '@mui/material';
+import Divider from '@mui/material/Divider';
 
 import { useMutation } from 'react-relay';
 

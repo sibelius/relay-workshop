@@ -1,9 +1,9 @@
 import React from 'react';
-import FavoriteIcon from '@mui/icons-material';
-import FavoriteBorderIcon from '@mui/icons-material';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 import { useFragment } from 'react-relay';
-import IconButton from '@mui/material';
+import IconButton from '@mui/material/IconButton';
 
 import { graphql } from 'react-relay';
 

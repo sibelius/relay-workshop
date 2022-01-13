@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import _Card from '@mui/material';
+import _Card from '@mui/material/Card';
 import { flexbox, space, layout, FlexboxProps, SpaceProps, compose, LayoutProps } from 'styled-system';
 
 interface CardProps extends FlexboxProps, SpaceProps, LayoutProps {}

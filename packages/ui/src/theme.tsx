@@ -1,4 +1,4 @@
-import createMuiTheme from '@mui/material/createMuiTheme';
+import createMuiTheme from '@mui/material/styles/createMuiTheme';
 
 // TODO - customize material ui theme
 export const theme = {
