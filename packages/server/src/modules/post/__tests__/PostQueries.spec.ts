@@ -37,16 +37,23 @@ it('should all posts', async () => {
           }
         }
       }
-    }    
+    }
   `;
 
   const rootValue = {};
-  const context = await getContext({ user });
-  const variables = {};
+  const contextValue = await getContext({ user });
+  const variableValues = {};
 
-  const result = await graphql(schema, query, rootValue, context, variables);
+  const result = await graphql({
+    schema,
+    source: query,
+    rootValue,
+    contextValue,
+    variableValues,
+  });
   expect(result.errors).toBeUndefined();
 
+  // eslint-disable-next-line
   console.log('result: ', result.data.posts);
   expect(result.data.posts.edges.length).toBe(2);
   expect(sanitizeTestObject(result.data)).toMatchSnapshot();

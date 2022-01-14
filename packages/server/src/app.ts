@@ -3,7 +3,7 @@ import Koa, { Request } from 'koa';
 import Router from 'koa-router';
 import logger from 'koa-logger';
 import cors from 'kcors';
-import graphqlHttp from 'koa-graphql';
+import { graphqlHTTP, OptionsData } from 'koa-graphql';
 import bodyParser from 'koa-bodyparser';
 import { GraphQLError } from 'graphql';
 import koaPlayground from 'graphql-playground-middleware-koa';
@@ -54,10 +54,10 @@ const graphqlSettingsPerReq = async (req: Request) => {
         stack: error.stack,
       };
     },
-  } as graphqlHttp.OptionsData;
+  } as OptionsData;
 };
 
-const graphqlServer = graphqlHttp(graphqlSettingsPerReq);
+const graphqlServer = graphqlHTTP(graphqlSettingsPerReq);
 
 router.all('/graphql', graphqlServer);
 router.all(
