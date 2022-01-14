@@ -31,7 +31,7 @@ const UserType = new GraphQLObjectType<IUser, GraphQLContext>({
       resolve: user => user.email,
     },
     posts: {
-      type: GraphQLNonNull(PostConnection.connectionType),
+      type: new GraphQLNonNull(PostConnection.connectionType),
       args: {
         ...connectionArgs,
       },
@@ -44,7 +44,7 @@ const UserType = new GraphQLObjectType<IUser, GraphQLContext>({
         ),
     },
     comments: {
-      type: GraphQLNonNull(CommentConnection.connectionType),
+      type: new GraphQLNonNull(CommentConnection.connectionType),
       args: {
         ...connectionArgs,
       },

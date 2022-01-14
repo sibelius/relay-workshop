@@ -35,11 +35,11 @@ const CommentType = new GraphQLObjectType<IComment, GraphQLContext>({
       resolve: (comment, _, context) => PostLoader.load(context, comment.post),
     },
     likesCount: {
-      type: GraphQLNonNull(GraphQLInt),
+      type: new GraphQLNonNull(GraphQLInt),
       resolve: comment => LikeModel.countDocuments({ comment: comment._id }),
     },
     meHasLiked: {
-      type: GraphQLNonNull(GraphQLBoolean),
+      type: new GraphQLNonNull(GraphQLBoolean),
       description: 'whether logged user liked this post',
       resolve: async (comment, _, context) => {
         if (!context.user) {

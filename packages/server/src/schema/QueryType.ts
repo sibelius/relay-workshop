@@ -19,7 +19,7 @@ const QueryType = new GraphQLObjectType({
       resolve: (root, args, context) => UserLoader.load(context, context.user?._id),
     },
     posts: {
-      type: GraphQLNonNull(PostConnection.connectionType),
+      type: new GraphQLNonNull(PostConnection.connectionType),
       args: {
         ...connectionArgs,
       },

@@ -22,10 +22,10 @@ const mutation = mutationWithClientMutationId({
   name: 'PostCommentCreate',
   inputFields: {
     post: {
-      type: GraphQLNonNull(GraphQLID),
+      type: new GraphQLNonNull(GraphQLID),
     },
     body: {
-      type: GraphQLNonNull(GraphQLString),
+      type: new GraphQLNonNull(GraphQLString),
     },
   },
   mutateAndGetPayload: async (args: Args, context: GraphQLContext) => {

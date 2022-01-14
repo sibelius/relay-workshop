@@ -7,7 +7,7 @@ type MongooseModel = {
 
 export const mongooseIDResolver = {
   _id: {
-    type: GraphQLNonNull(GraphQLString),
+    type: new GraphQLNonNull(GraphQLString),
     description: 'mongoose _id',
     resolve: ({ _id }: MongooseModel) => _id.toString(),
   },
