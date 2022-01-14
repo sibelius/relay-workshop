@@ -20,16 +20,22 @@ it('should return logged user', async () => {
       me {
         name
       }
-    }    
+    }
   `;
 
   const rootValue = {};
-  const context = await getContext({ user });
-  const variables = {};
+  const contextValue = await getContext({ user });
+  const variableValues = {};
 
-  const result = await graphql(schema, query, rootValue, context, variables);
+  const result = await graphql({
+    schema,
+    source: query,
+    rootValue,
+    contextValue,
+    variableValues,
+  });
+
   expect(result.errors).toBeUndefined();
-
   expect(result.data.me).not.toBe(null);
   expect(result.data.me.name).toBe(user.name);
   expect(sanitizeTestObject(result)).toMatchSnapshot();
