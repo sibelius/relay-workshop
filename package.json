@@ -96,8 +96,7 @@
     "react-dom": "18.0.0-alpha-e4e8226c6-20210812",
     "styled-system": "5.1.5",
     "webpack": "5.38.1",
-    "html-webpack-plugin": "5.3.1",
-    "@pmmmwh/react-refresh-webpack-plugin": "0.4.3"
+    "html-webpack-plugin": "5.3.1"
   },
   "scripts": {
     "all:relay": "lerna run relay --parallel --ignore @workshop/0* --ignore @workshop/1*",
