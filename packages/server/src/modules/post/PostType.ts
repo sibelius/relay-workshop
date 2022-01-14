@@ -32,15 +32,15 @@ const PostType = new GraphQLObjectType<IPost, GraphQLContext>({
       resolve: (post, _, context) => UserLoader.load(context, post.author),
     },
     likesCount: {
-      type: GraphQLNonNull(GraphQLInt),
+      type: new GraphQLNonNull(GraphQLInt),
       resolve: post => LikeModel.countDocuments({ post: post._id }),
     },
     commentsCount: {
-      type: GraphQLNonNull(GraphQLInt),
+      type: new GraphQLNonNull(GraphQLInt),
       resolve: post => CommentModel.countDocuments({ post: post._id }),
     },
     comments: {
-      type: GraphQLNonNull(CommentConnection.connectionType),
+      type: new GraphQLNonNull(CommentConnection.connectionType),
       args: {
         ...connectionArgs,
       },
@@ -48,7 +48,7 @@ const PostType = new GraphQLObjectType<IPost, GraphQLContext>({
         await CommentLoader.loadAll(context, withFilter(args, { post: post._id })),
     },
     meHasLiked: {
-      type: GraphQLNonNull(GraphQLBoolean),
+      type: new GraphQLNonNull(GraphQLBoolean),
       description: 'whether logged user liked this post',
       resolve: async (post, _, context) => {
         if (!context.user) {

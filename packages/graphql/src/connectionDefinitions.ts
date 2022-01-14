@@ -1,14 +1,15 @@
 import {
   GraphQLBoolean,
   GraphQLFieldConfigArgumentMap,
-  GraphQLFieldConfigMap,
+  GraphQLFieldConfig,
   GraphQLFieldResolver,
   GraphQLInt,
   GraphQLList,
   GraphQLNonNull,
   GraphQLObjectType,
   GraphQLString,
-  Thunk,
+  ThunkObjMap,
+  resolveObjMapThunk,
 } from 'graphql';
 
 export const forwardConnectionArgs: GraphQLFieldConfigArgumentMap = {
@@ -39,8 +40,8 @@ type ConnectionConfig = {
   nodeType: GraphQLObjectType;
   resolveNode?: GraphQLFieldResolver<any, any> | null;
   resolveCursor?: GraphQLFieldResolver<any, any> | null;
-  edgeFields?: Thunk<GraphQLFieldConfigMap<any, any>> | null;
-  connectionFields?: Thunk<GraphQLFieldConfigMap<any, any>> | null;
+  edgeFields?: ThunkObjMap<GraphQLFieldConfig<any, any>> | null;
+  connectionFields?: ThunkObjMap<GraphQLFieldConfig<any, any>> | null;
 };
 
 export type GraphQLConnectionDefinitions = {
@@ -53,11 +54,11 @@ const pageInfoType = new GraphQLObjectType({
   description: 'Information about pagination in a connection.',
   fields: () => ({
     hasNextPage: {
-      type: GraphQLNonNull(GraphQLBoolean),
+      type: new GraphQLNonNull(GraphQLBoolean),
       description: 'When paginating forwards, are there more items?',
     },
     hasPreviousPage: {
-      type: GraphQLNonNull(GraphQLBoolean),
+      type: new GraphQLNonNull(GraphQLBoolean),
       description: 'When paginating backwards, are there more items?',
     },
     startCursor: {
@@ -70,10 +71,6 @@ const pageInfoType = new GraphQLObjectType({
     },
   }),
 });
-
-function resolveMaybeThunk<T>(thingOrThunk: Thunk<T>): T {
-  return typeof thingOrThunk === 'function' ? (thingOrThunk as () => T)() : thingOrThunk;
-}
 
 export function connectionDefinitions(config: ConnectionConfig): GraphQLConnectionDefinitions {
   const { nodeType, resolveCursor, resolveNode } = config;
@@ -91,11 +88,11 @@ export function connectionDefinitions(config: ConnectionConfig): GraphQLConnecti
         description: 'The item at the end of the edge',
       },
       cursor: {
-        type: GraphQLNonNull(GraphQLString),
+        type: new GraphQLNonNull(GraphQLString),
         resolve: resolveCursor,
         description: 'A cursor for use in pagination',
       },
-      ...(resolveMaybeThunk(edgeFields) as any),
+      ...(resolveObjMapThunk(edgeFields) as any),
     }),
   });
 
@@ -116,22 +113,22 @@ export function connectionDefinitions(config: ConnectionConfig): GraphQLConnecti
   for example.`,
       },
       startCursorOffset: {
-        type: GraphQLNonNull(GraphQLInt),
+        type: new GraphQLNonNull(GraphQLInt),
         description: 'Offset from start',
       },
       endCursorOffset: {
-        type: GraphQLNonNull(GraphQLInt),
+        type: new GraphQLNonNull(GraphQLInt),
         description: 'Offset till end',
       },
       pageInfo: {
-        type: GraphQLNonNull(pageInfoType),
+        type: new GraphQLNonNull(pageInfoType),
         description: 'Information to aid in pagination.',
       },
       edges: {
-        type: GraphQLNonNull(GraphQLList(edgeType)),
+        type: new GraphQLNonNull(new GraphQLList(edgeType)),
         description: 'A list of edges.',
       },
-      ...(resolveMaybeThunk(connectionFields) as any),
+      ...(resolveObjMapThunk(connectionFields) as any),
     }),
   });
 

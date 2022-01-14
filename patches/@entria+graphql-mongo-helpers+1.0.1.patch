@@ -1,0 +1,678 @@
+diff --git a/node_modules/@entria/graphql-mongo-helpers/lib/buildAggregatePipeline.d.ts b/node_modules/@entria/graphql-mongo-helpers/lib/buildAggregatePipeline.d.ts
+index 0798d0a..f6e7615 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/lib/buildAggregatePipeline.d.ts
++++ b/node_modules/@entria/graphql-mongo-helpers/lib/buildAggregatePipeline.d.ts
+@@ -1,7 +1,8 @@
++import { PipelineStage } from 'mongoose';
+ import { BuiltConditionSet } from './types';
+ interface IBuildAggregatePipeline {
+     defaultConditions: Record<string, any>;
+     builtMongoConditions: BuiltConditionSet;
+ }
+-export declare function buildAggregatePipeline({ defaultConditions, builtMongoConditions, }: IBuildAggregatePipeline): Record<string, any>[];
++export declare function buildAggregatePipeline({ defaultConditions, builtMongoConditions, }: IBuildAggregatePipeline): PipelineStage[];
+ export {};
+diff --git a/node_modules/@entria/graphql-mongo-helpers/lib/buildAggregatePipeline.js.map b/node_modules/@entria/graphql-mongo-helpers/lib/buildAggregatePipeline.js.map
+index 3f7e21d..746f546 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/lib/buildAggregatePipeline.js.map
++++ b/node_modules/@entria/graphql-mongo-helpers/lib/buildAggregatePipeline.js.map
+@@ -1 +1 @@
+-{"version":3,"file":"buildAggregatePipeline.js","sourceRoot":"","sources":["../src/buildAggregatePipeline.ts"],"names":[],"mappings":";;;AAOA,SAAgB,sBAAsB,CAAC,EACrC,iBAAiB,EACjB,oBAAoB,GACI;IACxB,MAAM,UAAU,mCACX,iBAAiB,GACjB,oBAAoB,CAAC,UAAU,CACnC,CAAC;IAEF,MAAM,iBAAiB,GAAG;QACxB,GAAG,CAAC,MAAM,CAAC,MAAM,CAAC,UAAU,CAAC,CAAC,MAAM,CAAC,CAAC,CAAC,CAAC,EAAE,MAAM,EAAE,UAAU,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC;QACrE,GAAG,oBAAoB,CAAC,QAAQ;KACjC,CAAC;IAEF,OAAO,iBAAiB,CAAC;AAC3B,CAAC;AAfD,wDAeC"}
+\ No newline at end of file
++{"version":3,"file":"buildAggregatePipeline.js","sourceRoot":"","sources":["../src/buildAggregatePipeline.ts"],"names":[],"mappings":";;;AASA,SAAgB,sBAAsB,CAAC,EACrC,iBAAiB,EACjB,oBAAoB,GACI;IACxB,MAAM,UAAU,mCACX,iBAAiB,GACjB,oBAAoB,CAAC,UAAU,CACnC,CAAC;IAEF,MAAM,iBAAiB,GAAG;QACxB,GAAG,CAAC,MAAM,CAAC,MAAM,CAAC,UAAU,CAAC,CAAC,MAAM,CAAC,CAAC,CAAC,CAAC,EAAE,MAAM,EAAE,UAAU,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC;QACrE,GAAG,oBAAoB,CAAC,QAAQ;KACjC,CAAC;IAEF,OAAO,iBAAiB,CAAC;AAC3B,CAAC;AAfD,wDAeC"}
+\ No newline at end of file
+diff --git a/node_modules/@entria/graphql-mongo-helpers/lib/buildMongoConditionsFromFilters.js b/node_modules/@entria/graphql-mongo-helpers/lib/buildMongoConditionsFromFilters.js
+index 9bd337b..108d809 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/lib/buildMongoConditionsFromFilters.js
++++ b/node_modules/@entria/graphql-mongo-helpers/lib/buildMongoConditionsFromFilters.js
+@@ -23,7 +23,7 @@ const handleFieldOperator = (_context, condition, conditionName, fieldMapping, p
+     const operator = conditionNamePieces.length > 1 ? conditionNamePieces.pop() : '';
+     // I don't think we support snake case for field names, should this be here?
+     conditionName = conditionNamePieces.join('_');
+-    if ((utils_1.isMatchFilterMapping(fieldMapping) || utils_1.isCustomFilterMapping(fieldMapping)) &&
++    if (((0, utils_1.isMatchFilterMapping)(fieldMapping) || (0, utils_1.isCustomFilterMapping)(fieldMapping)) &&
+         typeof fieldMapping.format === 'function') {
+         condition = fieldMapping.format(condition);
+     }
+@@ -56,7 +56,7 @@ function buildConditionsObject(context, conditions, mapping) {
+         const fieldMapping = mapping[getFilterName(currentKey)];
+         if (fieldMapping === false)
+             return prev;
+-        if (fieldMapping && !utils_1.isCustomFilterMapping(fieldMapping) && !utils_1.isMatchFilterMapping(fieldMapping)) {
++        if (fieldMapping && !(0, utils_1.isCustomFilterMapping)(fieldMapping) && !(0, utils_1.isMatchFilterMapping)(fieldMapping)) {
+             return prev;
+         }
+         if (conditionName === 'AND') {
+@@ -66,7 +66,7 @@ function buildConditionsObject(context, conditions, mapping) {
+             ({ condition, conditionName } = handleOr(context, condition, mapping));
+         }
+         else {
+-            if (utils_1.isCustomFilterMapping(fieldMapping)) {
++            if ((0, utils_1.isCustomFilterMapping)(fieldMapping)) {
+                 if (fieldMapping.format && typeof fieldMapping.format === 'function') {
+                     const customCondition = fieldMapping.format(condition);
+                     return Object.assign(Object.assign({}, prev), customCondition);
+@@ -74,7 +74,7 @@ function buildConditionsObject(context, conditions, mapping) {
+             }
+             ({ condition, conditionName } = handleFieldOperator(context, condition, conditionName, fieldMapping, prev));
+         }
+-        conditionName = utils_1.isMatchFilterMapping(fieldMapping) && fieldMapping.key ? fieldMapping.key : conditionName;
++        conditionName = (0, utils_1.isMatchFilterMapping)(fieldMapping) && fieldMapping.key ? fieldMapping.key : conditionName;
+         return Object.assign(Object.assign({}, prev), { [conditionName]: condition });
+     }, {});
+ }
+@@ -85,7 +85,7 @@ function buildMongoConditionsFromFilters(context, filters = {}, mapping = {}) {
+     // first check if there are any pipeline mapped fields
+     //  and if AND or OR are also passed, if that is the case, we must throw an error
+     //  because we cannot use OR/AND while also using pipeline.
+-    const hasPipelineFilter = keys.find((key) => utils_1.isPipelineFilterMapping(mapping[key]));
++    const hasPipelineFilter = keys.find((key) => (0, utils_1.isPipelineFilterMapping)(mapping[key]));
+     if (hasPipelineFilter && (filters.AND || filters.OR)) {
+         throw new Error(`Wrong filter usage, because filter "${hasPipelineFilter}" is a pipeline filter, which should disable AND and OR`);
+     }
+@@ -107,7 +107,7 @@ function buildMongoConditionsFromFilters(context, filters = {}, mapping = {}) {
+     const pipeline = Object.keys(filtersKeysGrouped.AGGREGATE_PIPELINE).reduce((prev, key) => {
+         const mappedFilter = mapping[key];
+         // should not really happen!
+-        if (!utils_1.isPipelineFilterMapping(mappedFilter)) {
++        if (!(0, utils_1.isPipelineFilterMapping)(mappedFilter)) {
+             return prev;
+         }
+         const fieldPipeline = Array.isArray(mappedFilter.pipeline)
+diff --git a/node_modules/@entria/graphql-mongo-helpers/lib/buildMongoConditionsFromFilters.js.map b/node_modules/@entria/graphql-mongo-helpers/lib/buildMongoConditionsFromFilters.js.map
+index f3db59c..b9d7efd 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/lib/buildMongoConditionsFromFilters.js.map
++++ b/node_modules/@entria/graphql-mongo-helpers/lib/buildMongoConditionsFromFilters.js.map
+@@ -1 +1 @@
+-{"version":3,"file":"buildMongoConditionsFromFilters.js","sourceRoot":"","sources":["../src/buildMongoConditionsFromFilters.ts"],"names":[],"mappings":";;AACA,2CAAoD;AACpD,mCAA+F;AAE/F,MAAM,cAAc,GAAG,CAAC,IAAI,EAAE,KAAK,EAAE,IAAI,EAAE,KAAK,EAAE,IAAI,EAAE,KAAK,EAAE,IAAI,EAAE,KAAK,CAAC,CAAC;AAE5E,MAAM,cAAc,GAAG,CAAC,IAAI,EAAE,KAAK,EAAE,KAAK,CAAC,CAAC;AAE5C,MAAM,aAAa,GAAG,CAAC,UAAkB,EAAE,EAAE,CAAC,UAAU,CAAC,KAAK,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC;AAIvE,MAAM,WAAW,GAAG,CAAC,QAAmB,EAAE,EAAE,CAAC,CAC3C,OAAiB,EACjB,SAA0B,EAC1B,OAA8B,EAC9B,EAAE;IACF,IAAI,CAAC,KAAK,CAAC,OAAO,CAAC,SAAS,CAAC,EAAE;QAC7B,MAAM,IAAI,KAAK,CAAC,8BAA8B,QAAQ,GAAG,CAAC,CAAC;KAC5D;IAED,OAAO;QACL,SAAS,EAAE,SAAS,CAAC,GAAG,CAAC,CAAC,YAAY,EAAE,EAAE,CAAC,qBAAqB,CAAmB,OAAO,EAAE,YAAY,EAAE,OAAO,CAAC,CAAC;QACnH,aAAa,EAAE,QAAQ;KACxB,CAAC;AACJ,CAAC,CAAC;AAEF,MAAM,SAAS,GAAG,WAAW,CAAC,MAAM,CAAC,CAAC;AACtC,MAAM,QAAQ,GAAG,WAAW,CAAC,KAAK,CAAC,CAAC;AAEpC,MAAM,mBAAmB,GAAG,CAC1B,QAAkB,EAClB,SAAc,EACd,aAAqB,EACrB,YAAwC,EACxC,IAA4B,EAC5B,EAAE;IACF,wFAAwF;IACxF,8CAA8C;IAC9C,MAAM,mBAAmB,GAAG,aAAa,CAAC,KAAK,CAAC,GAAG,CAAC,CAAC;IACrD,MAAM,QAAQ,GAAG,mBAAmB,CAAC,MAAM,GAAG,CAAC,CAAC,CAAC,CAAC,mBAAmB,CAAC,GAAG,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC;IACjF,4EAA4E;IAC5E,aAAa,GAAG,mBAAmB,CAAC,IAAI,CAAC,GAAG,CAAC,CAAC;IAE9C,IACE,CAAC,4BAAoB,CAAC,YAAY,CAAC,IAAI,6BAAqB,CAAC,YAAY,CAAC,CAAC;QAC3E,OAAO,YAAY,CAAC,MAAM,KAAK,UAAU,EACzC;QACA,SAAS,GAAG,YAAY,CAAC,MAAM,CAAC,SAAS,CAAC,CAAC;KAC5C;IAED,IAAI,QAAQ,EAAE;QACZ,IAAI,cAAc,CAAC,OAAO,CAAC,QAAQ,CAAC,KAAK,CAAC,CAAC,EAAE;YAC3C,MAAM,IAAI,KAAK,CAAC,IAAI,QAAQ,uCAAuC,aAAa,IAAI,CAAC,CAAC;SACvF;QAED,IAAI,cAAc,CAAC,OAAO,CAAC,QAAQ,CAAC,IAAI,CAAC,IAAI,CAAC,KAAK,CAAC,OAAO,CAAC,SAAS,CAAC,EAAE;YACtE,MAAM,IAAI,KAAK,CAAC,UAAU,aAAa,6BAA6B,CAAC,CAAC;SACvE;QAED,2BAA2B;QAC3B,SAAS,GAAG;YACV,CAAC,IAAI,QAAQ,EAAE,CAAC,EAAE,SAAS;SAC5B,CAAC;KACH;IAED,oCAAoC;IACpC,IAAI,aAAa,IAAI,IAAI,EAAE;QACzB,2BAA2B;QAC3B,SAAS,mCACJ,SAAS,GACT,IAAI,CAAC,aAAa,CAAC,CACvB,CAAC;KACH;IAED,OAAO;QACL,SAAS;QACT,aAAa;KACd,CAAC;AACJ,CAAC,CAAC;AAEF,SAAS,qBAAqB,CAC5B,OAAiB,EACjB,UAAyB,EACzB,OAA8B;IAE9B,OAAO,MAAM,CAAC,IAAI,CAAC,UAAU,CAAC,CAAC,MAAM,CAAC,CAAC,IAAI,EAAE,UAAU,EAAU,EAAE;QACjE,IAAI,SAAS,GAAG,UAAU,CAAC,UAAU,CAAC,CAAC;QACvC,IAAI,aAAa,GAAG,UAAU,CAAC;QAE/B,MAAM,YAAY,GAAG,OAAO,CAAC,aAAa,CAAC,UAAU,CAAC,CAAC,CAAC;QAExD,IAAI,YAAY,KAAK,KAAK;YAAE,OAAO,IAAI,CAAC;QAExC,IAAI,YAAY,IAAI,CAAC,6BAAqB,CAAC,YAAY,CAAC,IAAI,CAAC,4BAAoB,CAAC,YAAY,CAAC,EAAE;YAC/F,OAAO,IAAI,CAAC;SACb;QAED,IAAI,aAAa,KAAK,KAAK,EAAE;YAC3B,CAAC,EAAE,SAAS,EAAE,aAAa,EAAE,GAAG,SAAS,CAAmB,OAAO,EAAE,SAAS,EAAE,OAAO,CAAC,CAAC,CAAC;SAC3F;aAAM,IAAI,aAAa,KAAK,IAAI,EAAE;YACjC,CAAC,EAAE,SAAS,EAAE,aAAa,EAAE,GAAG,QAAQ,CAAmB,OAAO,EAAE,SAAS,EAAE,OAAO,CAAC,CAAC,CAAC;SAC1F;aAAM;YACL,IAAI,6BAAqB,CAAC,YAAY,CAAC,EAAE;gBACvC,IAAI,YAAY,CAAC,MAAM,IAAI,OAAO,YAAY,CAAC,MAAM,KAAK,UAAU,EAAE;oBACpE,MAAM,eAAe,GAAG,YAAY,CAAC,MAAM,CAAC,SAAS,CAAC,CAAC;oBAEvD,uCACK,IAAI,GACJ,eAAe,EAClB;iBACH;aACF;YAED,CAAC,EAAE,SAAS,EAAE,aAAa,EAAE,GAAG,mBAAmB,CAAC,OAAO,EAAE,SAAS,EAAE,aAAa,EAAE,YAAY,EAAE,IAAI,CAAC,CAAC,CAAC;SAC7G;QAED,aAAa,GAAG,4BAAoB,CAAS,YAAY,CAAC,IAAI,YAAY,CAAC,GAAG,CAAC,CAAC,CAAC,YAAY,CAAC,GAAG,CAAC,CAAC,CAAC,aAAa,CAAC;QAElH,uCACK,IAAI,KACP,CAAC,aAAa,CAAC,EAAE,SAAS,IAC1B;IACJ,CAAC,EAAE,EAAE,CAAC,CAAC;AACT,CAAC;AAED,SAAwB,+BAA+B,CACrD,OAAiB,EACjB,UAAgC,EAAE,EAClC,UAAyD,EAAE;IAE3D,IAAI,CAAC,OAAO;QAAE,OAAO,EAAE,UAAU,EAAE,EAAE,EAAE,QAAQ,EAAE,EAAE,EAAE,CAAC;IAEtD,MAAM,IAAI,GAAG,MAAM,CAAC,IAAI,CAAC,OAAO,CAAC,CAAC;IAElC,sDAAsD;IACtD,iFAAiF;IACjF,2DAA2D;IAC3D,MAAM,iBAAiB,GAAG,IAAI,CAAC,IAAI,CAAC,CAAC,GAAG,EAAE,EAAE,CAAC,+BAAuB,CAAC,OAAO,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC;IAEpF,IAAI,iBAAiB,IAAI,CAAC,OAAO,CAAC,GAAG,IAAI,OAAO,CAAC,EAAE,CAAC,EAAE;QACpD,MAAM,IAAI,KAAK,CACb,uCAAuC,iBAAiB,yDAAyD,CAClH,CAAC;KACH;IAED,2BAA2B;IAC3B,MAAM,kBAAkB,GAAG,MAAM,CAAC,IAAI,CAAC,OAAO,CAAC,CAAC,MAAM,CACpD,CAAC,IAAI,EAAE,GAAG,EAAE,EAAE;QACZ,MAAM,UAAU,GAAG,aAAa,CAAC,GAAG,CAAC,CAAC;QAEtC,aAAa;QACb,MAAM,IAAI,GAAG,CAAC,OAAO,IAAI,CAAC,CAAC,OAAO,CAAC,UAAU,CAAC,IAAI,OAAO,CAAC,UAAU,CAAC,CAAC,IAAI,CAAC,IAAI,iCAAqB,CAAC,YAAY,CAAC;QAElH,uCACK,IAAI,KACP,CAAC,IAAI,CAAC,kCACD,IAAI,CAAC,IAAI,CAAC,KACb,CAAC,GAAG,CAAC,EAAE,OAAO,CAAC,GAAG,CAAC,OAErB;IACJ,CAAC,EACD;QACE,2BAA2B;QAC3B,CAAC,iCAAqB,CAAC,YAAY,CAAC,EAAE,EAAE;QACxC,CAAC,iCAAqB,CAAC,gBAAgB,CAAC,EAAE,EAAE;QAC5C,CAAC,iCAAqB,CAAC,kBAAkB,CAAC,EAAE,EAAE;KAC/C,CACF,CAAC;IAEF,qCAAqC;IACrC,MAAM,UAAU,GAAG,qBAAqB,CACtC,OAAO,kCAEF,kBAAkB,CAAC,YAAY,GAC/B,kBAAkB,CAAC,gBAAgB,GAExC,OAAO,CACR,CAAC;IAEF,wDAAwD;IACxD,MAAM,QAAQ,GAAG,MAAM,CAAC,IAAI,CAAC,kBAAkB,CAAC,kBAAkB,CAAC,CAAC,MAAM,CAAC,CAAC,IAAc,EAAE,GAAG,EAAY,EAAE;QAC3G,MAAM,YAAY,GAAG,OAAO,CAAC,GAAG,CAAC,CAAC;QAClC,4BAA4B;QAC5B,IAAI,CAAC,+BAAuB,CAAC,YAAY,CAAC,EAAE;YAC1C,OAAO,IAAI,CAAC;SACb;QAED,MAAM,aAAa,GAAG,KAAK,CAAC,OAAO,CAAC,YAAY,CAAC,QAAQ,CAAC;YACxD,CAAC,CAAC,YAAY,CAAC,QAAQ;YACvB,CAAC,CAAC,YAAY,CAAC,QAAQ,CAAC,OAAO,CAAC,GAAG,CAAC,CAAC,CAAC;QAExC,OAAO,CAAC,GAAG,IAAI,EAAE,GAAG,aAAa,CAAC,CAAC;IACrC,CAAC,EAAE,EAAE,CAAC,CAAC;IAEP,OAAO;QACL,UAAU;QACV,QAAQ;KACT,CAAC;AACJ,CAAC;AAzED,kDAyEC"}
+\ No newline at end of file
++{"version":3,"file":"buildMongoConditionsFromFilters.js","sourceRoot":"","sources":["../src/buildMongoConditionsFromFilters.ts"],"names":[],"mappings":"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"}
+\ No newline at end of file
+diff --git a/node_modules/@entria/graphql-mongo-helpers/lib/connectionDefinitions.d.ts b/node_modules/@entria/graphql-mongo-helpers/lib/connectionDefinitions.d.ts
+index eae8bd5..1bcf4bf 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/lib/connectionDefinitions.d.ts
++++ b/node_modules/@entria/graphql-mongo-helpers/lib/connectionDefinitions.d.ts
+@@ -1,4 +1,4 @@
+-import { GraphQLFieldConfigArgumentMap, GraphQLFieldConfigMap, GraphQLFieldResolver, GraphQLInterfaceType, GraphQLObjectType, Thunk } from 'graphql';
++import { GraphQLFieldConfig, GraphQLFieldConfigArgumentMap, GraphQLFieldResolver, GraphQLInterfaceType, GraphQLObjectType, ThunkObjMap } from 'graphql';
+ export declare const forwardConnectionArgs: GraphQLFieldConfigArgumentMap;
+ export declare const backwardConnectionArgs: GraphQLFieldConfigArgumentMap;
+ export declare const connectionArgs: GraphQLFieldConfigArgumentMap;
+@@ -15,8 +15,8 @@ interface ConnectionConfig {
+     edgeDescription?: string | null;
+     resolveNode?: GraphQLFieldResolver<any, any> | null;
+     resolveCursor?: GraphQLFieldResolver<any, any> | null;
+-    edgeFields?: Thunk<GraphQLFieldConfigMap<any, any>> | null;
+-    connectionFields?: Thunk<GraphQLFieldConfigMap<any, any>> | null;
++    edgeFields?: ThunkObjMap<GraphQLFieldConfig<any, any>> | null;
++    connectionFields?: ThunkObjMap<GraphQLFieldConfig<any, any>> | null;
+ }
+ export declare const connectionDefinitions: (config: ConnectionConfig) => GraphQLConnectionDefinitions;
+ export {};
+diff --git a/node_modules/@entria/graphql-mongo-helpers/lib/connectionDefinitions.js b/node_modules/@entria/graphql-mongo-helpers/lib/connectionDefinitions.js
+index b99a75a..1750a22 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/lib/connectionDefinitions.js
++++ b/node_modules/@entria/graphql-mongo-helpers/lib/connectionDefinitions.js
+@@ -24,11 +24,11 @@ exports.PageInfoType = new graphql_1.GraphQLObjectType({
+     description: 'Information about pagination in a connection.',
+     fields: () => ({
+         hasNextPage: {
+-            type: graphql_1.GraphQLNonNull(graphql_1.GraphQLBoolean),
++            type: new graphql_1.GraphQLNonNull(graphql_1.GraphQLBoolean),
+             description: 'When paginating forwards, are there more items?',
+         },
+         hasPreviousPage: {
+-            type: graphql_1.GraphQLNonNull(graphql_1.GraphQLBoolean),
++            type: new graphql_1.GraphQLNonNull(graphql_1.GraphQLBoolean),
+             description: 'When paginating backwards, are there more items?',
+         },
+         startCursor: {
+@@ -55,15 +55,15 @@ argument to "first", then fetch the total count so it could display "5 of 83",
+ for example.`,
+     },
+     startCursorOffset: {
+-        type: graphql_1.GraphQLNonNull(graphql_1.GraphQLInt),
++        type: new graphql_1.GraphQLNonNull(graphql_1.GraphQLInt),
+         description: 'Offset from start.',
+     },
+     endCursorOffset: {
+-        type: graphql_1.GraphQLNonNull(graphql_1.GraphQLInt),
++        type: new graphql_1.GraphQLNonNull(graphql_1.GraphQLInt),
+         description: 'Offset till end.',
+     },
+     pageInfo: {
+-        type: graphql_1.GraphQLNonNull(exports.PageInfoType),
++        type: new graphql_1.GraphQLNonNull(exports.PageInfoType),
+         description: 'Information to aid in pagination.',
+     },
+ };
+@@ -72,9 +72,6 @@ exports.ConnectionInterface = new graphql_1.GraphQLInterfaceType({
+     description: 'A connection to a list of items.',
+     fields: () => (Object.assign({}, connectionProps)),
+ });
+-function resolveMaybeThunk(thingOrThunk) {
+-    return typeof thingOrThunk === 'function' ? thingOrThunk() : thingOrThunk;
+-}
+ const connectionDefinitions = (config) => {
+     const { nodeType, resolveCursor, resolveNode } = config;
+     const name = config.name || nodeType.name;
+@@ -88,18 +85,18 @@ const connectionDefinitions = (config) => {
+                 resolve: resolveNode,
+                 description: 'The item at the end of the edge.',
+             }, cursor: {
+-                type: graphql_1.GraphQLNonNull(graphql_1.GraphQLString),
++                type: new graphql_1.GraphQLNonNull(graphql_1.GraphQLString),
+                 resolve: resolveCursor,
+                 description: 'A cursor for use in pagination.',
+-            } }, resolveMaybeThunk(edgeFields))),
++            } }, (0, graphql_1.resolveObjMapThunk)(edgeFields))),
+     });
+     const connectionType = new graphql_1.GraphQLObjectType({
+         name: `${name}Connection`,
+         description: config.description || 'A connection to a list of items.',
+         fields: () => (Object.assign(Object.assign(Object.assign({}, connectionProps), { edges: {
+-                type: graphql_1.GraphQLNonNull(graphql_1.GraphQLList(edgeType)),
++                type: new graphql_1.GraphQLNonNull(new graphql_1.GraphQLList(edgeType)),
+                 description: 'A list of edges.',
+-            } }), resolveMaybeThunk(connectionFields))),
++            } }), (0, graphql_1.resolveObjMapThunk)(connectionFields))),
+         interfaces: [exports.ConnectionInterface],
+     });
+     return { edgeType, connectionType };
+diff --git a/node_modules/@entria/graphql-mongo-helpers/lib/connectionDefinitions.js.map b/node_modules/@entria/graphql-mongo-helpers/lib/connectionDefinitions.js.map
+index f3f7cbf..30dcec1 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/lib/connectionDefinitions.js.map
++++ b/node_modules/@entria/graphql-mongo-helpers/lib/connectionDefinitions.js.map
+@@ -1 +1 @@
+-{"version":3,"file":"connectionDefinitions.js","sourceRoot":"","sources":["../src/connectionDefinitions.ts"],"names":[],"mappings":"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"}
+\ No newline at end of file
++{"version":3,"file":"connectionDefinitions.js","sourceRoot":"","sources":["../src/connectionDefinitions.ts"],"names":[],"mappings":";;;AAAA,qCAaiB;AAEJ,QAAA,qBAAqB,GAAkC;IAClE,KAAK,EAAE;QACL,IAAI,EAAE,uBAAa;KACpB;IACD,KAAK,EAAE;QACL,IAAI,EAAE,oBAAU;KACjB;CACF,CAAC;AAEW,QAAA,sBAAsB,GAAkC;IACnE,MAAM,EAAE;QACN,IAAI,EAAE,uBAAa;KACpB;IACD,IAAI,EAAE;QACJ,IAAI,EAAE,oBAAU;KACjB;CACF,CAAC;AAEW,QAAA,cAAc,mCACtB,6BAAqB,GACrB,8BAAsB,EACzB;AAOW,QAAA,YAAY,GAAG,IAAI,2BAAiB,CAAC;IAChD,IAAI,EAAE,UAAU;IAChB,WAAW,EAAE,+CAA+C;IAC5D,MAAM,EAAE,GAAG,EAAE,CAAC,CAAC;QACb,WAAW,EAAE;YACX,IAAI,EAAE,IAAI,wBAAc,CAAC,wBAAc,CAAC;YACxC,WAAW,EAAE,iDAAiD;SAC/D;QACD,eAAe,EAAE;YACf,IAAI,EAAE,IAAI,wBAAc,CAAC,wBAAc,CAAC;YACxC,WAAW,EAAE,kDAAkD;SAChE;QACD,WAAW,EAAE;YACX,IAAI,EAAE,uBAAa;YACnB,WAAW,EAAE,oDAAoD;SAClE;QACD,SAAS,EAAE;YACT,IAAI,EAAE,uBAAa;YACnB,WAAW,EAAE,mDAAmD;SACjE;KACF,CAAC;CACH,CAAC,CAAC;AAEH,MAAM,eAAe,GAAG;IACtB,KAAK,EAAE;QACL,IAAI,EAAE,oBAAU;QAChB,WAAW,EAAE,qCAAqC;KACnD;IACD,UAAU,EAAE;QACV,IAAI,EAAE,oBAAU;QAChB,OAAO,EAAE,CAAC,UAAU,EAAE,EAAE,CAAC,UAAU,CAAC,KAAK;QACzC,WAAW,EAAE;;;aAGJ;KACV;IACD,iBAAiB,EAAE;QACjB,IAAI,EAAE,IAAI,wBAAc,CAAC,oBAAU,CAAC;QACpC,WAAW,EAAE,oBAAoB;KAClC;IACD,eAAe,EAAE;QACf,IAAI,EAAE,IAAI,wBAAc,CAAC,oBAAU,CAAC;QACpC,WAAW,EAAE,kBAAkB;KAChC;IACD,QAAQ,EAAE;QACR,IAAI,EAAE,IAAI,wBAAc,CAAC,oBAAY,CAAC;QACtC,WAAW,EAAE,mCAAmC;KACjD;CACF,CAAC;AAEW,QAAA,mBAAmB,GAAG,IAAI,8BAAoB,CAAC;IAC1D,IAAI,EAAE,YAAY;IAClB,WAAW,EAAE,kCAAkC;IAC/C,MAAM,EAAE,GAAG,EAAE,CAAC,mBACT,eAAe,EAClB;CACH,CAAC,CAAC;AAaI,MAAM,qBAAqB,GAAG,CAAC,MAAwB,EAAgC,EAAE;IAC9F,MAAM,EAAE,QAAQ,EAAE,aAAa,EAAE,WAAW,EAAE,GAAG,MAAM,CAAC;IAExD,MAAM,IAAI,GAAG,MAAM,CAAC,IAAI,IAAI,QAAQ,CAAC,IAAI,CAAC;IAC1C,MAAM,UAAU,GAAG,MAAM,CAAC,UAAU,IAAI,EAAE,CAAC;IAC3C,MAAM,gBAAgB,GAAG,MAAM,CAAC,gBAAgB,IAAI,EAAE,CAAC;IAEvD,MAAM,QAAQ,GAAG,IAAI,2BAAiB,CAAC;QACrC,IAAI,EAAE,GAAG,IAAI,MAAM;QACnB,WAAW,EAAE,MAAM,CAAC,eAAe,IAAI,0BAA0B;QACjE,MAAM,EAAE,GAAG,EAAE,CAAC,iBACZ,IAAI,EAAE;gBACJ,IAAI,EAAE,QAAQ;gBACd,OAAO,EAAE,WAAW;gBACpB,WAAW,EAAE,kCAAkC;aAChD,EACD,MAAM,EAAE;gBACN,IAAI,EAAE,IAAI,wBAAc,CAAC,uBAAa,CAAC;gBACvC,OAAO,EAAE,aAAa;gBACtB,WAAW,EAAE,iCAAiC;aAC/C,IACG,IAAA,4BAAkB,EAAC,UAAU,CAAS,EAC1C;KACH,CAAC,CAAC;IAEH,MAAM,cAAc,GAAG,IAAI,2BAAiB,CAAC;QAC3C,IAAI,EAAE,GAAG,IAAI,YAAY;QACzB,WAAW,EAAE,MAAM,CAAC,WAAW,IAAI,kCAAkC;QACrE,MAAM,EAAE,GAAG,EAAE,CAAC,+CACT,eAAe,KAClB,KAAK,EAAE;gBACL,IAAI,EAAE,IAAI,wBAAc,CAAC,IAAI,qBAAW,CAAC,QAAQ,CAAC,CAAC;gBACnD,WAAW,EAAE,kBAAkB;aAChC,KACG,IAAA,4BAAkB,EAAC,gBAAgB,CAAS,EAChD;QACF,UAAU,EAAE,CAAC,2BAAmB,CAAC;KAClC,CAAC,CAAC;IAEH,OAAO,EAAE,QAAQ,EAAE,cAAc,EAAE,CAAC;AACtC,CAAC,CAAC;AAxCW,QAAA,qBAAqB,yBAwChC"}
+\ No newline at end of file
+diff --git a/node_modules/@entria/graphql-mongo-helpers/lib/createLoader.d.ts b/node_modules/@entria/graphql-mongo-helpers/lib/createLoader.d.ts
+index 50bdf14..4b4c370 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/lib/createLoader.d.ts
++++ b/node_modules/@entria/graphql-mongo-helpers/lib/createLoader.d.ts
+@@ -20,7 +20,7 @@ export declare type CreateLoaderArgs<Context extends BaseContext<LoaderName, Val
+ export interface FilteredConnectionArguments extends ConnectionArguments {
+     filters: GraphQLFilter | null;
+ }
+-export declare const createLoader: <Context extends BaseContext<LoaderName, Value>, LoaderName extends string, Value extends Document<any>>({ model, viewerCanSee, loaderName, filterMapping, isAggregate, shouldValidateContextUser, defaultFilters, defaultConditions, defaultSort, }: CreateLoaderArgs<Context, LoaderName, Value>) => {
++export declare const createLoader: <Context extends BaseContext<LoaderName, Value>, LoaderName extends string, Value extends Document<any, any, any>>({ model, viewerCanSee, loaderName, filterMapping, isAggregate, shouldValidateContextUser, defaultFilters, defaultConditions, defaultSort, }: CreateLoaderArgs<Context, LoaderName, Value>) => {
+     Wrapper: new (value: Value) => Value;
+     getLoader: () => DataLoader<string, Value, string>;
+     clearCache: ({ dataloaders }: Context, id: string) => Record<LoaderName, DataLoader<string, Value, string>>[LoaderName];
+diff --git a/node_modules/@entria/graphql-mongo-helpers/lib/createLoader.js b/node_modules/@entria/graphql-mongo-helpers/lib/createLoader.js
+index 4e78079..9a866fe 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/lib/createLoader.js
++++ b/node_modules/@entria/graphql-mongo-helpers/lib/createLoader.js
+@@ -26,7 +26,7 @@ const createLoader = ({ model, viewerCanSee = defaultViewerCanSee, loaderName, f
+     const nameIt = (name, cls) => ({ [name]: class extends cls {
+         } }[name]);
+     const Wrapper = nameIt(model.collection.collectionName, Loader);
+-    const getLoader = () => new dataloader_1.default((ids) => graphql_mongoose_loader_1.mongooseLoader(model, ids));
++    const getLoader = () => new dataloader_1.default((ids) => (0, graphql_mongoose_loader_1.mongooseLoader)(model, ids));
+     const load = async (context, id) => {
+         if (!id) {
+             return null;
+@@ -48,7 +48,7 @@ const createLoader = ({ model, viewerCanSee = defaultViewerCanSee, loaderName, f
+     const clearAndPrimeCache = (context, id, data) => clearCache(context, id) && primeCache(context, id, data);
+     const buildFiltersConditionsAndSort = (context, args) => {
+         const mongoDefaultFilters = typeof defaultFilters === 'object' ? defaultFilters : defaultFilters(context, args);
+-        const builtMongoConditions = buildMongoConditionsFromFilters_1.default(context, Object.assign(Object.assign({}, mongoDefaultFilters), (args.filters ? Object.assign({}, args.filters) : {})), filterMapping);
++        const builtMongoConditions = (0, buildMongoConditionsFromFilters_1.default)(context, Object.assign(Object.assign({}, mongoDefaultFilters), (args.filters ? Object.assign({}, args.filters) : {})), filterMapping);
+         const mongoDefaultConditions = typeof defaultConditions === 'object' ? defaultConditions : defaultConditions(context, args);
+         const mongoDefaultSort = typeof defaultSort === 'object' ? defaultSort : defaultSort(context, args);
+         const conditions = Object.assign(Object.assign({}, mongoDefaultConditions), builtMongoConditions.conditions);
+@@ -60,14 +60,14 @@ const createLoader = ({ model, viewerCanSee = defaultViewerCanSee, loaderName, f
+         };
+     };
+     const loadAll = isAggregate
+-        ? withConnectionAggregate_1.withConnectionAggregate(model, load, (context, args) => {
++        ? (0, withConnectionAggregate_1.withConnectionAggregate)(model, load, (context, args) => {
+             const { mongoDefaultConditions, builtMongoConditions } = buildFiltersConditionsAndSort(context, args);
+             return {
+                 defaultConditions: mongoDefaultConditions,
+                 builtMongoConditions,
+             };
+         })
+-        : withConnectionCursor_1.withConnectionCursor(model, load, (context, args) => {
++        : (0, withConnectionCursor_1.withConnectionCursor)(model, load, (context, args) => {
+             const { conditions, mongoDefaultSort } = buildFiltersConditionsAndSort(context, args);
+             return {
+                 conditions,
+@@ -81,7 +81,7 @@ const createLoader = ({ model, viewerCanSee = defaultViewerCanSee, loaderName, f
+         primeCache,
+         clearAndPrimeCache,
+         load,
+-        loadAll: shouldValidateContextUser ? validateContextUser_1.validateContextUser(loadAll) : loadAll,
++        loadAll: shouldValidateContextUser ? (0, validateContextUser_1.validateContextUser)(loadAll) : loadAll,
+     };
+ };
+ exports.createLoader = createLoader;
+diff --git a/node_modules/@entria/graphql-mongo-helpers/lib/createLoader.js.map b/node_modules/@entria/graphql-mongo-helpers/lib/createLoader.js.map
+index 9f22696..7d5f598 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/lib/createLoader.js.map
++++ b/node_modules/@entria/graphql-mongo-helpers/lib/createLoader.js.map
+@@ -1 +1 @@
+-{"version":3,"file":"createLoader.js","sourceRoot":"","sources":["../src/createLoader.ts"],"names":[],"mappings":"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"}
+\ No newline at end of file
++{"version":3,"file":"createLoader.js","sourceRoot":"","sources":["../src/createLoader.ts"],"names":[],"mappings":";;;;;;AAAA,2BAA2B;AAC3B,6EAAiE;AACjE,4DAAoC;AAIpC,wGAAgF;AAEhF,+DAA4D;AAC5D,uEAAoE;AACpE,iEAA8D;AAE9D,MAAM,mBAAmB,GAAG,CAAyB,QAAoC,EAAE,IAAW,EAAS,EAAE,CAAC,IAAI,CAAC;AA4BhH,MAAM,YAAY,GAAG,CAI1B,EACA,KAAK,EACL,YAAY,GAAG,mBAAmB,EAClC,UAAU,EACV,aAAa,GAAG,EAAE,EAClB,WAAW,GAAG,KAAK,EACnB,yBAAyB,GAAG,KAAK,EACjC,cAAc,GAAG,EAAE,EACnB,iBAAiB,GAAG,EAAE,EACtB,WAAW,GAAG,EAAE,SAAS,EAAE,CAAC,CAAC,EAAE,GACc,EAAE,EAAE;IACjD,MAAM,MAAM;QAEV,YAAY,IAAW;YACrB,6CAA6C;YAC7C,2BAA2B;YAC3B,MAAM,CAAC,IAAI,CAAC,IAAI,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,EAAE,EAAE;gBAC5B,IAAI,CAAC,GAAG,CAAC,GAAI,IAAY,CAAC,GAAG,CAAC,CAAC;YACjC,CAAC,CAAC,CAAC;YACH,IAAI,CAAC,EAAE,GAAG,IAAI,CAAC,EAAE,IAAI,IAAI,CAAC,GAAG,CAAC;QAChC,CAAC;KACF;IAED,MAAM,MAAM,GAAG,CAAC,IAAY,EAAE,GAAkB,EAAiB,EAAE,CAAC,CAAC,EAAE,CAAC,IAAI,CAAC,EAAE,KAAM,SAAQ,GAAG;SAAG,EAAE,CAAC,IAAI,CAAC,CAAC,CAAC;IAE7G,MAAM,OAAO,GAAG,MAAM,CAAC,KAAK,CAAC,UAAU,CAAC,cAAc,EAAE,MAAM,CAAC,CAAC;IAEhE,MAAM,SAAS,GAAG,GAAG,EAAE,CAAC,IAAI,oBAAU,CAAgB,CAAC,GAAG,EAAE,EAAE,CAAC,IAAA,wCAAc,EAAC,KAAK,EAAE,GAAG,CAAC,CAAC,CAAC;IAE3F,MAAM,IAAI,GAAG,KAAK,EAAE,OAAgB,EAAE,EAAiB,EAAE,EAAE;QACzD,IAAI,CAAC,EAAE,EAAE;YACP,OAAO,IAAI,CAAC;SACb;QAED,IAAI;YACF,MAAM,IAAI,GAAG,MAAM,OAAO,CAAC,WAAW,CAAC,UAAU,CAAC,CAAC,IAAI,CAAC,EAAE,CAAC,QAAQ,EAAE,CAAC,CAAC;YAEvE,IAAI,CAAC,IAAI,EAAE;gBACT,OAAO,IAAI,CAAC;aACb;YAED,MAAM,YAAY,GAAG,MAAM,YAAY,CAAC,OAAO,EAAE,IAAI,CAAC,CAAC;YAEvD,OAAO,YAAY,CAAC,CAAC,CAAE,IAAI,OAAO,CAAC,YAAY,CAAW,CAAC,CAAC,CAAC,IAAI,CAAC;SACnE;QAAC,OAAO,GAAG,EAAE;YACZ,OAAO,IAAI,CAAC;SACb;IACH,CAAC,CAAC;IAEF,MAAM,UAAU,GAAG,CAAC,EAAE,WAAW,EAAW,EAAE,EAAU,EAAE,EAAE,CAAC,WAAW,CAAC,UAAU,CAAC,CAAC,KAAK,CAAC,EAAE,CAAC,QAAQ,EAAE,CAAC,CAAC;IAE1G,MAAM,UAAU,GAAG,CAAC,EAAE,WAAW,EAAW,EAAE,EAAU,EAAE,IAAW,EAAE,EAAE,CACvE,WAAW,CAAC,UAAU,CAAC,CAAC,KAAK,CAAC,EAAE,CAAC,QAAQ,EAAE,EAAE,IAAI,CAAC,CAAC;IAErD,MAAM,kBAAkB,GAAG,CAAC,OAAgB,EAAE,EAAU,EAAE,IAAW,EAAE,EAAE,CACvE,UAAU,CAAC,OAAO,EAAE,EAAE,CAAC,IAAI,UAAU,CAAC,OAAO,EAAE,EAAE,EAAE,IAAI,CAAC,CAAC;IAE3D,MAAM,6BAA6B,GAAG,CAAC,OAAgB,EAAE,IAAiC,EAAE,EAAE;QAC5F,MAAM,mBAAmB,GAAG,OAAO,cAAc,KAAK,QAAQ,CAAC,CAAC,CAAC,cAAc,CAAC,CAAC,CAAC,cAAc,CAAC,OAAO,EAAE,IAAI,CAAC,CAAC;QAEhH,MAAM,oBAAoB,GAAG,IAAA,yCAA+B,EAC1D,OAAO,kCACF,mBAAmB,GAAK,CAAC,IAAI,CAAC,OAAO,CAAC,CAAC,mBAAM,IAAI,CAAC,OAAO,EAAG,CAAC,CAAC,EAAE,CAAC,GACtE,aAAoB,CACrB,CAAC;QAEF,MAAM,sBAAsB,GAC1B,OAAO,iBAAiB,KAAK,QAAQ,CAAC,CAAC,CAAC,iBAAiB,CAAC,CAAC,CAAC,iBAAiB,CAAC,OAAO,EAAE,IAAI,CAAC,CAAC;QAE/F,MAAM,gBAAgB,GAAG,OAAO,WAAW,KAAK,QAAQ,CAAC,CAAC,CAAC,WAAW,CAAC,CAAC,CAAC,WAAW,CAAC,OAAO,EAAE,IAAI,CAAC,CAAC;QAEpG,MAAM,UAAU,mCACX,sBAAsB,GACtB,oBAAoB,CAAC,UAAU,CACnC,CAAC;QAEF,OAAO;YACL,oBAAoB;YACpB,sBAAsB;YACtB,UAAU;YACV,gBAAgB;SACjB,CAAC;IACJ,CAAC,CAAC;IAEF,MAAM,OAAO,GAAG,WAAW;QACzB,CAAC,CAAC,IAAA,iDAAuB,EAAC,KAAK,EAAE,IAAI,EAAE,CAAC,OAAgB,EAAE,IAAiC,EAAE,EAAE;YAC3F,MAAM,EAAE,sBAAsB,EAAE,oBAAoB,EAAE,GAAG,6BAA6B,CAAC,OAAO,EAAE,IAAI,CAAC,CAAC;YAEtG,OAAO;gBACL,iBAAiB,EAAE,sBAAsB;gBACzC,oBAAoB;aACrB,CAAC;QACJ,CAAC,CAAC;QACJ,CAAC,CAAC,IAAA,2CAAoB,EAAC,KAAK,EAAE,IAAI,EAAE,CAAC,OAAgB,EAAE,IAAiC,EAAE,EAAE;YACxF,MAAM,EAAE,UAAU,EAAE,gBAAgB,EAAE,GAAG,6BAA6B,CAAC,OAAO,EAAE,IAAI,CAAC,CAAC;YAEtF,OAAO;gBACL,UAAU;gBACV,IAAI,EAAE,gBAAgB;aACvB,CAAC;QACJ,CAAC,CAAC,CAAC;IAEP,OAAO;QACL,OAAO,EAAE,OAER;QACD,SAAS;QACT,UAAU;QACV,UAAU;QACV,kBAAkB;QAClB,IAAI;QACJ,OAAO,EAAE,yBAAyB,CAAC,CAAC,CAAC,IAAA,yCAAmB,EAAC,OAAO,CAAC,CAAC,CAAC,CAAC,OAAO;KAC5E,CAAC;AACJ,CAAC,CAAC;AArHW,QAAA,YAAY,gBAqHvB"}
+\ No newline at end of file
+diff --git a/node_modules/@entria/graphql-mongo-helpers/lib/documentResolvers.d.ts b/node_modules/@entria/graphql-mongo-helpers/lib/documentResolvers.d.ts
+index 5069ac4..1f0d1fb 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/lib/documentResolvers.d.ts
++++ b/node_modules/@entria/graphql-mongo-helpers/lib/documentResolvers.d.ts
+@@ -5,7 +5,7 @@ interface ModelObj {
+ }
+ export declare const objectIdResolver: {
+     _id: {
+-        type: GraphQLNonNull<import("graphql").GraphQLNullableType>;
++        type: GraphQLNonNull<import("graphql").GraphQLScalarType<string, string>>;
+         description: string;
+         resolve: ({ _id }: ModelObj) => string;
+     };
+@@ -16,11 +16,11 @@ interface TimestampedObj {
+ }
+ export declare const timestampResolver: {
+     createdAt: {
+-        type: import("graphql").GraphQLScalarType;
++        type: import("graphql").GraphQLScalarType<string, string>;
+         resolve: (obj: TimestampedObj) => string | null;
+     };
+     updatedAt: {
+-        type: import("graphql").GraphQLScalarType;
++        type: import("graphql").GraphQLScalarType<string, string>;
+         resolve: (obj: TimestampedObj) => string | null;
+     };
+ };
+diff --git a/node_modules/@entria/graphql-mongo-helpers/lib/documentResolvers.js b/node_modules/@entria/graphql-mongo-helpers/lib/documentResolvers.js
+index f8fa5ee..7ce784a 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/lib/documentResolvers.js
++++ b/node_modules/@entria/graphql-mongo-helpers/lib/documentResolvers.js
+@@ -4,7 +4,7 @@ exports.timestampResolver = exports.objectIdResolver = void 0;
+ const graphql_1 = require("graphql");
+ exports.objectIdResolver = {
+     _id: {
+-        type: graphql_1.GraphQLNonNull(graphql_1.GraphQLString),
++        type: new graphql_1.GraphQLNonNull(graphql_1.GraphQLString),
+         description: 'mongoose _id',
+         resolve: ({ _id }) => _id.toString(),
+     },
+diff --git a/node_modules/@entria/graphql-mongo-helpers/lib/documentResolvers.js.map b/node_modules/@entria/graphql-mongo-helpers/lib/documentResolvers.js.map
+index 86f27bd..b15b061 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/lib/documentResolvers.js.map
++++ b/node_modules/@entria/graphql-mongo-helpers/lib/documentResolvers.js.map
+@@ -1 +1 @@
+-{"version":3,"file":"documentResolvers.js","sourceRoot":"","sources":["../src/documentResolvers.ts"],"names":[],"mappings":";;;AAAA,qCAAwD;AAO3C,QAAA,gBAAgB,GAAG;IAC9B,GAAG,EAAE;QACH,IAAI,EAAE,wBAAc,CAAC,uBAAa,CAAC;QACnC,WAAW,EAAE,cAAc;QAC3B,OAAO,EAAE,CAAC,EAAE,GAAG,EAAY,EAAE,EAAE,CAAC,GAAG,CAAC,QAAQ,EAAE;KAC/C;CACF,CAAC;AAOW,QAAA,iBAAiB,GAAG;IAC/B,SAAS,EAAE;QACT,IAAI,EAAE,uBAAa;QACnB,OAAO,EAAE,CAAC,GAAmB,EAAE,EAAE,CAAC,CAAC,GAAG,CAAC,SAAS,CAAC,CAAC,CAAC,GAAG,CAAC,SAAS,CAAC,WAAW,EAAE,CAAC,CAAC,CAAC,IAAI,CAAC;KACvF;IACD,SAAS,EAAE;QACT,IAAI,EAAE,uBAAa;QACnB,OAAO,EAAE,CAAC,GAAmB,EAAE,EAAE,CAAC,CAAC,GAAG,CAAC,SAAS,CAAC,CAAC,CAAC,GAAG,CAAC,SAAS,CAAC,WAAW,EAAE,CAAC,CAAC,CAAC,IAAI,CAAC;KACvF;CACF,CAAC"}
+\ No newline at end of file
++{"version":3,"file":"documentResolvers.js","sourceRoot":"","sources":["../src/documentResolvers.ts"],"names":[],"mappings":";;;AAAA,qCAAwD;AAO3C,QAAA,gBAAgB,GAAG;IAC9B,GAAG,EAAE;QACH,IAAI,EAAE,IAAI,wBAAc,CAAC,uBAAa,CAAC;QACvC,WAAW,EAAE,cAAc;QAC3B,OAAO,EAAE,CAAC,EAAE,GAAG,EAAY,EAAE,EAAE,CAAC,GAAG,CAAC,QAAQ,EAAE;KAC/C;CACF,CAAC;AAOW,QAAA,iBAAiB,GAAG;IAC/B,SAAS,EAAE;QACT,IAAI,EAAE,uBAAa;QACnB,OAAO,EAAE,CAAC,GAAmB,EAAE,EAAE,CAAC,CAAC,GAAG,CAAC,SAAS,CAAC,CAAC,CAAC,GAAG,CAAC,SAAS,CAAC,WAAW,EAAE,CAAC,CAAC,CAAC,IAAI,CAAC;KACvF;IACD,SAAS,EAAE;QACT,IAAI,EAAE,uBAAa;QACnB,OAAO,EAAE,CAAC,GAAmB,EAAE,EAAE,CAAC,CAAC,GAAG,CAAC,SAAS,CAAC,CAAC,CAAC,GAAG,CAAC,SAAS,CAAC,WAAW,EAAE,CAAC,CAAC,CAAC,IAAI,CAAC;KACvF;CACF,CAAC"}
+\ No newline at end of file
+diff --git a/node_modules/@entria/graphql-mongo-helpers/lib/getObjectId.js b/node_modules/@entria/graphql-mongo-helpers/lib/getObjectId.js
+index 54bd2db..1348116 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/lib/getObjectId.js
++++ b/node_modules/@entria/graphql-mongo-helpers/lib/getObjectId.js
+@@ -15,7 +15,7 @@ const getObjectId = (target) => {
+         return new mongoose_1.Types.ObjectId(target.toString());
+     }
+     if (typeof target === 'string') {
+-        const result = graphql_relay_1.fromGlobalId(target);
++        const result = (0, graphql_relay_1.fromGlobalId)(target);
+         if (result.type && result.id && mongoose_1.Types.ObjectId.isValid(result.id)) {
+             return new mongoose_1.Types.ObjectId(result.id);
+         }
+diff --git a/node_modules/@entria/graphql-mongo-helpers/lib/getObjectId.js.map b/node_modules/@entria/graphql-mongo-helpers/lib/getObjectId.js.map
+index f84f8fd..6a57679 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/lib/getObjectId.js.map
++++ b/node_modules/@entria/graphql-mongo-helpers/lib/getObjectId.js.map
+@@ -1 +1 @@
+-{"version":3,"file":"getObjectId.js","sourceRoot":"","sources":["../src/getObjectId.ts"],"names":[],"mappings":";;;AAAA,iDAA6C;AAC7C,uCAA2C;AAE3C,qDAAqD;AAC9C,MAAM,WAAW,GAAG,CAAC,MAA0C,EAAyB,EAAE;IAC/F,IAAI,MAAM,YAAY,gBAAK,CAAC,QAAQ,EAAE;QACpC,OAAO,IAAI,gBAAK,CAAC,QAAQ,CAAC,MAAM,CAAC,QAAQ,EAAE,CAAC,CAAC;KAC9C;IAED,IAAI,OAAO,MAAM,KAAK,QAAQ,IAAI,MAAM,YAAY,mBAAQ,EAAE;QAC5D,OAAO,MAAM,IAAI,MAAM,CAAC,GAAG,CAAC,CAAC,CAAC,IAAI,gBAAK,CAAC,QAAQ,CAAC,MAAM,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC;KACrE;IAED,IAAI,gBAAK,CAAC,QAAQ,CAAC,OAAO,CAAC,MAAM,CAAC,EAAE;QAClC,OAAO,IAAI,gBAAK,CAAC,QAAQ,CAAC,MAAM,CAAC,QAAQ,EAAE,CAAC,CAAC;KAC9C;IAED,IAAI,OAAO,MAAM,KAAK,QAAQ,EAAE;QAC9B,MAAM,MAAM,GAAG,4BAAY,CAAC,MAAM,CAAC,CAAC;QAEpC,IAAI,MAAM,CAAC,IAAI,IAAI,MAAM,CAAC,EAAE,IAAI,gBAAK,CAAC,QAAQ,CAAC,OAAO,CAAC,MAAM,CAAC,EAAE,CAAC,EAAE;YACjE,OAAO,IAAI,gBAAK,CAAC,QAAQ,CAAC,MAAM,CAAC,EAAE,CAAC,CAAC;SACtC;QAED,IAAI,gBAAK,CAAC,QAAQ,CAAC,OAAO,CAAC,MAAM,CAAC,EAAE;YAClC,OAAO,IAAI,gBAAK,CAAC,QAAQ,CAAC,MAAM,CAAC,CAAC;SACnC;QAED,OAAO,IAAI,CAAC;KACb;IAED,OAAO,IAAI,CAAC;AACd,CAAC,CAAC;AA5BW,QAAA,WAAW,eA4BtB"}
+\ No newline at end of file
++{"version":3,"file":"getObjectId.js","sourceRoot":"","sources":["../src/getObjectId.ts"],"names":[],"mappings":";;;AAAA,iDAA6C;AAC7C,uCAA2C;AAE3C,qDAAqD;AAC9C,MAAM,WAAW,GAAG,CAAC,MAA0C,EAAyB,EAAE;IAC/F,IAAI,MAAM,YAAY,gBAAK,CAAC,QAAQ,EAAE;QACpC,OAAO,IAAI,gBAAK,CAAC,QAAQ,CAAC,MAAM,CAAC,QAAQ,EAAE,CAAC,CAAC;KAC9C;IAED,IAAI,OAAO,MAAM,KAAK,QAAQ,IAAI,MAAM,YAAY,mBAAQ,EAAE;QAC5D,OAAO,MAAM,IAAI,MAAM,CAAC,GAAG,CAAC,CAAC,CAAC,IAAI,gBAAK,CAAC,QAAQ,CAAC,MAAM,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC;KACrE;IAED,IAAI,gBAAK,CAAC,QAAQ,CAAC,OAAO,CAAC,MAAM,CAAC,EAAE;QAClC,OAAO,IAAI,gBAAK,CAAC,QAAQ,CAAC,MAAM,CAAC,QAAQ,EAAE,CAAC,CAAC;KAC9C;IAED,IAAI,OAAO,MAAM,KAAK,QAAQ,EAAE;QAC9B,MAAM,MAAM,GAAG,IAAA,4BAAY,EAAC,MAAM,CAAC,CAAC;QAEpC,IAAI,MAAM,CAAC,IAAI,IAAI,MAAM,CAAC,EAAE,IAAI,gBAAK,CAAC,QAAQ,CAAC,OAAO,CAAC,MAAM,CAAC,EAAE,CAAC,EAAE;YACjE,OAAO,IAAI,gBAAK,CAAC,QAAQ,CAAC,MAAM,CAAC,EAAE,CAAC,CAAC;SACtC;QAED,IAAI,gBAAK,CAAC,QAAQ,CAAC,OAAO,CAAC,MAAM,CAAC,EAAE;YAClC,OAAO,IAAI,gBAAK,CAAC,QAAQ,CAAC,MAAM,CAAC,CAAC;SACnC;QAED,OAAO,IAAI,CAAC;KACb;IAED,OAAO,IAAI,CAAC;AACd,CAAC,CAAC;AA5BW,QAAA,WAAW,eA4BtB"}
+\ No newline at end of file
+diff --git a/node_modules/@entria/graphql-mongo-helpers/lib/statusFields.d.ts b/node_modules/@entria/graphql-mongo-helpers/lib/statusFields.d.ts
+index e8cc9aa..1be79ee 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/lib/statusFields.d.ts
++++ b/node_modules/@entria/graphql-mongo-helpers/lib/statusFields.d.ts
+@@ -1,6 +1,6 @@
+ declare const errorField: {
+     error: {
+-        type: import("graphql").GraphQLScalarType;
++        type: import("graphql").GraphQLScalarType<string, string>;
+         description: string;
+         resolve: ({ error }: {
+             error: any;
+@@ -9,7 +9,7 @@ declare const errorField: {
+ };
+ declare const successField: {
+     success: {
+-        type: import("graphql").GraphQLScalarType;
++        type: import("graphql").GraphQLScalarType<boolean, boolean>;
+         description: string;
+         resolve: ({ success }: {
+             success: any;
+diff --git a/node_modules/@entria/graphql-mongo-helpers/lib/types.d.ts b/node_modules/@entria/graphql-mongo-helpers/lib/types.d.ts
+index 823d145..85ff096 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/lib/types.d.ts
++++ b/node_modules/@entria/graphql-mongo-helpers/lib/types.d.ts
+@@ -1,8 +1,8 @@
+ import { Types } from 'mongoose';
+ export declare type DataLoaderKey = string | Types.ObjectId;
+ export declare type BuiltConditionSet = {
+-    conditions: Object;
+-    pipeline: Object[];
++    conditions: any;
++    pipeline: any[];
+ };
+ export declare type FilterMapping<TValue = any> = {
+     [key: string]: FilterFieldMapping<TValue>;
+diff --git a/node_modules/@entria/graphql-mongo-helpers/lib/utils.d.ts b/node_modules/@entria/graphql-mongo-helpers/lib/utils.d.ts
+index 3b0ac34..8562eab 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/lib/utils.d.ts
++++ b/node_modules/@entria/graphql-mongo-helpers/lib/utils.d.ts
+@@ -1,4 +1,4 @@
+ import { FilterFieldMappingCustom, FilterFieldMappingMatch, FilterFieldMappingPipeline, FilterFieldMapping } from './types';
+-export declare const isPipelineFilterMapping: <ValueT = any>(filterMapping: boolean | FilterFieldMappingMatch<ValueT> | FilterFieldMappingCustom<ValueT> | FilterFieldMappingPipeline<ValueT> | undefined) => filterMapping is FilterFieldMappingPipeline<ValueT>;
+-export declare const isCustomFilterMapping: <ValueT = any>(filterMapping: boolean | FilterFieldMappingMatch<ValueT> | FilterFieldMappingCustom<ValueT> | FilterFieldMappingPipeline<ValueT> | undefined) => filterMapping is FilterFieldMappingCustom<ValueT>;
+-export declare const isMatchFilterMapping: <ValueT = any>(filterMapping: boolean | FilterFieldMappingMatch<ValueT> | FilterFieldMappingCustom<ValueT> | FilterFieldMappingPipeline<ValueT> | undefined) => filterMapping is FilterFieldMappingMatch<ValueT>;
++export declare const isPipelineFilterMapping: <ValueT = any>(filterMapping: FilterFieldMapping<ValueT> | undefined) => filterMapping is FilterFieldMappingPipeline<ValueT>;
++export declare const isCustomFilterMapping: <ValueT = any>(filterMapping: FilterFieldMapping<ValueT> | undefined) => filterMapping is FilterFieldMappingCustom<ValueT>;
++export declare const isMatchFilterMapping: <ValueT = any>(filterMapping: FilterFieldMapping<ValueT> | undefined) => filterMapping is FilterFieldMappingMatch<ValueT>;
+diff --git a/node_modules/@entria/graphql-mongo-helpers/lib/withConnectionAggregate.js b/node_modules/@entria/graphql-mongo-helpers/lib/withConnectionAggregate.js
+index 6f1ff6c..1143824 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/lib/withConnectionAggregate.js
++++ b/node_modules/@entria/graphql-mongo-helpers/lib/withConnectionAggregate.js
+@@ -6,9 +6,9 @@ const buildAggregatePipeline_1 = require("./buildAggregatePipeline");
+ const withConnectionAggregate = (model, loader, condFn) => (...params) => {
+     const { defaultConditions = {}, builtMongoConditions } = condFn(...params);
+     const [context, args] = params;
+-    const aggregatePipeline = buildAggregatePipeline_1.buildAggregatePipeline({ defaultConditions, builtMongoConditions });
++    const aggregatePipeline = (0, buildAggregatePipeline_1.buildAggregatePipeline)({ defaultConditions, builtMongoConditions });
+     const aggregate = model.aggregate(aggregatePipeline);
+-    return graphql_mongoose_loader_1.connectionFromMongoAggregate({
++    return (0, graphql_mongoose_loader_1.connectionFromMongoAggregate)({
+         aggregate,
+         context,
+         args,
+diff --git a/node_modules/@entria/graphql-mongo-helpers/lib/withConnectionAggregate.js.map b/node_modules/@entria/graphql-mongo-helpers/lib/withConnectionAggregate.js.map
+index ae75919..d20d3fc 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/lib/withConnectionAggregate.js.map
++++ b/node_modules/@entria/graphql-mongo-helpers/lib/withConnectionAggregate.js.map
+@@ -1 +1 @@
+-{"version":3,"file":"withConnectionAggregate.js","sourceRoot":"","sources":["../src/withConnectionAggregate.ts"],"names":[],"mappings":";;;AAAA,6EAA+E;AAK/E,qEAAkE;AAI3D,MAAM,uBAAuB,GAAG,CACrC,KAAiB,EACjB,MAAyB,EACzB,MAA0D,EAC1D,EAAE,CAAC,CAAC,GAAG,MAAa,EAAE,EAAE;IACxB,MAAM,EAAE,iBAAiB,GAAG,EAAE,EAAE,oBAAoB,EAAE,GAAG,MAAM,CAAC,GAAG,MAAM,CAAC,CAAC;IAE3E,MAAM,CAAC,OAAO,EAAE,IAAI,CAAC,GAAG,MAAM,CAAC;IAE/B,MAAM,iBAAiB,GAAG,+CAAsB,CAAC,EAAE,iBAAiB,EAAE,oBAAoB,EAAE,CAAC,CAAC;IAE9F,MAAM,SAAS,GAAG,KAAK,CAAC,SAAS,CAAC,iBAAiB,CAAC,CAAC;IAErD,OAAO,sDAA4B,CAAC;QAClC,SAAS;QACT,OAAO;QACP,IAAI;QACJ,MAAM,EAAE,MAAa;KACtB,CAAC,CAAC;AACL,CAAC,CAAC;AAnBW,QAAA,uBAAuB,2BAmBlC"}
+\ No newline at end of file
++{"version":3,"file":"withConnectionAggregate.js","sourceRoot":"","sources":["../src/withConnectionAggregate.ts"],"names":[],"mappings":";;;AAAA,6EAA+E;AAK/E,qEAAkE;AAI3D,MAAM,uBAAuB,GAClC,CACE,KAAiB,EACjB,MAAyB,EACzB,MAA0D,EAC1D,EAAE,CACJ,CAAC,GAAG,MAAa,EAAE,EAAE;IACnB,MAAM,EAAE,iBAAiB,GAAG,EAAE,EAAE,oBAAoB,EAAE,GAAG,MAAM,CAAC,GAAG,MAAM,CAAC,CAAC;IAE3E,MAAM,CAAC,OAAO,EAAE,IAAI,CAAC,GAAG,MAAM,CAAC;IAE/B,MAAM,iBAAiB,GAAG,IAAA,+CAAsB,EAAC,EAAE,iBAAiB,EAAE,oBAAoB,EAAE,CAAC,CAAC;IAE9F,MAAM,SAAS,GAAG,KAAK,CAAC,SAAS,CAAC,iBAAiB,CAAC,CAAC;IAErD,OAAO,IAAA,sDAA4B,EAAC;QAClC,SAAS;QACT,OAAO;QACP,IAAI;QACJ,MAAM,EAAE,MAAa;KACtB,CAAC,CAAC;AACL,CAAC,CAAC;AArBS,QAAA,uBAAuB,2BAqBhC"}
+\ No newline at end of file
+diff --git a/node_modules/@entria/graphql-mongo-helpers/lib/withConnectionCursor.js b/node_modules/@entria/graphql-mongo-helpers/lib/withConnectionCursor.js
+index 4bfb842..52fc083 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/lib/withConnectionCursor.js
++++ b/node_modules/@entria/graphql-mongo-helpers/lib/withConnectionCursor.js
+@@ -6,7 +6,7 @@ const withConnectionCursor = (model, loader, condFn) => (...params) => {
+     const { conditions = {}, sort = {} } = condFn(...params);
+     const [context, args] = params;
+     const cursor = model.find(conditions).sort(sort);
+-    return graphql_mongoose_loader_1.connectionFromMongoCursor({
++    return (0, graphql_mongoose_loader_1.connectionFromMongoCursor)({
+         cursor,
+         context,
+         args,
+diff --git a/node_modules/@entria/graphql-mongo-helpers/lib/withConnectionCursor.js.map b/node_modules/@entria/graphql-mongo-helpers/lib/withConnectionCursor.js.map
+index 4fa6fb4..3515fc9 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/lib/withConnectionCursor.js.map
++++ b/node_modules/@entria/graphql-mongo-helpers/lib/withConnectionCursor.js.map
+@@ -1 +1 @@
+-{"version":3,"file":"withConnectionCursor.js","sourceRoot":"","sources":["../src/withConnectionCursor.ts"],"names":[],"mappings":";;;AAAA,6EAA4E;AAKrE,MAAM,oBAAoB,GAAG,CAClC,KAAiB,EACjB,MAAyB,EACzB,MAA+D,EAC/D,EAAE,CAAC,CAAC,GAAG,MAAa,EAAE,EAAE;IACxB,MAAM,EAAE,UAAU,GAAG,EAAE,EAAE,IAAI,GAAG,EAAE,EAAE,GAAG,MAAM,CAAC,GAAG,MAAM,CAAC,CAAC;IAEzD,MAAM,CAAC,OAAO,EAAE,IAAI,CAAC,GAAG,MAAM,CAAC;IAE/B,MAAM,MAAM,GAAG,KAAK,CAAC,IAAI,CAAC,UAAU,CAAC,CAAC,IAAI,CAAC,IAAI,CAAC,CAAC;IAEjD,OAAO,mDAAyB,CAAC;QAC/B,MAAM;QACN,OAAO;QACP,IAAI;QACJ,MAAM,EAAE,MAAa;KACtB,CAAC,CAAC;AACL,CAAC,CAAC;AAjBW,QAAA,oBAAoB,wBAiB/B"}
+\ No newline at end of file
++{"version":3,"file":"withConnectionCursor.js","sourceRoot":"","sources":["../src/withConnectionCursor.ts"],"names":[],"mappings":";;;AAAA,6EAA4E;AAKrE,MAAM,oBAAoB,GAAG,CAClC,KAAiB,EACjB,MAAyB,EACzB,MAA+D,EAC/D,EAAE,CAAC,CAAC,GAAG,MAAa,EAAE,EAAE;IACxB,MAAM,EAAE,UAAU,GAAG,EAAE,EAAE,IAAI,GAAG,EAAE,EAAE,GAAG,MAAM,CAAC,GAAG,MAAM,CAAC,CAAC;IAEzD,MAAM,CAAC,OAAO,EAAE,IAAI,CAAC,GAAG,MAAM,CAAC;IAE/B,MAAM,MAAM,GAAG,KAAK,CAAC,IAAI,CAAC,UAAU,CAAC,CAAC,IAAI,CAAC,IAAI,CAAC,CAAC;IAEjD,OAAO,IAAA,mDAAyB,EAAC;QAC/B,MAAM;QACN,OAAO;QACP,IAAI;QACJ,MAAM,EAAE,MAAa;KACtB,CAAC,CAAC;AACL,CAAC,CAAC;AAjBW,QAAA,oBAAoB,wBAiB/B"}
+\ No newline at end of file
+diff --git a/node_modules/@entria/graphql-mongo-helpers/lib/withFilter.d.ts b/node_modules/@entria/graphql-mongo-helpers/lib/withFilter.d.ts
+index b248c8a..2de0d45 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/lib/withFilter.d.ts
++++ b/node_modules/@entria/graphql-mongo-helpers/lib/withFilter.d.ts
+@@ -9,8 +9,8 @@ export declare const withFilter: (args: ArgsWithFilter | {
+     [key: string]: any;
+ }, filters: object) => {
+     filters: any;
+-    before?: import("graphql/jsutils/Maybe").Maybe<string>;
+-    after?: import("graphql/jsutils/Maybe").Maybe<string>;
++    before?: string | null | undefined;
++    after?: string | null | undefined;
+     first?: number | null | undefined;
+     last?: number | null | undefined;
+ } | {
+diff --git a/node_modules/@entria/graphql-mongo-helpers/src/__tests__/connectionDefinitions.spec.ts b/node_modules/@entria/graphql-mongo-helpers/src/__tests__/connectionDefinitions.spec.ts
+index 94dd5c1..52b18c2 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/src/__tests__/connectionDefinitions.spec.ts
++++ b/node_modules/@entria/graphql-mongo-helpers/src/__tests__/connectionDefinitions.spec.ts
+@@ -35,13 +35,13 @@ describe('connectionDefinitions', () => {
+     const connectionFields = NodeConnection.connectionType.getFields();
+     expect(connectionFields.count.type).toMatchObject(GraphQLInt);
+     expect(connectionFields.totalCount.type).toMatchObject(GraphQLInt);
+-    expect(connectionFields.startCursorOffset.type).toMatchObject(GraphQLNonNull(GraphQLInt));
+-    expect(connectionFields.endCursorOffset.type).toMatchObject(GraphQLNonNull(GraphQLInt));
+-    expect(connectionFields.pageInfo.type).toMatchObject(GraphQLNonNull(PageInfoType));
++    expect(connectionFields.startCursorOffset.type).toMatchObject(new GraphQLNonNull(GraphQLInt));
++    expect(connectionFields.endCursorOffset.type).toMatchObject(new GraphQLNonNull(GraphQLInt));
++    expect(connectionFields.pageInfo.type).toMatchObject(new GraphQLNonNull(PageInfoType));
+ 
+     const edgeFields = NodeConnection.edgeType.getFields();
+     expect(edgeFields.node.type).toMatchObject(NodeType);
+-    expect(edgeFields.cursor.type).toMatchObject(GraphQLNonNull(GraphQLString));
++    expect(edgeFields.cursor.type).toMatchObject(new GraphQLNonNull(GraphQLString));
+   });
+ 
+   it('should create a connection and extend ConnectionInterface', () => {
+diff --git a/node_modules/@entria/graphql-mongo-helpers/src/__tests__/documentResolvers.spec.ts b/node_modules/@entria/graphql-mongo-helpers/src/__tests__/documentResolvers.spec.ts
+index 269a351..bc0f4b2 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/src/__tests__/documentResolvers.spec.ts
++++ b/node_modules/@entria/graphql-mongo-helpers/src/__tests__/documentResolvers.spec.ts
+@@ -19,7 +19,7 @@ describe('documentResolvers', () => {
+ 
+     expect(Object.keys(postFields)).toHaveLength(2);
+     expect(postFields._id.name).toBe('_id');
+-    expect(postFields._id.type).toMatchObject(GraphQLNonNull(GraphQLString));
++    expect(postFields._id.type).toMatchObject(new GraphQLNonNull(GraphQLString));
+     expect(postFields._id.resolve).toBeTruthy();
+   });
+ 
+diff --git a/node_modules/@entria/graphql-mongo-helpers/src/buildAggregatePipeline.ts b/node_modules/@entria/graphql-mongo-helpers/src/buildAggregatePipeline.ts
+index d159bfc..909348c 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/src/buildAggregatePipeline.ts
++++ b/node_modules/@entria/graphql-mongo-helpers/src/buildAggregatePipeline.ts
+@@ -1,3 +1,5 @@
++import { PipelineStage } from 'mongoose';
++
+ import { BuiltConditionSet } from './types';
+ 
+ interface IBuildAggregatePipeline {
+@@ -8,7 +10,7 @@ interface IBuildAggregatePipeline {
+ export function buildAggregatePipeline({
+   defaultConditions,
+   builtMongoConditions,
+-}: IBuildAggregatePipeline): Record<string, any>[] {
++}: IBuildAggregatePipeline): PipelineStage[] {
+   const conditions = {
+     ...defaultConditions,
+     ...builtMongoConditions.conditions,
+diff --git a/node_modules/@entria/graphql-mongo-helpers/src/connectionDefinitions.ts b/node_modules/@entria/graphql-mongo-helpers/src/connectionDefinitions.ts
+index 3d2cba6..044b9e3 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/src/connectionDefinitions.ts
++++ b/node_modules/@entria/graphql-mongo-helpers/src/connectionDefinitions.ts
+@@ -1,7 +1,7 @@
+ import {
+   GraphQLBoolean,
++  GraphQLFieldConfig,
+   GraphQLFieldConfigArgumentMap,
+-  GraphQLFieldConfigMap,
+   GraphQLFieldResolver,
+   GraphQLInt,
+   GraphQLInterfaceType,
+@@ -9,7 +9,8 @@ import {
+   GraphQLNonNull,
+   GraphQLObjectType,
+   GraphQLString,
+-  Thunk,
++  resolveObjMapThunk,
++  ThunkObjMap,
+ } from 'graphql';
+ 
+ export const forwardConnectionArgs: GraphQLFieldConfigArgumentMap = {
+@@ -45,11 +46,11 @@ export const PageInfoType = new GraphQLObjectType({
+   description: 'Information about pagination in a connection.',
+   fields: () => ({
+     hasNextPage: {
+-      type: GraphQLNonNull(GraphQLBoolean),
++      type: new GraphQLNonNull(GraphQLBoolean),
+       description: 'When paginating forwards, are there more items?',
+     },
+     hasPreviousPage: {
+-      type: GraphQLNonNull(GraphQLBoolean),
++      type: new GraphQLNonNull(GraphQLBoolean),
+       description: 'When paginating backwards, are there more items?',
+     },
+     startCursor: {
+@@ -77,15 +78,15 @@ argument to "first", then fetch the total count so it could display "5 of 83",
+ for example.`,
+   },
+   startCursorOffset: {
+-    type: GraphQLNonNull(GraphQLInt),
++    type: new GraphQLNonNull(GraphQLInt),
+     description: 'Offset from start.',
+   },
+   endCursorOffset: {
+-    type: GraphQLNonNull(GraphQLInt),
++    type: new GraphQLNonNull(GraphQLInt),
+     description: 'Offset till end.',
+   },
+   pageInfo: {
+-    type: GraphQLNonNull(PageInfoType),
++    type: new GraphQLNonNull(PageInfoType),
+     description: 'Information to aid in pagination.',
+   },
+ };
+@@ -98,10 +99,6 @@ export const ConnectionInterface = new GraphQLInterfaceType({
+   }),
+ });
+ 
+-function resolveMaybeThunk<T>(thingOrThunk: Thunk<T>): T {
+-  return typeof thingOrThunk === 'function' ? (thingOrThunk as () => T)() : thingOrThunk;
+-}
+-
+ interface ConnectionConfig {
+   name?: string | null;
+   description?: string | null;
+@@ -109,8 +106,8 @@ interface ConnectionConfig {
+   edgeDescription?: string | null;
+   resolveNode?: GraphQLFieldResolver<any, any> | null;
+   resolveCursor?: GraphQLFieldResolver<any, any> | null;
+-  edgeFields?: Thunk<GraphQLFieldConfigMap<any, any>> | null;
+-  connectionFields?: Thunk<GraphQLFieldConfigMap<any, any>> | null;
++  edgeFields?: ThunkObjMap<GraphQLFieldConfig<any, any>> | null;
++  connectionFields?: ThunkObjMap<GraphQLFieldConfig<any, any>> | null;
+ }
+ 
+ export const connectionDefinitions = (config: ConnectionConfig): GraphQLConnectionDefinitions => {
+@@ -130,11 +127,11 @@ export const connectionDefinitions = (config: ConnectionConfig): GraphQLConnecti
+         description: 'The item at the end of the edge.',
+       },
+       cursor: {
+-        type: GraphQLNonNull(GraphQLString),
++        type: new GraphQLNonNull(GraphQLString),
+         resolve: resolveCursor,
+         description: 'A cursor for use in pagination.',
+       },
+-      ...(resolveMaybeThunk(edgeFields) as any),
++      ...(resolveObjMapThunk(edgeFields) as any),
+     }),
+   });
+ 
+@@ -144,10 +141,10 @@ export const connectionDefinitions = (config: ConnectionConfig): GraphQLConnecti
+     fields: () => ({
+       ...connectionProps,
+       edges: {
+-        type: GraphQLNonNull(GraphQLList(edgeType)),
++        type: new GraphQLNonNull(new GraphQLList(edgeType)),
+         description: 'A list of edges.',
+       },
+-      ...(resolveMaybeThunk(connectionFields) as any),
++      ...(resolveObjMapThunk(connectionFields) as any),
+     }),
+     interfaces: [ConnectionInterface],
+   });
+diff --git a/node_modules/@entria/graphql-mongo-helpers/src/documentResolvers.ts b/node_modules/@entria/graphql-mongo-helpers/src/documentResolvers.ts
+index d86cb79..b1da1d4 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/src/documentResolvers.ts
++++ b/node_modules/@entria/graphql-mongo-helpers/src/documentResolvers.ts
+@@ -7,7 +7,7 @@ interface ModelObj {
+ 
+ export const objectIdResolver = {
+   _id: {
+-    type: GraphQLNonNull(GraphQLString),
++    type: new GraphQLNonNull(GraphQLString),
+     description: 'mongoose _id',
+     resolve: ({ _id }: ModelObj) => _id.toString(),
+   },
+diff --git a/node_modules/@entria/graphql-mongo-helpers/src/types.ts b/node_modules/@entria/graphql-mongo-helpers/src/types.ts
+index 88bef7a..81508d9 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/src/types.ts
++++ b/node_modules/@entria/graphql-mongo-helpers/src/types.ts
+@@ -3,8 +3,8 @@ import { Types } from 'mongoose';
+ export type DataLoaderKey = string | Types.ObjectId;
+ 
+ export type BuiltConditionSet = {
+-  conditions: Object;
+-  pipeline: Object[];
++  conditions: any;
++  pipeline: any[];
+ };
+ 
+ export type FilterMapping<TValue = any> = {
+diff --git a/node_modules/@entria/graphql-mongo-helpers/src/withConnectionAggregate.ts b/node_modules/@entria/graphql-mongo-helpers/src/withConnectionAggregate.ts
+index 1ea4595..f9ce2ea 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/src/withConnectionAggregate.ts
++++ b/node_modules/@entria/graphql-mongo-helpers/src/withConnectionAggregate.ts
+@@ -7,23 +7,25 @@ import { buildAggregatePipeline } from './buildAggregatePipeline';
+ 
+ type WithConnectionAggregateConditions = { defaultConditions?: object; builtMongoConditions: BuiltConditionSet };
+ 
+-export const withConnectionAggregate = <Context extends object>(
+-  model: Model<any>,
+-  loader: LoaderFn<Context>,
+-  condFn: (...p: any[]) => WithConnectionAggregateConditions,
+-) => (...params: any[]) => {
+-  const { defaultConditions = {}, builtMongoConditions } = condFn(...params);
+-
+-  const [context, args] = params;
+-
+-  const aggregatePipeline = buildAggregatePipeline({ defaultConditions, builtMongoConditions });
+-
+-  const aggregate = model.aggregate(aggregatePipeline);
+-
+-  return connectionFromMongoAggregate({
+-    aggregate,
+-    context,
+-    args,
+-    loader: loader as any,
+-  });
+-};
++export const withConnectionAggregate =
++  <Context extends object>(
++    model: Model<any>,
++    loader: LoaderFn<Context>,
++    condFn: (...p: any[]) => WithConnectionAggregateConditions,
++  ) =>
++  (...params: any[]) => {
++    const { defaultConditions = {}, builtMongoConditions } = condFn(...params);
++
++    const [context, args] = params;
++
++    const aggregatePipeline = buildAggregatePipeline({ defaultConditions, builtMongoConditions });
++
++    const aggregate = model.aggregate(aggregatePipeline);
++
++    return connectionFromMongoAggregate({
++      aggregate,
++      context,
++      args,
++      loader: loader as any,
++    });
++  };

@@ -18,7 +18,7 @@ const mutation = mutationWithClientMutationId({
   name: 'PostCreate',
   inputFields: {
     content: {
-      type: GraphQLNonNull(GraphQLString),
+      type: new GraphQLNonNull(GraphQLString),
     },
   },
   mutateAndGetPayload: async (args: Args, context: GraphQLContext) => {

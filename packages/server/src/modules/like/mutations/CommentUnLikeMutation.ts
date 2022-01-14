@@ -19,7 +19,7 @@ const mutation = mutationWithClientMutationId({
   name: 'CommentUnLike',
   inputFields: {
     comment: {
-      type: GraphQLNonNull(GraphQLID),
+      type: new GraphQLNonNull(GraphQLID),
     },
   },
   mutateAndGetPayload: async (args: Args, context: GraphQLContext) => {

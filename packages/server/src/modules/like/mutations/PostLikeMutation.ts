@@ -19,7 +19,7 @@ const mutation = mutationWithClientMutationId({
   name: 'PostLike',
   inputFields: {
     post: {
-      type: GraphQLNonNull(GraphQLID),
+      type: new GraphQLNonNull(GraphQLID),
     },
   },
   mutateAndGetPayload: async (args: Args, context: GraphQLContext) => {
