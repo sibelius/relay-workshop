@@ -13,16 +13,23 @@ module.exports = merge(webpackCommonConfig, {
   mode: "development",
   devtool: "cheap-module-source-map",
   devServer: {
-    contentBase: outputPath,
-    disableHostCheck: true,
+    static: {
+      directory: outputPath,
+    },
+    allowedHosts: 'all',
     historyApiFallback: {
       disableDotRule: true,
     },
     hot: true,
-    hotOnly: false,
     compress: true,
     open: true,
     port: "8444",
+    client: {
+      overlay: {
+        errors: true,
+        warnings: false,
+      },
+    },
   },
   plugins: [
     new ReactRefreshPlugin(),

@@ -1,7 +1,7 @@
 {
   "name": "@workshop/webpack",
   "version": "1.0.0",
-  "main": "src/webpackConfig.js",
+  "main": "src/index.js",
   "devDependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "0.5.4",
     "css-loader": "6.5.1",

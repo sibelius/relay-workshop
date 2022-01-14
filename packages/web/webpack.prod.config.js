@@ -1,6 +1,6 @@
-const webpackConfig = require('@workshop/webpack');
+const { webpackProdConfig } = require('@workshop/webpack');
 const { merge } = require('webpack-merge');
 
-module.exports = merge(webpackConfig.webpackProdConfig, {
+module.exports = merge(webpackProdConfig, {
   entry: './src/client.tsx',
 });
