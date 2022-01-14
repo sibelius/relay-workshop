@@ -1,4 +1,4 @@
-import createMuiTheme from '@mui/material/styles/createMuiTheme';
+import { createTheme } from '@mui/material/styles';
 
 // TODO - customize material ui theme
 export const theme = {
@@ -6,15 +6,13 @@ export const theme = {
   relayLight: '#F17A35',
 };
 
-export const getTheme = () => {
-  return {
-    ...createMuiTheme({
-      palette: {
-        primary: {
-          main: '#F17A35',
-          // dark: '#F06B1F',
-        },
+export const getTheme = () => ({
+  ...createTheme({
+    palette: {
+      primary: {
+        main: '#F17A35',
+        // dark: '#F06B1F',
       },
-    }),
-  };
-};
+    },
+  }),
+});
