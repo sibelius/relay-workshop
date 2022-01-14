@@ -1,3 +1,3 @@
-const webpackConfig = require('@workshop/webpack');
+const { webpackDevConfig } = require('@workshop/webpack');
 
-module.exports = webpackConfig;
+module.exports = webpackDevConfig;
