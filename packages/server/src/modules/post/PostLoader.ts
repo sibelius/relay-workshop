@@ -1,4 +1,4 @@
-import { createLoader } from '@workshop/graphql';
+import { createLoader } from "@entria/graphql-mongo-helpers";
 
 import { registerLoader } from '../loader/loaderRegister';
 

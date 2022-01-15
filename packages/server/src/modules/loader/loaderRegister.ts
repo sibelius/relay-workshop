@@ -1,4 +1,4 @@
-import { DataLoaderKey } from '@workshop/graphql';
+import { DataLoaderKey } from "@entria/graphql-mongo-helpers";
 import DataLoader from 'dataloader';
 
 export interface DataLoaders {

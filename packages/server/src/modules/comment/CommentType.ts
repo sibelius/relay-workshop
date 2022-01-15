@@ -1,7 +1,7 @@
 import { GraphQLObjectType, GraphQLString, GraphQLNonNull, GraphQLInt, GraphQLBoolean } from 'graphql';
 import { globalIdField } from 'graphql-relay';
 
-import { connectionDefinitions, mongooseIDResolver, timestamps } from '@workshop/graphql';
+import { connectionDefinitions, objectIdResolver, timestampResolver } from "@entria/graphql-mongo-helpers";
 
 import { nodeInterface, registerTypeLoader } from '../node/typeRegister';
 
@@ -21,7 +21,7 @@ const CommentType = new GraphQLObjectType<IComment, GraphQLContext>({
   description: 'Comment data',
   fields: () => ({
     id: globalIdField('Comment'),
-    ...mongooseIDResolver,
+    ...objectIdResolver,
     body: {
       type: GraphQLString,
       resolve: comment => comment.body,
@@ -49,7 +49,7 @@ const CommentType = new GraphQLObjectType<IComment, GraphQLContext>({
         return (await LikeModel.countDocuments({ comment: comment._id, user: context.user._id })) > 0;
       },
     },
-    ...timestamps,
+    ...timestampResolver,
   }),
   interfaces: () => [nodeInterface],
 });

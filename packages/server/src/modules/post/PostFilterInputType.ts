@@ -2,7 +2,7 @@ import { GraphQLID, GraphQLInputObjectType } from 'graphql';
 
 import { FILTER_CONDITION_TYPE } from '@entria/graphql-mongo-helpers';
 
-import { getObjectId } from '@workshop/graphql';
+import { getObjectId } from "@entria/graphql-mongo-helpers";
 
 export const postFilterMapping = {
   author: {

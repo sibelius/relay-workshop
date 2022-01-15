@@ -1,7 +1,7 @@
 import { GraphQLString, GraphQLNonNull } from 'graphql';
 import { mutationWithClientMutationId } from 'graphql-relay';
 
-import { errorField, successField } from '@workshop/graphql';
+import { errorField, successField } from "@entria/graphql-mongo-helpers";
 
 import { generateToken } from '../../../auth';
 

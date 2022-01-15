@@ -1,7 +1,7 @@
 import { GraphQLNonNull, GraphQLID } from 'graphql';
 import { mutationWithClientMutationId } from 'graphql-relay';
 
-import { errorField, successField, getObjectId } from '@workshop/graphql';
+import { errorField, successField, getObjectId } from "@entria/graphql-mongo-helpers";
 
 import PostModel from '../../post/PostModel';
 
