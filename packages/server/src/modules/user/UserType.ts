@@ -1,7 +1,13 @@
 import { GraphQLObjectType, GraphQLString, GraphQLNonNull } from 'graphql';
 import { globalIdField } from 'graphql-relay';
 
-import { connectionArgs, connectionDefinitions, mongooseIDResolver, timestamps, withFilter } from '@workshop/graphql';
+import {
+  connectionArgs,
+  connectionDefinitions,
+  objectIdResolver,
+  timestampResolver,
+  withFilter,
+} from "@entria/graphql-mongo-helpers";
 
 import { nodeInterface, registerTypeLoader } from '../node/typeRegister';
 
@@ -21,7 +27,7 @@ const UserType = new GraphQLObjectType<IUser, GraphQLContext>({
   description: 'User data',
   fields: () => ({
     id: globalIdField('User'),
-    ...mongooseIDResolver,
+    ...objectIdResolver,
     name: {
       type: GraphQLString,
       resolve: user => user.name,
@@ -51,7 +57,7 @@ const UserType = new GraphQLObjectType<IUser, GraphQLContext>({
       resolve: async (user, args, context) =>
         await CommentLoader.loadAll(context, withFilter(args, { user: user._id })),
     },
-    ...timestamps,
+    ...timestampResolver,
   }),
   interfaces: () => [nodeInterface],
 });

@@ -1,7 +1,13 @@
 import { GraphQLObjectType, GraphQLString, GraphQLNonNull, GraphQLInt, GraphQLBoolean } from 'graphql';
 import { globalIdField } from 'graphql-relay';
 
-import { connectionArgs, connectionDefinitions, mongooseIDResolver, timestamps, withFilter } from '@workshop/graphql';
+import {
+  connectionArgs,
+  connectionDefinitions,
+  objectIdResolver,
+  timestampResolver,
+  withFilter,
+} from "@entria/graphql-mongo-helpers";
 
 import { nodeInterface, registerTypeLoader } from '../node/typeRegister';
 
@@ -22,7 +28,7 @@ const PostType = new GraphQLObjectType<IPost, GraphQLContext>({
   description: 'Post data',
   fields: () => ({
     id: globalIdField('Post'),
-    ...mongooseIDResolver,
+    ...objectIdResolver,
     content: {
       type: GraphQLString,
       resolve: post => post.content,
@@ -58,7 +64,7 @@ const PostType = new GraphQLObjectType<IPost, GraphQLContext>({
         return (await LikeModel.countDocuments({ post: post._id, user: context.user._id })) > 0;
       },
     },
-    ...timestamps,
+    ...timestampResolver,
   }),
   interfaces: () => [nodeInterface],
 });

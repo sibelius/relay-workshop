@@ -1,6 +1,6 @@
 import { GraphQLObjectType, GraphQLNonNull } from 'graphql';
 
-import { connectionArgs } from '@workshop/graphql';
+import { connectionArgs } from "@entria/graphql-mongo-helpers";
 
 import { nodesField, nodeField } from '../modules/node/typeRegister';
 import UserType from '../modules/user/UserType';
