@@ -53,10 +53,11 @@ export default function createRouter(routes: RouteConfig[], history: History) {
   // and notify subscribers. Note that this pattern ensures that data-loading
   // occurs *outside* of - and *before* - rendering.
   // eslint-disable-next-line
-  const cleanup = history.listen((location, action) => {
+  const cleanup = history.listen(({ location }) => {
     if (location.pathname === currentEntry.location.pathname) {
       return;
     }
+
     const matches = matchRoute(routes, location);
     const entries = prepareMatches(matches);
     const nextEntry = {
