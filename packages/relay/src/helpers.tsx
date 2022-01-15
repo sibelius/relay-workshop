@@ -1,11 +1,11 @@
-import { Variables, UploadableMap, CacheConfig } from 'react-relay';
-import { RequestParameters } from 'relay-runtime';
+import { Variables } from 'react-relay';
+import { RequestParameters, UploadableMap, CacheConfig } from 'relay-runtime';
 
 export const isMutation = (request: RequestParameters) => request.operationKind === 'mutation';
 export const isQuery = (request: RequestParameters) => request.operationKind === 'query';
 export const forceFetch = (cacheConfig: CacheConfig) => !!(cacheConfig && cacheConfig.force);
 
-export const handleData = (response: any) => {
+export const handleData = (response: Response) => {
   const contentType = response.headers.get('content-type');
   if (contentType && contentType.indexOf('application/json') !== -1) {
     return response.json();
@@ -14,10 +14,10 @@ export const handleData = (response: any) => {
   return response.text();
 };
 
-function getRequestBodyWithUploadables(request, variables, uploadables) {
+function getRequestBodyWithUploadables(request: RequestParameters, variables: Variables, uploadables: UploadableMap) {
   const formData = new FormData();
   formData.append('name', request.name);
-  formData.append('query', request.text);
+  formData.append('query', request.text!);
   formData.append('variables', JSON.stringify(variables));
 
   Object.keys(uploadables).forEach(key => {
@@ -29,7 +29,7 @@ function getRequestBodyWithUploadables(request, variables, uploadables) {
   return formData;
 }
 
-function getRequestBodyWithoutUplodables(request, variables) {
+function getRequestBodyWithoutUplodables(request: RequestParameters, variables: Variables) {
   return JSON.stringify({
     name: request.name, // used by graphql mock on tests
     query: request.text, // GraphQL text from input

@@ -1,12 +1,13 @@
-import { ConnectionHandler, RecordProxy, RecordSourceSelectorProxy } from 'relay-runtime';
+import { ConnectionHandler, RecordProxy, RecordSourceProxy } from 'relay-runtime';
 
 type ConnectionUpdater = {
-  store: RecordSourceSelectorProxy;
+  store: RecordSourceProxy;
   parentId: string;
   connectionName: string;
   edge: RecordProxy;
   before?: boolean;
 };
+
 export function connectionUpdater({ store, parentId, connectionName, edge, before = false }: ConnectionUpdater) {
   if (edge) {
     if (!parentId) {
@@ -16,6 +17,13 @@ export function connectionUpdater({ store, parentId, connectionName, edge, befor
     }
 
     const parentProxy = store.get(parentId);
+
+    if (!parentProxy) {
+      // eslint-disable-next-line
+      console.log(`Parent proxy not found for "${parentId}"`);
+      return;
+    }
+
     const conn = ConnectionHandler.getConnection(parentProxy, connectionName);
     if (!conn) {
       // eslint-disable-next-line
@@ -35,9 +43,10 @@ type ConnectionDeleteEdgeUpdaterOptions = {
   parentId: string;
   connectionName: string;
   nodeId: string;
-  store: RecordSourceSelectorProxy;
+  store: RecordSourceProxy;
   filters?: object;
 };
+
 export function connectionDeleteEdgeUpdater({
   parentId,
   connectionName,
@@ -45,6 +54,13 @@ export function connectionDeleteEdgeUpdater({
   store,
 }: ConnectionDeleteEdgeUpdaterOptions) {
   const parentProxy = store.get(parentId);
+
+  if (!parentProxy) {
+    // eslint-disable-next-line
+    console.log(`Parent proxy not found for "${parentId}"`);
+    return;
+  }
+
   const conn = ConnectionHandler.getConnection(parentProxy, connectionName);
 
   if (!conn) {

@@ -1,14 +1,9 @@
 import ExecutionEnvironment from './ExecuteEnvironment';
+import { HttpError } from './HttpError';
 
-export type InitWithRetries = {
-  body?: unknown;
-  cache?: string | null;
-  credentials?: string | null;
-  fetchTimeout?: number | null;
-  headers?: unknown;
-  method?: string | null;
-  mode?: string | null;
-  retryDelays?: Array<number> | null;
+export type InitWithRetries = RequestInit & {
+  fetchTimeout?: number;
+  retryDelays?: Array<number>;
 };
 
 const DEFAULT_TIMEOUT = 15000;
@@ -18,7 +13,7 @@ const DEFAULT_RETRIES = [1000, 3000];
  * Makes a POST request to the server with the given data as the payload.
  * Automatic retries are done based on the values in `retryDelays`.
  */
-function fetchWithRetries(uri: string, initWithRetries?: InitWithRetries | null): Promise<any> {
+function fetchWithRetries(uri: string, initWithRetries?: InitWithRetries | null): Promise<Response> {
   const { fetchTimeout, retryDelays, ...init } = initWithRetries || {};
   const _fetchTimeout = fetchTimeout != null ? fetchTimeout : DEFAULT_TIMEOUT;
   const _retryDelays = retryDelays != null ? retryDelays : DEFAULT_RETRIES;
@@ -73,10 +68,10 @@ function fetchWithRetries(uri: string, initWithRetries?: InitWithRetries | null)
               console.log(false, 'fetchWithRetries: HTTP error, retrying.'), retryRequest();
             } else {
               // Request was not successful, giving up.
-              const error: any = new Error(
+              const error = new HttpError(
                 `fetchWithRetries(): Still no successful response after ${requestsAttempted} retries, giving up.`,
+                response,
               );
-              error.response = response;
               reject(error);
             }
           }

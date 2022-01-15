@@ -42,7 +42,7 @@ module.exports = {
     'object-curly-spacing': [1, 'always'],
     'import/first': 2,
     'import/default': 0,
-    'no-unused-vars': ['error', { ignoreRestSiblings: true }],
+    // 'no-unused-vars': ['error', { ignoreRestSiblings: true }],
     'no-extra-boolean-cast': 0,
     'import/named': 0,
     'import/namespace': [2, { allowComputed: true }],
