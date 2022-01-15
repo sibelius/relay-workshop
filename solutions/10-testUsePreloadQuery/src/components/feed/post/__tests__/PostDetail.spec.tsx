@@ -55,10 +55,10 @@ it('should render post like button', async () => {
   };
 
   // queue pending operation
-  Environment.mock.queuePendingOperation(query, variables);
+  environment.mock.queuePendingOperation(query, variables);
 
   // PostDetailQuery
-  Environment.mock.queueOperationResolver(operation => MockPayloadGenerator.generate(operation, customMockResolvers));
+  environment.mock.queueOperationResolver(operation => MockPayloadGenerator.generate(operation, customMockResolvers));
 
   const Root = withProviders({
     routes,

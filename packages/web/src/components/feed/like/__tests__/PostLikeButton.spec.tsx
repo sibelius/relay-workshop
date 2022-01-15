@@ -54,10 +54,10 @@ it('should render post like button and likes count', async () => {
   };
 
   // queue pending operation
-  Environment.mock.queuePendingOperation(query, variables);
+  environment.mock.queuePendingOperation(query, variables);
 
   // PostDetailQuery
-  Environment.mock.queueOperationResolver(operation => MockPayloadGenerator.generate(operation, customMockResolvers));
+  environment.mock.queueOperationResolver(operation => MockPayloadGenerator.generate(operation, customMockResolvers));
 
   const preloadedQuery = loadQuery(
     Environment,
@@ -87,10 +87,10 @@ it('should render post like button and likes count', async () => {
 
   fireEvent.click(likeButton);
 
-  await waitFor(() => Environment.mock.getMostRecentOperation());
+  await waitFor(() => environment.mock.getMostRecentOperation());
 
   // PostLikeMutation
-  const mutationOperation = Environment.mock.getMostRecentOperation();
+  const mutationOperation = environment.mock.getMostRecentOperation();
 
   expect(getMutationOperationVariables(mutationOperation).input).toEqual({
     post: postId,
