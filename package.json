@@ -10,7 +10,7 @@
   "scripts": {
     "all:relay": "lerna run relay --parallel --ignore @workshop/0* --ignore @workshop/1*",
     "b": "babel-node --extensions \".es6,.js,.es,.jsx,.mjs,.ts,.tsx\"",
-    "build:server": "yarn workspace @workshop/graphql build && yarn workspace @workshop/server build",
+    "build:server": "yarn workspace @workshop/server build",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "copy-envs": "cp packages/server/.env.example packages/server/.env && cp packages/web/.env.example packages/web/.env",
     "es": "node -r esbuild-register",
@@ -18,7 +18,7 @@
     "jest": "jest",
     "lint": "yarn eslint --fix",
     "lint:staged": "lint-staged",
-    "postinstall": "yarn patch-package && yarn workspace @workshop/graphql build",
+    "postinstall": "yarn patch-package",
     "prettier": "prettier --write **/src/**/*.ts && prettier --write **/src/**/*.tsx",
     "relay": "yarn workspace @workshop/web relay",
     "seed": "yarn workspace @workshop/server seed",
