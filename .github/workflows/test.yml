@@ -18,6 +18,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '16'
-      - run: yarn all:relay
       - run: yarn
+      - run: yarn all:relay
       - run: yarn jest
