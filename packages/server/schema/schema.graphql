@@ -37,33 +37,56 @@ type User implements Node {
 }
 
 """A connection to a list of items."""
-type PostConnection {
-  """Number of items in this connection"""
+type PostConnection implements Connection {
+  """Number of items in this connection."""
   count: Int
 
   """
   A count of the total number of objects in this connection, ignoring pagination.
-    This allows a client to fetch the first five objects by passing "5" as the
-    argument to "first", then fetch the total count so it could display "5 of 83",
-    for example.
+  This allows a client to fetch the first five objects by passing "5" as the
+  argument to "first", then fetch the total count so it could display "5 of 83",
+  for example.
   """
   totalCount: Int
 
-  """Offset from start"""
+  """Offset from start."""
   startCursorOffset: Int!
 
-  """Offset till end"""
+  """Offset till end."""
   endCursorOffset: Int!
 
   """Information to aid in pagination."""
-  pageInfo: PageInfoExtended!
+  pageInfo: PageInfo!
 
   """A list of edges."""
   edges: [PostEdge]!
 }
 
+"""A connection to a list of items."""
+interface Connection {
+  """Number of items in this connection."""
+  count: Int
+
+  """
+  A count of the total number of objects in this connection, ignoring pagination.
+  This allows a client to fetch the first five objects by passing "5" as the
+  argument to "first", then fetch the total count so it could display "5 of 83",
+  for example.
+  """
+  totalCount: Int
+
+  """Offset from start."""
+  startCursorOffset: Int!
+
+  """Offset till end."""
+  endCursorOffset: Int!
+
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+}
+
 """Information about pagination in a connection."""
-type PageInfoExtended {
+type PageInfo {
   """When paginating forwards, are there more items?"""
   hasNextPage: Boolean!
 
@@ -79,10 +102,10 @@ type PageInfoExtended {
 
 """An edge in a connection."""
 type PostEdge {
-  """The item at the end of the edge"""
+  """The item at the end of the edge."""
   node: Post
 
-  """A cursor for use in pagination"""
+  """A cursor for use in pagination."""
   cursor: String!
 }
 
@@ -106,26 +129,26 @@ type Post implements Node {
 }
 
 """A connection to a list of items."""
-type CommentConnection {
-  """Number of items in this connection"""
+type CommentConnection implements Connection {
+  """Number of items in this connection."""
   count: Int
 
   """
   A count of the total number of objects in this connection, ignoring pagination.
-    This allows a client to fetch the first five objects by passing "5" as the
-    argument to "first", then fetch the total count so it could display "5 of 83",
-    for example.
+  This allows a client to fetch the first five objects by passing "5" as the
+  argument to "first", then fetch the total count so it could display "5 of 83",
+  for example.
   """
   totalCount: Int
 
-  """Offset from start"""
+  """Offset from start."""
   startCursorOffset: Int!
 
-  """Offset till end"""
+  """Offset till end."""
   endCursorOffset: Int!
 
   """Information to aid in pagination."""
-  pageInfo: PageInfoExtended!
+  pageInfo: PageInfo!
 
   """A list of edges."""
   edges: [CommentEdge]!
@@ -133,10 +156,10 @@ type CommentConnection {
 
 """An edge in a connection."""
 type CommentEdge {
-  """The item at the end of the edge"""
+  """The item at the end of the edge."""
   node: Comment
 
-  """A cursor for use in pagination"""
+  """A cursor for use in pagination."""
   cursor: String!
 }
 
@@ -172,7 +195,11 @@ type Mutation {
 type UserLoginWithEmailPayload {
   token: String
   me: User
+
+  """Default error field resolver."""
   error: String
+
+  """Default success field resolver."""
   success: String
   clientMutationId: String
 }
@@ -186,7 +213,11 @@ input UserLoginWithEmailInput {
 type UserRegisterWithEmailPayload {
   token: String
   me: User
+
+  """Default error field resolver."""
   error: String
+
+  """Default success field resolver."""
   success: String
   clientMutationId: String
 }
@@ -200,7 +231,11 @@ input UserRegisterWithEmailInput {
 
 type PostCreatePayload {
   postEdge: PostEdge
+
+  """Default error field resolver."""
   error: String
+
+  """Default success field resolver."""
   success: String
   clientMutationId: String
 }
@@ -212,7 +247,11 @@ input PostCreateInput {
 
 type PostLikePayload {
   post: Post
+
+  """Default error field resolver."""
   error: String
+
+  """Default success field resolver."""
   success: String
   clientMutationId: String
 }
@@ -224,7 +263,11 @@ input PostLikeInput {
 
 type PostUnLikePayload {
   post: Post
+
+  """Default error field resolver."""
   error: String
+
+  """Default success field resolver."""
   success: String
   clientMutationId: String
 }
@@ -236,7 +279,11 @@ input PostUnLikeInput {
 
 type CommentLikePayload {
   comment: Comment
+
+  """Default error field resolver."""
   error: String
+
+  """Default success field resolver."""
   success: String
   clientMutationId: String
 }
@@ -248,7 +295,11 @@ input CommentLikeInput {
 
 type CommentUnLikePayload {
   comment: Comment
+
+  """Default error field resolver."""
   error: String
+
+  """Default success field resolver."""
   success: String
   clientMutationId: String
 }
@@ -261,7 +312,11 @@ input CommentUnLikeInput {
 type PostCommentCreatePayload {
   commentEdge: CommentEdge
   post: Post
+
+  """Default error field resolver."""
   error: String
+
+  """Default success field resolver."""
   success: String
   clientMutationId: String
 }
