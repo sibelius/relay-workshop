@@ -1,74 +1,8 @@
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: daily
-    time: "08:00"
-  open-pull-requests-limit: 10
-  ignore:
-  - dependency-name: "@types/node"
-    versions:
-    - 15.0.0
-  - dependency-name: react-relay
-    versions:
-    - 10.1.3
-    - 11.0.2
-  - dependency-name: webpack
-    versions:
-    - 5.24.1
-    - 5.25.0
-    - 5.26.3
-    - 5.34.0
-  - dependency-name: "@types/mongoose"
-    versions:
-    - 5.10.5
-  - dependency-name: eslint-plugin-prettier
-    versions:
-    - 3.4.0
-  - dependency-name: eslint-config-prettier
-    versions:
-    - 8.2.0
-  - dependency-name: "@testing-library/user-event"
-    versions:
-    - 13.0.10
-    - 13.0.13
-    - 13.0.2
-    - 13.1.1
-  - dependency-name: "@typescript-eslint/eslint-plugin"
-    versions:
-    - 4.20.0
-  - dependency-name: react-dom
-    versions:
-    - 0.14.1
-  - dependency-name: relay-compiler
-    versions:
-    - 11.0.1
-  - dependency-name: razzle
-    versions:
-    - 4.0.1
-  - dependency-name: relay-config
-    versions:
-    - 11.0.0
-  - dependency-name: patch-package
-    versions:
-    - 6.4.0
-    - 6.4.3
-  - dependency-name: "@typescript-eslint/parser"
-    versions:
-    - 4.15.2
-  - dependency-name: "@babel/node"
-    versions:
-    - 7.12.17
-  - dependency-name: "@babel/core"
-    versions:
-    - 7.12.16
-  - dependency-name: razzle-plugin-typescript
-    versions:
-    - 4.0.2
-  - dependency-name: node-notifier
-    versions:
-    - 8.0.2
-  - dependency-name: "@types/jsonwebtoken"
-    versions:
-    - 8.5.1
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      interval: daily
+      time: '08:00'
+    open-pull-requests-limit: 10
