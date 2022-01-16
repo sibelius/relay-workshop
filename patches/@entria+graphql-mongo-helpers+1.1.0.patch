@@ -1,0 +1,13 @@
+diff --git a/node_modules/@entria/graphql-mongo-helpers/lib/statusFields.js b/node_modules/@entria/graphql-mongo-helpers/lib/statusFields.js
+index 7756a45..e060bcf 100644
+--- a/node_modules/@entria/graphql-mongo-helpers/lib/statusFields.js
++++ b/node_modules/@entria/graphql-mongo-helpers/lib/statusFields.js
+@@ -12,7 +12,7 @@ const errorField = {
+ exports.errorField = errorField;
+ const successField = {
+     success: {
+-        type: graphql_1.GraphQLBoolean,
++        type: graphql_1.GraphQLString,
+         description: 'Default success field resolver.',
+         resolve: ({ success }) => success || false,
+     },
