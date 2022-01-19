@@ -4573,7 +4573,7 @@
   dependencies:
     "@types/unist" "*"
 
-"@types/history@*", "@types/history@4.7.11":
+"@types/history@*", "@types/history@4.7.11", "@types/history@^4.7.11":
   version "4.7.11"
   resolved "https://registry.yarnpkg.com/@types/history/-/history-4.7.11.tgz#56588b17ae8f50c53983a524fc3cc47437969d64"
   integrity sha512-qjDJRrmvBMiTx+jyLxvLfJU7UznFuokDv4f3WRuriHKERccVpFU+8XMQUAbDzoiJCsmexxRExQeMwwCdamSKDA==
@@ -4921,11 +4921,11 @@
     "@types/relay-runtime" "*"
 
 "@types/react-router-config@^5.0.1":
-  version "5.0.5"
-  resolved "https://registry.yarnpkg.com/@types/react-router-config/-/react-router-config-5.0.5.tgz#1a8a7a11ef5c5466b74d86f916aa41ff9bf2cf07"
-  integrity sha512-1HEbzmY6FQudAbvYuTdEFuadUkpXcjAIcCiuKSCG6j21tIaquxEbwqoWdxWjVkkgjP2p5OllF4eKvYV1plSbMQ==
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/@types/react-router-config/-/react-router-config-5.0.6.tgz#87c5c57e72d241db900d9734512c50ccec062451"
+  integrity sha512-db1mx37a1EJDf1XeX8jJN7R3PZABmJQXR8r28yUjVMFSjkmnQo6X6pOEEmNl+Tp2gYQOGPdYbFIipBtdElZ3Yg==
   dependencies:
-    "@types/history" "*"
+    "@types/history" "^4.7.11"
     "@types/react" "*"
     "@types/react-router" "*"
 
