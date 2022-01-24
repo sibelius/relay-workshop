@@ -58,7 +58,7 @@
     "@types/rebass": "^4.0.7",
     "@types/relay-runtime": "13.0.0",
     "@types/relay-test-utils": "^6.0.3",
-    "@types/styled-components": "5.1.20",
+    "@types/styled-components": "5.1.21",
     "@types/styled-system": "5.1.15",
     "@types/supertest": "2.0.11",
     "@typescript-eslint/eslint-plugin": "5.10.0",
