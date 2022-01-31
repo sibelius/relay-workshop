@@ -52,7 +52,7 @@
     "razzle": "^4.0.2",
     "razzle-plugin-typescript": "4.2.14",
     "react-refresh": "0.11.0",
-    "relay-test-utils": "13.0.1",
+    "relay-test-utils": "13.0.2",
     "style-loader": "^3.2.1",
     "webpack-cli": "^4.1.0",
     "webpack-dev-server": "^4.7.3",
