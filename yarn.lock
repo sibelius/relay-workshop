@@ -20470,16 +20470,16 @@ react-refresh@^0.9.0:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.9.0.tgz#71863337adc3e5c2f8a6bfddd12ae3bfe32aafbf"
   integrity sha512-Gvzk7OZpiqKSkxsQvO/mbTN1poglhmAV7gR/DdIrRrSMXraRQQlfikRJOr3Nb9GTMPC5kof948Zy6jJZIFtDvQ==
 
-react-relay@13.0.1:
-  version "13.0.1"
-  resolved "https://registry.yarnpkg.com/react-relay/-/react-relay-13.0.1.tgz#d7338d9427c352af905c7bb7d5973e70081292c1"
-  integrity sha512-Dv1vFP40+OFr1hKWs/NVlo2iTeapkqo6nUJUL1I9jytpNfg5XgjgXh+fQdfIMLM610+W+1Dxn6yZSEnnFpVQ0A==
+react-relay@13.0.2:
+  version "13.0.2"
+  resolved "https://registry.yarnpkg.com/react-relay/-/react-relay-13.0.2.tgz#70365014b9b8df0e423cbe46cd8155e177f6d421"
+  integrity sha512-7T67Hr6n/G090L3Ajl8bp0EAEFY/Ww8v5/dkDloGqSrduxW9hNa+4VLHM1MvIGxtwqbiSyz+LcRdfPRj7r87xw==
   dependencies:
     "@babel/runtime" "^7.0.0"
     fbjs "^3.0.2"
     invariant "^2.2.4"
     nullthrows "^1.1.1"
-    relay-runtime "13.0.1"
+    relay-runtime "13.0.2"
 
 react-router-config@^5.0.1, react-router-config@^5.1.1:
   version "5.1.1"
@@ -21049,6 +21049,15 @@ relay-runtime@13.0.1:
   version "13.0.1"
   resolved "https://registry.yarnpkg.com/relay-runtime/-/relay-runtime-13.0.1.tgz#7e59a07c3b4e8c58d04bc94f6f978822d4128ffb"
   integrity sha512-n/+J8PFfLFPVUcz9OG/z2i+adnfk0INwlTkVTw0V6KJe9NI9plc5eRCJwzzwspT4pdCkis5Lcjzvzp4H+0zn8g==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    fbjs "^3.0.2"
+    invariant "^2.2.4"
+
+relay-runtime@13.0.2:
+  version "13.0.2"
+  resolved "https://registry.yarnpkg.com/relay-runtime/-/relay-runtime-13.0.2.tgz#02adb73ddc159c57b92a23c52984bf73fae0d1fc"
+  integrity sha512-sP4lNGfFcOm7tQD12qlvwsiOREDgjkw4FQAjtemmtwivKOqI4qHAL22Ar62r5TPVlASn4iVWMk7rIdIJI20KGQ==
   dependencies:
     "@babel/runtime" "^7.0.0"
     fbjs "^3.0.2"
