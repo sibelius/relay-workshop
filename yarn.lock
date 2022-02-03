@@ -4924,10 +4924,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-relay@*", "@types/react-relay@13.0.0":
-  version "13.0.0"
-  resolved "https://registry.yarnpkg.com/@types/react-relay/-/react-relay-13.0.0.tgz#906a63fcb618e597c884545d89017855f4c73a40"
-  integrity sha512-1m1ngK2AUAzxw9gM+KUKJSley3Ih94uyErsoTx8ILethlPbWvm4EFmlxdVir5qkHDn98cMEKwuUEkidrIcTGVQ==
+"@types/react-relay@*", "@types/react-relay@13.0.1":
+  version "13.0.1"
+  resolved "https://registry.yarnpkg.com/@types/react-relay/-/react-relay-13.0.1.tgz#acc25817b29febdc6b251fa076ccbe6ee9b97b1f"
+  integrity sha512-nEjkbipJ84oOvjDz8X5bqkpaPjq3tpQekaS9P/3rlePIigttN3m3S6HMthKCeRWwXeKNdVqrMcmdPXI0TQly3g==
   dependencies:
     "@types/react" "*"
     "@types/relay-runtime" "*"
