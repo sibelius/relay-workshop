@@ -6497,10 +6497,10 @@ babel-plugin-polyfill-regenerator@^0.3.0:
   dependencies:
     "@babel/helper-define-polyfill-provider" "^0.3.0"
 
-babel-plugin-relay@13.0.3:
-  version "13.0.3"
-  resolved "https://registry.yarnpkg.com/babel-plugin-relay/-/babel-plugin-relay-13.0.3.tgz#01f8e4acaff27eaf85b0727b0fe67c3d2a697f78"
-  integrity sha512-LjDrPdh6Qo6FuiYZ4wWE5v9xO40t7BBo1pFo3qQgFJTtbyg6AXKoafuY+riN9WUkIyFO8zo1WA11ivVqOtMXGg==
+babel-plugin-relay@13.1.0:
+  version "13.1.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-relay/-/babel-plugin-relay-13.1.0.tgz#4ba5c43e7eb320d7b15ab5f60e94348902db41f0"
+  integrity sha512-+0MZajJgnMm2mS8qojNZ2tOmOAEF5vwxTTSql41s+ltmFB6XR2gd0sDs85Iuhgl/S9YK1sgpOEryKVa6rSNz1g==
   dependencies:
     babel-plugin-macros "^2.0.0"
     cosmiconfig "^5.0.5"
