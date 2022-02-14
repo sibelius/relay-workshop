@@ -9837,12 +9837,12 @@ error-ex@^1.3.1:
     is-arrayish "^0.2.1"
 
 error-overlay-webpack-plugin@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/error-overlay-webpack-plugin/-/error-overlay-webpack-plugin-1.0.0.tgz#370f1cd62632bed96e0348930c86d18b611eaab2"
-  integrity sha512-/dP94C37oKHXhVp5U27UqMZv78fn76Wz1EmkYXXxop+YMaIK+xNOVTIoekjwwqtTVWrBArlt+Qqqi2AGjm1gyw==
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/error-overlay-webpack-plugin/-/error-overlay-webpack-plugin-1.1.0.tgz#a885cc3bb8710da09e8be163654bd6753e5b8270"
+  integrity sha512-9qSrUyU2nZvKr/vfpZ+nIv92mj3KQJ4bSC1iu6gRpaU5pS9cYjqFZpvkYpZNJGTb+EpkHUpc8snrPr3aV3BUIA==
   dependencies:
-    react-dev-utils "^11.0.4"
-    react-error-overlay "^6.0.9"
+    react-dev-utils "^12.0.0"
+    react-error-overlay "6.0.9"
     sockjs-client "^1.5.2"
     url "^0.11.0"
 
@@ -20518,6 +20518,11 @@ react-dom@18.0.0-rc.0, react-dom@^16.8.6, react-dom@^18.0.0-rc.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     scheduler "^0.21.0-rc.0"
+
+react-error-overlay@6.0.9:
+  version "6.0.9"
+  resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.9.tgz#3c743010c9359608c375ecd6bc76f35d93995b0a"
+  integrity sha512-nQTTcUu+ATDbrSD1BZHr5kgSD4oF8OFjxun8uAaL8RwPBacGBNPf/yAuVVdx17N8XNzRDMrZ9XcKZHCjPW+9ew==
 
 react-error-overlay@^3.0.0:
   version "3.0.0"
