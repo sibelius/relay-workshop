@@ -153,11 +153,12 @@
   dependencies:
     tslib "~2.0.1"
 
-"@babel/cli@7.17.0":
-  version "7.17.0"
-  resolved "https://registry.yarnpkg.com/@babel/cli/-/cli-7.17.0.tgz#9b932d8f08a2e218fcdd9bba456044eb0a2e0b2c"
-  integrity sha512-es10YH/ejXbg551vtnmEzIPe3MQRNOS644o3pf8vUr1tIeNzVNlP8BBvs1Eh7roh5A+k2fEHUas+ZptOWHA1fQ==
+"@babel/cli@7.17.3":
+  version "7.17.3"
+  resolved "https://registry.yarnpkg.com/@babel/cli/-/cli-7.17.3.tgz#0ccb93a348d0e3a4ff8776a63dbeefd329f7b3cc"
+  integrity sha512-1+WRlh1IqLocOp122CLx4if345RSHMspwIZNJTlqG/GA46HVZC6p49N1kolfdd2/GOdr+tu4nScbAR3ACJ2ZiA==
   dependencies:
+    "@jridgewell/trace-mapping" "^0.3.4"
     commander "^4.0.1"
     convert-source-map "^1.1.0"
     fs-readdir-recursive "^1.1.0"
@@ -2653,7 +2654,7 @@
   resolved "https://registry.yarnpkg.com/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.11.tgz#771a1d8d744eeb71b6adb35808e1a6c7b9b8c8ec"
   integrity sha512-Fg32GrJo61m+VqYSdRSjRXMjQ06j8YIYfcTqndLYVAaHmroZHLJZCydsWBOTDqXS2v+mjxohBWEMfg97GXmYQg==
 
-"@jridgewell/trace-mapping@^0.3.0":
+"@jridgewell/trace-mapping@^0.3.0", "@jridgewell/trace-mapping@^0.3.4":
   version "0.3.4"
   resolved "https://registry.yarnpkg.com/@jridgewell/trace-mapping/-/trace-mapping-0.3.4.tgz#f6a0832dffd5b8a6aaa633b7d9f8e8e94c83a0c3"
   integrity sha512-vFv9ttIedivx0ux3QSjhgtCVjPZd5l46ZOMDSCwnH1yUO2e964gO8LZGyv2QkqcgR6TnBU1v+1IFqmeoG+0UJQ==
@@ -3462,15 +3463,6 @@
     react-is "^17.0.2"
     react-transition-group "^4.4.2"
 
-"@mui/private-theming@^5.4.1", "@mui/private-theming@^5.4.2":
-  version "5.4.2"
-  resolved "https://registry.yarnpkg.com/@mui/private-theming/-/private-theming-5.4.2.tgz#f0a05f908456a2f7b87ccb6fc3b6e1faae9d89e6"
-  integrity sha512-mlPDYYko4wIcwXjCPEmOWbNTT4DZ6h9YHdnRtQPnWM28+TRUHEo7SbydnnmVDQLRXUfaH4Y6XtEHIfBNPE/SLg==
-  dependencies:
-    "@babel/runtime" "^7.17.0"
-    "@mui/utils" "^5.4.2"
-    prop-types "^15.7.2"
-
 "@mui/private-theming@^5.4.2":
   version "5.4.2"
   resolved "https://registry.yarnpkg.com/@mui/private-theming/-/private-theming-5.4.2.tgz#f0a05f908456a2f7b87ccb6fc3b6e1faae9d89e6"
@@ -3526,12 +3518,12 @@
     csstype "^3.0.10"
     prop-types "^15.7.2"
 
-"@mui/types@^7.1.1", "@mui/types@^7.1.2":
+"@mui/types@^7.1.2":
   version "7.1.2"
   resolved "https://registry.yarnpkg.com/@mui/types/-/types-7.1.2.tgz#4f3678ae77a7a3efab73b6e040469cc6df2144ac"
   integrity sha512-SD7O1nVzqG+ckQpFjDhXPZjRceB8HQFHEvdLLrPhlJy4lLbwEBbxK74Tj4t6Jgk0fTvLJisuwOutrtYe9P/xBQ==
 
-"@mui/utils@^5.4.1", "@mui/utils@^5.4.2":
+"@mui/utils@^5.4.2":
   version "5.4.2"
   resolved "https://registry.yarnpkg.com/@mui/utils/-/utils-5.4.2.tgz#3edda8f80de235418fff0424ee66e2a49793ec01"
   integrity sha512-646dBCC57MXTo/Gf3AnZSHRHznaTETQq5x7AWp5FRQ4jPeyT4WSs18cpJVwkV01cAHKh06pNQTIufIALIWCL5g==
