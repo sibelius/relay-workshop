@@ -21964,9 +21964,9 @@ saxes@^5.0.1:
     xmlchars "^2.2.0"
 
 scheduler@^0.21.0-rc.0:
-  version "0.21.0-rc.1-next-f468816ef-20220225"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.21.0-rc.1-next-f468816ef-20220225.tgz#1909b9ce9e67de48f5ca06b52d98828401771e66"
-  integrity sha512-/maKldJ78Ba2o1e9kh2mUpqNZH7XrmSQ1o1aa3HUPN/OMotUB9+pBKX/y3Zihkjco21H4cujG9hK2sJOZUpzJw==
+  version "0.21.0-rc.2-next-b9de50d2f-20220308"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.21.0-rc.2-next-b9de50d2f-20220308.tgz#f3e89d3670b99adf1e1091644793bd73db03cbb0"
+  integrity sha512-aBVNOtcCn7k8FUi0lsIY34DZN1SUeuAjAQB6Y55Cxrhtrx9mggUepmF5gTWn7Z2RkEhQtrp7fzmRA/24bxxNJQ==
   dependencies:
     loose-envify "^1.1.0"
 
