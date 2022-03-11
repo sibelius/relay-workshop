@@ -2,7 +2,7 @@
   "name": "@workshop/relay",
   "version": "1.0.0",
   "dependencies": {
-    "react-relay": "13.1.1"
+    "react-relay": "13.2.0"
   },
   "main": "src/index.tsx"
 }
