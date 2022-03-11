@@ -21370,15 +21370,15 @@ relay-runtime@13.2.0:
     fbjs "^3.0.2"
     invariant "^2.2.4"
 
-relay-test-utils@13.1.1:
-  version "13.1.1"
-  resolved "https://registry.yarnpkg.com/relay-test-utils/-/relay-test-utils-13.1.1.tgz#7be9614e54df30ebc18d5439a565138692381293"
-  integrity sha512-uaXT8y+dj4oR/EHl7EIaUW97WPHd/2FVbDSUaJ2R/U53pDu8zLb3k3pGm1u5hLZC4aUppfsGw/rXTZL8IWRK1w==
+relay-test-utils@13.2.0:
+  version "13.2.0"
+  resolved "https://registry.yarnpkg.com/relay-test-utils/-/relay-test-utils-13.2.0.tgz#8438c2097155d6c989c70dd3c86b7bff68f9db88"
+  integrity sha512-BBEdg4VGpJkLpZV4dv3lDHTn33QcL5l+Bb/nfT6e3Xccd1hlImAeKapdiX3ILNJioKEwhoMAc4t+2aTwWJQD7g==
   dependencies:
     "@babel/runtime" "^7.0.0"
     fbjs "^3.0.2"
     invariant "^2.2.4"
-    relay-runtime "13.1.1"
+    relay-runtime "13.2.0"
 
 reload-server-webpack-plugin@^1.0.1:
   version "1.0.1"
