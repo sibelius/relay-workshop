@@ -7,7 +7,7 @@
     "mdx-deck": "^4.1.1",
     "mdx-deck-code-surfer": "^0.5.5",
     "mdx-deck-live-code": "^1.0.0",
-    "qrcode.react": "^1.0.0",
+    "qrcode.react": "^2.0.0",
     "raw-loader": "^4.0.2",
     "rebass": "^4.0.7",
     "styled-components": "^5.2.0",
