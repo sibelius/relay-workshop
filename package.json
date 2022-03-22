@@ -60,7 +60,7 @@
     "@types/relay-test-utils": "^6.0.3",
     "@types/styled-components": "5.1.24",
     "@types/styled-system": "5.1.15",
-    "@types/supertest": "2.0.11",
+    "@types/supertest": "2.0.12",
     "@typescript-eslint/eslint-plugin": "5.16.0",
     "@typescript-eslint/parser": "5.15.0",
     "babel-jest": "27.5.1",
