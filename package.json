@@ -56,7 +56,7 @@
     "@types/react-relay": "13.0.1",
     "@types/react-router-config": "^5.0.1",
     "@types/rebass": "^4.0.7",
-    "@types/relay-runtime": "13.0.2",
+    "@types/relay-runtime": "13.0.3",
     "@types/relay-test-utils": "^6.0.3",
     "@types/styled-components": "5.1.24",
     "@types/styled-system": "5.1.15",
