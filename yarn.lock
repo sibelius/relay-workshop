@@ -20680,7 +20680,7 @@ react-dev-utils@^4.2.3:
     strip-ansi "3.0.1"
     text-table "0.2.0"
 
-react-dom@18.0.0-rc.0, react-dom@18.0.0-rc.3, react-dom@^16.8.6, react-dom@^18.0.0-rc.0:
+react-dom@18.0.0, react-dom@18.0.0-rc.0, react-dom@^16.8.6, react-dom@^18.0.0-rc.0:
   version "18.0.0-rc.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.0.0-rc.0.tgz#aa07044bdd6399ff94c664b2985e2e25948fbf3e"
   integrity sha512-tdD1n0svTndHBQvVAq/f2Kx7FgQ30CpSLp87/neQKAHPW5WtdgW1sBSwmFAcMQOrmstTuP0M+zRlH86f9kMX/A==
@@ -21992,9 +21992,9 @@ saxes@^5.0.1:
     xmlchars "^2.2.0"
 
 scheduler@^0.21.0-rc.0:
-  version "0.21.0-rc.3-next-e7d0053e6-20220325"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.21.0-rc.3-next-e7d0053e6-20220325.tgz#53c7e95c2d10b82b11e58056033f6a6131b2033a"
-  integrity sha512-DIpRZC4U7E4snduICzeIL4N16C9R1kX/CIBrH5kp0kGB6zbTkIKSBnuAXoKgmgHe2tt2LVGWN1x2XMgw3xylLw==
+  version "0.21.0"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.21.0.tgz#6fd2532ff5a6d877b6edb12f00d8ab7e8f308820"
+  integrity sha512-1r87x5fz9MXqswA2ERLo0EbOAU74DpIUO090gIasYTqlVoJeMcl+Z1Rg7WHz+qtPujhS/hGIt9kxZOYBV3faRQ==
   dependencies:
     loose-envify "^1.1.0"
 
