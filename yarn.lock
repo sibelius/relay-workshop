@@ -20352,9 +20352,9 @@ q@^1.1.2, q@^1.5.1:
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
 
 qrcode.react@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/qrcode.react/-/qrcode.react-3.0.0.tgz#b1f2ce499e2a3ef3fce6a959248a98d5a8c9963b"
-  integrity sha512-c9wHOCtmFxDkybKAYRdqe4+M7O6mJ6AbsWGkRt+XFxpsR16pJbpZT22Lf28LwBIi6UcYPsbJ0AnqaT5qGX5Frg==
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/qrcode.react/-/qrcode.react-3.0.1.tgz#0cb1d7cfdf3955737fbd3509c193985795ca0612"
+  integrity sha512-uCNm16ClMCrdM2R20c/zqmdwHcbMQf3K7ey39EiK/UgEKbqWeM0iH2QxW3iDVFzjQKFzH23ICgOyG4gNsJ0/gw==
 
 qs@6.9.3:
   version "6.9.3"
