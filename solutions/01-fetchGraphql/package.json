@@ -6,6 +6,6 @@
     "start": "webpack serve --hot"
   },
   "devDependencies": {
-    "webpack": "5.70.0"
+    "webpack": "5.71.0"
   }
 }
