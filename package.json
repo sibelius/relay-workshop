@@ -62,7 +62,7 @@
     "@types/styled-system": "5.1.15",
     "@types/supertest": "2.0.12",
     "@typescript-eslint/eslint-plugin": "5.18.0",
-    "@typescript-eslint/parser": "5.17.0",
+    "@typescript-eslint/parser": "5.18.0",
     "babel-jest": "27.5.1",
     "concurrently": "^7.0.0",
     "crypto-browserify": "^3.12.0",
