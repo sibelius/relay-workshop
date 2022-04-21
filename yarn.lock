@@ -1969,9 +1969,9 @@
     tslib "^2"
 
 "@entria/graphql-mongo-helpers@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@entria/graphql-mongo-helpers/-/graphql-mongo-helpers-1.1.0.tgz#7a5c8704bd3732820cf836886afc027ff692a04e"
-  integrity sha512-LYj2AgsuovgKMq3DI6vsRsyaSVyVQbXovJ093+NpclSyXsfWViIgUD7bCRKtIx4ME08t5C/LRdzug2xKMEfBsA==
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@entria/graphql-mongo-helpers/-/graphql-mongo-helpers-1.1.2.tgz#89fba277efaf52f3f2ccba07f8349d741a6bda2d"
+  integrity sha512-MkQJdl4/FCAfRx0a5SmDuv+yT+ers9ZleIBYHswwVaCeTXbQQRJxLRQd13yawFfGS1XOZCEzvCsbjQididn/Gg==
   dependencies:
     "@entria/graphql-mongoose-loader" "^4.3.2"
 
