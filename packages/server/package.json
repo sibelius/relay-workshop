@@ -8,7 +8,7 @@
     "bcryptjs": "2.4.3",
     "dataloader": "2.1.0",
     "dotenv-safe": "^8.1.0",
-    "graphql": "16.4.0",
+    "graphql": "16.5.0",
     "graphql-playground-middleware-koa": "^1.6.21",
     "graphql-relay": "^0.10.0",
     "graphql-relay-subscription": "^1.0.0",
@@ -32,7 +32,7 @@
     "@workshop/babel": "*",
     "babel-loader": "^8.2.1",
     "reload-server-webpack-plugin": "^1.0.1",
-    "webpack": "5.72.0",
+    "webpack": "5.72.1",
     "webpack-cli": "4.9.2",
     "webpack-node-externals": "3.0.0",
     "webpack-plugin-serve": "1.6.0"
