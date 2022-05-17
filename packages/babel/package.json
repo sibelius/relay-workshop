@@ -16,7 +16,7 @@
     "@babel/preset-env": "7.17.10",
     "@babel/preset-flow": "7.17.12",
     "@babel/preset-react": "7.16.7",
-    "@babel/preset-typescript": "7.16.7",
+    "@babel/preset-typescript": "7.17.12",
     "babel-plugin-relay": "13.2.0"
   },
   "main": "index.js"
