@@ -4953,8 +4953,9 @@
   resolved "https://registry.yarnpkg.com/@types/yoga-layout/-/yoga-layout-1.9.2.tgz#efaf9e991a7390dc081a0b679185979a83a9639a"
 
 "@types/yup@^0.29.9":
-  version "0.29.13"
-  resolved "https://registry.yarnpkg.com/@types/yup/-/yup-0.29.13.tgz#21b137ba60841307a3c8a1050d3bf4e63ad561e9"
+  version "0.29.14"
+  resolved "https://registry.yarnpkg.com/@types/yup/-/yup-0.29.14.tgz#754f1dccedcc66fc2bbe290c27f5323b407ceb00"
+  integrity sha512-Ynb/CjHhE/Xp/4bhHmQC4U1Ox+I2OpfRYF3dnNgQqn1cHa6LK3H1wJMNPT02tSVZA6FYuXE2ITORfbnb6zBCSA==
 
 "@typescript-eslint/eslint-plugin@5.23.0", "@typescript-eslint/eslint-plugin@^5.12.0", "@typescript-eslint/eslint-plugin@^5.5.0":
   version "5.23.0"
