@@ -166,7 +166,7 @@
   dependencies:
     "@babel/highlight" "^7.16.7"
 
-"@babel/compat-data@^7.13.11", "@babel/compat-data@^7.17.0", "@babel/compat-data@^7.17.10":
+"@babel/compat-data@^7.13.11", "@babel/compat-data@^7.17.10":
   version "7.17.10"
   resolved "https://registry.yarnpkg.com/@babel/compat-data/-/compat-data-7.17.10.tgz#711dc726a492dfc8be8220028b1b92482362baab"
 
@@ -565,15 +565,16 @@
     "@babel/plugin-syntax-object-rest-spread" "^7.8.0"
     "@babel/plugin-transform-parameters" "^7.12.1"
 
-"@babel/plugin-proposal-object-rest-spread@7.17.3", "@babel/plugin-proposal-object-rest-spread@^7.17.3":
-  version "7.17.3"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.17.3.tgz#d9eb649a54628a51701aef7e0ea3d17e2b9dd390"
+"@babel/plugin-proposal-object-rest-spread@7.17.12", "@babel/plugin-proposal-object-rest-spread@^7.17.3":
+  version "7.17.12"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.17.12.tgz#f94a91715a7f2f8cfb3c06af820c776440bc0148"
+  integrity sha512-6l9cO3YXXRh4yPCPRA776ZyJ3RobG4ZKJZhp7NDRbKIOeV3dBPG8FXCF7ZtiO2RTCIOkQOph1xDDcc01iWVNjQ==
   dependencies:
-    "@babel/compat-data" "^7.17.0"
-    "@babel/helper-compilation-targets" "^7.16.7"
-    "@babel/helper-plugin-utils" "^7.16.7"
+    "@babel/compat-data" "^7.17.10"
+    "@babel/helper-compilation-targets" "^7.17.10"
+    "@babel/helper-plugin-utils" "^7.17.12"
     "@babel/plugin-syntax-object-rest-spread" "^7.8.3"
-    "@babel/plugin-transform-parameters" "^7.16.7"
+    "@babel/plugin-transform-parameters" "^7.17.12"
 
 "@babel/plugin-proposal-optional-catch-binding@^7.16.7":
   version "7.16.7"
@@ -909,11 +910,12 @@
     "@babel/helper-plugin-utils" "^7.16.7"
     "@babel/helper-replace-supers" "^7.16.7"
 
-"@babel/plugin-transform-parameters@^7.10.4", "@babel/plugin-transform-parameters@^7.12.1", "@babel/plugin-transform-parameters@^7.16.7":
-  version "7.16.7"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-parameters/-/plugin-transform-parameters-7.16.7.tgz#a1721f55b99b736511cb7e0152f61f17688f331f"
+"@babel/plugin-transform-parameters@^7.10.4", "@babel/plugin-transform-parameters@^7.12.1", "@babel/plugin-transform-parameters@^7.16.7", "@babel/plugin-transform-parameters@^7.17.12":
+  version "7.17.12"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-parameters/-/plugin-transform-parameters-7.17.12.tgz#eb467cd9586ff5ff115a9880d6fdbd4a846b7766"
+  integrity sha512-6qW4rWo1cyCdq1FkYri7AHpauchbGLXpdwnYsfxFb+KtddHENfsY5JZb35xUwkK5opOLcJ3BNd2l7PhRYGlwIA==
   dependencies:
-    "@babel/helper-plugin-utils" "^7.16.7"
+    "@babel/helper-plugin-utils" "^7.17.12"
 
 "@babel/plugin-transform-property-literals@^7.16.7":
   version "7.16.7"
