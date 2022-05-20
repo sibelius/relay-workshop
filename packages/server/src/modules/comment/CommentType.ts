@@ -1,7 +1,7 @@
 import { GraphQLObjectType, GraphQLString, GraphQLNonNull, GraphQLInt, GraphQLBoolean } from 'graphql';
 import { globalIdField } from 'graphql-relay';
 
-import { connectionDefinitions, objectIdResolver, timestampResolver } from "@entria/graphql-mongo-helpers";
+import { connectionDefinitions, objectIdResolver, timestampResolver } from '@entria/graphql-mongo-helpers';
 
 import { nodeInterface, registerTypeLoader } from '../node/typeRegister';
 
