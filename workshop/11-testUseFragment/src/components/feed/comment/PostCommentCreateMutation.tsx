@@ -3,7 +3,9 @@ import { SelectorStoreUpdater, RecordSourceSelectorProxy, ConnectionHandler } fr
 
 import { connectionUpdater } from '@workshop/relay';
 
+// eslint-disable-next-line import/no-unresolved
 import { PostCommentCreateInput } from './__generated__/PostCommentCreateMutation.graphql';
+// eslint-disable-next-line import/no-unresolved
 import { PostCommentComposer_me } from './__generated__/PostCommentComposer_me.graphql';
 
 export const PostCommentCreate = graphql`
@@ -28,37 +30,38 @@ export const PostCommentCreate = graphql`
   }
 `;
 
-export const updater = (parentId: string): SelectorStoreUpdater => (store: RecordSourceSelectorProxy) => {
-  const newEdge = store.getRootField('PostCommentCreate').getLinkedRecord('commentEdge');
+export const updater =
+  (parentId: string): SelectorStoreUpdater =>
+  (store: RecordSourceSelectorProxy) => {
+    const newEdge = store.getRootField('PostCommentCreate').getLinkedRecord('commentEdge');
 
-  connectionUpdater({
-    store,
-    parentId,
-    connectionName: 'PostComments_comments',
-    edge: newEdge,
-    before: true,
-  });
-};
+    connectionUpdater({
+      store,
+      parentId,
+      connectionName: 'PostComments_comments',
+      edge: newEdge,
+      before: true,
+    });
+  };
 
 let tempID = 0;
 
-export const optimisticUpdater = (input: PostCommentCreateInput, me: PostCommentComposer_me) => (
-  store: RecordSourceSelectorProxy,
-) => {
-  const id = 'client:newComment:' + tempID++;
+export const optimisticUpdater =
+  (input: PostCommentCreateInput, me: PostCommentComposer_me) => (store: RecordSourceSelectorProxy) => {
+    const id = 'client:newComment:' + tempID++;
 
-  const node = store.create(id, 'Comment');
+    const node = store.create(id, 'Comment');
 
-  const meProxy = store.get(me.id);
+    const meProxy = store.get(me.id);
 
-  node.setValue(id, 'id');
-  node.setValue(input.body, 'body');
-  node.setLinkedRecord(meProxy, 'user');
+    node.setValue(id, 'id');
+    node.setValue(input.body, 'body');
+    node.setLinkedRecord(meProxy, 'user');
 
-  const newEdge = store.create('client:newEdge:' + tempID++, 'CommentEdge');
-  newEdge.setLinkedRecord(node, 'node');
+    const newEdge = store.create('client:newEdge:' + tempID++, 'CommentEdge');
+    newEdge.setLinkedRecord(node, 'node');
 
-  const parentProxy = store.get(input.post);
-  const conn = ConnectionHandler.getConnection(parentProxy, 'PostComments_comments');
-  ConnectionHandler.insertEdgeBefore(conn, newEdge);
-};
+    const parentProxy = store.get(input.post);
+    const conn = ConnectionHandler.getConnection(parentProxy, 'PostComments_comments');
+    ConnectionHandler.insertEdgeBefore(conn, newEdge);
+  };

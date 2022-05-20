@@ -7,7 +7,7 @@ import {
   objectIdResolver,
   timestampResolver,
   withFilter,
-} from "@entria/graphql-mongo-helpers";
+} from '@entria/graphql-mongo-helpers';
 
 import { nodeInterface, registerTypeLoader } from '../node/typeRegister';
 
