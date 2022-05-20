@@ -10,7 +10,7 @@ I will explain everything during the intro.
 
 ## Code
 
-Most of it is written in TypeScript (not particularily well typed). Feel free to use plain JavaScript if you prefer that.
+Most of it is written in TypeScript (not particularity well typed). Feel free to use plain JavaScript if you prefer that.
 
 ## Structure
 
@@ -25,7 +25,7 @@ packages - contains packages and code that make workshop exercises possible
 - route - custom routing solution until react-router supports render as you fetch
 - server - graphql server used on demo and workshop exercises
 - test - test utilities to make tests easy
-- ui - minit design system to be used on demo and workshop exercises
+- ui - mini design system to be used on demo and workshop exercises
 - web - demo app - mini social network
 - webpack - shared webpack config for the demo and workshop exercises
 
@@ -33,7 +33,7 @@ workshop - a set of practice exercises to really learn Relay
 
 - 01-fetchGraphql - fetch GraphQL data using pure React
 - 02-useLazyLoadQuery - fetch GraphQL data using Relay useLazyLoadQuery hook
-- 03-useFragment - refactor code to colocate data using useFrament hook
+- 03-useFragment - refactor code to colocate data using useFragment hook
 - 04-usePagination - learn to paginate back and forward using usePagination hook
 - 05-useMutation - learn to do mutation using useMutation hook
 - 06-mutationUpdater - learn to update Relay store with mutation output data
@@ -69,19 +69,27 @@ brew services start mongodb-community
 ### How to run mongo in docker
 
 ```sh
-docker run -d -p PORT:27017 --name CONTAINER_NAME -d mongo:latest - run mongo:latest image in detached mode
+### run mongo:latest image in detached mode
+docker run -d -p PORT:27017 --name CONTAINER_NAME -d mongo:latest
 ```
 
 docker tips
 
-```
-docker ps: list all running containers
-docker ps -a: list all containers (including the exited ones)
-docker stop CONTAINER_NAME: stop the container
-docker start CONTAINER_NAME: start the container
-docker rm CONTAINER_NAME: delete the container to free disk space
-docker image ls: list all downloaded images
-docker rmi IMAGE_NAME:TAG: remove image from your computer to free disk space
+```bash
+### list all running containers
+docker ps
+### list all containers (including the exited ones)
+docker ps -a
+### stop the container
+docker stop CONTAINER_NAME
+### start the container
+docker start CONTAINER_N
+### delete the container to free disk spaceAME
+docker rm CONTA
+### list all downloaded imagesINER_NAME
+docker image ls
+###: remove image from your computer to free disk space
+docker rmi IMAGE_NAME:TAG
 ```
 
 ### Use React Workshop mongo URI
@@ -131,7 +139,7 @@ yarn get-token
 Web and workshops consumes a local .env, you just need to copy the .env.example to .env inside each package
 
 ```sh
-cp .env.example .env
+yarn copy-envs
 ```
 
 ## Web
