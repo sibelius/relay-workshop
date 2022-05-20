@@ -13,7 +13,7 @@
     "@babel/plugin-proposal-object-rest-spread": "7.18.0",
     "@babel/plugin-proposal-optional-chaining": "7.17.12",
     "@babel/plugin-transform-async-to-generator": "7.17.12",
-    "@babel/preset-env": "7.17.12",
+    "@babel/preset-env": "7.18.0",
     "@babel/preset-flow": "7.17.12",
     "@babel/preset-react": "7.17.12",
     "@babel/preset-typescript": "7.17.12",
