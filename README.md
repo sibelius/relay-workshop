@@ -139,7 +139,7 @@ yarn get-token
 Web and workshops consumes a local .env, you just need to copy the .env.example to .env inside each package
 
 ```sh
-cp .env.example .env
+yarn copy-envs
 ```
 
 ## Web
