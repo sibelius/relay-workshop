@@ -10,7 +10,7 @@ I will explain everything during the intro.
 
 ## Code
 
-Most of it is written in TypeScript (not particularily well typed). Feel free to use plain JavaScript if you prefer that.
+Most of it is written in TypeScript (not particularity well typed). Feel free to use plain JavaScript if you prefer that.
 
 ## Structure
 
@@ -25,7 +25,7 @@ packages - contains packages and code that make workshop exercises possible
 - route - custom routing solution until react-router supports render as you fetch
 - server - graphql server used on demo and workshop exercises
 - test - test utilities to make tests easy
-- ui - minit design system to be used on demo and workshop exercises
+- ui - mini design system to be used on demo and workshop exercises
 - web - demo app - mini social network
 - webpack - shared webpack config for the demo and workshop exercises
 
@@ -33,7 +33,7 @@ workshop - a set of practice exercises to really learn Relay
 
 - 01-fetchGraphql - fetch GraphQL data using pure React
 - 02-useLazyLoadQuery - fetch GraphQL data using Relay useLazyLoadQuery hook
-- 03-useFragment - refactor code to colocate data using useFrament hook
+- 03-useFragment - refactor code to colocate data using useFragment hook
 - 04-usePagination - learn to paginate back and forward using usePagination hook
 - 05-useMutation - learn to do mutation using useMutation hook
 - 06-mutationUpdater - learn to update Relay store with mutation output data
