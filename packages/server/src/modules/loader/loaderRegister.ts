@@ -1,6 +1,3 @@
-import { DataLoaderKey } from "@entria/graphql-mongo-helpers";
-import DataLoader from 'dataloader';
-
 export interface DataLoaders {
   PostLoader: ReturnType<typeof import('../post/PostLoader').getLoader>;
   UserLoader: ReturnType<typeof import('../user/UserLoader').getLoader>;
