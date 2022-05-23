@@ -9110,6 +9110,7 @@ enhanced-resolve@^0.9.1:
 enhanced-resolve@^4.0.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-4.5.0.tgz#2f3cfd84dbe3b487f18f2db2ef1e064a571ca5ec"
+  integrity sha512-Nv9m36S/vxpsI+Hc4/ZGRs0n9mXqSWGGq49zxb/cJfPAQMbUtttJAlNPS4AQzaBdw/pKskw5bMbekT/Y7W/Wlg==
   dependencies:
     graceful-fs "^4.1.2"
     memory-fs "^0.5.0"
@@ -18735,9 +18736,10 @@ raw-loader@^4.0.2:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
 
-razzle-plugin-typescript@4.2.16:
-  version "4.2.16"
-  resolved "https://registry.yarnpkg.com/razzle-plugin-typescript/-/razzle-plugin-typescript-4.2.16.tgz#5e5c2a63601dda58729925dfac10ba0781daf5c0"
+razzle-plugin-typescript@4.2.17:
+  version "4.2.17"
+  resolved "https://registry.yarnpkg.com/razzle-plugin-typescript/-/razzle-plugin-typescript-4.2.17.tgz#336b0e16d5c4aaf2024b306de76587c7ccca2618"
+  integrity sha512-hyJfpLgA9vTynI3u0iKccp/1WHckpfAl+De98sZ2b7+g3NGi54l4pmqmw9jZHkJqBmheTVkVFqzrcaFmEXd2HA==
   dependencies:
     fork-ts-checker-webpack-plugin "^5.2.0"
     ts-loader "^8.0.4"
