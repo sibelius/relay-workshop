@@ -12520,10 +12520,10 @@ humanize-number@0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/humanize-number/-/humanize-number-0.0.2.tgz#11c0af6a471643633588588048f1799541489c18"
 
-hygen@6.2.2:
-  version "6.2.2"
-  resolved "https://registry.yarnpkg.com/hygen/-/hygen-6.2.2.tgz#90fc127d67ba45180e394f721d7fd28ccf51103d"
-  integrity sha512-nAnZE+pE/IzekjVycFA3m5A3A+scWQnFU+bWXzewrburFkH1oXv+mpXGAR3P1gFlbvS0pB7rBECPhpDT3QDNnA==
+hygen@6.2.3:
+  version "6.2.3"
+  resolved "https://registry.yarnpkg.com/hygen/-/hygen-6.2.3.tgz#ce82dce79151159fb36cb8b1911ddab0060a9335"
+  integrity sha512-ZpOCKv5VAQmwC7pq6S/7fsC5mBGkD0alUnWZ8nMmj+91jkl5+xZFyB8uRSLQIEQWoj4Pnw/lcbYFhTsT52MOZw==
   dependencies:
     "@types/node" "^17.0.19"
     chalk "^4.1.2"
