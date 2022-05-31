@@ -87,7 +87,7 @@
     "eslint-plugin-typescript": "0.14.0",
     "git-json-merge": "^0.4.4",
     "https-browserify": "^1.0.0",
-    "hygen": "6.2.2",
+    "hygen": "6.2.3",
     "jest": "28.1.0",
     "jest-environment-jsdom": "^28.0.2",
     "jest-junit": "13.2.0",
