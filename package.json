@@ -92,7 +92,7 @@
     "jest-environment-jsdom": "^28.0.2",
     "jest-junit": "13.2.0",
     "lerna": "^4.0.0",
-    "lint-staged": "^12.1.7",
+    "lint-staged": "^13.0.0",
     "os-browserify": "^0.3.0",
     "path-browserify": "^1.0.1",
     "pre-commit": "^1.2.2",
