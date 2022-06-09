@@ -17,7 +17,7 @@
     "@babel/preset-flow": "7.17.12",
     "@babel/preset-react": "7.17.12",
     "@babel/preset-typescript": "7.17.12",
-    "babel-plugin-relay": "13.2.0"
+    "babel-plugin-relay": "14.0.0"
   },
   "main": "index.js"
 }
