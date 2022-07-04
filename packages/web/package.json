@@ -15,7 +15,7 @@
     "isomorphic-fetch": "^3.0.0",
     "koa": "^2.13.0",
     "koa-helmet": "^6.0.0",
-    "koa-router": "^10.0.0",
+    "koa-router": "^11.0.0",
     "koa-static": "^5.0.0",
     "notistack": "^2.0.3",
     "react": "18.1.0",
