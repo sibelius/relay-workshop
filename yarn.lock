@@ -3839,13 +3839,13 @@
     react-is "^18.2.0"
     react-transition-group "^4.4.2"
 
-"@mui/private-theming@^5.8.6":
-  version "5.8.6"
-  resolved "https://registry.yarnpkg.com/@mui/private-theming/-/private-theming-5.8.6.tgz#db2bafeda1699e43e67b3ff4f770d6b7a234501f"
-  integrity sha512-yHsJk1qU9r/q0DlnxGRJPHyM0Y/nUv8FTNgDTiI9I58GWuVuZqeTUr7JRvPh6ybeP/FLtW5eXEavRK9wxVk4uQ==
+"@mui/private-theming@^5.8.6", "@mui/private-theming@^5.9.0":
+  version "5.9.0"
+  resolved "https://registry.yarnpkg.com/@mui/private-theming/-/private-theming-5.9.0.tgz#d2437ed95ecfa3bfc9d2ee7c6053c94d4931cb26"
+  integrity sha512-t0ZsWxE/LvX5RH5azjx1esBHbIfD9zjnbSAYkpE59BPpkOrqAYDGoJguL2EPd9LaUb6COmBozmAwNenvI6RJRQ==
   dependencies:
     "@babel/runtime" "^7.17.2"
-    "@mui/utils" "^5.8.6"
+    "@mui/utils" "^5.9.0"
     prop-types "^15.8.1"
 
 "@mui/private-theming@^5.9.0":
@@ -3868,16 +3868,16 @@
     prop-types "^15.8.1"
 
 "@mui/styles@^5.2.3":
-  version "5.8.7"
-  resolved "https://registry.yarnpkg.com/@mui/styles/-/styles-5.8.7.tgz#7d1cc0ff4ae3e2798629fffab4a077faa8a37f61"
-  integrity sha512-TMP3TL7P/9tJXOkthUHT9uuuBf4d0PzkrzHyU3q3qyoMBs0sMyoSsNOJAKkbG5DUCcSEGbmbarYItHH4Y/6vOg==
+  version "5.9.0"
+  resolved "https://registry.yarnpkg.com/@mui/styles/-/styles-5.9.0.tgz#bfac6206bd75d6635eb0f58ee291da0f4f37f200"
+  integrity sha512-RV8XUXzpWQ65fjOcu6WHPDZjBpdTN0+YG2JJbKWzz7yphG9SFNp13wLk0BHP2O+C7VBoIqmIg1twOZAIwMaBzg==
   dependencies:
     "@babel/runtime" "^7.17.2"
     "@emotion/hash" "^0.8.0"
-    "@mui/private-theming" "^5.8.6"
+    "@mui/private-theming" "^5.9.0"
     "@mui/types" "^7.1.4"
-    "@mui/utils" "^5.8.6"
-    clsx "^1.2.0"
+    "@mui/utils" "^5.9.0"
+    clsx "^1.2.1"
     csstype "^3.1.0"
     hoist-non-react-statics "^3.3.2"
     jss "^10.8.2"
@@ -19776,6 +19776,11 @@ react-is@^17.0.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
 
 react-is@^18.0.0, react-is@^18.2.0:
+  version "18.2.0"
+  resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
+  integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
+
+react-is@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
   integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
