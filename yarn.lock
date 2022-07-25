@@ -10870,8 +10870,9 @@ feed@^4.2.2:
     xml-js "^1.6.11"
 
 fetch-multipart-graphql@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/fetch-multipart-graphql/-/fetch-multipart-graphql-3.0.0.tgz#61c9c1623beb4a7330e86ee72e6906148cd20acf"
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/fetch-multipart-graphql/-/fetch-multipart-graphql-3.1.0.tgz#99e8dcfd24e4ddd4e41583838d31a9e5e3acac1f"
+  integrity sha512-nz4SOy/8JBZyrB49CO6g1PM9zp03A04IYDZspkpBQiuo3a8xJnIQntDYhAcsQ4WNDHIX2cb+CLb0X7NnoS1D9w==
 
 figgy-pudding@^3.5.1:
   version "3.5.2"
