@@ -3914,7 +3914,7 @@
     csstype "^3.1.0"
     prop-types "^15.8.1"
 
-"@mui/types@^7.1.4", "@mui/types@^7.1.5":
+"@mui/types@^7.1.5":
   version "7.1.5"
   resolved "https://registry.yarnpkg.com/@mui/types/-/types-7.1.5.tgz#5e5cc49d719bc86522983359bc1f90eddcff0624"
   integrity sha512-HnRXrxgHJYJcT8ZDdDCQIlqk0s0skOKD7eWs9mJgBUu70hyW4iA6Kiv3yspJR474RFH8hysKR65VVSzUSzkuwA==
