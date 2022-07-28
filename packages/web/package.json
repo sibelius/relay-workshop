@@ -26,7 +26,7 @@
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.1",
     "rebass": "4.0.7",
-    "relay-compiler": "14.0.0",
+    "relay-compiler": "14.1.0",
     "relay-compiler-language-typescript": "15.0.1",
     "relay-config": "12.0.1",
     "relay-runtime": "14.1.0",
