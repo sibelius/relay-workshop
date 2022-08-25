@@ -5515,10 +5515,10 @@
   resolved "https://registry.yarnpkg.com/@types/relay-runtime/-/relay-runtime-14.1.2.tgz#252313e977f5b4d5a71d623fb8147c7815efbc9d"
   integrity sha512-HeXlKlkGakGZtnViOk5lRn5ljjYqR+EvbJodt0hmwAp5YrWZ5kdXqzMWvAhlAUpGJtP7NkKwMMAsduy46S7UjA==
 
-"@types/relay-test-utils@^6.0.3":
-  version "6.0.6"
-  resolved "https://registry.yarnpkg.com/@types/relay-test-utils/-/relay-test-utils-6.0.6.tgz#394e93162a6220ddcad5504be3a7e0b803ea79ca"
-  integrity sha512-Tgbdb8b6/ztP3TK25sIhlaNmXeSN30aNkQcHSfDn0U7smSueVYRjAytYWIEUWAdEpvATgWJ9z57f6n2i/TgWFQ==
+"@types/relay-test-utils@^14.1.0":
+  version "14.1.0"
+  resolved "https://registry.yarnpkg.com/@types/relay-test-utils/-/relay-test-utils-14.1.0.tgz#6b0aa8b7491212dc35c84e335f1ee1ce612555df"
+  integrity sha512-qwt9JDaNFa3VNTYC5FKvDE38a3Blz8Pav95xvqhY2g2ECoz47G6oocVR6qySTNQ/1kp2rFvhGG4TtyThlQBh5A==
   dependencies:
     "@types/react" "*"
     "@types/react-relay" "*"
