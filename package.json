@@ -1,34 +1,7 @@
 {
   "name": "relay-workshop",
   "version": "1.0.0",
-  "private": true,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/sibelius/relay-workshop.git"
-  },
   "author": "Sibelius Seraphini <sibeliusseraphini@gmail.com>",
-  "scripts": {
-    "all:relay": "lerna run relay --parallel --ignore @workshop/0* --ignore @workshop/1*",
-    "b": "babel-node --extensions \".es6,.js,.es,.jsx,.mjs,.ts,.tsx\"",
-    "build:server": "yarn workspace @workshop/server build",
-    "commitmsg": "commitlint -e $GIT_PARAMS",
-    "copy-envs": "cp packages/server/.env.example packages/server/.env && cp packages/web/.env.example packages/web/.env",
-    "es": "node -r esbuild-register",
-    "get-token": "yarn b ./packages/server/scripts/getToken.ts",
-    "jest": "jest",
-    "lint": "yarn eslint --fix",
-    "lint:staged": "lint-staged",
-    "postinstall": "yarn patch-package",
-    "prettier": "prettier --write **/src/**/*.ts && prettier --write **/src/**/*.tsx",
-    "relay": "yarn workspace @workshop/web relay",
-    "seed": "yarn workspace @workshop/server seed",
-    "server": "yarn workspace @workshop/server start",
-    "server:serve": "yarn workspace @workshop/server serve",
-    "start": "concurrently --kill-others \"yarn workspace @workshop/web start\" \"yarn workspace @workshop/server start\"",
-    "update-schema": "yarn w ./packages/server/scripts/updateSchema.ts",
-    "w": "yarn b webpackx.ts",
-    "web": "yarn workspace @workshop/web start"
-  },
   "devDependencies": {
     "@babel/preset-modules": "0.1.5",
     "@types/bcryptjs": "^2.4.1",
@@ -101,14 +74,6 @@
     "stream-http": "^3.2.0",
     "typescript": "4.8.2"
   },
-  "resolutions": {
-    "graphql": "16.2.0",
-    "html-webpack-plugin": "5.3.1",
-    "react": "18.0.0",
-    "react-dom": "18.0.0",
-    "styled-system": "5.1.5",
-    "webpack": "5.38.1"
-  },
   "lint-staged": {
     "*.{js,ts,tsx}": [
       "prettier --write",
@@ -119,8 +84,44 @@
     ]
   },
   "pre-commit": "lint:staged",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sibelius/relay-workshop.git"
+  },
+  "resolutions": {
+    "graphql": "16.2.0",
+    "html-webpack-plugin": "5.3.1",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "styled-system": "5.1.5",
+    "webpack": "5.38.1"
+  },
+  "scripts": {
+    "all:relay": "lerna run relay --parallel --ignore @workshop/0* --ignore @workshop/1*",
+    "b": "babel-node --extensions \".es6,.js,.es,.jsx,.mjs,.ts,.tsx\"",
+    "build:server": "yarn workspace @workshop/server build",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "copy-envs": "cp apps/server/.env.example apps/server/.env && cp apps/web/.env.example apps/web/.env",
+    "es": "node -r esbuild-register",
+    "get-token": "yarn b apps/server/scripts/getToken.ts",
+    "jest": "jest",
+    "lint": "yarn eslint --fix",
+    "lint:staged": "lint-staged",
+    "postinstall": "yarn patch-package",
+    "prettier": "prettier --write **/src/**/*.ts && prettier --write **/src/**/*.tsx",
+    "relay": "yarn workspace @workshop/web relay",
+    "seed": "yarn workspace @workshop/server seed",
+    "server": "yarn workspace @workshop/server start",
+    "server:serve": "yarn workspace @workshop/server serve",
+    "start": "concurrently --kill-others \"yarn workspace @workshop/web start\" \"yarn workspace @workshop/server start\"",
+    "update-schema": "yarn w apps/server/scripts/updateSchema.ts",
+    "w": "yarn b webpackx.ts",
+    "web": "yarn workspace @workshop/web start"
+  },
   "workspaces": {
     "packages": [
+      "apps/*",
       "packages/*",
       "workshop/*",
       "solutions/*",

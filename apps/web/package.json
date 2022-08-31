@@ -63,10 +63,10 @@
   "module": "src/index.ts",
   "scripts": {
     "jest": "jest",
-    "razzle:build": "razzle build",
+    "razzle:build": "node_modules/.bin/razzle build",
     "razzle:prod": "NODE_ENV=production node build/server.js",
-    "razzle:start": "razzle start",
-    "relay": "relay-compiler",
+    "razzle:start": "node_modules/.bin/razzle start",
+    "relay": "node_modules/.bin/relay-compiler",
     "start": "webpack serve --hot --config webpack.dev.config.js",
     "build": "webpack --config webpack.prod.config.js"
   }
