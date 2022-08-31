@@ -40,11 +40,11 @@
   "main": "dist/index.js",
   "module": "src/index.ts",
   "scripts": {
-    "build": "babel src --extensions \".es6,.js,.es,.jsx,.mjs,.ts,.tsx\" --ignore *.spec.js --out-dir dist --copy-files --source-maps --verbose",
+    "build": "babel src --extensions \\\".es6,.js,.es,.jsx,.mjs,.ts,.tsx\\\" --ignore *.spec.js --out-dir dist --copy-files --source-maps --verbose",
     "jest": "jest",
     "serve": "node ./dist/index.js",
-    "start": "webpack --watch --progress --config webpack.config.server.js",
-    "update-schema": "babel-node --extensions \".es6,.js,.es,.jsx,.mjs,.ts\" ./scripts/updateSchema.ts",
-    "seed": "babel-node --extensions \".ts\" ./scripts/seed.ts"
+    "start": "node_modules/.bin/webpack --watch --progress --config webpack.config.server.js",
+    "update-schema": "babel-node --extensions \\\".es6,.js,.es,.jsx,.mjs,.ts\\\" scripts/updateSchema.ts",
+    "seed": "babel-node --extensions \\\".ts\\\" scripts/seed.ts"
   }
 }

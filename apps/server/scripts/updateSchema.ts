@@ -14,7 +14,7 @@ const cwd = process.cwd();
   const configs = [
     {
       schema: schemaGraphql,
-      path: path.join(cwd, `./packages/server/schema/schema.graphql`),
+      path: path.join(cwd, `./apps/server/schema/schema.graphql`),
     },
   ];
 

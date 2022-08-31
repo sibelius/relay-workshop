@@ -1,7 +1,7 @@
 import { graphql } from 'graphql';
 
 import { clearDbAndRestartCounters, connectMongoose, disconnectMongoose, sanitizeTestObject } from '../../../../test';
-import { createUser } from '../../../modules/user/fixture/createUser';
+import { createUser } from '../../user/fixture/createUser';
 import { schema } from '../../../schema/schema';
 import { getContext } from '../../../getContext';
 import { createPost } from '../fixture/createPost';

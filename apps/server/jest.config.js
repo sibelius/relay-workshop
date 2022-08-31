@@ -1,4 +1,4 @@
-const pack = require('./package');
+const pack = require('./package.json');
 
 module.exports = {
   displayName: pack.name,
