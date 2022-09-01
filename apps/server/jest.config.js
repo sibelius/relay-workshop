@@ -2,7 +2,6 @@ const pack = require('./package.json');
 
 module.exports = {
   displayName: pack.name,
-  name: pack.name,
   testEnvironment: '<rootDir>/test/environment/mongodb',
   testPathIgnorePatterns: ['/node_modules/', './dist'],
   coverageReporters: ['lcov', 'html'],

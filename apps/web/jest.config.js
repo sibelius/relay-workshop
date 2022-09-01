@@ -1,7 +1,6 @@
 const pkg = require('./package.json');
 
 module.exports = {
-  name: pkg.name,
   displayName: pkg.name,
   testPathIgnorePatterns: ['/node_modules/', './dist', './scripts', '__generated__'],
   coverageReporters: ['lcov', 'html'],
