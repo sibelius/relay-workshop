@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should return logged user 1`] = `
-Object {
-  "data": Object {
-    "me": Object {
+{
+  "data": {
+    "me": {
       "name": "user#1",
     },
   },
