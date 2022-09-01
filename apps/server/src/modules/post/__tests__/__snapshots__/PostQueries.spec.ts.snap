@@ -1,20 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should all posts 1`] = `
-Object {
-  "posts": Object {
-    "edges": Array [
-      Object {
-        "node": Object {
-          "author": Object {
+{
+  "posts": {
+    "edges": [
+      {
+        "node": {
+          "author": {
             "name": "user#2",
           },
           "content": "content#1",
         },
       },
-      Object {
-        "node": Object {
-          "author": Object {
+      {
+        "node": {
+          "author": {
             "name": "user#1",
           },
           "content": "content#0",
