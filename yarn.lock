@@ -13410,10 +13410,10 @@ humanize-number@0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/humanize-number/-/humanize-number-0.0.2.tgz#11c0af6a471643633588588048f1799541489c18"
 
-hygen@6.2.8:
-  version "6.2.8"
-  resolved "https://registry.yarnpkg.com/hygen/-/hygen-6.2.8.tgz#c71fd8b4b26c91574a26eaf34248bebb770e3c83"
-  integrity sha512-hAf4zNDureugjoI59Bp5DfZ19GWwx0ArAHW8dmplxqzgIXdF8V87+PkmL2It8flMYj1qVj3VDptFD/ntGUfQkw==
+hygen@6.2.10:
+  version "6.2.10"
+  resolved "https://registry.yarnpkg.com/hygen/-/hygen-6.2.10.tgz#cc1b941dcb40023f52d31491fe142573fa5200ff"
+  integrity sha512-nL3r/xPrnpPlRZAli8h7XcL5nhvN/P8ZXGESGzMUYilKmWyFvSVBrHrQcUg9tSkYlY98SFAS6kQg4bByJ7OQVA==
   dependencies:
     "@types/node" "^17.0.19"
     chalk "^4.1.2"
