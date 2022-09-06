@@ -60,7 +60,7 @@
     "eslint-plugin-typescript": "0.14.0",
     "git-json-merge": "^0.4.4",
     "https-browserify": "^1.0.0",
-    "hygen": "6.2.8",
+    "hygen": "6.2.10",
     "jest": "29.0.1",
     "jest-environment-jsdom": "^29.0.1",
     "jest-junit": "14.0.1",
