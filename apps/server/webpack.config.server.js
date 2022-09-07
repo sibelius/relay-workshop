@@ -15,7 +15,7 @@ module.exports = {
   entry: {
     server: [
       // 'webpack/hot/poll?1000',
-      './src/index.ts',
+      './src/server.ts',
     ],
   },
   output: {
