@@ -1,7 +1,7 @@
-import type { AppProps } from 'next/app';
+import type { AppProps } from "next/app";
+import React from "react";
+import { ReactRelayContainer } from "../relay/ReactRelayContainer";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+export default function MyApp({ Component, pageProps }: AppProps) {
+  return <ReactRelayContainer Component={Component} props={pageProps} />;
 }
-
-export default MyApp;

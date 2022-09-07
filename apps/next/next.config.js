@@ -3,7 +3,10 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   experimental: {
-    externalDir: true
+    externalDir: true,
+  },
+  compiler: {
+    relay: require("./relay.config"),
   }
 };
 

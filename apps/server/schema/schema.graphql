@@ -13,6 +13,7 @@ type Query {
   ): [Node]!
   me: User
   posts(after: String, first: Int, before: String, last: Int): PostConnection!
+  version: String!
 }
 
 """An object with an ID"""

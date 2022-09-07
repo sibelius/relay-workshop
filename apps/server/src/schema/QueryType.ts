@@ -1,4 +1,4 @@
-import { GraphQLObjectType, GraphQLNonNull } from 'graphql';
+import { GraphQLObjectType, GraphQLNonNull, GraphQLString } from 'graphql';
 
 import { connectionArgs } from '@entria/graphql-mongo-helpers';
 
@@ -7,6 +7,8 @@ import UserType from '../modules/user/UserType';
 import * as UserLoader from '../modules/user/UserLoader';
 import { PostConnection } from '../modules/post/PostType';
 import * as PostLoader from '../modules/post/PostLoader';
+
+import pkg from '../../package.json';
 
 const QueryType = new GraphQLObjectType({
   name: 'Query',
@@ -24,6 +26,10 @@ const QueryType = new GraphQLObjectType({
         ...connectionArgs,
       },
       resolve: async (_, args, context) => await PostLoader.loadAll(context, args),
+    },
+    version: {
+      type: new GraphQLNonNull(GraphQLString),
+      resolve: () => pkg.version,
     },
   }),
 });
