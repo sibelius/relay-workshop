@@ -7,6 +7,7 @@ import { Button, Card, CardActions, Content, TextField } from '@workshop/ui';
 import { Flex } from 'rebass';
 import React from 'react';
 import { useSnackbar } from 'notistack';
+import Link from "next/link";
 
 import { UserRegisterWithEmail } from '../../components/auth/UserRegisterWithEmailMutation';
 import {
@@ -14,6 +15,7 @@ import {
   UserRegisterWithEmailMutation$data,
 } from '../../__generated__/UserRegisterWithEmailMutation.graphql';
 import AuthRoot from '../../components/auth/AuthRoot';
+import { useRouter } from 'next/router';
 
 type Values = {
   name: string;
@@ -24,6 +26,8 @@ const SignUp: NextPage = () => {
   const [userRegisterWithEmail, isPending] = useMutation<UserRegisterWithEmailMutation>(UserRegisterWithEmail);
 
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
+
+  const router = useRouter();
 
   const onSubmit = (values: Values) => {
     closeSnackbar();
@@ -47,8 +51,7 @@ const SignUp: NextPage = () => {
           updateToken(UserRegisterWithEmail.token);
         }
 
-        // nextjs
-        // history.push('/');
+        router.push('/');
       },
     };
 
@@ -96,7 +99,7 @@ const SignUp: NextPage = () => {
                   Sign Up
                 </Button>
               </CardActions>
-              {/*<Link to={'/auth/login'}>Already have an account? Login</Link>*/}
+              <Link href={'/auth/login'}>Already have an account? Login</Link>
             </Flex>
           </Card>
         </Content>

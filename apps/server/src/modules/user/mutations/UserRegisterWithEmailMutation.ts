@@ -9,6 +9,7 @@ import UserModel from '../UserModel';
 
 import UserType from '../UserType';
 import * as UserLoader from '../UserLoader';
+import { config } from '../../../config';
 
 export default mutationWithClientMutationId({
   name: 'UserRegisterWithEmail',
@@ -23,7 +24,7 @@ export default mutationWithClientMutationId({
       type: new GraphQLNonNull(GraphQLString),
     },
   },
-  mutateAndGetPayload: async ({ name, email, password }) => {
+  mutateAndGetPayload: async ({ name, email, password }, context) => {
     const hasUser = (await UserModel.countDocuments({ email: email.trim().toLowerCase() })) > 0;
 
     if (hasUser) {
@@ -38,8 +39,12 @@ export default mutationWithClientMutationId({
       password,
     }).save();
 
+    const token = generateToken(user);
+
+    context.setCookie(config.WORKSHOP_COOKIE, token);
+
     return {
-      token: generateToken(user),
+      token,
       id: user._id,
       success: 'User registered with success',
     };

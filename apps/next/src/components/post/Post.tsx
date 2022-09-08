@@ -7,7 +7,8 @@ import { Text } from 'rebass';
 
 import { Card, CardActions } from '@workshop/ui';
 
-import { Link as _Link } from 'next/link';
+// import { Link as _Link } from '@workshop/route';
+import _Link from "next/link";
 
 import PostLikeButton from '../like/PostLikeButton';
 import PostCommentComposer from '../comment/PostCommentComposer';
@@ -59,7 +60,7 @@ const Post = (props: Props) => {
   );
 
   const Wrapper = isDetail ? React.Fragment : Link;
-  const wrapperProps = isDetail ? {} : { to: `/post/${post.id}` };
+  const wrapperProps = isDetail ? {} : { href: `/post/${post.id}` };
 
   const { author } = post;
 

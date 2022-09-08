@@ -18,9 +18,6 @@ const PostNewSubscription = subscriptionWithClientId<PostNew, GraphQLContext>({
     },
   },
   subscribe: (input, context) => {
-    // eslint-disable-next-line
-    console.log('Subscribe PostNewSubscription: ', input, context);
-
     return pubSub.asyncIterator(EVENTS.POST.NEW);
   },
   getPayload: (obj: PostNew) => {

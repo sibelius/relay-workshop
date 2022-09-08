@@ -5,8 +5,22 @@ import {
   renderGraphiQL,
   shouldRenderGraphiQL,
 } from "graphql-helix";
-import { schema, getContext } from "@workshop/server";
+import { schema, getContext, getUser } from '@workshop/server';
 import connectMongoDB from '../../connectMongoDB';
+import { serialize } from "cookie";
+import { config } from '../../config';
+
+export const setCookie = (res: NextApiResponse) => (cookieName: string, token: string) => {
+  res.setHeader(
+    "Set-Cookie",
+    serialize(cookieName, token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV !== "development",
+      sameSite: "lax",
+      path: "/",
+    })
+  );
+}
 
 export const graphqlHandler = async (req: NextApiRequest, res: NextApiResponse) => {
   const request: any = {
@@ -28,6 +42,8 @@ export const graphqlHandler = async (req: NextApiRequest, res: NextApiResponse) 
   // Extract the GraphQL parameters from the request
   const { operationName, query, variables } = getGraphQLParameters(request);
 
+  const { user } = await getUser(req.cookies[config.WORKSHOP_COOKIE]);
+
   // Validate and execute the query
   const result = await processRequest({
     operationName,
@@ -38,6 +54,8 @@ export const graphqlHandler = async (req: NextApiRequest, res: NextApiResponse) 
     contextFactory: () => {
       return getContext({
         req: request,
+        user,
+        setCookie: setCookie(res),
       });
     },
   });
