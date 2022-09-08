@@ -25,11 +25,11 @@ const Version: NextPage = (props) => {
 
 export default Version;
 
-export async function getServerSideProps() {
+export async function getServerSideProps(ctx) {
   return {
     props: {
       preloadedQueries: {
-        versionQuery: await getPreloadedQuery(versionQuery, {}),
+        versionQuery: await getPreloadedQuery(versionQuery, {}, ctx),
       },
     },
   };

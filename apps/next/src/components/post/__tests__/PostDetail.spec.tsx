@@ -8,7 +8,7 @@ import { loadQuery } from 'react-relay';
 import { JSResource } from '@workshop/route';
 
 import { Environment } from '../../../../relay';
-import PostDetail from '../PostDetail';
+import PostDetail from '../../../pages/post/[id]';
 
 import { withProviders } from '../../../../../test/withProviders';
 
