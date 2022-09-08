@@ -1,5 +1,5 @@
 import 'isomorphic-fetch';
-import Koa, { Request } from 'koa';
+import Koa, { Request, Context } from 'koa';
 import Router from 'koa-router';
 import logger from 'koa-logger';
 import cors from 'kcors';
@@ -30,7 +30,33 @@ router.get('/', async ctx => {
   ctx.body = 'Welcome to Relay Workshop';
 });
 
-const graphqlSettingsPerReq = async (req: Request) => {
+export const setCookie = (context: Context) => (cookieName: string, token: string) => {
+  // const domain = null;
+  //
+  // const secure = process.env.NODE_ENV !== 'development';
+  // const sameSite = 'None'; // Lax | None
+  //
+  // const options = {
+  //   httpOnly: true,
+  //   overwrite: true,
+  //   maxAge,
+  //   secure,
+  //   domain,
+  //   signed: false,
+  //   sameSite,
+  // };
+
+  const options = {
+    httpOnly: true,
+    secure: process.env.NODE_ENV !== "development",
+    sameSite: "lax",
+    path: "/",
+  };
+
+  context.cookies.set(cookieName, token, options);
+}
+
+const graphqlSettingsPerReq = async (req: Request, ctx, koaContext) => {
   const { user } = await getUser(req.header.authorization);
 
   return {
@@ -39,6 +65,8 @@ const graphqlSettingsPerReq = async (req: Request) => {
     context: await getContext({
       req,
       user,
+      koaContext,
+      setCookie: setCookie(koaContext),
     }),
     formatError: (error: GraphQLError) => {
       // eslint-disable-next-line

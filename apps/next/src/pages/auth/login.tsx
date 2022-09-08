@@ -1,10 +1,13 @@
-import type { NextPage } from 'next';
+import type { GetServerSideProps, NextPage } from 'next';
 import { useMutation } from 'react-relay';
 import { FormikProvider, useFormik } from 'formik';
 import * as yup from 'yup';
 import { Button, Card, CardActions, Content, TextField } from '@workshop/ui';
 import { Flex } from 'rebass';
 import React from 'react';
+import { parse } from "cookie";
+import { config } from '../../config';
+import Link from "next/link";
 
 import { useSnackbar } from 'notistack';
 
@@ -14,6 +17,7 @@ import {
   UserLoginWithEmailMutation$data,
   UserLoginWithEmailMutation,
 } from '../..//__generated__/UserLoginWithEmailMutation.graphql';
+import { useRouter } from 'next/router';
 
 type Values = {
   email: string;
@@ -24,7 +28,7 @@ const Login: NextPage = () => {
 
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
 
-  // const history = useHistory();
+  const router = useRouter();
 
   const onSubmit = (values: Values) => {
     closeSnackbar();
@@ -43,11 +47,8 @@ const Login: NextPage = () => {
         }
 
         enqueueSnackbar(UserLoginWithEmail?.success);
-        if (UserLoginWithEmail?.token) {
-          updateToken(UserLoginWithEmail.token);
-        }
 
-        // history.push('/');
+        router.push('/');
       },
     };
 
@@ -92,7 +93,7 @@ const Login: NextPage = () => {
                   Login
                 </Button>
               </CardActions>
-              {/*<Link to={'/auth/signUp'}>Does not have an account? Sign Up</Link>*/}
+              <Link href={'/auth/signUp'}>Does not have an account? Sign Up</Link>
             </Flex>
           </Card>
         </Content>
@@ -102,3 +103,13 @@ const Login: NextPage = () => {
 };
 
 export default Login;
+
+export const getServerSideProps: GetServerSideProps<any> = async function (
+  ctx
+) {
+  const token = parse(ctx.req.headers.cookie)[config.WORKSHOP_COOKIE];
+
+  return {
+    props: {},
+  };
+}

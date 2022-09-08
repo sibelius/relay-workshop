@@ -17,4 +17,5 @@ export const config = {
   MONGO_URI: ENV.MONGO_URI || 'mongodb://localhost/reacteurope',
   PORT: ENV.PORT || 7500,
   JWT_SECRET: ENV.JWT_KEY || 'secret_key',
+  WORKSHOP_COOKIE: 'relayworkshop',
 };

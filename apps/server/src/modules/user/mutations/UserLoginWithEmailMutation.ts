@@ -9,6 +9,7 @@ import UserModel from '../UserModel';
 
 import * as UserLoader from '../UserLoader';
 import UserType from '../UserType';
+import { config } from '../../../config';
 
 export default mutationWithClientMutationId({
   name: 'UserLoginWithEmail',
@@ -20,7 +21,7 @@ export default mutationWithClientMutationId({
       type: new GraphQLNonNull(GraphQLString),
     },
   },
-  mutateAndGetPayload: async ({ email, password }) => {
+  mutateAndGetPayload: async ({ email, password }, context) => {
     const user = await UserModel.findOne({ email: email.trim().toLowerCase() });
 
     const defaultErrorMessage = 'Invalid credentials';
@@ -37,6 +38,10 @@ export default mutationWithClientMutationId({
         error: defaultErrorMessage,
       };
     }
+
+    const token = generateToken(user);
+
+    context.setCookie(config.WORKSHOP_COOKIE, token);
 
     return {
       token: generateToken(user),

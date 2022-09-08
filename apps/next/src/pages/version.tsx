@@ -23,6 +23,8 @@ const Version: NextPage = (props) => {
   );
 };
 
+export default Version;
+
 export async function getServerSideProps() {
   return {
     props: {
@@ -32,5 +34,3 @@ export async function getServerSideProps() {
     },
   };
 }
-
-export default Version;

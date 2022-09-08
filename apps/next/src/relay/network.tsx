@@ -9,18 +9,20 @@ export function createNetwork() {
   });
 
   async function fetchResponse(operation: RequestParameters, variables: Variables, cacheConfig: CacheConfig) {
-    const { id } = operation;
+    const { id, text } = operation;
+
+    const queryID = id || text;
 
     const isQuery = operation.operationKind === 'query';
     const forceFetch = cacheConfig && cacheConfig.force;
     if (isQuery && !forceFetch) {
-      const fromCache = responseCache.get(id, variables);
+      const fromCache = responseCache.get(queryID, variables);
       if (fromCache != null) {
         return Promise.resolve(fromCache);
       }
     }
 
-    return networkFetch(id, variables);
+    return networkFetch(operation, variables);
   }
 
   const network = Network.create(fetchResponse);
@@ -30,7 +32,7 @@ export function createNetwork() {
   return network;
 }
 
-export async function networkFetch(params: RequestParameters, variables: Variables) {
+export async function networkFetch(params: RequestParameters, variables: Variables, headers = {}) {
   const response = await fetch(
     // TODO: figure out how not to use hardcoded hostname and port
     // TODO: consider bypassing api fetch and directly invoking graphql on server
@@ -40,11 +42,15 @@ export async function networkFetch(params: RequestParameters, variables: Variabl
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
+        ...headers,
       },
       body: JSON.stringify({
         query: params.text,
         variables,
+        operationName: params.name
       }),
+      // credentials: 'same-origin',
+      credentials: 'include',
     },
   );
 

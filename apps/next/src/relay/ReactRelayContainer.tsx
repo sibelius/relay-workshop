@@ -1,16 +1,17 @@
 import { NextComponentType, NextPageContext } from 'next';
 import { Suspense, useMemo } from 'react';
-import { ReactRelayContext, useRelayEnvironment } from 'react-relay';
+import { useRelayEnvironment, RelayEnvironmentProvider } from 'react-relay';
 import { createEnvironment } from './relayEnvironment';
 
 export function ReactRelayContainer({Component, props}: {Component: NextComponentType<NextPageContext, any, any>, props: any}) {
   const environment = useMemo(() => createEnvironment(), []);
+
   return (
-    <ReactRelayContext.Provider value={{environment}}>
+    <RelayEnvironmentProvider environment={environment}>
       <Suspense fallback={null}>
         <Hyderate Component={Component} props={props} />
       </Suspense>
-    </ReactRelayContext.Provider>
+    </RelayEnvironmentProvider>
   );
 }
 
@@ -30,14 +31,16 @@ function Hyderate({Component, props}: {Component: NextComponentType<NextPageCont
     for (const [queryName, {params, variables, response}] of Object.entries(
       preloadedQueries,
     ) as any) {
+      const queryId = params.id || params.text;
+
       environment
         .getNetwork()
         // @ts-ignore - seems to be a private untyped api 🤷‍♂️
-        .responseCache.set(params.id, variables, response);
+        .responseCache.set(queryId, variables, response);
       // TODO: create using a function exported from react-relay package
       queryRefs[queryName] = {
         environment,
-        fetchKey: params.id,
+        fetchKey: queryId,
         fetchPolicy: 'store-or-network',
         isDisposed: false,
         name: params.name,
