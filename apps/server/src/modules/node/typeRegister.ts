@@ -27,7 +27,7 @@ const getTypeRegister = () => {
   };
 
   const { nodeField, nodesField, nodeInterface } = nodeDefinitions(
-    (globalId, context: GraphQLContext) => {
+    async (globalId, context: GraphQLContext) => {
       const { type, id } = fromGlobalId(globalId);
 
       const { load } = typesLoaders[type] || { load: null };
@@ -37,7 +37,7 @@ const getTypeRegister = () => {
     obj => {
       const { type } = typesLoaders[obj.constructor.name] || { type: null };
 
-      return type;
+      return type.name;
     },
   );
 

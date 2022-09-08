@@ -7,7 +7,6 @@ import { Text } from 'rebass';
 
 import { Card, CardActions } from '@workshop/ui';
 
-// import { Link as _Link } from '@workshop/route';
 import _Link from "next/link";
 
 import PostLikeButton from '../like/PostLikeButton';
