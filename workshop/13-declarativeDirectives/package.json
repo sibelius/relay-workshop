@@ -1,5 +1,5 @@
 {
-  "name": "@workshop/13- declarativeDirectives",
+  "name": "@workshop/13-declarativeDirectives",
   "version": "1.0.0",
   "scripts": {
     "copy-env": "cp .env.example .env",
