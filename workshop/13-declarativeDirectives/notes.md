@@ -1,83 +1,48 @@
-# Update data using Declarative Directives
+# Why use Declarative Directives
 
 GraphQL mutations let you modify data in your GraphQL server.
-After a mutation, you can update your frontend without the need to refresh it using Declarative Directives
+After a mutation, you can update your frontend without the need to refresh it using Declarative Directives.
 
-## GraphQL Mutation best practices
+## What are Declarative Directives
+Declarative Directive are used to add newly created records to your connection. 
+They can replace the usage of an updater function on your mutation, with Declarative Directives Relay does that to you.
 
-A GraphQL mutation is a write followed by a read.
-Your graphql mutation should return all data that you need to update your client.
-
-- if you added a new post, you should return the new post.
-- If you edited a post, you should return the edited post.
-- If you remove a post, you should return the id of the deleted post.
-
-## GraphQL Relay Mutation pattern
-
-Usually GraphQL Mutation in relay have a input object and also an output object, like below.
-However this is not required anymore, feel free to use any mutation format you want.
-
+We have @appendNode/@prependNode and @appendEdge/@prependEdge to insert new records. The difference is how your backend returns the data after the mutation.
+For example, if your mutation return is something like that: 
 ```graphql
-PostLike(input: PostLikeInput!): PostLikePayload
-
-type PostLikePayload {
-  post: Post
-  error: String
-  success: String
-  clientMutationId: String
-}
-
-input PostLikeInput {
-  post: ID!
-  clientMutationId: String
-}
+  mutation AddTodoMutation($input: AddTodoInput!) {
+    addTodo(input: $input) {
+      todoEdge {
+        cursor
+        node {
+          id
+          text
+          completed
+        }
+      }
+      
+    }
+  }
+```
+You should use @appendEdge. So your mutation would look like this:
+```graphql
+  mutation AddTodoMutation($input: AddTodoInput!, $connections: [ID!]!) {
+    addTodo(input: $input) {
+      todoEdge @appendEdge(connections: $connections){
+        cursor
+        node {
+          id
+          text
+          completed
+        }
+      }
+    }
+  }
 ```
 
-## Doing mutations in Relay
+As you can see, when using Declarative Directives is necessary to declare your connection as well. So you need to get it from your query, on the exercise we already had this setup for you, 
+take a look at Feed.tsx to see how it's done.
 
-Relay provides `useMutation` hook to perform mutations.
-`useMutation` ensures that you won't do the same mutation twice
-It will also cancel the mutation if the component is unmounted.
-
-```jsx
-type UseMutationConfig<TMutation extends MutationParameters> = {
-  configs?: Array<DeclarativeMutationConfig>;
-  onError?: (error: Error) => void | null;
-  onCompleted?: (response: TMutation['response'], errors: Array<PayloadError> | null) => void | null;
-  onUnsubscribe?: () => void | null;
-  optimisticResponse?: any;
-  optimisticUpdater?: SelectorStoreUpdater | null;
-  updater?: SelectorStoreUpdater | null;
-  uploadables?: UploadableMap;
-  variables: TMutation['variables'];
-};
-
-export const useMutation = <TMutation extends MutationParameters>(
-  mutation: GraphQLTaggedNode,
-): [(config: UseMutationConfig<TMutation>) => Disposable, boolean]
-```
-
-`useMutation` receives a graphql`` tag with the GraphQL mutation
-
-Example of a simple mutation in Relay
-```jsx
-const [postLike] = useMutation<PostLikeMutation>(PostLike);
-
-const onPostLike = () => {
-  const config = {
-    variables: {
-      input: {
-        post: post.id,
-      },
-    },
-  };  
-
-  postLike(config);
-}
-``` 
-
-Mutations can have optimistic response or updater to provide fast feedback for user.
-An optimistic response is the "happy path", when everything goes well in the server.
 
 ## References
 
