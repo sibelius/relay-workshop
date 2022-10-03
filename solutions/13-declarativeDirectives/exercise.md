@@ -1,6 +1,6 @@
-# 05 - useMutation
+# 13 - declarativeDirectives
 
-Learn how to use useMutation with declarative directives to modify GraphQL data and see the connection updating automatically.
+Learn how to use declarative directives to modify GraphQL data and see the connection updating automatically without the need to refresh or use a updater function.
 
 ## Exercise
 
