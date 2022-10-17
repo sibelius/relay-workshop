@@ -1,0 +1,14 @@
+{
+  "name": "@workshop/13-declarativeDirectives",
+  "version": "1.0.0",
+  "scripts": {
+    "copy-env": "cp .env.example .env",
+    "relay": "relay-compiler",
+    "relay:watch": "relay-compiler --watch",
+    "start": "webpack serve --hot"
+  },
+  "devDependencies": {
+    "relay-compiler": "14.1.0",
+    "webpack": "5.74.0"
+  }
+}
