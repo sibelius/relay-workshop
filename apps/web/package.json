@@ -49,7 +49,7 @@
     "happypack": "^5.0.1",
     "html-webpack-plugin": "5.5.0",
     "razzle": "^4.0.2",
-    "razzle-plugin-typescript": "4.2.17",
+    "razzle-plugin-typescript": "4.2.18",
     "react-refresh": "0.14.0",
     "relay-test-utils": "14.1.0",
     "style-loader": "^3.2.1",
