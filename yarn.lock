@@ -1392,16 +1392,16 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/node@7.19.1":
-  version "7.19.1"
-  resolved "https://registry.yarnpkg.com/@babel/node/-/node-7.19.1.tgz#10237a480dfd9f84dee9b68ba5cb991de4b2e0fb"
-  integrity sha512-gfxJNrawPso6kx7SwKfAdX1rEzVc09speJLFKrdxuZXGlve92pjbB3nJVmuwrxNN4+jvytj2zvliNXuW6uaSOw==
+"@babel/node@7.20.0":
+  version "7.20.0"
+  resolved "https://registry.yarnpkg.com/@babel/node/-/node-7.20.0.tgz#2c4cbebdd408998ebdbb01b82335aa3b2096c724"
+  integrity sha512-FEWKq7XC2I4ci05L46B9ghJVZc5mkqx1UKtxed0BUq7jaw+8HbpwjF4nsE7I5A4iolIWlMXycGRal1CcAe0PZA==
   dependencies:
     "@babel/register" "^7.18.9"
     commander "^4.0.1"
     core-js "^3.25.1"
     node-environment-flags "^1.0.5"
-    regenerator-runtime "^0.13.4"
+    regenerator-runtime "^0.13.10"
     v8flags "^3.1.1"
 
 "@babel/parser@^7.1.0", "@babel/parser@^7.10.5", "@babel/parser@^7.12.5", "@babel/parser@^7.12.7", "@babel/parser@^7.14.7", "@babel/parser@^7.18.10", "@babel/parser@^7.18.8", "@babel/parser@^7.19.6", "@babel/parser@^7.7.0":
@@ -21693,9 +21693,10 @@ regenerator-runtime@^0.11.0:
   version "0.11.1"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
 
-regenerator-runtime@^0.13.4, regenerator-runtime@^0.13.9:
-  version "0.13.9"
-  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz#8925742a98ffd90814988d7566ad30ca3b263b52"
+regenerator-runtime@^0.13.10, regenerator-runtime@^0.13.4, regenerator-runtime@^0.13.9:
+  version "0.13.10"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.10.tgz#ed07b19616bcbec5da6274ebc75ae95634bfc2ee"
+  integrity sha512-KepLsg4dU12hryUO7bp/axHAKvwGOCV0sGloQtpagJ12ai+ojVDqkeGSiRX1zlq+kjIMZ1t7gpze+26QqtdGqw==
 
 regenerator-transform@^0.15.0:
   version "0.15.0"
