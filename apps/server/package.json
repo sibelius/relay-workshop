@@ -30,7 +30,7 @@
     "@types/kcors": "^2.2.3",
     "@types/koa-graphql": "^0.8.4",
     "@workshop/babel": "*",
-    "babel-loader": "^8.2.1",
+    "babel-loader": "^9.0.0",
     "reload-server-webpack-plugin": "^1.0.1",
     "webpack": "5.74.0",
     "webpack-cli": "4.10.0",
