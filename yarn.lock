@@ -10816,8 +10816,9 @@ error-ex@^1.3.1:
     is-arrayish "^0.2.1"
 
 error-overlay-webpack-plugin@^1.0.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/error-overlay-webpack-plugin/-/error-overlay-webpack-plugin-1.1.0.tgz#a885cc3bb8710da09e8be163654bd6753e5b8270"
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/error-overlay-webpack-plugin/-/error-overlay-webpack-plugin-1.1.1.tgz#1e2fba590d2d1fbe61379769a8b209e0f6a515d7"
+  integrity sha512-mnBIlhMExA+OZI+oyj2opdBDIsq2zFoJTKDMDn6gm/kWENwZfeUc2kX7eV+l2MumV3aob9c/KC/MWpb5FZhMKw==
   dependencies:
     react-dev-utils "^12.0.0"
     react-error-overlay "6.0.9"
