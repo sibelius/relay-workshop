@@ -121,7 +121,9 @@
     "w": "yarn b webpackx.ts",
     "web": "yarn workspace @workshop/web start",
     "next:dev": "yarn workspace @workshop/next dev",
-    "next:build": "yarn workspace @workshop/next build"
+    "next:build": "yarn workspace @workshop/next build",
+    "nextapp:dev": "yarn workspace @workshop/nextapp dev",
+    "nextapp:build": "yarn workspace @workshop/nextapp build"
   },
   "workspaces": {
     "packages": [
