@@ -1,4 +1,4 @@
-import { networkFetch } from './network';
+import { networkFetch } from './environment';
 import { ConcreteRequest, Variables } from 'relay-runtime';
 import { GetServerSidePropsContext } from 'next/types';
 

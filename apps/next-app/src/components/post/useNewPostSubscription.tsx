@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 
 import { useSnackbar } from 'notistack';
 
-import { useRouter } from  'next/router';
+import { useRouter } from  'next/navigation';
 
 import { useSubscription } from 'react-relay';
 

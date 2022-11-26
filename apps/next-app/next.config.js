@@ -5,6 +5,7 @@ const nextConfig = {
   experimental: {
     externalDir: true,
     serverComponents: true,
+    appDir: true,
   },
   compiler: {
     relay: require('./relay.config'),
