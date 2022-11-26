@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { graphql, readInlineData } from 'react-relay';
 
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 import { useAuth_user } from './__generated__/useAuth_user.graphql';
 

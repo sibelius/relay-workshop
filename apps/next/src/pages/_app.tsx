@@ -1,7 +1,5 @@
 import type { AppProps } from 'next/app';
 import React from 'react';
-
-
 import { ThemeProvider } from 'styled-components';
 import StylesProvider from '@mui/styles/StylesProvider';
 import { getTheme } from '@workshop/ui';

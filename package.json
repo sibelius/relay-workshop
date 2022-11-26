@@ -99,7 +99,6 @@
     "webpack": "5.74.0"
   },
   "scripts": {
-    "all:relay": "lerna run relay --parallel --ignore @workshop/0* --ignore @workshop/1*",
     "b": "babel-node --extensions \".es6,.js,.es,.jsx,.mjs,.ts,.tsx\"",
     "build:server": "yarn workspace @workshop/server build",
     "commitmsg": "commitlint -e $GIT_PARAMS",
@@ -111,8 +110,7 @@
     "lint:staged": "lint-staged",
     "postinstall": "yarn patch-package",
     "prettier": "prettier --write **/src/**/*.ts && prettier --write **/src/**/*.tsx",
-    "relay": "yarn workspace @workshop/web relay",
-    "relay:next": "yarn workspace @workshop/next relay",
+    "relay": "lerna run relay --parallel --ignore @workshop/0* --ignore @workshop/1*",
     "seed": "yarn workspace @workshop/server seed",
     "server": "yarn workspace @workshop/server start",
     "server:serve": "yarn workspace @workshop/server serve",
