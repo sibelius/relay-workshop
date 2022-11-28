@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "devDependencies": {
-    "@pmmmwh/react-refresh-webpack-plugin": "0.5.9",
+    "@pmmmwh/react-refresh-webpack-plugin": "0.5.10",
     "css-loader": "6.7.2",
     "dotenv-webpack": "^8.0.0",
     "html-webpack-plugin": "5.5.0",
