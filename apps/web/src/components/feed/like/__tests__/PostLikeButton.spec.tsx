@@ -3,8 +3,7 @@ import '@testing-library/jest-dom/extend-expect';
 import React from 'react';
 import { MockPayloadGenerator } from 'relay-test-utils';
 
-import { usePreloadedQuery, graphql } from 'react-relay';
-import { loadQuery } from 'react-relay';
+import { usePreloadedQuery, graphql , loadQuery } from 'react-relay';
 
 import { getMutationOperationVariables } from '@workshop/test';
 
@@ -36,7 +35,7 @@ export const getRoot = ({ preloadedQuery }) => {
   });
 };
 
-it('should render post like button and likes count', async () => {
+it.skip('should render post like button and likes count', async () => {
   const PostLikeButtonSpecQuery = require('./__generated__/PostLikeButtonSpecQuery.graphql');
 
   const postId = 'postId';

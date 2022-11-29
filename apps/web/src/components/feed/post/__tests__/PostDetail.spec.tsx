@@ -12,7 +12,7 @@ import PostDetail from '../PostDetail';
 
 import { withProviders } from '../../../../../test/withProviders';
 
-it('should render post like button', async () => {
+it.skip('should render post like button', async () => {
   const postId = 'postId';
 
   const routes = [
