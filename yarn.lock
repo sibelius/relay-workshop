@@ -992,16 +992,16 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/node@7.20.2":
-  version "7.20.2"
-  resolved "https://registry.yarnpkg.com/@babel/node/-/node-7.20.2.tgz#9422926a5ccffa559b96fea1d0fbc9c5af8369bc"
-  integrity sha512-s4zKG8fccCpqXEXxSkzE8vAREefRneatdGfNQDPqikTTpQmWF4Bt1OTZ9r8GghKJSeNEgRJwbI5ZSmGBQLvAEQ==
+"@babel/node@7.20.5":
+  version "7.20.5"
+  resolved "https://registry.yarnpkg.com/@babel/node/-/node-7.20.5.tgz#5afdc32f4e195019b6c566f418ad630a9ee42695"
+  integrity sha512-ElSr40UtumWE4fYYF1xfLP2C6b9nfS/rswK7YYpLo9HDGEXGXEAWZaGCxIirxGIDyoV0rbl6jV1LyFMQ6ZOQSA==
   dependencies:
     "@babel/register" "^7.18.9"
     commander "^4.0.1"
-    core-js "^3.25.1"
+    core-js "^3.26.0"
     node-environment-flags "^1.0.5"
-    regenerator-runtime "^0.13.10"
+    regenerator-runtime "^0.13.11"
     v8flags "^3.1.1"
 
 "@babel/parser@^7.1.0", "@babel/parser@^7.14.7", "@babel/parser@^7.18.10", "@babel/parser@^7.20.5":
@@ -7126,10 +7126,10 @@ core-js@^2.4.0, core-js@^2.5.0, core-js@^2.6.5:
   version "2.6.12"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
 
-core-js@^3.19.2, core-js@^3.25.1:
-  version "3.25.1"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.25.1.tgz#5818e09de0db8956e16bf10e2a7141e931b7c69c"
-  integrity sha512-sr0FY4lnO1hkQ4gLDr24K0DGnweGO1QwSj5BpfQjpSJPdqWalja4cTps29Y/PJVG/P7FYlPDkH3hO+Tr0CvDgQ==
+core-js@^3.19.2, core-js@^3.26.0:
+  version "3.26.1"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.26.1.tgz#7a9816dabd9ee846c1c0fe0e8fcad68f3709134e"
+  integrity sha512-21491RRQVzUn0GGM9Z1Jrpr6PNPxPi+Za8OM9q4tksTSnlbXXGKK1nXNg/QvwFYettXvSX6zWKCtHHfjN4puyA==
 
 core-util-is@1.0.2:
   version "1.0.2"
@@ -15894,10 +15894,10 @@ regenerator-runtime@^0.11.0:
   version "0.11.1"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
 
-regenerator-runtime@^0.13.10, regenerator-runtime@^0.13.4, regenerator-runtime@^0.13.9:
-  version "0.13.10"
-  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.10.tgz#ed07b19616bcbec5da6274ebc75ae95634bfc2ee"
-  integrity sha512-KepLsg4dU12hryUO7bp/axHAKvwGOCV0sGloQtpagJ12ai+ojVDqkeGSiRX1zlq+kjIMZ1t7gpze+26QqtdGqw==
+regenerator-runtime@^0.13.10, regenerator-runtime@^0.13.11, regenerator-runtime@^0.13.4, regenerator-runtime@^0.13.9:
+  version "0.13.11"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.11.tgz#f6dca3e7ceec20590d07ada785636a90cdca17f9"
+  integrity sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==
 
 regenerator-transform@^0.15.0:
   version "0.15.0"
