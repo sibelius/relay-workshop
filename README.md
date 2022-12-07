@@ -69,8 +69,10 @@ brew services start mongodb-community
 ### How to run mongo in docker
 
 ```sh
+
+### remember to start docker before executing the command!
 ### run mongo:latest image in detached mode
-docker run -d -p PORT:27017 --name CONTAINER_NAME -d mongo:latest
+docker run -d -p 27017:27017 --name CONTAINER_NAME -d mongo:latest
 ```
 
 docker tips
