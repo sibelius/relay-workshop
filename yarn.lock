@@ -3493,15 +3493,6 @@
     react-is "^18.2.0"
     react-transition-group "^4.4.5"
 
-"@mui/private-theming@^5.11.0", "@mui/private-theming@^5.11.1":
-  version "5.11.1"
-  resolved "https://registry.yarnpkg.com/@mui/private-theming/-/private-theming-5.11.1.tgz#8e6a6c33c6f04cadba17b6f3320e22bd64413655"
-  integrity sha512-nnHg7kA5RwFRhy0wiDYe59sLCVGORpPypL1JcEdhv0+N0Zbmc2E/y4z2zqMRZ62MAEscpro7cQbvv244ThA84A==
-  dependencies:
-    "@babel/runtime" "^7.20.6"
-    "@mui/utils" "^5.11.1"
-    prop-types "^15.8.1"
-
 "@mui/private-theming@^5.11.1":
   version "5.11.1"
   resolved "https://registry.yarnpkg.com/@mui/private-theming/-/private-theming-5.11.1.tgz#8e6a6c33c6f04cadba17b6f3320e22bd64413655"
@@ -3563,7 +3554,7 @@
   resolved "https://registry.yarnpkg.com/@mui/types/-/types-7.2.3.tgz#06faae1c0e2f3a31c86af6f28b3a4a42143670b9"
   integrity sha512-tZ+CQggbe9Ol7e/Fs5RcKwg/woU+o8DCtOnccX6KmbBc7YrfqMYEYuaIcXHuhpT880QwNkZZ3wQwvtlDFA2yOw==
 
-"@mui/utils@^5.11.0", "@mui/utils@^5.11.1":
+"@mui/utils@^5.11.1":
   version "5.11.1"
   resolved "https://registry.yarnpkg.com/@mui/utils/-/utils-5.11.1.tgz#8d12b3c2245efd9a1c0595658dcb4c86f6625206"
   integrity sha512-lMAPgIJoil8V9ZxsMbEflMsvZmWcHbRVMc4JDY9jPO9V4welpF43h/O267b1RqlcRnC5MEbVQV605GYkTZY29Q==
