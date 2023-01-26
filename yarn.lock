@@ -2644,27 +2644,6 @@
     source-map "^0.6.1"
     write-file-atomic "^3.0.0"
 
-"@jest/transform@^29.3.1":
-  version "29.3.1"
-  resolved "https://registry.yarnpkg.com/@jest/transform/-/transform-29.3.1.tgz#1e6bd3da4af50b5c82a539b7b1f3770568d6e36d"
-  integrity sha512-8wmCFBTVGYqFNLWfcOWoVuMuKYPUBTnTMDkdvFtAYELwDOl9RGwOsvQWGPFxDJ8AWY9xM/8xCXdqmPK3+Q5Lug==
-  dependencies:
-    "@babel/core" "^7.11.6"
-    "@jest/types" "^29.3.1"
-    "@jridgewell/trace-mapping" "^0.3.15"
-    babel-plugin-istanbul "^6.1.1"
-    chalk "^4.0.0"
-    convert-source-map "^2.0.0"
-    fast-json-stable-stringify "^2.1.0"
-    graceful-fs "^4.2.9"
-    jest-haste-map "^29.3.1"
-    jest-regex-util "^29.2.0"
-    jest-util "^29.3.1"
-    micromatch "^4.0.4"
-    pirates "^4.0.4"
-    slash "^3.0.0"
-    write-file-atomic "^4.0.1"
-
 "@jest/transform@^29.4.0":
   version "29.4.0"
   resolved "https://registry.yarnpkg.com/@jest/transform/-/transform-29.4.0.tgz#73ddd9bf8599d285af09e7e3fef730c17a2fd965"
@@ -2718,7 +2697,7 @@
     "@types/yargs" "^17.0.8"
     chalk "^4.0.0"
 
-"@jest/types@^29.3.1", "@jest/types@^29.4.0":
+"@jest/types@^29.4.0":
   version "29.4.0"
   resolved "https://registry.yarnpkg.com/@jest/types/-/types-29.4.0.tgz#569115f2438cacf3cff92521c7d624fbb683de3d"
   integrity sha512-1S2Dt5uQp7R0bGY/L2BpuwCSji7v12kY3o8zqwlkbYBmOY956SKk+zOWqmfhHSINegiAVqOXydAYuWpzX6TYsQ==
@@ -5723,15 +5702,15 @@ axobject-query@^3.1.1:
   dependencies:
     deep-equal "^2.0.5"
 
-babel-jest@29.3.1:
-  version "29.3.1"
-  resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-29.3.1.tgz#05c83e0d128cd48c453eea851482a38782249f44"
-  integrity sha512-aard+xnMoxgjwV70t0L6wkW/3HQQtV+O0PEimxKgzNqCJnbYmroPojdP2tqKSOAt8QAKV/uSZU8851M7B5+fcA==
+babel-jest@29.4.0, babel-jest@^29.4.0:
+  version "29.4.0"
+  resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-29.4.0.tgz#20b18b69a321125429ff67a383b94c6bf552d1ec"
+  integrity sha512-M61cGPg4JBashDvIzKoIV/y95mSF6x3ome7CMEaszUTHD4uo6dtC6Nln+fvRTspYNtwy8lDHl5lmoTBSNY/a+g==
   dependencies:
-    "@jest/transform" "^29.3.1"
+    "@jest/transform" "^29.4.0"
     "@types/babel__core" "^7.1.14"
     babel-plugin-istanbul "^6.1.1"
-    babel-preset-jest "^29.2.0"
+    babel-preset-jest "^29.4.0"
     chalk "^4.0.0"
     graceful-fs "^4.2.9"
     slash "^3.0.0"
@@ -5758,19 +5737,6 @@ babel-jest@^27.4.2, babel-jest@^27.5.1:
     "@types/babel__core" "^7.1.14"
     babel-plugin-istanbul "^6.1.1"
     babel-preset-jest "^27.5.1"
-    chalk "^4.0.0"
-    graceful-fs "^4.2.9"
-    slash "^3.0.0"
-
-babel-jest@^29.4.0:
-  version "29.4.0"
-  resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-29.4.0.tgz#20b18b69a321125429ff67a383b94c6bf552d1ec"
-  integrity sha512-M61cGPg4JBashDvIzKoIV/y95mSF6x3ome7CMEaszUTHD4uo6dtC6Nln+fvRTspYNtwy8lDHl5lmoTBSNY/a+g==
-  dependencies:
-    "@jest/transform" "^29.4.0"
-    "@types/babel__core" "^7.1.14"
-    babel-plugin-istanbul "^6.1.1"
-    babel-preset-jest "^29.4.0"
     chalk "^4.0.0"
     graceful-fs "^4.2.9"
     slash "^3.0.0"
@@ -5833,16 +5799,6 @@ babel-plugin-jest-hoist@^27.5.1:
     "@babel/template" "^7.3.3"
     "@babel/types" "^7.3.3"
     "@types/babel__core" "^7.0.0"
-    "@types/babel__traverse" "^7.0.6"
-
-babel-plugin-jest-hoist@^29.2.0:
-  version "29.2.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-29.2.0.tgz#23ee99c37390a98cfddf3ef4a78674180d823094"
-  integrity sha512-TnspP2WNiR3GLfCsUNHqeXw0RoQ2f9U5hQ5L3XFpwuO8htQmSrhh8qsB6vi5Yi8+kuynN1yjDjQsPfkebmB6ZA==
-  dependencies:
-    "@babel/template" "^7.3.3"
-    "@babel/types" "^7.3.3"
-    "@types/babel__core" "^7.1.14"
     "@types/babel__traverse" "^7.0.6"
 
 babel-plugin-jest-hoist@^29.4.0:
@@ -5984,14 +5940,6 @@ babel-preset-jest@^27.5.1:
   resolved "https://registry.yarnpkg.com/babel-preset-jest/-/babel-preset-jest-27.5.1.tgz#91f10f58034cb7989cb4f962b69fa6eef6a6bc81"
   dependencies:
     babel-plugin-jest-hoist "^27.5.1"
-    babel-preset-current-node-syntax "^1.0.0"
-
-babel-preset-jest@^29.2.0:
-  version "29.2.0"
-  resolved "https://registry.yarnpkg.com/babel-preset-jest/-/babel-preset-jest-29.2.0.tgz#3048bea3a1af222e3505e4a767a974c95a7620dc"
-  integrity sha512-z9JmMJppMxNv8N7fNRHvhMg9cvIkMxQBXgFkane3yKVEvEOP+kB50lk8DFRvF9PGqbyXxlmebKWhuDORO8RgdA==
-  dependencies:
-    babel-plugin-jest-hoist "^29.2.0"
     babel-preset-current-node-syntax "^1.0.0"
 
 babel-preset-jest@^29.4.0:
@@ -11463,25 +11411,6 @@ jest-haste-map@^27.5.1:
   optionalDependencies:
     fsevents "^2.3.2"
 
-jest-haste-map@^29.3.1:
-  version "29.3.1"
-  resolved "https://registry.yarnpkg.com/jest-haste-map/-/jest-haste-map-29.3.1.tgz#af83b4347f1dae5ee8c2fb57368dc0bb3e5af843"
-  integrity sha512-/FFtvoG1xjbbPXQLFef+WSU4yrc0fc0Dds6aRPBojUid7qlPqZvxdUBA03HW0fnVHXVCnCdkuoghYItKNzc/0A==
-  dependencies:
-    "@jest/types" "^29.3.1"
-    "@types/graceful-fs" "^4.1.3"
-    "@types/node" "*"
-    anymatch "^3.0.3"
-    fb-watchman "^2.0.0"
-    graceful-fs "^4.2.9"
-    jest-regex-util "^29.2.0"
-    jest-util "^29.3.1"
-    jest-worker "^29.3.1"
-    micromatch "^4.0.4"
-    walker "^1.0.8"
-  optionalDependencies:
-    fsevents "^2.3.2"
-
 jest-haste-map@^29.4.0:
   version "29.4.0"
   resolved "https://registry.yarnpkg.com/jest-haste-map/-/jest-haste-map-29.4.0.tgz#139d6bd262f3f74894f23933ee4046af7e770ab0"
@@ -12066,7 +11995,7 @@ jest-util@^28.0.2:
     graceful-fs "^4.2.9"
     picomatch "^2.2.3"
 
-jest-util@^29.3.1, jest-util@^29.4.0:
+jest-util@^29.4.0:
   version "29.4.0"
   resolved "https://registry.yarnpkg.com/jest-util/-/jest-util-29.4.0.tgz#1f3743c3dda843049623501c7e6f8fa5efdc2c2f"
   integrity sha512-lCCwlze7UEV8TpR9ArS8w0cTbcMry5tlBkg7QSc5og5kNyV59dnY2aKHu5fY2k5aDJMQpCUGpvL2w6ZU44lveA==
@@ -12195,16 +12124,6 @@ jest-worker@^27.0.2, jest-worker@^27.3.1, jest-worker@^27.4.5, jest-worker@^27.5
   resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-27.5.1.tgz#8d146f0900e8973b106b6f73cc1e9a8cb86f8db0"
   dependencies:
     "@types/node" "*"
-    merge-stream "^2.0.0"
-    supports-color "^8.0.0"
-
-jest-worker@^29.3.1:
-  version "29.3.1"
-  resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-29.3.1.tgz#e9462161017a9bb176380d721cab022661da3d6b"
-  integrity sha512-lY4AnnmsEWeiXirAIA0c9SDPbuCBq8IYuDVL8PMm0MZ2PEs2yPvRA/J64QBXuZp7CYKrDM/rmNrc9/i3KJQncw==
-  dependencies:
-    "@types/node" "*"
-    jest-util "^29.3.1"
     merge-stream "^2.0.0"
     supports-color "^8.0.0"
 
