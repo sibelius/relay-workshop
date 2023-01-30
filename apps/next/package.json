@@ -10,7 +10,7 @@
     "relay": "relay-compiler"
   },
   "dependencies": {
-    "next": "13.1.5",
+    "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "graphql-helix": "^1.11.0",
