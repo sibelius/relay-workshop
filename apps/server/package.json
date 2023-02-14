@@ -6,7 +6,7 @@
     "@entria/graphql-mongo-helpers": "^1.1.0",
     "@entria/graphql-mongoose-loader": "^4.3.2",
     "bcryptjs": "2.4.3",
-    "dataloader": "2.2.1",
+    "dataloader": "2.2.2",
     "dotenv-safe": "^8.1.0",
     "graphql": "16.6.0",
     "graphql-playground-middleware-koa": "^1.6.21",
