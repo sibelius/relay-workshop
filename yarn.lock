@@ -1890,7 +1890,7 @@
   version "0.5.7"
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.7.tgz#1d572bfbbe14b7704e0ba0f39b74815b84870d70"
 
-"@emotion/babel-plugin@^11.10.5", "@emotion/babel-plugin@^11.10.6":
+"@emotion/babel-plugin@^11.10.6":
   version "11.10.6"
   resolved "https://registry.yarnpkg.com/@emotion/babel-plugin/-/babel-plugin-11.10.6.tgz#a68ee4b019d661d6f37dec4b8903255766925ead"
   integrity sha512-p2dAqtVrkhSa7xz1u/m9eHYdLi+en8NowrmXeF/dKtJpU8lCWli8RUAati7NcSl0afsBott48pdnANuD0wh9QQ==
@@ -9028,9 +9028,10 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
-git-json-merge@^0.4.4:
-  version "0.4.5"
-  resolved "https://registry.yarnpkg.com/git-json-merge/-/git-json-merge-0.4.5.tgz#d8e4bb8a34057fa7d945e2d6ce97b9d8db553b77"
+git-json-merge@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/git-json-merge/-/git-json-merge-1.0.0.tgz#c93be5477440a8d38b7cfcda34c1b4f064504971"
+  integrity sha512-bugFzAfvFMrFEEEMWGXVCyJxRNcWICyziOCMIbAJjQmvlLDNaiLxtxy0W1H4aFyLIHU4KBWpqNAhtnZibl7g9g==
   dependencies:
     detect-indent "^6.0.0"
     xdiff "^0.2.11"
