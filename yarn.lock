@@ -9112,9 +9112,10 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
-git-json-merge@^0.4.4:
-  version "0.4.5"
-  resolved "https://registry.yarnpkg.com/git-json-merge/-/git-json-merge-0.4.5.tgz#d8e4bb8a34057fa7d945e2d6ce97b9d8db553b77"
+git-json-merge@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/git-json-merge/-/git-json-merge-1.0.0.tgz#c93be5477440a8d38b7cfcda34c1b4f064504971"
+  integrity sha512-bugFzAfvFMrFEEEMWGXVCyJxRNcWICyziOCMIbAJjQmvlLDNaiLxtxy0W1H4aFyLIHU4KBWpqNAhtnZibl7g9g==
   dependencies:
     detect-indent "^6.0.0"
     xdiff "^0.2.11"
