@@ -32,7 +32,7 @@
     "relay-runtime": "14.1.0",
     "styled-components": "5.3.6",
     "styled-system": "5.1.5",
-    "yup": "^0.32.0"
+    "yup": "^1.0.2"
   },
   "devDependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "0.5.10",
