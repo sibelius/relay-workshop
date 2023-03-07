@@ -9349,6 +9349,11 @@ graphql-subscriptions@^2.0.0:
   dependencies:
     iterall "^1.3.0"
 
+graphql-ws@5.12.0:
+  version "5.12.0"
+  resolved "https://registry.yarnpkg.com/graphql-ws/-/graphql-ws-5.12.0.tgz#d06fe38916334b4a4c827f73268cbf4359a32ed7"
+  integrity sha512-PA3ImUp8utrpEjoxBMhvxsjkStvFEdU0E1gEBREt8HZIWkxOUymwJBhFnBL7t/iHhUq1GVPeZevPinkZFENxTw==
+
 graphql@15.3.0, graphql@16.6.0, "graphql@^14.0.0 || ^15.0.0", graphql@^15.1.0:
   version "16.6.0"
   resolved "https://registry.yarnpkg.com/graphql/-/graphql-16.6.0.tgz#c2dcffa4649db149f6282af726c8c83f1c7c5fdb"
@@ -15384,7 +15389,7 @@ react-router-config@^5.0.1:
   dependencies:
     "@babel/runtime" "^7.1.2"
 
-react-router-dom@^6.2.1:
+react-router-dom@6.8.2, react-router-dom@^6.2.1:
   version "6.8.2"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.8.2.tgz#a6654a3400be9aafd504d7125573568921b78b57"
   integrity sha512-N/oAF1Shd7g4tWy+75IIufCGsHBqT74tnzHQhbiUTYILYF0Blk65cg+HPZqwC+6SqEyx033nKqU7by38v3lBZg==
