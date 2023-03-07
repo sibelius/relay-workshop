@@ -1,5 +1,5 @@
 {
-  "name": "@workshop/web",
+  "name": "@workshop/web-react-router",
   "version": "1.0.0",
   "dependencies": {
     "@babel/polyfill": "7.12.1",
@@ -23,7 +23,7 @@
     "react-infinite-scroller": "1.2.6",
     "react-relay": "14.1.0",
     "react-router-config": "^5.0.1",
-    "react-router-dom": "^6.2.1",
+    "react-router-dom": "6.8.2",
     "react-scripts": "5.0.1",
     "rebass": "4.0.7",
     "relay-compiler": "14.1.0",
