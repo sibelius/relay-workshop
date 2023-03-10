@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 
-import { useHistory } from '@workshop/route';
+import { useNavigate } from 'react-router-dom';
 
 export const TOKEN_KEY = 'reacteurope';
 
@@ -17,13 +17,13 @@ export const updateToken = (token = '') => {
 };
 
 export const useLogout = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const logout = useCallback(() => {
     updateToken('');
 
-    history.push('/auth/login');
-  }, [history]);
+    navigate('/auth/login');
+  }, [navigate]);
 
   return [logout];
 };

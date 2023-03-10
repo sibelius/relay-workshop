@@ -10,6 +10,8 @@ import { FeedQuery } from './__generated__/FeedQuery.graphql';
 
 import FeedList from './FeedList';
 import { useNewPostSubscription } from './useNewPostSubscription';
+import { useLoaderData } from 'react-router-dom'
+import { useRelayEnvironment } from 'react-relay';
 
 type Props = {
   prepared: {
@@ -17,6 +19,32 @@ type Props = {
   };
 };
 const Feed = ({ prepared }: Props) => {
+  const loader = useLoaderData();
+
+  console.log({
+    loader,
+  });
+
+  const environment = useRelayEnvironment();
+
+  const queryId = loader.feedQuery.params.id || loader.feedQuery.params.text;
+  const params = loader.feedQuery.params;
+  const variables = loader.feedQuery.variables;
+
+  const feedQuery = {
+    environment,
+    fetchKey: queryId,
+    fetchPolicy: 'store-or-network',
+    isDisposed: false,
+    name: params.name,
+    kind: 'PreloadedQuery',
+    variables,
+  }
+
+  console.log({
+    feedQuery,
+  });
+
   const data = usePreloadedQuery<FeedQuery>(
     graphql`
       query FeedQuery {
@@ -27,12 +55,12 @@ const Feed = ({ prepared }: Props) => {
         }
       }
     `,
-    prepared.feedQuery,
+    feedQuery,
   );
 
   const { me } = data;
 
-  useNewPostSubscription(me);
+  // useNewPostSubscription(me);
 
   return (
     <Content>

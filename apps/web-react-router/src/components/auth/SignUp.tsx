@@ -7,7 +7,7 @@ import { useSnackbar } from 'notistack';
 
 import { Card, Content, Button, CardActions, TextField } from '@workshop/ui';
 
-import { useHistory, Link } from '@workshop/route';
+import { useNavigate, Link } from 'react-router-dom';
 
 import { useMutation } from 'react-relay';
 
@@ -28,7 +28,7 @@ const SignUp = () => {
 
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const onSubmit = (values: Values) => {
     closeSnackbar();
@@ -52,7 +52,7 @@ const SignUp = () => {
           updateToken(UserRegisterWithEmail.token);
         }
 
-        history.push('/');
+        navigate('/');
       },
     };
 

@@ -10,16 +10,26 @@ import {
 
 import App from './App';
 import { routes } from './routes';
+import Feed from './components/feed/Feed';
+import { getPreloadedQuery } from './relay/getPreloadedQuery';
+import FeedQuery from './components/feed/__generated__/FeedQuery.graphql';
+import Providers from './Providers';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <div>
-        <h1>Hello World</h1>
-        <Link to="about">About Us</Link>
-      </div>
-    ),
+    loader: async ({ request, params, context }) => {
+      console.log('loader: ', {
+        request,
+        params,
+        context,
+      });
+
+      return {
+        feedQuery: await getPreloadedQuery(FeedQuery, {}),
+      };
+    },
+    element: <Feed />,
   },
   {
     path: "about",
@@ -29,5 +39,7 @@ const router = createBrowserRouter([
 
 
 createRoot(document.getElementById('root')).render(
-  <RouterProvider router={router} />
+  <Providers>
+    <RouterProvider router={router} />
+  </Providers>
 );
