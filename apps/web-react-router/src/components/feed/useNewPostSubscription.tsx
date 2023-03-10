@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 
 import { useSnackbar } from 'notistack';
 
-import { useHistory } from '@workshop/route';
+import { useNavigate } from 'react-router-dom';
 
 import { useSubscription } from 'react-relay';
 
@@ -18,7 +18,7 @@ type Me = FeedQueryResponse['me'];
 // TODO - use @inline for me
 export const useNewPostSubscription = (me: Me) => {
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const postNewConfig = useMemo<GraphQLSubscriptionConfig<PostNewSubscription>>(
     () => ({
@@ -45,7 +45,7 @@ export const useNewPostSubscription = (me: Me) => {
               <Button
                 color='primary'
                 onClick={() => {
-                  history.push(`/post/${post.id}`);
+                  navigate(`/post/${post.id}`);
                   closeSnackbar(key);
                 }}
               >

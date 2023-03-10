@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { RelayEnvironmentProvider } from 'react-relay';
 
 import { ThemeProvider } from 'styled-components';
@@ -7,7 +7,7 @@ import { getTheme } from '@workshop/ui';
 
 import { SnackbarProvider } from 'notistack';
 
-import Environment from './relay/Environment';
+import { createEnvironment } from './relay/relayEnvironment';
 
 const theme = getTheme();
 
@@ -15,12 +15,16 @@ type Props = {
   children: React.ReactNode;
   environment: typeof Environment;
 };
-const Providers = ({ children, environment = Environment }: Props) => {
+const Providers = ({ children, environment = createEnvironment() }: Props) => {
   return (
     <RelayEnvironmentProvider environment={environment}>
       <ThemeProvider theme={theme}>
         <StylesProvider injectFirst>
-          <SnackbarProvider>{children}</SnackbarProvider>
+          <SnackbarProvider>
+            <Suspense fallback={null}>
+              {children}
+            </Suspense>
+          </SnackbarProvider>
         </StylesProvider>
       </ThemeProvider>
     </RelayEnvironmentProvider>
