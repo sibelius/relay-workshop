@@ -12345,9 +12345,9 @@ koa-graphql@^0.12.0:
     http-errors "^1.7.3"
 
 koa-helmet@^7.0.1:
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/koa-helmet/-/koa-helmet-7.0.1.tgz#4c58dd78fd142fd4701e7a9d6810ca11929045ca"
-  integrity sha512-C7HNgiakdoVbHKBOp59yeEb/BuYq31nm7PtjMjSYVk9t5oW6gJHWOmUyEU1Qo1QfQCj8U8wCtn98FU7lizJrqg==
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/koa-helmet/-/koa-helmet-7.0.2.tgz#2077e60cc69fa550802931ccdb85f948aa6bd054"
+  integrity sha512-AvzS6VuEfFgbAm0mTUnkk/BpMarMcs5A56g+f0sfrJ6m63wII48d2GDrnUQGp0Nj+RR950vNtgqXm9UJSe7GOg==
   dependencies:
     helmet "^6.0.1"
 
