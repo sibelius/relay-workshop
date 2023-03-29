@@ -48,7 +48,7 @@
     "eslint-import-resolver-lerna": "^2.0.0",
     "eslint-import-resolver-typescript": "3.5.3",
     "eslint-import-resolver-webpack": "0.13.2",
-    "eslint-plugin-cypress": "2.12.1",
+    "eslint-plugin-cypress": "2.13.1",
     "eslint-plugin-flowtype": "8.0.3",
     "eslint-plugin-import": "2.27.5",
     "eslint-plugin-jsx-a11y": "6.7.1",
