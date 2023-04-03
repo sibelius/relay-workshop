@@ -33,7 +33,7 @@
     "styled-components": "5.3.9",
     "styled-system": "5.1.5",
     "yup": "^1.0.2",
-    "graphql-ws": "5.12.0"
+    "graphql-ws": "5.12.1"
   },
   "devDependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "0.5.10",
