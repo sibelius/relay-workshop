@@ -8897,9 +8897,9 @@ fd-slicer@~1.1.0:
     pend "~1.2.0"
 
 fetch-multipart-graphql@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/fetch-multipart-graphql/-/fetch-multipart-graphql-3.1.1.tgz#385e20bccb5df7943bbb3c8186da559223f4575d"
-  integrity sha512-opcj0vs/N8hB4JORmiu4CDzDsQfXXWHpvkzREIpHGor4YCmNEDuMzBSGgDAIP0oNCNVmkmD/eWz8hybyVVdAeQ==
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/fetch-multipart-graphql/-/fetch-multipart-graphql-3.2.1.tgz#43f30caa20787527f2a45ad70a347427cd12514e"
+  integrity sha512-uNbr6ysfn3GmR7s6LzkeACpYfxdLvCHSDn9DHSZNHpn6jkDH9mWa8rT4jfqXNzua5PG1z5DpDnZjJzIH462Kew==
 
 figgy-pudding@^3.5.1:
   version "3.5.2"
