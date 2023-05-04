@@ -1,6 +1,7 @@
 import { readFragment } from 'relay-runtime/lib/store/ResolverFragments';
 import { graphql } from 'react-relay';
 import moment from 'moment';
+
 import { postCreatedAtDateResolver$key } from '../../__generated__/postCreatedAtDateResolver.graphql';
 
 /**
@@ -10,9 +11,9 @@ import { postCreatedAtDateResolver$key } from '../../__generated__/postCreatedAt
 export function createdAtDate(key: postCreatedAtDateResolver$key) {
   const post = readFragment(
     graphql`
-    fragment postCreatedAtDateResolver on Post {
-      id
-      createdAt
+      fragment postCreatedAtDateResolver on Post {
+        id
+        createdAt
       }
     `,
     key,
