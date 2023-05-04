@@ -5,7 +5,7 @@ import { Flex } from 'rebass';
 
 const versionQuery = graphql`
   query versionQuery @preloadable {
-    version
+    version   
   }
 `;
 

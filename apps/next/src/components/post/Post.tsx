@@ -35,6 +35,7 @@ const Post = (props: Props) => {
       fragment Post_post on Post {
         id
         content
+        createdAtDate
         author {
           id
           name
@@ -69,6 +70,7 @@ const Post = (props: Props) => {
         <CardContent>
           <PostHeader user={author} />
           <Text mt='10px'>{post.content}</Text>
+          <Text mt='10px'>{post.createdAtDate}</Text>
         </CardContent>
       </Wrapper>
       <CardActions>
