@@ -1,5 +1,8 @@
 import { Environment, RecordSource, Store } from "relay-runtime";
 import { createNetwork } from './network';
+import { RelayFeatureFlags } from "relay-runtime";
+
+RelayFeatureFlags.ENABLE_RELAY_RESOLVERS = true;
   
 const IS_SERVER = typeof window === typeof undefined;
 const CLIENT_DEBUG = false;
