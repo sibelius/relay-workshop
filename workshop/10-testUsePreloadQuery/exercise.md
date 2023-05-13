@@ -28,12 +28,12 @@ const Root = withProviders({
 
 - queue a pending operation, usually a query that will be used by preloadQuery
 ```jsx
-Environment.mock.queuePendingOperation(query, variables);
+environment.mock.queuePendingOperation(query, variables);
 ```
 
 - mock a queued pending operation using custom mock resolvers
 ```jsx
-Environment.mock.queueOperationResolver(operation => MockPayloadGenerator.generate(operation, customMockResolvers));
+environment.mock.queueOperationResolver(operation => MockPayloadGenerator.generate(operation, customMockResolvers));
 ```
 
 - mock GraphQL data

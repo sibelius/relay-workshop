@@ -1,18 +1,19 @@
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import React from 'react';
-import { MockPayloadGenerator } from 'relay-test-utils';
+import { createMockEnvironment, MockPayloadGenerator } from 'relay-test-utils';
 
 import { loadQuery } from 'react-relay';
 
 import { JSResource } from '@workshop/route';
 
-import { Environment } from '../../../../relay';
 import PostDetail from '../../../pages/post/[id]';
 
 import { withProviders } from '../../../../../test/withProviders';
 
 it('should render post like button', async () => {
+  const environment = createMockEnvironment();
+
   const postId = 'postId';
 
   const routes = [
@@ -25,7 +26,7 @@ it('should render post like button', async () => {
       //
       //   return {
       //     postDetailQuery: loadQuery(
-      //       Environment,
+      //       environment,
       //       PostDetailQuery,
       //       {
       //         id: params.id,
@@ -55,10 +56,10 @@ it('should render post like button', async () => {
   };
 
   // queue pending operation
-  Environment.mock.queuePendingOperation(query, variables);
+  environment.mock.queuePendingOperation(query, variables);
 
   // PostDetailQuery
-  Environment.mock.queueOperationResolver(operation => MockPayloadGenerator.generate(operation, customMockResolvers));
+  environment.mock.queueOperationResolver(operation => MockPayloadGenerator.generate(operation, customMockResolvers));
 
   const Root = withProviders({
     routes,
@@ -67,7 +68,7 @@ it('should render post like button', async () => {
   });
 
   const prepared = {
-    postDetailQuery: loadQuery(Environment, PostDetailQuery, variables, {
+    postDetailQuery: loadQuery(environment, PostDetailQuery, variables, {
       fetchPolicy: 'store-or-network',
     }),
   };
