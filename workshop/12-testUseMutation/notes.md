@@ -17,7 +17,7 @@ const mockResolvers = {
 };
 // resolve component query using a mock generator
 // ComponentQuery
-Environment.mock.resolveMostRecentOperation(operation =>
+environment.mock.resolveMostRecentOperation(operation =>
   MockPayloadGenerator.generate(operation, customMockResolvers),
 );
 
@@ -26,11 +26,11 @@ const likeButton = getByTestId('likeButton');
 // click the button that will call the mutation
 fireEvent.click(likeButton);
 // wait the mutation to be called
-await waitFor(() => Environment.mock.getMostRecentOperation());
+await waitFor(() => environment.mock.getMostRecentOperation());
 
 // get the mutation
 // PostLikeMutation
-const mutationOperation = Environment.mock.getMostRecentOperation();
+const mutationOperation = environment.mock.getMostRecentOperation();
 
 // expect the mutation are called with proper variables
 expect(mutationOperation.fragment.variables.input).toEqual({

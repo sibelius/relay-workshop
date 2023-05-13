@@ -1,11 +1,11 @@
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import React from 'react';
-import { MockPayloadGenerator } from 'relay-test-utils';
+import { createMockEnvironment, MockPayloadGenerator } from 'relay-test-utils';
 
 import { usePreloadedQuery, graphql, loadQuery } from 'react-relay';
 
-import { Environment } from '../../../../relay';
+import { environment } from '../../../../relay';
 import PostLikeButton from '../PostLikeButton';
 
 import { withProviders } from '../../../../../test/withProviders';
@@ -34,6 +34,8 @@ export const getRoot = ({ preloadedQuery }) => {
 };
 
 it('should render post like button and likes count', async () => {
+  const environment = createMockEnvironment();
+
   const PostLikeButtonSpecQuery = require('./__generated__/PostLikeButtonSpecQuery.graphql');
 
   const postId = 'postId';
@@ -51,13 +53,13 @@ it('should render post like button and likes count', async () => {
   };
 
   // queue pending operation
-  Environment.mock.queuePendingOperation(query, variables);
+  environment.mock.queuePendingOperation(query, variables);
 
   // PostDetailQuery
-  Environment.mock.queueOperationResolver(operation => MockPayloadGenerator.generate(operation, customMockResolvers));
+  environment.mock.queueOperationResolver(operation => MockPayloadGenerator.generate(operation, customMockResolvers));
 
   const preloadedQuery = loadQuery(
-    Environment,
+    environment,
     PostLikeButtonSpecQuery,
     {
       id: postId,

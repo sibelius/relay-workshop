@@ -21,10 +21,10 @@ fireEvent.click(likeButton);
 
 - wait mutation to be called
 ```jsx
-await waitFor(() => Environment.mock.getMostRecentOperation());
+await waitFor(() => environment.mock.getMostRecentOperation());
 ```
 
 - get mutation operation
 ```jsx
-const mutationOperation = Environment.mock.getMostRecentOperation();
+const mutationOperation = environment.mock.getMostRecentOperation();
 ```

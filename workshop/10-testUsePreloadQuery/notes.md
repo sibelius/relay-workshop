@@ -27,7 +27,7 @@ It provides `createMockEnvironment`, `MockPayloadGenerator` and `@relay_test_ope
 After rendering a component that needs a GraphQL operation you can mock the operation like this:
 
 ```jsx
-Environment.mock.resolveMostRecentOperation(operation =>
+environment.mock.resolveMostRecentOperation(operation =>
    MockPayloadGenerator.generate(operation, customMockResolvers),
 );
 ```
@@ -77,7 +77,7 @@ const mockResolvers = {
 };
 // resolve component query using a mock generator
 // ComponentQuery
-Environment.mock.resolveMostRecentOperation(operation =>
+environment.mock.resolveMostRecentOperation(operation =>
   MockPayloadGenerator.generate(operation, customMockResolvers),
 );
 
@@ -90,10 +90,10 @@ When testing a `preloadQuery` code you need to mock and resolve an operation bef
 
 ```jsx
 // this will queue a pending operation to be resolved
-Environment.mock.queuePendingOperation(query, variables);
+environment.mock.queuePendingOperation(query, variables);
 
 // this resolves the queue operation from above
-Environment.mock.queueOperationResolver(operation => MockPayloadGenerator.generate(operation, customMockResolvers));
+environment.mock.queueOperationResolver(operation => MockPayloadGenerator.generate(operation, customMockResolvers));
 ```
 
 After doing this you can call your `preloadQuery`.
@@ -101,10 +101,10 @@ The `preloadQuery` flow is like this:
 
 ```jsx
 // queue pending operation
-Environment.mock.queuePendingOperation(query, variables);
+environment.mock.queuePendingOperation(query, variables);
 
 // PostDetailQuery
-Environment.mock.queueOperationResolver(operation => MockPayloadGenerator.generate(operation, customMockResolvers));
+environment.mock.queueOperationResolver(operation => MockPayloadGenerator.generate(operation, customMockResolvers));
 
 // call preloadQuery
 preloadQuery(Environment, PostDetailQuery, variables, {
