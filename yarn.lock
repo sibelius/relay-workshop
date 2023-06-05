@@ -2067,7 +2067,7 @@
     debug "^4.1.0"
     globals "^11.1.0"
 
-"@babel/types@^7.0.0", "@babel/types@^7.12.6", "@babel/types@^7.18.10", "@babel/types@^7.18.6", "@babel/types@^7.18.9", "@babel/types@^7.20.0", "@babel/types@^7.20.7", "@babel/types@^7.21.0", "@babel/types@^7.21.4", "@babel/types@^7.21.5", "@babel/types@^7.22.0", "@babel/types@^7.22.3", "@babel/types@^7.22.4", "@babel/types@^7.3.0", "@babel/types@^7.3.3", "@babel/types@^7.4.4":
+"@babel/types@^7.0.0", "@babel/types@^7.12.6", "@babel/types@^7.18.10", "@babel/types@^7.18.6", "@babel/types@^7.18.9", "@babel/types@^7.20.0", "@babel/types@^7.20.7", "@babel/types@^7.21.0", "@babel/types@^7.21.4", "@babel/types@^7.21.5", "@babel/types@^7.22.0", "@babel/types@^7.22.4", "@babel/types@^7.3.0", "@babel/types@^7.3.3", "@babel/types@^7.4.4":
   version "7.22.4"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.22.4.tgz#56a2653ae7e7591365dabf20b76295410684c071"
   integrity sha512-Tx9x3UBHTTsMSW85WB2kphxYQVvrZ/t1FxD88IpSgIjiUJlCm9z+xWIDwyo1vffTwSqteqyznB8ZE9vYYk16zA==
@@ -4505,9 +4505,9 @@
     "@types/istanbul-lib-report" "*"
 
 "@types/jest@*", "@types/jest@^29.0.0":
-  version "29.5.1"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-29.5.1.tgz#83c818aa9a87da27d6da85d3378e5a34d2f31a47"
-  integrity sha512-tEuVcHrpaixS36w7hpsfLBLpjtMRJUE09/MHXn923LOVojDwyC14cWcfc0rDs0VEfUyYmt/+iX1kxxp+gZMcaQ==
+  version "29.5.2"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-29.5.2.tgz#86b4afc86e3a8f3005b297ed8a72494f89e6395b"
+  integrity sha512-mSoZVJF5YzGVCk+FsDxzDuH7s+SCkzrgKZzf0Z0T2WudhBUPoF6ktoTPC4R0ZoCPCV5xUvuU6ias5NvxcBcMMg==
   dependencies:
     expect "^29.0.0"
     pretty-format "^29.0.0"
