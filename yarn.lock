@@ -1130,12 +1130,12 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/node@7.22.1":
-  version "7.22.1"
-  resolved "https://registry.yarnpkg.com/@babel/node/-/node-7.22.1.tgz#e7f0caed654f886d1272629f4122b093c421d376"
-  integrity sha512-9MVahJCvE4+8qsSPCvv6wXM50YNxwqW61TDQYrsvUy8GxUmWd8IzpBm7kBZzSuEkGHd4MZ1vK8s4IM9IirY2uw==
+"@babel/node@7.22.5":
+  version "7.22.5"
+  resolved "https://registry.yarnpkg.com/@babel/node/-/node-7.22.5.tgz#5632c6f5f5d06ac68e34dd1cbe461ef4d5f8e49c"
+  integrity sha512-rguSfZsRNsAhCQ/XjZhDK2CTWxp/jEKx2On8Ir+C6uCZERirg/Ae6fJaOSKQgTg11kA2LEvonpxY2Hb3zF5C8g==
   dependencies:
-    "@babel/register" "^7.21.0"
+    "@babel/register" "^7.22.5"
     commander "^4.0.1"
     core-js "^3.30.2"
     node-environment-flags "^1.0.5"
@@ -2040,10 +2040,10 @@
     "@babel/plugin-transform-modules-commonjs" "^7.21.5"
     "@babel/plugin-transform-typescript" "^7.21.3"
 
-"@babel/register@^7.21.0":
-  version "7.21.0"
-  resolved "https://registry.yarnpkg.com/@babel/register/-/register-7.21.0.tgz#c97bf56c2472e063774f31d344c592ebdcefa132"
-  integrity sha512-9nKsPmYDi5DidAqJaQooxIhsLJiNMkGr8ypQ8Uic7cIox7UCDsM7HuUGxdGT7mSDTYbqzIdsOWzfBton/YJrMw==
+"@babel/register@^7.22.5":
+  version "7.22.5"
+  resolved "https://registry.yarnpkg.com/@babel/register/-/register-7.22.5.tgz#e4d8d0f615ea3233a27b5c6ada6750ee59559939"
+  integrity sha512-vV6pm/4CijSQ8Y47RH5SopXzursN35RQINfGJkmOlcpAtGuf94miFvIPhCKGQN7WGIcsgG1BHEX2KVdTYwTwUQ==
   dependencies:
     clone-deep "^4.0.1"
     find-cache-dir "^2.0.0"
