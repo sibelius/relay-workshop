@@ -10,7 +10,7 @@
     "@mui/styles": "^5.12.3",
     "@types/yup": "^0.32.0",
     "fetch-multipart-graphql": "^3.0.0",
-    "formik": "2.4.1",
+    "formik": "2.4.2",
     "graphql-ws": "5.13.1",
     "identity-obj-proxy": "^3.0.0",
     "isomorphic-fetch": "^3.0.0",
