@@ -8,7 +8,7 @@
     "bcryptjs": "2.4.3",
     "dataloader": "2.2.2",
     "dotenv-safe": "^8.1.0",
-    "graphql": "16.7.0",
+    "graphql": "16.7.1",
     "graphql-helix": "^1.13.0",
     "graphql-playground-middleware-koa": "^1.6.21",
     "graphql-relay": "^0.10.0",
