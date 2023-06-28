@@ -34,7 +34,7 @@
     "@types/styled-components": "5.1.26",
     "@types/styled-system": "5.1.16",
     "@types/supertest": "2.0.12",
-    "@typescript-eslint/eslint-plugin": "5.60.0",
+    "@typescript-eslint/eslint-plugin": "5.60.1",
     "@typescript-eslint/parser": "5.60.1",
     "babel-jest": "29.5.0",
     "concurrently": "^8.0.1",
