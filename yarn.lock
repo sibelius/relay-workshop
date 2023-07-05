@@ -1102,10 +1102,10 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/node@7.22.5":
-  version "7.22.5"
-  resolved "https://registry.yarnpkg.com/@babel/node/-/node-7.22.5.tgz#5632c6f5f5d06ac68e34dd1cbe461ef4d5f8e49c"
-  integrity sha512-rguSfZsRNsAhCQ/XjZhDK2CTWxp/jEKx2On8Ir+C6uCZERirg/Ae6fJaOSKQgTg11kA2LEvonpxY2Hb3zF5C8g==
+"@babel/node@7.22.6":
+  version "7.22.6"
+  resolved "https://registry.yarnpkg.com/@babel/node/-/node-7.22.6.tgz#a47b4f150f06bad1808823c4519690ded6c93911"
+  integrity sha512-Lt6v+RUQOTsEOXLv+KfjogLFkFfsLPPSoXZqmbngfVatkWjQPnFGHO0xjFRcN6XEvm3vsnZn+AWQiRpgZFsdIA==
   dependencies:
     "@babel/register" "^7.22.5"
     commander "^4.0.1"
