@@ -4707,10 +4707,10 @@
     "@types/styled-system" "*"
     "@types/styled-system__css" "*"
 
-"@types/relay-runtime@*", "@types/relay-runtime@14.1.11":
-  version "14.1.11"
-  resolved "https://registry.yarnpkg.com/@types/relay-runtime/-/relay-runtime-14.1.11.tgz#95c7282016c786c8987a85e5e0481fc3498ac43a"
-  integrity sha512-0crosl+xiE03Pe4vPbu62jxnLtVo45pk3R0tJEs7pLvRm7UQ9Oi7ZahMt4jkO8t+KU+RbP0RqvWxxKHvy59CwQ==
+"@types/relay-runtime@*", "@types/relay-runtime@14.1.12":
+  version "14.1.12"
+  resolved "https://registry.yarnpkg.com/@types/relay-runtime/-/relay-runtime-14.1.12.tgz#080ed86393e5e416150e8f9e988b4462f2824d5d"
+  integrity sha512-6U+Q091/4CuvRwLta4zA9uk7eQMD/kEqtlyM4rCsZP0BlNLiBWAOktZwTED9+BSzIi4kt5Bk5QAJQ+1dv9QiZA==
 
 "@types/relay-test-utils@^14.1.0":
   version "14.1.0"
