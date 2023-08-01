@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "Sibelius Seraphini <sibeliusseraphini@gmail.com>",
   "devDependencies": {
-    "@babel/preset-modules": "0.1.5",
+    "@babel/preset-modules": "0.1.6",
     "@types/bcryptjs": "^2.4.1",
     "@types/dotenv-safe": "8.1.2",
     "@types/dotenv-webpack": "7.0.4",
