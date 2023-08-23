@@ -29,7 +29,7 @@
     "@types/react-relay": "14.1.4",
     "@types/react-router-config": "^5.0.1",
     "@types/rebass": "^4.0.7",
-    "@types/relay-runtime": "14.1.12",
+    "@types/relay-runtime": "14.1.13",
     "@types/relay-test-utils": "^14.1.0",
     "@types/styled-components": "5.1.26",
     "@types/styled-system": "5.1.16",
