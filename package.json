@@ -43,7 +43,7 @@
     "eslint": "8.48.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-okonet": "7.0.2",
-    "eslint-config-prettier": "^8.0.0",
+    "eslint-config-prettier": "^9.0.0",
     "eslint-config-shellscape": "6.0.1",
     "eslint-import-resolver-lerna": "^2.0.0",
     "eslint-import-resolver-typescript": "3.6.0",
