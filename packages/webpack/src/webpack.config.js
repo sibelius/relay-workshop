@@ -2,7 +2,7 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const dotEnv = require('dotenv-webpack');
-const webpack = require('webpack')
+const webpack = require('webpack');
 
 const cwd = process.cwd();
 const outputPath = path.join(cwd, 'build');
@@ -24,8 +24,11 @@ module.exports = {
       http: require.resolve('stream-http'),
       https: require.resolve('https-browserify'),
       os: require.resolve('os-browserify/browser'),
-      "crypto": require.resolve("crypto-browserify"),
-      "stream": require.resolve("stream-browserify"),
+      crypto: require.resolve('crypto-browserify'),
+      stream: require.resolve('stream-browserify'),
+      zlib: require.resolve('browserify-zlib'),
+      assert: require.resolve('assert/'),
+      buffer: require.resolve('buffer/'),
     },
   },
   module: {
@@ -62,6 +65,6 @@ module.exports = {
     }),
     new webpack.ProvidePlugin({
       Buffer: ['buffer', 'Buffer'],
-    })
+    }),
   ],
 };
