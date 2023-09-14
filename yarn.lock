@@ -3245,21 +3245,21 @@
   resolved "https://registry.yarnpkg.com/@leichtgewicht/ip-codec/-/ip-codec-2.0.3.tgz#0300943770e04231041a51bd39f0439b5c7ab4f0"
   integrity sha512-nkalE/f1RvRGChwBnEIoBfSEYOXnCRdleKuv6+lePbMDrMZXeDQnqak5XDOeBgrPPyPfAdcCu/B5z+v3VhplGg==
 
-"@lerna/child-process@7.1.5":
-  version "7.1.5"
-  resolved "https://registry.yarnpkg.com/@lerna/child-process/-/child-process-7.1.5.tgz#a01e8821fb7b17a68d1c1527127543af6cf27f1b"
-  integrity sha512-YXmxzxXTP3u9HQpSXvK8qqoAm7VWQIFria3FVMQKkOSkWkph1TNnvt3Q1JvKT7/Jgd1HfTc3QrK09a2FND9+8A==
+"@lerna/child-process@7.3.0":
+  version "7.3.0"
+  resolved "https://registry.yarnpkg.com/@lerna/child-process/-/child-process-7.3.0.tgz#c56488a8a881f22a64793bf9339c5a2450a18559"
+  integrity sha512-rA+fGUo2j/LEq6w1w8s6oVikLbJTWoIDVpYMc7bUCtwDOUuZKMQiRtjmpavY3fTm7ltu42f4AKflc2A70K4wvA==
   dependencies:
     chalk "^4.1.0"
     execa "^5.0.0"
     strong-log-transformer "^2.1.0"
 
-"@lerna/create@7.1.5":
-  version "7.1.5"
-  resolved "https://registry.yarnpkg.com/@lerna/create/-/create-7.1.5.tgz#180b26f028be25b541a327429168da6c10bdb265"
-  integrity sha512-/CDI/cvXJbycgSDzWXzP7DBuJ10qL/uYEouFt3/mxi9+hSfM885fu6lbVPV7QOf8A0otXcTs7PN2dVyMrnWQeg==
+"@lerna/create@7.3.0":
+  version "7.3.0"
+  resolved "https://registry.yarnpkg.com/@lerna/create/-/create-7.3.0.tgz#5438c231f617b8e825731390d394f8684af471d5"
+  integrity sha512-fjgiKjg9VXwQ4ZKKsrXICEKRiC3yo6+FprR0mc55uz0s5e9xupoSGLobUTTBdE7ncNB3ibqml8dfaAn/+ESajQ==
   dependencies:
-    "@lerna/child-process" "7.1.5"
+    "@lerna/child-process" "7.3.0"
     "@npmcli/run-script" "6.0.2"
     "@nx/devkit" ">=16.5.1 < 17"
     "@octokit/plugin-enterprise-rest" "6.0.1"
@@ -3284,12 +3284,13 @@
     ini "^1.3.8"
     init-package-json "5.0.0"
     inquirer "^8.2.4"
+    is-ci "3.0.1"
     is-stream "2.0.0"
     js-yaml "4.1.0"
     libnpmpublish "7.3.0"
     load-json-file "6.2.0"
     lodash "^4.17.21"
-    make-dir "3.1.0"
+    make-dir "4.0.0"
     minimatch "3.0.5"
     multimatch "5.0.0"
     node-fetch "2.6.7"
@@ -8325,11 +8326,6 @@ diff-sequences@^27.5.1:
   resolved "https://registry.yarnpkg.com/diff-sequences/-/diff-sequences-27.5.1.tgz#eaecc0d327fd68c8d9672a1e64ab8dccb2ef5327"
   integrity sha512-k1gCAXAsNgLwEL+Y8Wvl+M6oEFj5bgazfZULpS5CneoPPXRaCCW7dm+q21Ky2VEE5X+VeRDBVg1Pcvvsr4TtNQ==
 
-diff-sequences@^29.4.3:
-  version "29.4.3"
-  resolved "https://registry.yarnpkg.com/diff-sequences/-/diff-sequences-29.4.3.tgz#9314bc1fabe09267ffeca9cbafc457d8499a13f2"
-  integrity sha512-ofrBgwpPhCD85kMKtE9RYFFq6OC1A89oW2vvgWZNCwxrUpRUILopY7lsYyMDSjc8g6U6aiO0Qubg6r4Wgt5ZnA==
-
 diff-sequences@^29.6.3:
   version "29.6.3"
   resolved "https://registry.yarnpkg.com/diff-sequences/-/diff-sequences-29.6.3.tgz#4deaf894d11407c51efc8418012f9e70b84ea921"
@@ -12369,15 +12365,15 @@ jest-config@^29.6.3:
     slash "^3.0.0"
     strip-json-comments "^3.1.1"
 
-"jest-diff@>=29.4.3 < 30", jest-diff@^29.6.1:
-  version "29.6.2"
-  resolved "https://registry.yarnpkg.com/jest-diff/-/jest-diff-29.6.2.tgz#c36001e5543e82a0805051d3ceac32e6825c1c46"
-  integrity sha512-t+ST7CB9GX5F2xKwhwCf0TAR17uNDiaPTZnVymP9lw0lssa9vG+AFyDZoeIHStU3WowFFwT+ky+er0WVl2yGhA==
+"jest-diff@>=29.4.3 < 30", jest-diff@^29.6.1, jest-diff@^29.6.3:
+  version "29.6.3"
+  resolved "https://registry.yarnpkg.com/jest-diff/-/jest-diff-29.6.3.tgz#365c6b037ea8e67d2f2af68bc018fc18d44311f0"
+  integrity sha512-3sw+AdWnwH9sSNohMRKA7JiYUJSRr/WS6+sEFfBuhxU5V5GlEVKfvUn8JuMHE0wqKowemR1C2aHy8VtXbaV8dQ==
   dependencies:
     chalk "^4.0.0"
-    diff-sequences "^29.4.3"
-    jest-get-type "^29.4.3"
-    pretty-format "^29.6.2"
+    diff-sequences "^29.6.3"
+    jest-get-type "^29.6.3"
+    pretty-format "^29.6.3"
 
 jest-diff@^26.6.2:
   version "26.6.2"
@@ -12398,16 +12394,6 @@ jest-diff@^27.5.1:
     diff-sequences "^27.5.1"
     jest-get-type "^27.5.1"
     pretty-format "^27.5.1"
-
-jest-diff@^29.6.3:
-  version "29.6.3"
-  resolved "https://registry.yarnpkg.com/jest-diff/-/jest-diff-29.6.3.tgz#365c6b037ea8e67d2f2af68bc018fc18d44311f0"
-  integrity sha512-3sw+AdWnwH9sSNohMRKA7JiYUJSRr/WS6+sEFfBuhxU5V5GlEVKfvUn8JuMHE0wqKowemR1C2aHy8VtXbaV8dQ==
-  dependencies:
-    chalk "^4.0.0"
-    diff-sequences "^29.6.3"
-    jest-get-type "^29.6.3"
-    pretty-format "^29.6.3"
 
 jest-docblock@^26.0.0:
   version "26.0.0"
@@ -13968,12 +13954,12 @@ launch-editor@^2.6.0:
     shell-quote "^1.7.3"
 
 lerna@^7.0.1:
-  version "7.1.5"
-  resolved "https://registry.yarnpkg.com/lerna/-/lerna-7.1.5.tgz#f65bde23d477382a221f9373f82d027825fa8622"
-  integrity sha512-5bvfmoIH4Czk5mdoLaRPYkM3M63Ei6+TOuXs3MgXmvqD8vs+vQpHuBVmiYFp5Mwsck3FkidJ+eTxfucltA2Lmw==
+  version "7.3.0"
+  resolved "https://registry.yarnpkg.com/lerna/-/lerna-7.3.0.tgz#efecafbdce15694e2f6841256e073a3a2061053e"
+  integrity sha512-Dt8TH+J+c9+3MhTYcm5OxnNzXb87WG7GPNj3kidjYJjJY7KxIMDNU37qBTYRWA1h3wAeNKBplXVQYUPkGcYgkQ==
   dependencies:
-    "@lerna/child-process" "7.1.5"
-    "@lerna/create" "7.1.5"
+    "@lerna/child-process" "7.3.0"
+    "@lerna/create" "7.3.0"
     "@npmcli/run-script" "6.0.2"
     "@nx/devkit" ">=16.5.1 < 17"
     "@octokit/plugin-enterprise-rest" "6.0.1"
@@ -14010,7 +13996,7 @@ lerna@^7.0.1:
     libnpmpublish "7.3.0"
     load-json-file "6.2.0"
     lodash "^4.17.21"
-    make-dir "3.1.0"
+    make-dir "4.0.0"
     minimatch "3.0.5"
     multimatch "5.0.0"
     node-fetch "2.6.7"
@@ -14378,12 +14364,12 @@ magic-string@^0.25.0, magic-string@^0.25.7:
   dependencies:
     sourcemap-codec "^1.4.8"
 
-make-dir@3.1.0, make-dir@^3.0.0, make-dir@^3.0.2, make-dir@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-3.1.0.tgz#415e967046b3a7f1d185277d84aa58203726a13f"
-  integrity sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==
+make-dir@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-4.0.0.tgz#c3c2307a771277cd9638305f915c29ae741b614e"
+  integrity sha512-hXdUTZYIVOt1Ex//jAQi+wTZZpUpwBj/0QsOzqegb3rGMMeJiSEu5xLHnYfBrRV4RH2+OCSOO95Is/7x1WJ4bw==
   dependencies:
-    semver "^6.0.0"
+    semver "^7.5.3"
 
 make-dir@^2.0.0, make-dir@^2.1.0:
   version "2.1.0"
@@ -14392,6 +14378,13 @@ make-dir@^2.0.0, make-dir@^2.1.0:
   dependencies:
     pify "^4.0.1"
     semver "^5.6.0"
+
+make-dir@^3.0.0, make-dir@^3.0.2, make-dir@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-3.1.0.tgz#415e967046b3a7f1d185277d84aa58203726a13f"
+  integrity sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==
+  dependencies:
+    semver "^6.0.0"
 
 make-fetch-happen@^10.0.3:
   version "10.2.0"
@@ -17153,15 +17146,6 @@ pretty-format@^29.0.0, pretty-format@^29.6.1:
   version "29.6.1"
   resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-29.6.1.tgz#ec838c288850b7c4f9090b867c2d4f4edbfb0f3e"
   integrity sha512-7jRj+yXO0W7e4/tSJKoR7HRIHLPPjtNaUGG2xxKQnGvPNRkgWcQ0AZX6P4KBRJN4FcTBWb3sa7DVUJmocYuoog==
-  dependencies:
-    "@jest/schemas" "^29.6.0"
-    ansi-styles "^5.0.0"
-    react-is "^18.0.0"
-
-pretty-format@^29.6.2:
-  version "29.6.2"
-  resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-29.6.2.tgz#3d5829261a8a4d89d8b9769064b29c50ed486a47"
-  integrity sha512-1q0oC8eRveTg5nnBEWMXAU2qpv65Gnuf2eCQzSjxpWFkPaPARwqZZDGuNE0zPAZfTCHzIk3A8dIjwlQKKLphyg==
   dependencies:
     "@jest/schemas" "^29.6.0"
     ansi-styles "^5.0.0"
