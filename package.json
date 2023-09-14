@@ -37,7 +37,7 @@
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
     "assert": "^2.1.0",
-    "babel-jest": "29.6.4",
+    "babel-jest": "29.7.0",
     "browserify-zlib": "^0.2.0",
     "concurrently": "^8.0.1",
     "crypto-browserify": "^3.12.0",
