@@ -4557,9 +4557,9 @@
     pretty-format "^29.0.0"
 
 "@types/jscodeshift@^0.11.0":
-  version "0.11.6"
-  resolved "https://registry.yarnpkg.com/@types/jscodeshift/-/jscodeshift-0.11.6.tgz#9ced613c8dd92559000fb671d151685ea8e420c7"
-  integrity sha512-3lJ4DajWkk4MZ1F7q+1C7jE0z0xOtbu0VU/Kg3wdPq2DUvJjySSlu3B5Q/bICrTxugLhONBO7inRUWsymOID/A==
+  version "0.11.7"
+  resolved "https://registry.yarnpkg.com/@types/jscodeshift/-/jscodeshift-0.11.7.tgz#3c320f58af9f5b22226cc80d44a3f93abbe9e7aa"
+  integrity sha512-YJ+dQlL2a8dR+iNExYVxiFMa4nhoUgIhYN47rCCdwkRPYdURkee4bCskMhNNCUNo14wbjVf7C0iIKL5tQ9jecw==
   dependencies:
     ast-types "^0.14.1"
     recast "^0.20.3"
