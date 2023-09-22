@@ -4658,9 +4658,9 @@
     "@types/koa" "*"
 
 "@types/koa-router@^7.4.1":
-  version "7.4.4"
-  resolved "https://registry.yarnpkg.com/@types/koa-router/-/koa-router-7.4.4.tgz#db72bde3616365d74f00178d5f243c4fce7da572"
-  integrity sha512-3dHlZ6CkhgcWeF6wafEUvyyqjWYfKmev3vy1PtOmr0mBc3wpXPU5E8fBBd4YQo5bRpHPfmwC5yDaX7s4jhIN6A==
+  version "7.4.5"
+  resolved "https://registry.yarnpkg.com/@types/koa-router/-/koa-router-7.4.5.tgz#33cd1c7e5ee75e52fd4786f49a8577b45cfdccde"
+  integrity sha512-9DpkJcOpeK2bXUfyLDKzbDnohUp1TcNBQ7XsuadjYcHMsCOILRbzQdA/g5qJA+0zHi0cet64bOycXz2Snb0Rpw==
   dependencies:
     "@types/koa" "*"
 
