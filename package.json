@@ -33,7 +33,7 @@
     "@types/relay-test-utils": "^14.1.0",
     "@types/styled-components": "5.1.26",
     "@types/styled-system": "5.1.17",
-    "@types/supertest": "2.0.12",
+    "@types/supertest": "2.0.13",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
     "assert": "^2.1.0",
