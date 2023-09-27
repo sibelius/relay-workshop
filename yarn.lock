@@ -4653,9 +4653,9 @@
     "@types/koa" "*"
 
 "@types/koa-multer@^1.0.0":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@types/koa-multer/-/koa-multer-1.0.1.tgz#9c9734a9011682e959f0c423c3df7077586ced5a"
-  integrity sha512-KFUcRz+qZVMNxFFFyOkuabvoYELx4sCrwSN3EFJ39GQBRCvO9UOatOX2eKUi0TQiGoxkuvAXyPUCK4JnV9FTOg==
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@types/koa-multer/-/koa-multer-1.0.2.tgz#bfb3558180a3579c7d55f89f7e39a38b3daf4303"
+  integrity sha512-pHN5+hvVYK5253opxE1+UsNS0hmqgIOuSO5BHz8P6Vc2GHBXcoutWkcEggCp9bTKDHPzWNH/7/KuZLDiOb2KpA==
   dependencies:
     "@types/koa" "*"
 
