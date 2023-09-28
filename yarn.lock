@@ -4529,10 +4529,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/isomorphic-fetch@0.0.36":
-  version "0.0.36"
-  resolved "https://registry.yarnpkg.com/@types/isomorphic-fetch/-/isomorphic-fetch-0.0.36.tgz#3a6d8f63974baf26b10fd1314db910633108a769"
-  integrity sha512-ulw4d+vW1HKn4oErSmNN2HYEcHGq0N1C5exlrMM0CRqX1UUpFhGb5lwiom5j9KN3LBJJDLRmYIZz1ghm7FIzZw==
+"@types/isomorphic-fetch@0.0.37":
+  version "0.0.37"
+  resolved "https://registry.yarnpkg.com/@types/isomorphic-fetch/-/isomorphic-fetch-0.0.37.tgz#d3efed60248923ae14f797ad20b82b4ae4b0ca83"
+  integrity sha512-+27HulrbyFpcalE4Agl+KHfGi4Qkcdmxv/ISi+DmUs5NECAFxRHeuZaLJj6DBfDRle6yxCOqLHJrfyVy9y5x9w==
 
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0", "@types/istanbul-lib-coverage@^2.0.1":
   version "2.0.4"
