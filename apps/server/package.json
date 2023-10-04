@@ -14,7 +14,7 @@
     "graphql-relay": "^0.10.0",
     "graphql-relay-subscription": "^1.0.0",
     "graphql-subscriptions": "^2.0.0",
-    "graphql-ws": "5.14.0",
+    "graphql-ws": "5.14.1",
     "isomorphic-fetch": "^3.0.0",
     "jsonwebtoken": "9.0.2",
     "kcors": "^2.2.2",
