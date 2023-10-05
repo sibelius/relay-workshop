@@ -4810,9 +4810,9 @@
     csstype "^3.0.2"
 
 "@types/rebass@^4.0.7":
-  version "4.0.10"
-  resolved "https://registry.yarnpkg.com/@types/rebass/-/rebass-4.0.10.tgz#f7a819d039349c138f279d2104986d7604a85528"
-  integrity sha512-Bp9Y2Bc7wrZr2NYHrqWOVRHdL5I5CRIaOiG9hlnwHH5hFRf8/FJsiJmCMsBhlsma312Jc6xWL+XUtSnfio+wOA==
+  version "4.0.11"
+  resolved "https://registry.yarnpkg.com/@types/rebass/-/rebass-4.0.11.tgz#cdc60385a4044380d7ed3bf0c14d1755252e64f1"
+  integrity sha512-d95sIb9hCSZ6nF8Bci4XPRFzUZWcngzWGvgvo+EA68KU4JJySXTs09YfRtzgfUSq8SVIA7CzroT0GJxY7qat9w==
   dependencies:
     "@types/react" "*"
     "@types/styled-components" "*"
