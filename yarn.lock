@@ -4905,10 +4905,10 @@
     "@types/react" "*"
     csstype "^3.0.2"
 
-"@types/styled-system@*", "@types/styled-system@5.1.17":
-  version "5.1.17"
-  resolved "https://registry.yarnpkg.com/@types/styled-system/-/styled-system-5.1.17.tgz#dbf8bd02461cb929e958a59bd37f9910ce9f95e5"
-  integrity sha512-TTrfh1eKI/m3e8KtVIqINOMeLrjdzLhkMm5BsSHd2GsCYsiS7942Fkel+upqMjw0JlDRNU4q7XWtDud8hcxkQA==
+"@types/styled-system@*", "@types/styled-system@5.1.18":
+  version "5.1.18"
+  resolved "https://registry.yarnpkg.com/@types/styled-system/-/styled-system-5.1.18.tgz#66577f414b4e9b215efe102072cc72e5fe60c744"
+  integrity sha512-ec6qSpzRZxTdylYl8VnCV9ko5he7E6g27aU2eagaHHpkO7oDpY28TdWiwzryUspcwXpOnIFQ4zrCzwwW0ClEMQ==
   dependencies:
     csstype "^3.0.2"
 
