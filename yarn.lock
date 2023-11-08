@@ -4404,10 +4404,10 @@
   dependencies:
     dotenv "^8.2.0"
 
-"@types/dotenv-webpack@7.0.5":
-  version "7.0.5"
-  resolved "https://registry.yarnpkg.com/@types/dotenv-webpack/-/dotenv-webpack-7.0.5.tgz#cb2f02c8a7d91e0f2267c43ed97be243bcd62ab3"
-  integrity sha512-eY9KJ1hyULKhtK1ygtMrNfhiPHGN4bWOyBZS/1vCmVBWar4BJSW/6JKCjJ/tKBLm1A0ZGWAoc/I8YdHXc2zpzw==
+"@types/dotenv-webpack@7.0.6":
+  version "7.0.6"
+  resolved "https://registry.yarnpkg.com/@types/dotenv-webpack/-/dotenv-webpack-7.0.6.tgz#5a9d0d2a1ed59a1d88e612f95868d68169ba5b5a"
+  integrity sha512-Clmgz28p/K48DD/XUd+ajusM6hVed8S9ow4wmTqY5QtHp9QFBXEWWSoiXMqfHcn16IDVXdjxQBjKI4z8mHpxhQ==
   dependencies:
     "@types/node" "*"
     tapable "^2.2.0"
