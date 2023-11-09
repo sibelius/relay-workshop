@@ -4218,10 +4218,10 @@
     "@types/react" "*"
     csstype "^3.0.2"
 
-"@types/styled-system@*", "@types/styled-system@5.1.19":
-  version "5.1.19"
-  resolved "https://registry.yarnpkg.com/@types/styled-system/-/styled-system-5.1.19.tgz#e992086e997008f77bd2b80f730ab609c56e7eaf"
-  integrity sha512-KO570UwUWA6FgD+PWrGj5Lc++J5O1SCj7BWys5SE5sSK14Sy+Wl6K13kPfFOIAZdpwTZR9bGv52FLTHCtsvHbQ==
+"@types/styled-system@*", "@types/styled-system@5.1.22":
+  version "5.1.22"
+  resolved "https://registry.yarnpkg.com/@types/styled-system/-/styled-system-5.1.22.tgz#508499f4c68bb86dde3454693e92f5771edf177f"
+  integrity sha512-NbRp37zWcrf/+Qf2NumdyZfhSx1dzJ50zgfKvnezYJx1HTRUMVYY8jtWvK1eoIAa6F5sXwHLhE8oXNu15ThBAA==
   dependencies:
     csstype "^3.0.2"
 
