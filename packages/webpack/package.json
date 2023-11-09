@@ -9,7 +9,7 @@
     "html-webpack-plugin": "5.5.3",
     "webpack-cli": "^5.0.0",
     "webpack-dev-server": "^4.7.3",
-    "webpack-merge": "5.9.0",
+    "webpack-merge": "5.10.0",
     "webpack-plugin-serve": "^1.2.0"
   }
 }
