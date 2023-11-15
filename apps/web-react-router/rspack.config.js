@@ -15,9 +15,12 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx|ts|tsx)?$/,
-        exclude: [/node_modules(?!\/@woovi)/],
+        exclude: [/node_modules/],
         loader: 'builtin:swc-loader',
         options: {
+          rspackExperiments: {
+            relay: true,
+          },
           jsc: {
             experimental: {
               plugins: [
@@ -57,6 +60,7 @@ module.exports = {
   ],
   devServer: {
     historyApiFallback: true,
+    open: true,
   },
   builtins: {
     relay: true,
