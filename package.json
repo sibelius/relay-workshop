@@ -123,6 +123,7 @@
     "w": "yarn b webpackx.ts",
     "web": "yarn workspace @workshop/web start",
     "web-react-router": "yarn workspace @workshop/web-react-router start",
+    "web:rspack": "yarn workspace @workshop/web-react-router rspack:dev",
     "next:dev": "yarn workspace @workshop/next dev",
     "next:build": "yarn workspace @workshop/next build",
     "nextapp:dev": "yarn workspace @workshop/nextapp dev",

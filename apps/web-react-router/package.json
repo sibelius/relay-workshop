@@ -33,7 +33,10 @@
     "relay-runtime": "15.0.0",
     "styled-components": "5.3.11",
     "styled-system": "5.1.5",
-    "yup": "^1.0.2"
+    "yup": "^1.0.2",
+    "@rspack/cli": "latest",
+    "@rspack/core": "latest",
+    "@rspack/plugin-node-polyfill": "latest"
   },
   "devDependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "0.5.11",
@@ -68,6 +71,8 @@
     "razzle:start": "node_modules/.bin/razzle start",
     "relay": "node_modules/.bin/relay-compiler",
     "start": "webpack serve --hot --config webpack.dev.config.js",
-    "build": "webpack --config webpack.prod.config.js"
+    "build": "webpack --config webpack.prod.config.js",
+    "rspack:dev": "rspack serve",
+    "rspack:build": "rspack build"
   }
 }
