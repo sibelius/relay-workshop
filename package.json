@@ -42,7 +42,7 @@
     "concurrently": "^8.0.1",
     "crypto-browserify": "^3.12.0",
     "esbuild-register": "^3.3.2",
-    "eslint": "8.50.0",
+    "eslint": "8.53.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-okonet": "7.0.2",
     "eslint-config-prettier": "^9.0.0",
