@@ -4314,9 +4314,9 @@
     csstype "^3.0.2"
 
 "@types/rebass@^4.0.7":
-  version "4.0.11"
-  resolved "https://registry.yarnpkg.com/@types/rebass/-/rebass-4.0.11.tgz#cdc60385a4044380d7ed3bf0c14d1755252e64f1"
-  integrity sha512-d95sIb9hCSZ6nF8Bci4XPRFzUZWcngzWGvgvo+EA68KU4JJySXTs09YfRtzgfUSq8SVIA7CzroT0GJxY7qat9w==
+  version "4.0.14"
+  resolved "https://registry.yarnpkg.com/@types/rebass/-/rebass-4.0.14.tgz#8f3e75861a9605c8457c36cb45fec088e92434fc"
+  integrity sha512-WBqyrPLdaOsfp6/mLE51LTMxbr5SfAQmLFQwwl6CNUeiaMLdRg0hOk+R9DokkzamHEN9gB87KZBd6YXlOIlqxQ==
   dependencies:
     "@types/react" "*"
     "@types/styled-components" "*"
