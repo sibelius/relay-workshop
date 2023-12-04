@@ -3391,9 +3391,9 @@
     ws "8.8.1"
 
 "@rspack/plugin-node-polyfill@latest":
-  version "0.3.13"
-  resolved "https://registry.yarnpkg.com/@rspack/plugin-node-polyfill/-/plugin-node-polyfill-0.3.13.tgz#a1aa1c8d81da0bd74bf62f018c3baed2b856759c"
-  integrity sha512-1OQ2MuSa6ZmTktCzlZKBYdqevxI0G7ADknP01c+8uTIXyIwLc2WEDvQOGCSEfuS9kDrwIL6ePiqhdtDorwN2aw==
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@rspack/plugin-node-polyfill/-/plugin-node-polyfill-0.4.1.tgz#54e75b64a6dcfd3beff1eed92ce21fe202a361bc"
+  integrity sha512-YxKgK/RB4cB1Bz8nEltmjDsD009o7pkc7BjgvuQwLg93v7+r15G2Tj9HT5CD0g2igQvt149ysnoS3011dL41HA==
   dependencies:
     assert "^2.0.0"
     browserify-fs "1.0.0"
