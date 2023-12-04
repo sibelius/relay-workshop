@@ -75,7 +75,7 @@
     "prettier": "3.0.3",
     "stream-browserify": "^3.0.0",
     "stream-http": "^3.2.0",
-    "typescript": "5.2.2",
+    "typescript": "5.3.2",
     "util": "^0.12.5"
   },
   "lint-staged": {
