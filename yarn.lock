@@ -4272,10 +4272,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-relay@*", "@types/react-relay@14.1.6":
-  version "14.1.6"
-  resolved "https://registry.yarnpkg.com/@types/react-relay/-/react-relay-14.1.6.tgz#ca860b46662ad83e1f31309170c9323c3d373ccb"
-  integrity sha512-nTueAhz2lhVVCJeQPuPSkrR3x9WMhfahMbdYlknvipT6LuptBjoJ/w86+YikI6ldHOjcZMi+KnTIiAs8bStYdw==
+"@types/react-relay@*", "@types/react-relay@16.0.5":
+  version "16.0.5"
+  resolved "https://registry.yarnpkg.com/@types/react-relay/-/react-relay-16.0.5.tgz#3a67c0b05033325aa2361aa499d5e779704275ac"
+  integrity sha512-iQjijrgYN3SeOxzr2O4bh4ez9xajj1KLwgakui5VKiw/f9r5IISMB7bMq/KdlNO5W3p8qyB09h24iIcO3jMz/g==
   dependencies:
     "@types/react" "*"
     "@types/relay-runtime" "*"
@@ -17987,16 +17987,16 @@ react-refresh@^0.9.0:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.9.0.tgz#71863337adc3e5c2f8a6bfddd12ae3bfe32aafbf"
   integrity sha512-Gvzk7OZpiqKSkxsQvO/mbTN1poglhmAV7gR/DdIrRrSMXraRQQlfikRJOr3Nb9GTMPC5kof948Zy6jJZIFtDvQ==
 
-react-relay@15.0.0:
-  version "15.0.0"
-  resolved "https://registry.yarnpkg.com/react-relay/-/react-relay-15.0.0.tgz#0014bea71611ae5cdbd3ef445aa13398fe3372d1"
-  integrity sha512-KWdeMMKMJanOL9LsGZYkyAekayYIi+Y4mbDM8VYbHVPgTWJWAQP6yJKS+V4D17qIMo1L84QJQjGaQWEG139p9Q==
+react-relay@16.0.0:
+  version "16.0.0"
+  resolved "https://registry.yarnpkg.com/react-relay/-/react-relay-16.0.0.tgz#50201d309559401c19184f9a6e2cf32127175d21"
+  integrity sha512-3Dje0NLJFwt6b3xqgbiCGlTnpxoZe1OTPsXIPtFdftgDWQzSfrwqkBYUKab6bV2HhCKWCzXWafb8wURLDAlNJQ==
   dependencies:
     "@babel/runtime" "^7.0.0"
     fbjs "^3.0.2"
     invariant "^2.2.4"
     nullthrows "^1.1.1"
-    relay-runtime "15.0.0"
+    relay-runtime "16.0.0"
 
 react-router-config@^5.0.1:
   version "5.1.1"
