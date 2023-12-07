@@ -48,7 +48,7 @@
     "dotenv-webpack": "^8.0.0",
     "error-overlay-webpack-plugin": "^1.0.0",
     "happypack": "^5.0.1",
-    "html-webpack-plugin": "5.5.3",
+    "html-webpack-plugin": "5.5.4",
     "razzle": "^4.0.2",
     "razzle-plugin-typescript": "4.2.18",
     "react-refresh": "0.14.0",
