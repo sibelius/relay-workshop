@@ -4125,10 +4125,10 @@
   dependencies:
     "@types/koa" "*"
 
-"@types/koa-cors@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@types/koa-cors/-/koa-cors-0.0.3.tgz#b0801fbecb22be6db9122fbe8ce24642984d2c87"
-  integrity sha512-hn/IlwjvstuAzeTIp79lWA2nbdoc/1qRonvv46r9j8uiB5a3BF4xFljzqOLbPTWLCBFWnC15vE89IJVbEQgi5g==
+"@types/koa-cors@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@types/koa-cors/-/koa-cors-0.0.6.tgz#e633cadb7493dd57bd480b3d4feb59c19f45e209"
+  integrity sha512-JGT9/jtFahFfmZ9YmzM/TTpkc+Bw7ZLQUCvn2sFyZXi7DI4nd4noAmyha6i2nThHvVVBfh+V9OhVwPTpVAls6A==
   dependencies:
     "@types/koa" "*"
 

@@ -16,7 +16,7 @@
     "@types/koa": "^2.11.6",
     "@types/koa-bodyparser": "^5.0.1",
     "@types/koa-convert": "^1.2.0",
-    "@types/koa-cors": "^0.0.3",
+    "@types/koa-cors": "^0.0.6",
     "@types/koa-logger": "^3.1.0",
     "@types/koa-multer": "^1.0.0",
     "@types/koa-router": "^7.4.1",
