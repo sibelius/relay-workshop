@@ -1,7 +1,7 @@
 import { createMemoryHistory } from 'history';
 
 import React, { Suspense } from 'react';
-import '@testing-library/jest-dom/extend-expect';
+import '@testing-library/jest-dom';
 
 import { RoutingContext, createRouter, JSResource } from '@workshop/route';
 

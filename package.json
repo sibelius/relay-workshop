@@ -76,7 +76,8 @@
     "stream-browserify": "^3.0.0",
     "stream-http": "^3.2.0",
     "typescript": "5.2.2",
-    "util": "^0.12.5"
+    "util": "^0.12.5",
+    "babel-plugin-transform-barrels": "^1.0.10"
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
