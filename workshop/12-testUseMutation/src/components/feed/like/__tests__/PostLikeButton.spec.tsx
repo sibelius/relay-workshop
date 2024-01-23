@@ -1,6 +1,6 @@
 // eslint-disable-next-line
 import { render, fireEvent, wait } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
+import '@testing-library/jest-dom';
 import React from 'react';
 import { createMockEnvironment, MockPayloadGenerator } from 'relay-test-utils';
 
