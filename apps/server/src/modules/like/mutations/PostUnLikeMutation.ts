@@ -52,7 +52,9 @@ const mutation = mutationWithClientMutationId({
       };
     }
 
-    await hasLiked.remove();
+    await hasLiked.deleteOne({
+      _id: hasLiked._id,
+    });
 
     return {
       id: post._id,
