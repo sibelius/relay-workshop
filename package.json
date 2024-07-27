@@ -4,6 +4,9 @@
   "author": "Sibelius Seraphini <sibeliusseraphini@gmail.com>",
   "devDependencies": {
     "@babel/preset-modules": "0.1.6",
+    "@eslint/compat": "^1.1.1",
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.8.0",
     "@types/bcryptjs": "^2.4.6",
     "@types/dotenv-safe": "8.1.6",
     "@types/dotenv-webpack": "7.0.7",
@@ -62,6 +65,7 @@
     "eslint-plugin-relay": "1.8.3",
     "eslint-plugin-typescript": "0.14.0",
     "git-json-merge": "^1.0.0",
+    "globals": "^15.8.0",
     "https-browserify": "^1.0.0",
     "hygen": "6.2.11",
     "jest": "29.7.0",

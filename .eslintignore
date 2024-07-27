@@ -1,9 +1,0 @@
-.circleci
-.github
-build
-data
-digital_assets
-flow-typed
-hard-source-cache
-public
-__generated__
