@@ -30,6 +30,17 @@ export default [...fixupConfigRules(compat.extends(
     "plugin:@typescript-eslint/recommended",
     "prettier",
 )), {
+    ignores: [
+        '.circleci',
+        '.github',
+        'build',
+        'data',
+        'digital_assets',
+        'flow-typed',
+        'hard-source-cache',
+        'public',
+        '__generated__'
+    ],
     plugins: {
         react: fixupPluginRules(react),
         flowtype,
