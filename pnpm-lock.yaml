@@ -159,7 +159,7 @@ importers:
         version: 9.1.0(eslint@9.8.0)
       eslint-config-shellscape:
         specifier: 6.0.2
-        version: 6.0.2(eslint-config-prettier@9.1.0(eslint@9.8.0))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint-import-resolver-webpack@0.13.8)(eslint-plugin-import@2.29.1)(eslint@9.8.0))(eslint-import-resolver-webpack@0.13.8(eslint-plugin-import@2.29.1)(webpack@5.91.0(esbuild@0.23.0)))(typescript@5.5.4)
+        version: 6.0.2(eslint-config-prettier@9.1.0(eslint@9.8.0))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint-import-resolver-webpack@0.13.8)(eslint-plugin-import@2.29.1)(eslint@9.8.0))(eslint-import-resolver-webpack@0.13.8(eslint-plugin-import@2.29.1)(webpack@5.93.0(esbuild@0.23.0)))(typescript@5.5.4)
       eslint-import-resolver-lerna:
         specifier: ^2.0.0
         version: 2.0.0
@@ -168,7 +168,7 @@ importers:
         version: 3.6.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint-import-resolver-webpack@0.13.8)(eslint-plugin-import@2.29.1)(eslint@9.8.0)
       eslint-import-resolver-webpack:
         specifier: 0.13.8
-        version: 0.13.8(eslint-plugin-import@2.29.1)(webpack@5.91.0(esbuild@0.23.0))
+        version: 0.13.8(eslint-plugin-import@2.29.1)(webpack@5.93.0(esbuild@0.23.0))
       eslint-plugin-cypress:
         specifier: 3.4.0
         version: 3.4.0(eslint@9.8.0)
@@ -424,8 +424,8 @@ importers:
   solutions/01-fetchGraphql:
     devDependencies:
       webpack:
-        specifier: 5.93.0
-        version: 5.93.0(esbuild@0.23.0)
+        specifier: 5.91.0
+        version: 5.91.0(esbuild@0.23.0)
 
   solutions/02-useLazyLoadQuery:
     devDependencies:
@@ -433,8 +433,8 @@ importers:
         specifier: 17.0.0
         version: 17.0.0
       webpack:
-        specifier: 5.93.0
-        version: 5.93.0(esbuild@0.23.0)
+        specifier: 5.91.0
+        version: 5.91.0(esbuild@0.23.0)
 
   solutions/03-useFragment:
     devDependencies:
@@ -442,8 +442,8 @@ importers:
         specifier: 17.0.0
         version: 17.0.0
       webpack:
-        specifier: 5.93.0
-        version: 5.93.0(esbuild@0.23.0)
+        specifier: 5.91.0
+        version: 5.91.0(esbuild@0.23.0)
 
   solutions/04-usePaginationFragment:
     devDependencies:
@@ -451,8 +451,8 @@ importers:
         specifier: 17.0.0
         version: 17.0.0
       webpack:
-        specifier: 5.93.0
-        version: 5.93.0(esbuild@0.23.0)
+        specifier: 5.91.0
+        version: 5.91.0(esbuild@0.23.0)
 
   solutions/05-useMutation:
     devDependencies:
@@ -460,8 +460,8 @@ importers:
         specifier: 17.0.0
         version: 17.0.0
       webpack:
-        specifier: 5.93.0
-        version: 5.93.0(esbuild@0.23.0)
+        specifier: 5.91.0
+        version: 5.91.0(esbuild@0.23.0)
 
   solutions/06-mutationUpdater:
     devDependencies:
@@ -469,8 +469,8 @@ importers:
         specifier: 17.0.0
         version: 17.0.0
       webpack:
-        specifier: 5.93.0
-        version: 5.93.0(esbuild@0.23.0)
+        specifier: 5.91.0
+        version: 5.91.0(esbuild@0.23.0)
 
   solutions/07-useRefetchableFragment:
     devDependencies:
@@ -478,8 +478,8 @@ importers:
         specifier: 17.0.0
         version: 17.0.0
       webpack:
-        specifier: 5.93.0
-        version: 5.93.0(esbuild@0.23.0)
+        specifier: 5.91.0
+        version: 5.91.0(esbuild@0.23.0)
 
   solutions/08-useSubscription:
     devDependencies:
@@ -487,8 +487,8 @@ importers:
         specifier: 17.0.0
         version: 17.0.0
       webpack:
-        specifier: 5.93.0
-        version: 5.93.0(esbuild@0.23.0)
+        specifier: 5.91.0
+        version: 5.91.0(esbuild@0.23.0)
 
   solutions/09-usePreloadedQuery:
     devDependencies:
@@ -496,8 +496,8 @@ importers:
         specifier: 17.0.0
         version: 17.0.0
       webpack:
-        specifier: 5.93.0
-        version: 5.93.0(esbuild@0.23.0)
+        specifier: 5.91.0
+        version: 5.91.0(esbuild@0.23.0)
 
   solutions/10-testUsePreloadQuery:
     devDependencies:
@@ -505,8 +505,8 @@ importers:
         specifier: 17.0.0
         version: 17.0.0
       webpack:
-        specifier: 5.93.0
-        version: 5.93.0(esbuild@0.23.0)
+        specifier: 5.91.0
+        version: 5.91.0(esbuild@0.23.0)
 
   solutions/11-testUseFragment:
     devDependencies:
@@ -514,8 +514,8 @@ importers:
         specifier: 17.0.0
         version: 17.0.0
       webpack:
-        specifier: 5.93.0
-        version: 5.93.0(esbuild@0.23.0)
+        specifier: 5.91.0
+        version: 5.91.0(esbuild@0.23.0)
 
   solutions/12-testUseMutation:
     devDependencies:
@@ -523,8 +523,8 @@ importers:
         specifier: 17.0.0
         version: 17.0.0
       webpack:
-        specifier: 5.93.0
-        version: 5.93.0(esbuild@0.23.0)
+        specifier: 5.91.0
+        version: 5.91.0(esbuild@0.23.0)
 
   solutions/13-declarativeDirectives:
     devDependencies:
@@ -532,14 +532,14 @@ importers:
         specifier: 17.0.0
         version: 17.0.0
       webpack:
-        specifier: 5.93.0
-        version: 5.93.0(esbuild@0.23.0)
+        specifier: 5.91.0
+        version: 5.91.0(esbuild@0.23.0)
 
   workshop/01-fetchGraphql:
     devDependencies:
       webpack:
-        specifier: 5.93.0
-        version: 5.93.0(esbuild@0.23.0)
+        specifier: 5.91.0
+        version: 5.91.0(esbuild@0.23.0)
 
   workshop/02-useLazyLoadQuery:
     devDependencies:
@@ -547,8 +547,8 @@ importers:
         specifier: 17.0.0
         version: 17.0.0
       webpack:
-        specifier: 5.93.0
-        version: 5.93.0(esbuild@0.23.0)
+        specifier: 5.91.0
+        version: 5.91.0(esbuild@0.23.0)
 
   workshop/03-useFragment:
     devDependencies:
@@ -556,8 +556,8 @@ importers:
         specifier: 17.0.0
         version: 17.0.0
       webpack:
-        specifier: 5.93.0
-        version: 5.93.0(esbuild@0.23.0)
+        specifier: 5.91.0
+        version: 5.91.0(esbuild@0.23.0)
 
   workshop/04-usePaginationFragment:
     devDependencies:
@@ -565,8 +565,8 @@ importers:
         specifier: 17.0.0
         version: 17.0.0
       webpack:
-        specifier: 5.93.0
-        version: 5.93.0(esbuild@0.23.0)
+        specifier: 5.91.0
+        version: 5.91.0(esbuild@0.23.0)
 
   workshop/05-useMutation:
     devDependencies:
@@ -574,8 +574,8 @@ importers:
         specifier: 17.0.0
         version: 17.0.0
       webpack:
-        specifier: 5.93.0
-        version: 5.93.0(esbuild@0.23.0)
+        specifier: 5.91.0
+        version: 5.91.0(esbuild@0.23.0)
 
   workshop/06-mutationUpdater:
     devDependencies:
@@ -583,8 +583,8 @@ importers:
         specifier: 17.0.0
         version: 17.0.0
       webpack:
-        specifier: 5.93.0
-        version: 5.93.0(esbuild@0.23.0)
+        specifier: 5.91.0
+        version: 5.91.0(esbuild@0.23.0)
 
   workshop/07-useRefetchableFragment:
     devDependencies:
@@ -592,8 +592,8 @@ importers:
         specifier: 17.0.0
         version: 17.0.0
       webpack:
-        specifier: 5.93.0
-        version: 5.93.0(esbuild@0.23.0)
+        specifier: 5.91.0
+        version: 5.91.0(esbuild@0.23.0)
 
   workshop/08-useSubscription:
     devDependencies:
@@ -601,8 +601,8 @@ importers:
         specifier: 17.0.0
         version: 17.0.0
       webpack:
-        specifier: 5.93.0
-        version: 5.93.0(esbuild@0.23.0)
+        specifier: 5.91.0
+        version: 5.91.0(esbuild@0.23.0)
 
   workshop/09-usePreloadedQuery:
     devDependencies:
@@ -610,8 +610,8 @@ importers:
         specifier: 17.0.0
         version: 17.0.0
       webpack:
-        specifier: 5.93.0
-        version: 5.93.0(esbuild@0.23.0)
+        specifier: 5.91.0
+        version: 5.91.0(esbuild@0.23.0)
 
   workshop/10-testUsePreloadQuery:
     devDependencies:
@@ -619,8 +619,8 @@ importers:
         specifier: 17.0.0
         version: 17.0.0
       webpack:
-        specifier: 5.93.0
-        version: 5.93.0(esbuild@0.23.0)
+        specifier: 5.91.0
+        version: 5.91.0(esbuild@0.23.0)
 
   workshop/11-testUseFragment:
     devDependencies:
@@ -628,8 +628,8 @@ importers:
         specifier: 17.0.0
         version: 17.0.0
       webpack:
-        specifier: 5.93.0
-        version: 5.93.0(esbuild@0.23.0)
+        specifier: 5.91.0
+        version: 5.91.0(esbuild@0.23.0)
 
   workshop/12-testUseMutation:
     devDependencies:
@@ -637,8 +637,8 @@ importers:
         specifier: 17.0.0
         version: 17.0.0
       webpack:
-        specifier: 5.93.0
-        version: 5.93.0(esbuild@0.23.0)
+        specifier: 5.91.0
+        version: 5.91.0(esbuild@0.23.0)
 
   workshop/13-declarativeDirectives:
     devDependencies:
@@ -646,8 +646,8 @@ importers:
         specifier: 17.0.0
         version: 17.0.0
       webpack:
-        specifier: 5.93.0
-        version: 5.93.0(esbuild@0.23.0)
+        specifier: 5.91.0
+        version: 5.91.0(esbuild@0.23.0)
 
 packages:
 
@@ -9973,7 +9973,7 @@ snapshots:
       '@octokit/request-error': 3.0.3
       '@octokit/types': 9.3.2
       is-plain-object: 5.0.0
-      node-fetch: 2.6.7(encoding@0.1.13)
+      node-fetch: 2.7.0(encoding@0.1.13)
       universal-user-agent: 6.0.1
     transitivePeerDependencies:
       - encoding
@@ -12413,12 +12413,12 @@ snapshots:
     dependencies:
       eslint: 9.8.0
 
-  eslint-config-shellscape@6.0.2(eslint-config-prettier@9.1.0(eslint@9.8.0))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint-import-resolver-webpack@0.13.8)(eslint-plugin-import@2.29.1)(eslint@9.8.0))(eslint-import-resolver-webpack@0.13.8(eslint-plugin-import@2.29.1)(webpack@5.91.0(esbuild@0.23.0)))(typescript@5.5.4):
+  eslint-config-shellscape@6.0.2(eslint-config-prettier@9.1.0(eslint@9.8.0))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint-import-resolver-webpack@0.13.8)(eslint-plugin-import@2.29.1)(eslint@9.8.0))(eslint-import-resolver-webpack@0.13.8(eslint-plugin-import@2.29.1)(webpack@5.93.0(esbuild@0.23.0)))(typescript@5.5.4):
     dependencies:
       '@typescript-eslint/eslint-plugin': 7.8.0(@typescript-eslint/parser@7.8.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4)
       '@typescript-eslint/parser': 7.8.0(eslint@8.57.0)(typescript@5.5.4)
       eslint: 8.57.0
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.8.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint-import-resolver-webpack@0.13.8)(eslint-plugin-import@2.29.1)(eslint@9.8.0))(eslint-import-resolver-webpack@0.13.8(eslint-plugin-import@2.29.1)(webpack@5.91.0(esbuild@0.23.0)))(eslint@8.57.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.8.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint-import-resolver-webpack@0.13.8)(eslint-plugin-import@2.29.1)(eslint@9.8.0))(eslint-import-resolver-webpack@0.13.8(eslint-plugin-import@2.29.1)(webpack@5.93.0(esbuild@0.23.0)))(eslint@8.57.0)
       eslint-plugin-prettier: 4.2.1(eslint-config-prettier@9.1.0(eslint@9.8.0))(eslint@8.57.0)(prettier@2.8.8)
       eslint-plugin-typescript-sort-keys: 3.2.0(@typescript-eslint/parser@7.8.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4)
       prettier: 2.8.8
@@ -12445,7 +12445,7 @@ snapshots:
       debug: 4.3.6
       enhanced-resolve: 5.17.1
       eslint: 9.8.0
-      eslint-module-utils: 2.8.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint-import-resolver-webpack@0.13.8)(eslint-plugin-import@2.29.1)(eslint@9.8.0))(eslint-import-resolver-webpack@0.13.8(eslint-plugin-import@2.29.1)(webpack@5.91.0(esbuild@0.23.0)))(eslint@9.8.0)
+      eslint-module-utils: 2.8.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint-import-resolver-webpack@0.13.8)(eslint-plugin-import@2.29.1)(eslint@9.8.0))(eslint-import-resolver-webpack@0.13.8(eslint-plugin-import@2.29.1)(webpack@5.93.0(esbuild@0.23.0)))(eslint@9.8.0)
       eslint-plugin-import: 2.29.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.1)(eslint-import-resolver-webpack@0.13.8)(eslint@9.8.0)
       fast-glob: 3.3.2
       get-tsconfig: 4.7.6
@@ -12457,7 +12457,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-import-resolver-webpack@0.13.8(eslint-plugin-import@2.29.1)(webpack@5.91.0(esbuild@0.23.0)):
+  eslint-import-resolver-webpack@0.13.8(eslint-plugin-import@2.29.1)(webpack@5.93.0(esbuild@0.23.0)):
     dependencies:
       array.prototype.find: 2.2.3
       debug: 3.2.7
@@ -12471,11 +12471,11 @@ snapshots:
       lodash: 4.17.21
       resolve: 2.0.0-next.5
       semver: 5.7.2
-      webpack: 5.91.0(esbuild@0.23.0)
+      webpack: 5.93.0(esbuild@0.23.0)
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.8.1(@typescript-eslint/parser@7.8.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint-import-resolver-webpack@0.13.8)(eslint-plugin-import@2.29.1)(eslint@9.8.0))(eslint-import-resolver-webpack@0.13.8(eslint-plugin-import@2.29.1)(webpack@5.91.0(esbuild@0.23.0)))(eslint@8.57.0):
+  eslint-module-utils@2.8.1(@typescript-eslint/parser@7.8.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint-import-resolver-webpack@0.13.8)(eslint-plugin-import@2.29.1)(eslint@9.8.0))(eslint-import-resolver-webpack@0.13.8(eslint-plugin-import@2.29.1)(webpack@5.93.0(esbuild@0.23.0)))(eslint@8.57.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
@@ -12483,11 +12483,11 @@ snapshots:
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint-import-resolver-webpack@0.13.8)(eslint-plugin-import@2.29.1)(eslint@9.8.0)
-      eslint-import-resolver-webpack: 0.13.8(eslint-plugin-import@2.29.1)(webpack@5.91.0(esbuild@0.23.0))
+      eslint-import-resolver-webpack: 0.13.8(eslint-plugin-import@2.29.1)(webpack@5.93.0(esbuild@0.23.0))
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.8.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint-import-resolver-webpack@0.13.8)(eslint-plugin-import@2.29.1)(eslint@9.8.0))(eslint-import-resolver-webpack@0.13.8(eslint-plugin-import@2.29.1)(webpack@5.91.0(esbuild@0.23.0)))(eslint@9.8.0):
+  eslint-module-utils@2.8.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint-import-resolver-webpack@0.13.8)(eslint-plugin-import@2.29.1)(eslint@9.8.0))(eslint-import-resolver-webpack@0.13.8(eslint-plugin-import@2.29.1)(webpack@5.93.0(esbuild@0.23.0)))(eslint@9.8.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
@@ -12495,7 +12495,7 @@ snapshots:
       eslint: 9.8.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint-import-resolver-webpack@0.13.8)(eslint-plugin-import@2.29.1)(eslint@9.8.0)
-      eslint-import-resolver-webpack: 0.13.8(eslint-plugin-import@2.29.1)(webpack@5.91.0(esbuild@0.23.0))
+      eslint-import-resolver-webpack: 0.13.8(eslint-plugin-import@2.29.1)(webpack@5.93.0(esbuild@0.23.0))
     transitivePeerDependencies:
       - supports-color
 
@@ -12518,7 +12518,7 @@ snapshots:
       lodash: 4.17.21
       string-natural-compare: 3.0.1
 
-  eslint-plugin-import@2.29.1(@typescript-eslint/parser@7.8.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint-import-resolver-webpack@0.13.8)(eslint-plugin-import@2.29.1)(eslint@9.8.0))(eslint-import-resolver-webpack@0.13.8(eslint-plugin-import@2.29.1)(webpack@5.91.0(esbuild@0.23.0)))(eslint@8.57.0):
+  eslint-plugin-import@2.29.1(@typescript-eslint/parser@7.8.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint-import-resolver-webpack@0.13.8)(eslint-plugin-import@2.29.1)(eslint@9.8.0))(eslint-import-resolver-webpack@0.13.8(eslint-plugin-import@2.29.1)(webpack@5.93.0(esbuild@0.23.0)))(eslint@8.57.0):
     dependencies:
       array-includes: 3.1.8
       array.prototype.findlastindex: 1.2.5
@@ -12528,7 +12528,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.1(@typescript-eslint/parser@7.8.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint-import-resolver-webpack@0.13.8)(eslint-plugin-import@2.29.1)(eslint@9.8.0))(eslint-import-resolver-webpack@0.13.8(eslint-plugin-import@2.29.1)(webpack@5.91.0(esbuild@0.23.0)))(eslint@8.57.0)
+      eslint-module-utils: 2.8.1(@typescript-eslint/parser@7.8.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint-import-resolver-webpack@0.13.8)(eslint-plugin-import@2.29.1)(eslint@9.8.0))(eslint-import-resolver-webpack@0.13.8(eslint-plugin-import@2.29.1)(webpack@5.93.0(esbuild@0.23.0)))(eslint@8.57.0)
       hasown: 2.0.2
       is-core-module: 2.15.0
       is-glob: 4.0.3
@@ -12555,7 +12555,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.8.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint-import-resolver-webpack@0.13.8)(eslint-plugin-import@2.29.1)(eslint@9.8.0))(eslint-import-resolver-webpack@0.13.8(eslint-plugin-import@2.29.1)(webpack@5.91.0(esbuild@0.23.0)))(eslint@9.8.0)
+      eslint-module-utils: 2.8.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint-import-resolver-webpack@0.13.8)(eslint-plugin-import@2.29.1)(eslint@9.8.0))(eslint-import-resolver-webpack@0.13.8(eslint-plugin-import@2.29.1)(webpack@5.93.0(esbuild@0.23.0)))(eslint@9.8.0)
       hasown: 2.0.2
       is-core-module: 2.15.0
       is-glob: 4.0.3
@@ -12840,9 +12840,9 @@ snapshots:
   execa@5.0.0:
     dependencies:
       cross-spawn: 7.0.3
-      get-stream: 6.0.0
+      get-stream: 6.0.1
       human-signals: 2.1.0
-      is-stream: 2.0.0
+      is-stream: 2.0.1
       merge-stream: 2.0.0
       npm-run-path: 4.0.1
       onetime: 5.1.2
@@ -14064,7 +14064,7 @@ snapshots:
 
   jest-diff@29.7.0:
     dependencies:
-      chalk: 4.1.0
+      chalk: 4.1.2
       diff-sequences: 29.6.3
       jest-get-type: 29.6.3
       pretty-format: 29.7.0
@@ -15075,7 +15075,7 @@ snapshots:
       array-differ: 3.0.0
       array-union: 2.1.0
       arrify: 2.0.1
-      minimatch: 3.0.5
+      minimatch: 3.1.2
 
   mute-stream@0.0.8: {}
 
@@ -15233,7 +15233,7 @@ snapshots:
       '@yarnpkg/parsers': 3.0.0-rc.46
       '@zkochan/js-yaml': 0.0.7
       axios: 1.7.3
-      chalk: 4.1.0
+      chalk: 4.1.2
       cli-cursor: 3.1.0
       cli-spinners: 2.6.1
       cliui: 8.0.1
@@ -15387,9 +15387,9 @@ snapshots:
   ora@5.3.0:
     dependencies:
       bl: 4.1.0
-      chalk: 4.1.0
+      chalk: 4.1.2
       cli-cursor: 3.1.0
-      cli-spinners: 2.6.1
+      cli-spinners: 2.9.2
       is-interactive: 1.0.0
       log-symbols: 4.1.0
       strip-ansi: 6.0.1
