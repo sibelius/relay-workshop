@@ -4,7 +4,7 @@ Learn how to use useMutation to modify GraphQL data
 
 ## Exercise
 
-- run `yarn get-token` to get an user token, put the token on Authorization header on Network Layer
+- run `pnpm get-token` to get an user token, put the token on Authorization header on Network Layer
 - Create a PostLike mutation to like a Post
 
 ## Extras

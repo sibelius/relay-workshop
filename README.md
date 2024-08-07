@@ -52,7 +52,7 @@ slides - some slides to help in workshop
 
 ## Requirements
 
-- yarn - we need to use yarn, as npm does not support workspaces yet
+- pnpm - we need to use yarn, as npm does not support workspaces yet
 - node lts - we recommend using node LTS version, and nvm to manage your node version
 - mongo - you can
 
@@ -107,25 +107,25 @@ mongodb+srv://sibelius:eYZlo2POmcyuUuRR@reacteurope-los0c.mongodb.net/test
 Server runs at http://localhost:7500/graphql
 
 ```sh
-yarn server
+pnpm server
 ```
 
 ### How to update GraphQL schema SDL (schema.graphql)
 
 ```sh
-yarn update-schema
+pnpm update-schema
 ```
 
 ### How to create a seed of posts
 
 ```sh
-yarn seed
+pnpm seed
 ```
 
 ## How to update Relay artifacts
 
 ```
-yarn relay
+pnpm relay
 ```
 
 ## How to get an Authorization Token
@@ -133,7 +133,7 @@ yarn relay
 Useful for exercises that user should be logged in
 
 ```
-yarn get-token
+pnpm get-token
 ```
 
 ## Setup .env
@@ -141,31 +141,31 @@ yarn get-token
 Web and workshops consumes a local .env, you just need to copy the .env.example to .env inside each package
 
 ```sh
-yarn copy-envs
+pnpm copy-envs
 ```
 
 ## Web
 
 ```
-yarn web
+pnpm web
 ```
 
 ## Run both `web` and `server` packages
 
 ```bash
-yarn start
+pnpm start
 ```
 
 ## How to run Workshop exercises
 
 - go inside the workshop/<exercise>/
-- run yarn start
+- run pnpm start
 
 Example for 01-fetchGraphQL
 
 ```bash
 cd ./workshop/01-fetchGraphQL
-yarn start
+pnpm start
 ```
 
 ## Feedback Form

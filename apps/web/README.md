@@ -5,16 +5,16 @@ You can login/logout, create a new post, comment in a post and like a post or co
 
 ## How to update GraphQL artifacts (__generated__)
 ```
-yarn relay
+pnpm relay
 ```
 
 ## How to run
 
 ```
-yarn start:serve
+pnpm start:serve
 ```
 
 ## How to test
 ```
-yarn jest
+pnpm jest
 ```
