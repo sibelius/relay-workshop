@@ -10,22 +10,22 @@ Types available:
 
 ## How to update GraphQL schema SDL (schema.graphql)
 ```
-yarn update-schema
+pnpm update-schema
 ```
 
 ## How to run
 
 ```
-yarn start
+pnpm start
 ```
 
 ## How to test
 ```
-yarn jest
+pnpm jest
 ```
 
 ## How to build
 
 ```
-yarn build
+pnpm build
 ```

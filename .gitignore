@@ -74,3 +74,4 @@ differencify_reports
 .vscode
 .yarn
 .yarnrc
+yarn.lock
