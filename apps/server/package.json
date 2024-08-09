@@ -23,7 +23,7 @@
     "koa-graphql": "^0.12.0",
     "koa-logger": "^3.2.1",
     "koa-router": "^12.0.0",
-    "mongodb-memory-server": "9.2.0",
+    "mongodb-memory-server": "10.0.0",
     "mongoose": "^8.3.3",
     "supertest": "7.0.0"
   },

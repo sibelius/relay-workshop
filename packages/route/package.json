@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "react-router-config": "^5.0.1",
-    "react-router-dom": "^6.23.0"
+    "react-router-dom": "^6.26.0"
   },
   "main": "src/index.tsx"
 }
