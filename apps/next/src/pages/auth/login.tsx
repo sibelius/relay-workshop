@@ -5,11 +5,16 @@ import * as yup from 'yup';
 import { Button, Card, CardActions, Content, TextField } from '@workshop/ui';
 import { Flex } from 'rebass';
 import React from 'react';
-import { parse } from "cookie";
-import { config } from '../../config';
-import Link from "next/link";
+import { parse } from 'cookie';
+
+import Link from 'next/link';
 
 import { useSnackbar } from 'notistack';
+
+import { useRouter } from 'next/router';
+
+import { config } from '../../config';
+
 
 import AuthRoot from '../../components/auth/AuthRoot';
 import { UserLoginWithEmail } from '../../components/auth/UserLoginWithEmailMutation';
@@ -17,7 +22,7 @@ import {
   UserLoginWithEmailMutation$data,
   UserLoginWithEmailMutation,
 } from '../..//__generated__/UserLoginWithEmailMutation.graphql';
-import { useRouter } from 'next/router';
+
 
 type Values = {
   email: string;
@@ -105,7 +110,7 @@ const Login: NextPage = () => {
 export default Login;
 
 export const getServerSideProps: GetServerSideProps<any> = async function (
-  ctx
+  ctx,
 ) {
   const token = parse(ctx.req.headers.cookie)[config.WORKSHOP_COOKIE];
 

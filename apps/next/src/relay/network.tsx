@@ -47,7 +47,7 @@ export async function networkFetch(params: RequestParameters, variables: Variabl
       body: JSON.stringify({
         query: params.text,
         variables,
-        operationName: params.name
+        operationName: params.name,
       }),
       // credentials: 'same-origin',
       credentials: 'include',

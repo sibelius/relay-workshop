@@ -1,5 +1,6 @@
 import loadSerializableQuery from '../src/relay/loadSerializableQuery';
 import FeedViewQueryNode, { FeedViewQuery } from '../src/__generated__/FeedViewQuery.graphql';
+
 import FeedViewClientComponent from './FeedViewClientComponent';
 
 const Page = async () => {

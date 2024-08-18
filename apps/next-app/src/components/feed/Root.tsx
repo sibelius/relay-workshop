@@ -6,9 +6,8 @@ import { Text } from 'rebass';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import IconButton from '@mui/material/IconButton';
 
-import { usePreloadedQuery } from 'react-relay';
+import { usePreloadedQuery , graphql } from 'react-relay';
 
-import { graphql } from 'react-relay';
 
 import { useLogout } from '../auth/useLogout';
 import { useAuth } from '../auth/useAuth';

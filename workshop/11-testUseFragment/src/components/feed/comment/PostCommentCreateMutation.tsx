@@ -3,9 +3,9 @@ import { SelectorStoreUpdater, RecordSourceSelectorProxy, ConnectionHandler } fr
 
 import { connectionUpdater } from '@workshop/relay';
 
-// eslint-disable-next-line import/no-unresolved
+ 
 import { PostCommentCreateInput } from './__generated__/PostCommentCreateMutation.graphql';
-// eslint-disable-next-line import/no-unresolved
+ 
 import { PostCommentComposer_me } from './__generated__/PostCommentComposer_me.graphql';
 
 export const PostCommentCreate = graphql`

@@ -1,7 +1,8 @@
 import React from 'react';
 
+import styled from 'styled-components'
 import { Flex, Text } from 'rebass';
-import { Card, Content, Button } from '@workshop/ui';
+import { Content, Card, Button } from '@workshop/ui';
 
 const App = () => {
   const posts = [];

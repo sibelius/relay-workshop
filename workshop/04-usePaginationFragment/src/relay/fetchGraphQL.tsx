@@ -4,7 +4,7 @@ import { Variables } from 'relay-runtime/lib/util/RelayRuntimeTypes';
 import config from '../config';
 
 export const fetchGraphQL = async (request: RequestParameters, variables: Variables) => {
-  const response = await fetch(config.GRAPHQL_URL, {
+  const response = await fetch(config.GRAPHQL_URL!, {
     method: 'POST',
     headers: {
       Accept: 'application/json',

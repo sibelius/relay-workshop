@@ -70,7 +70,7 @@ it.skip('should render post like button', async () => {
     postDetailQuery: {},
   };
 
-  // eslint-disable-next-line
+   
   const { debug, getByText } = render(<Root prepared={prepared} />);
 
   // uncomment to check DOM

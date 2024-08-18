@@ -1,3 +1,3 @@
 export const config = {
-  WORKSHOP_COOKIE: 'relayworkshop'
+  WORKSHOP_COOKIE: 'relayworkshop',
 }

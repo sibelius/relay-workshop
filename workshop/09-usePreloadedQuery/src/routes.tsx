@@ -1,17 +1,20 @@
-// eslint-disable-next-line
-import { loadQuery } from '@workshop/relay';
 
-import { JSResource } from '@workshop/route';
+import React from 'react';
+import { loadQuery } from 'react-relay';
+
+import { RouteObject } from 'react-router-dom'
+
+import App from './App';
+import PostDetail from './components/feed/post/PostDetail';
 
 // eslint-disable-next-line
 import { Environment } from './relay';
 
-export const routes = [
+export const routes: RouteObject[] = [
   {
-    component: JSResource('App', () => import('./App')),
+    element: <App />,
     path: '/',
-    exact: true,
-    prepare: () => {
+    loader: () => {
       /**
        * TODO
        * add preloadQuery to start fetching before component has mounted
@@ -20,10 +23,8 @@ export const routes = [
   },
   {
     path: '/post/:id',
-    exact: true,
-    component: JSResource('PostDetail', () => import('./components/feed/post/PostDetail')),
-    // eslint-disable-next-line
-    prepare: (params: { id: string }) => {
+    element: <PostDetail />,
+    loader: ({ request, params, context }) => {
       /**
        * TODO
        * add preloadQuery to start fetching before component has mounted

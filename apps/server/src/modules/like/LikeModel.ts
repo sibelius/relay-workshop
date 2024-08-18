@@ -39,6 +39,6 @@ export interface ILike extends Document {
   updatedAt: Date;
 }
 
-const LikeModel: Model<ILike> = mongoose.models["Like"] || mongoose.model('Like', Schema);
+const LikeModel: Model<ILike> = mongoose.models['Like'] || mongoose.model('Like', Schema);
 
 export default LikeModel;

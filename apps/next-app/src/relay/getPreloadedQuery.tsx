@@ -1,6 +1,7 @@
-import { networkFetch } from './environment';
 import { ConcreteRequest, Variables } from 'relay-runtime';
 import { GetServerSidePropsContext } from 'next/types';
+
+import { networkFetch } from './environment';
 
 const getRequestEsm = (request: ConcreteRequest) => {
   if (request.default) {

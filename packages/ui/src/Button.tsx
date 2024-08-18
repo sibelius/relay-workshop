@@ -1,10 +1,12 @@
 import styled from 'styled-components';
+
 import { flexbox, FlexboxProps, space, SpaceProps } from 'styled-system';
-import _Button from '@mui/material/Button';
+
+import MaterialButton from '@mui/material/Button'
 
 interface ButtonProps extends FlexboxProps, SpaceProps {}
 
-export const Button = styled(_Button)<ButtonProps>`
+export const Button = styled(MaterialButton)<ButtonProps>`
   ${flexbox}
   ${space}
 `;

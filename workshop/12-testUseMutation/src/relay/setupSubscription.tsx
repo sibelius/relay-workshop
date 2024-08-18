@@ -1,13 +1,11 @@
-import { SubscribeFunction, Observable } from 'relay-runtime';
-import { SubscriptionClient } from 'subscriptions-transport-ws';
+import { SubscribeFunction, Observable, RequestParameters, Variables } from 'relay-runtime';
+import { createClient } from 'graphql-ws'
 
 import config from '../config';
 
 import { getToken } from './getToken';
 
-export const setupSubscription: SubscribeFunction = (request, variables) => {
-  const query = request.text;
-
+export const setupSubscription = () => {
   const authorization = getToken();
 
   const connectionParams = {};
@@ -16,12 +14,20 @@ export const setupSubscription: SubscribeFunction = (request, variables) => {
     connectionParams['authorization'] = authorization;
   }
 
-  const subscriptionClient = new SubscriptionClient(config.SUBSCRIPTION_URL, {
-    reconnect: true,
+  const wsClient = createClient({
+    url: config.SUBSCRIPTION_URL,
     connectionParams,
-  });
+  })
 
-  const observable = subscriptionClient.request({ query: query!, variables });
-
-  return Observable.from(observable);
+  const subscribe: SubscribeFunction = (operation: RequestParameters, variables: Variables) => {
+    return Observable.create(sink => {
+      return wsClient.subscribe({
+        query: operation.text!,
+        variables,
+        operationName: operation.name,
+      }, sink)
+    })
+  }
+  
+  return subscribe
 };

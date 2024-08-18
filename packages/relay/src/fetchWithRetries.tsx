@@ -42,7 +42,7 @@ function fetchWithRetries(uri: string, initWithRetries?: InitWithRetries | null)
         if (shouldRetry(requestsAttempted)) {
           // eslint-disable-next-line
           console.log(false, 'fetchWithRetries: HTTP timeout, retrying.');
-          // eslint-disable-next-line
+           
           retryRequest();
         } else {
           reject(
@@ -79,7 +79,7 @@ function fetchWithRetries(uri: string, initWithRetries?: InitWithRetries | null)
         .catch(error => {
           clearTimeout(requestTimeout);
           if (shouldRetry(requestsAttempted)) {
-            // eslint-disable-next-line
+             
             retryRequest();
           } else {
             reject(error);

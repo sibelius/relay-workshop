@@ -1,8 +1,6 @@
 const path = require('path');
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const dotEnv = require('dotenv-webpack');
-const webpack = require('webpack');
+const rspack = require('@rspack/core');
 
 const cwd = process.cwd();
 const outputPath = path.join(cwd, 'build');
@@ -57,13 +55,13 @@ module.exports = {
     ],
   },
   plugins: [
-    new dotEnv({
+    new rspack.EnvironmentPlugin({
       path: './.env',
     }),
-    new HtmlWebpackPlugin({
+    new rspack.HtmlWebpackPlugin({
       template: './src/index.html',
     }),
-    new webpack.ProvidePlugin({
+    new rspack.ProvidePlugin({
       Buffer: ['buffer', 'Buffer'],
     }),
   ],

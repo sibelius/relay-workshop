@@ -3,21 +3,17 @@ import React from 'react';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import IconButton from '@mui/material/IconButton';
 
-import { useHistory } from '@workshop/route';
+import { useNavigate } from 'react-router-dom'
+
 
 type Props = {
   path?: string;
 };
 const BackButton = ({ path = '/' }: Props) => {
-  const history = useHistory();
+  const navigate = useNavigate()
 
   const handleGoBack = () => {
-    if (history.length > 2) {
-      history.goBack();
-      return;
-    }
-
-    history.push(path);
+    navigate(-1)
   };
 
   return (

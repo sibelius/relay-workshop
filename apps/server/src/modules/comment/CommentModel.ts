@@ -40,6 +40,6 @@ export interface IComment extends Document {
   updatedAt: Date;
 }
 
-const CommentModel: Model<IComment> = mongoose.models["Comment"] || mongoose.model('Comment', Schema);
+const CommentModel: Model<IComment> = mongoose.models['Comment'] || mongoose.model('Comment', Schema);
 
 export default CommentModel;

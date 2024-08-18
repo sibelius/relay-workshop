@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { useFragment } from 'react-relay';
-import { graphql } from 'react-relay';
+import { useFragment , graphql } from 'react-relay';
 
 import { Text, Flex } from 'rebass';
 import Avatar from '@mui/material/Avatar';

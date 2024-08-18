@@ -1,0 +1,10 @@
+{
+  "name": "@workshop/rspack",
+  "main": "src/index.js",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@rspack/cli": "0.7.5",
+    "@rspack/core": "0.7.5",
+    "@rspack/plugin-react-refresh": "^1.0.0"
+  }
+}

@@ -1,5 +1,5 @@
-import { graphql, PreloadedQuery, usePreloadedQuery } from "react-relay";
-import { VersionViewQuery } from "__generated__/VersionViewQuery.graphql";
+import { graphql, PreloadedQuery, usePreloadedQuery } from 'react-relay';
+import { VersionViewQuery } from '__generated__/VersionViewQuery.graphql';
 import { Flex } from 'rebass';
 
 const VersionView = (props: {
@@ -11,7 +11,7 @@ const VersionView = (props: {
         version
       }
     `,
-    props.queryRef
+    props.queryRef,
   );
 
   console.log({

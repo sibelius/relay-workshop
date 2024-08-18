@@ -54,6 +54,6 @@ UserSchema.methods = {
   },
 };
 
-const UserModel: Model<IUser> = mongoose.models["User"] ||mongoose.model('User', UserSchema);
+const UserModel: Model<IUser> = mongoose.models['User'] ||mongoose.model('User', UserSchema);
 
 export default UserModel;

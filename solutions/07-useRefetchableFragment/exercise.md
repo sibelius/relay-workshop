@@ -16,5 +16,5 @@ Learn how to use refetch any query using useRefetchableFragment
 - useTransition
 useTransition hook let you "suspend" based on an action, usually a data fetch
 ```
-const [startTransition, isPending] = useTransition();
+const [isPending, startTransition] = useTransition();
 ```

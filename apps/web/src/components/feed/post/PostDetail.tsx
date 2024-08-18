@@ -1,8 +1,7 @@
 import React from 'react';
 
-import { usePreloadedQuery } from 'react-relay';
+import { usePreloadedQuery , graphql } from 'react-relay';
 
-import { graphql } from 'react-relay';
 
 import { Text } from 'rebass';
 

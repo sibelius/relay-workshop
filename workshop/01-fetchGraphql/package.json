@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "scripts": {
     "copy-env": "cp .env.example .env",
-    "start": "webpack serve --hot"
+    "start": "rspack serve",
+    "start:help": "rspack --help"
   },
   "devDependencies": {
-    "webpack": "5.91.0"
+    "@workshop/rspack": "workspace:*",
+    "@workshop/ui": "workspace:*",
+    "@workshop/babelweb": "workspace:*"
   }
 }

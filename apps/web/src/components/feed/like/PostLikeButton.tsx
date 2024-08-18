@@ -2,16 +2,14 @@ import React from 'react';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
-import { useFragment } from 'react-relay';
+import { useFragment , graphql , useMutation } from 'react-relay';
 import IconButton from '@mui/material/IconButton';
 
-import { graphql } from 'react-relay';
 
 import { Text } from 'rebass';
 
 import { theme } from '@workshop/ui';
 
-import { useMutation } from 'react-relay';
 
 import { likeOptimisticResponse, PostLike } from './PostLikeMutation';
 import { PostUnLike, unlikeOptimisticResponse } from './PostUnLikeMutation';
