@@ -1,6 +1,8 @@
-import { useServer } from 'graphql-ws/lib/use/ws';
 import { createServer } from 'http';
+
+import { useServer } from 'graphql-ws/lib/use/ws';
 import ws from 'ws';
+
 import app from './app';
 import { config } from './config';
 import { connectDatabase } from './database';

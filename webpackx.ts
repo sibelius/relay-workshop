@@ -58,7 +58,7 @@ const runProgram = async () => {
     // eslint-disable-next-line
     const stats = await compilerRunPromise(compiler);
 
-    // eslint-disable-next-line
+     
     // console.log(stats.toString());
 
     await runProgram();

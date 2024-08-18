@@ -7,7 +7,7 @@ const barrelConfig = {
   plugins: [
     ...config.plugins,
     'transform-barrels',
-  ]
+  ],
 }
 
 module.exports = babelJest.createTransformer(barrelConfig);

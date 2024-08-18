@@ -1,9 +1,10 @@
 import { Request, Context } from 'koa';
 
+import { setCookie } from '@workshop/next/src/pages/api/graphql';
+
 import { IUser } from './modules/user/UserModel';
 import { getDataloaders } from './modules/loader/loaderRegister';
 import { GraphQLContext } from './graphql/types';
-import { setCookie } from '@workshop/next/src/pages/api/graphql';
 
 type ContextVars = {
   user?: IUser | null;

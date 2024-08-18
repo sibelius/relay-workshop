@@ -29,6 +29,6 @@ export interface IPost extends Document {
   updatedAt: Date;
 }
 
-const PostModel: Model<IPost> = mongoose.models["Post"] ||mongoose.model('Post', PostSchema);
+const PostModel: Model<IPost> = mongoose.models['Post'] ||mongoose.model('Post', PostSchema);
 
 export default PostModel;

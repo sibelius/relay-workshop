@@ -32,11 +32,8 @@
     "@types/koa-graphql": "^0.8.4",
     "@workshop/babel": "*",
     "babel-loader": "^9.1.0",
-    "reload-server-webpack-plugin": "^1.0.1",
-    "webpack": "5.91.0",
-    "webpack-cli": "5.1.4",
     "webpack-node-externals": "3.0.0",
-    "webpack-plugin-serve": "1.6.0"
+    "@workshop/rspack": "workspace:*"
   },
   "main": "dist/index.js",
   "module": "src/index.ts",
@@ -44,7 +41,7 @@
     "build": "babel src --extensions \\\".es6,.js,.es,.jsx,.mjs,.ts,.tsx\\\" --ignore *.spec.js --out-dir dist --copy-files --source-maps --verbose",
     "jest": "jest",
     "serve": "node ./dist/index.js",
-    "start": "node_modules/.bin/webpack --watch --progress --config webpack.config.server.js",
+    "start": "rspack --watch --config rspack.config.server.js",
     "update-schema": "babel-node --extensions \\\".es6,.js,.es,.jsx,.mjs,.ts\\\" scripts/updateSchema.ts",
     "seed": "npx tsx scripts/seed.ts"
   }

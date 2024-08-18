@@ -1,11 +1,11 @@
 const path = require('path');
 
-const webpack = require('webpack');
-
+const rspack = require('@rspack/core')
 const WebpackNodeExternals = require('webpack-node-externals');
 
-const ReloadServerPlugin = require('./webpack/ReloadServerPlugin');
-// const ReloadServerPlugin = require('reload-server-webpack-plugin');
+Object.assign(rspack, {
+  ReloadServerPlugin: require('./rspack/ReloadServerPlugin'),
+})
 
 const cwd = process.cwd();
 
@@ -28,7 +28,7 @@ module.exports = {
   },
   externals: [
     WebpackNodeExternals({
-      allowlist: ['webpack/hot/poll?1000'],
+      allowlist: ['rspack/hot/poll?1000'],
     }),
     WebpackNodeExternals({
       modulesDir: path.resolve(__dirname, '../../node_modules'),
@@ -56,11 +56,11 @@ module.exports = {
     ],
   },
   plugins: [
-    new ReloadServerPlugin({
+    new rspack.ReloadServerPlugin({
       script: path.resolve('build', 'server.js'),
     }),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.DefinePlugin({
+    new rspack.HotModuleReplacementPlugin(),
+    new rspack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development'),
     }),
   ],
