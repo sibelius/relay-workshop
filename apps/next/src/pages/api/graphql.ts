@@ -1,24 +1,26 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextApiRequest, NextApiResponse } from 'next';
 import {
   getGraphQLParameters,
   processRequest,
   renderGraphiQL,
   shouldRenderGraphiQL,
-} from "graphql-helix";
+} from 'graphql-helix';
 import { schema, getContext, getUser } from '@workshop/server';
+
+import { serialize } from 'cookie';
+
 import connectMongoDB from '../../connectMongoDB';
-import { serialize } from "cookie";
 import { config } from '../../config';
 
 export const setCookie = (res: NextApiResponse) => (cookieName: string, token: string) => {
   res.setHeader(
-    "Set-Cookie",
+    'Set-Cookie',
     serialize(cookieName, token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV !== "development",
-      sameSite: "lax",
-      path: "/",
-    })
+      secure: process.env.NODE_ENV !== 'development',
+      sameSite: 'lax',
+      path: '/',
+    }),
   );
 }
 
@@ -33,8 +35,8 @@ export const graphqlHandler = async (req: NextApiRequest, res: NextApiResponse) 
   if (shouldRenderGraphiQL(request)) {
     res.send(
       renderGraphiQL({
-        endpoint: "/api/graphql",
-      })
+        endpoint: '/api/graphql',
+      }),
     );
     return;
   }
@@ -60,7 +62,7 @@ export const graphqlHandler = async (req: NextApiRequest, res: NextApiResponse) 
     },
   });
 
-  if (result.type === "RESPONSE") {
+  if (result.type === 'RESPONSE') {
     // We set the provided status and headers and just the send the payload back to the client
     result.headers.forEach(({ name, value }) => res.setHeader(name, value));
     res.status(result.status);

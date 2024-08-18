@@ -1,6 +1,6 @@
-import { Environment, RecordSource, Store } from "relay-runtime";
+import { Environment, RecordSource, Store , RelayFeatureFlags } from 'relay-runtime';
+
 import { createNetwork } from './network';
-import { RelayFeatureFlags } from "relay-runtime";
 
 RelayFeatureFlags.ENABLE_RELAY_RESOLVERS = true;
   

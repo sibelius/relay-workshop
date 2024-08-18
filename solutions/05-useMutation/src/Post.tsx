@@ -1,12 +1,11 @@
 import React, { useCallback } from 'react';
-import { useFragment, graphql } from 'react-relay';
+import { useFragment, graphql , useMutation } from 'react-relay';
 import { Text } from 'rebass';
 import { Card, CardActions, theme } from '@workshop/ui';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import IconButton from '@mui/material/IconButton';
 
-import { useMutation } from '@workshop/relay';
 
 import { Post_post, Post_post$key } from './__generated__/Post_post.graphql';
 import { likeOptimisticResponse, PostLike } from './PostLikeMutation';

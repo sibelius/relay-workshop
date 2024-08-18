@@ -3,8 +3,7 @@ import '@testing-library/jest-dom';
 import React from 'react';
 import { createMockEnvironment, MockPayloadGenerator } from 'relay-test-utils';
 
-import { usePreloadedQuery, graphql } from 'react-relay';
-import { loadQuery } from 'react-relay';
+import { usePreloadedQuery, graphql , loadQuery } from 'react-relay';
 
 import { getMutationOperationVariables } from '@workshop/test';
 

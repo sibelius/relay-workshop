@@ -1,4 +1,5 @@
-import { Environment, RecordSource, Store } from "relay-runtime";
+import { Environment, RecordSource, Store } from 'relay-runtime';
+
 import { createNetwork } from './network';
   
 const IS_SERVER = typeof window === typeof undefined;

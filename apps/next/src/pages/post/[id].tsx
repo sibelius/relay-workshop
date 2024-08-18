@@ -1,10 +1,13 @@
 import type { NextPage } from 'next';
 import { graphql, usePreloadedQuery } from 'react-relay';
-import { getPreloadedQuery } from '../../relay/getPreloadedQuery';
+
 import { Text } from 'rebass';
 import { BackButtonNext, Card, Content } from '@workshop/ui';
-import Post from '../../components/post/Post';
+
 import React from 'react';
+
+import Post from '../../components/post/Post';
+import { getPreloadedQuery } from '../../relay/getPreloadedQuery';
 import RootLayout from '../../components/feed/RootLayout';
 
 const idPostQuery = graphql`

@@ -7,7 +7,9 @@ import { Button, Card, CardActions, Content, TextField } from '@workshop/ui';
 import { Flex } from 'rebass';
 import React from 'react';
 import { useSnackbar } from 'notistack';
-import Link from "next/link";
+import Link from 'next/link';
+
+import { useRouter } from 'next/router';
 
 import { UserRegisterWithEmail } from '../../components/auth/UserRegisterWithEmailMutation';
 import {
@@ -15,7 +17,6 @@ import {
   UserRegisterWithEmailMutation$data,
 } from '../../__generated__/UserRegisterWithEmailMutation.graphql';
 import AuthRoot from '../../components/auth/AuthRoot';
-import { useRouter } from 'next/router';
 
 type Values = {
   name: string;

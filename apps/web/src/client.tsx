@@ -1,5 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line
+ 
 import { createRoot } from 'react-dom';
 import { createBrowserHistory } from 'history';
 

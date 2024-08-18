@@ -1,6 +1,6 @@
-import mongoose from "mongoose";
-import { NextApiRequest, NextApiResponse } from "next";
-import { NextApiHandler } from "next/dist/shared/lib/utils";
+import mongoose from 'mongoose';
+import { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiHandler } from 'next/dist/shared/lib/utils';
 
 const mongooseOptions = {
 };
@@ -9,7 +9,7 @@ export const connectMongoDB =
   (handler: NextApiHandler) =>
   async (req: NextApiRequest, res: NextApiResponse) => {
     if (!process.env.MONGO_URI) {
-      console.warn("Unable to find mongo URI");
+      console.warn('Unable to find mongo URI');
       return;
     }
 

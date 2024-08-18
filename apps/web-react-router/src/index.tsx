@@ -6,7 +6,7 @@ import {
   RouterProvider,
   Route,
   Link,
-} from "react-router-dom";
+} from 'react-router-dom';
 
 import App from './App';
 import { routes } from './routes';
@@ -17,7 +17,7 @@ import Providers from './Providers';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     loader: async ({ request, params, context }) => {
       console.log('loader: ', {
         request,
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
     element: <Feed />,
   },
   {
-    path: "about",
+    path: 'about',
     element: <div>About</div>,
   },
 ]);
@@ -41,5 +41,5 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <Providers>
     <RouterProvider router={router} />
-  </Providers>
+  </Providers>,
 );

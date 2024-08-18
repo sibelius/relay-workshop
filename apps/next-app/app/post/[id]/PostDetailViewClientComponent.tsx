@@ -1,10 +1,12 @@
 'use client';
 
 import { Suspense } from 'react';
+
+import { RelayEnvironmentProvider } from 'react-relay';
+
 import { SerializablePreloadedQuery } from '../../../src/relay/loadSerializableQuery';
 import PostDetailViewQueryNode, { PostDetailViewQuery } from '../../../src/__generated__/PostDetailViewQuery.graphql';
 import { getCurrentEnvironment } from '../../../src/relay/environment';
-import { RelayEnvironmentProvider } from 'react-relay';
 import useSerializablePreloadedQuery from '../../../src/relay/useSerializablePreloadedQuery';
 import PostDetailView from '../../../src/components/post/PostDetailView';
 

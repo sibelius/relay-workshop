@@ -1,9 +1,10 @@
 import { NextComponentType, NextPageContext } from 'next';
 import { Suspense, useMemo } from 'react';
 import { useRelayEnvironment, RelayEnvironmentProvider } from 'react-relay';
+
 import { createEnvironment } from './relayEnvironment';
 
-export function ReactRelayContainer({Component, props}: {Component: NextComponentType<NextPageContext, any, any>, props: any}) {
+export function ReactRelayContainer({ Component, props }: {Component: NextComponentType<NextPageContext, any, any>, props: any}) {
   const environment = useMemo(() => createEnvironment(), []);
 
   return (
@@ -15,20 +16,20 @@ export function ReactRelayContainer({Component, props}: {Component: NextComponen
   );
 }
 
-function Hyderate({Component, props}: {Component: NextComponentType<NextPageContext, any, any>, props: any}) {
+function Hyderate({ Component, props }: {Component: NextComponentType<NextPageContext, any, any>, props: any}) {
   const environment = useRelayEnvironment();
 
   const transformedProps = useMemo(() => {
     if (props == null) {
       return props;
     }
-    const {preloadedQueries, ...otherProps} = props;
+    const { preloadedQueries, ...otherProps } = props;
     if (preloadedQueries == null) {
       return props;
     }
 
     const queryRefs: any = {};
-    for (const [queryName, {params, variables, response}] of Object.entries(
+    for (const [queryName, { params, variables, response }] of Object.entries(
       preloadedQueries,
     ) as any) {
       const queryId = params.id || params.text;
@@ -49,7 +50,7 @@ function Hyderate({Component, props}: {Component: NextComponentType<NextPageCont
       };
     }
 
-    return {...otherProps, queryRefs};
+    return { ...otherProps, queryRefs };
   }, [props]);
 
   return <Component {...transformedProps} />;

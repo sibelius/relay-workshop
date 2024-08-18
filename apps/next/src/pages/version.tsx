@@ -1,7 +1,9 @@
 import type { NextPage } from 'next';
 import { graphql, usePreloadedQuery } from 'react-relay';
-import { getPreloadedQuery } from '../relay/getPreloadedQuery';
+
 import { Flex } from 'rebass';
+
+import { getPreloadedQuery } from '../relay/getPreloadedQuery';
 
 const versionQuery = graphql`
   query versionQuery @preloadable {

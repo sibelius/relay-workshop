@@ -1,11 +1,17 @@
 import { graphql, PreloadedQuery, usePreloadedQuery } from 'react-relay';
 import { NextPage } from 'next';
-import RootLayout from './RootLayout';
+
 import { Content } from '@workshop/ui';
-import PostComposer from '../post/PostComposer';
-import FeedList from './FeedList';
+
 import React from 'react';
+
+import PostComposer from '../post/PostComposer';
+
 import { FeedViewQuery } from '../../__generated__/FeedViewQuery.graphql';
+
+import FeedList from './FeedList';
+
+import RootLayout from './RootLayout';
 
 const FeedView: NextPage = (props: { queryRef: PreloadedQuery<FeedViewQuery> }) => {
   const query = usePreloadedQuery<any>(

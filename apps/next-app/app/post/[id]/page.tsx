@@ -1,5 +1,6 @@
 import loadSerializableQuery from '../../../src/relay/loadSerializableQuery';
 import PostDetailViewQueryNode, { PostDetailViewQuery } from '../../../src/__generated__/PostDetailViewQuery.graphql';
+
 import PostDetailViewClientComponent from './PostDetailViewClientComponent';
 
 const Page = async ({ params }: { params: { id: string } }) => {

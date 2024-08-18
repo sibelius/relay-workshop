@@ -1,7 +1,6 @@
 import React from 'react';
-import { graphql } from 'react-relay';
+import { graphql , usePreloadedQuery, PreloadedQuery } from 'react-relay';
 
-import { usePreloadedQuery, PreloadedQuery } from 'react-relay';
 
 import { Content } from '@workshop/ui';
 

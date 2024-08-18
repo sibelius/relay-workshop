@@ -2,6 +2,7 @@ import type { GetServerSideProps, NextPage } from 'next';
 import { graphql, usePreloadedQuery } from 'react-relay';
 import { Content } from '@workshop/ui';
 import React from 'react';
+
 import { getPreloadedQuery } from '../relay/getPreloadedQuery';
 import FeedList from '../components/feed/FeedList';
 import RootLayout from '../components/feed/RootLayout';

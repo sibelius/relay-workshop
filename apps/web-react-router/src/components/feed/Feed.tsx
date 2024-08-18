@@ -1,17 +1,16 @@
 import React from 'react';
-import { graphql } from 'react-relay';
+import { graphql , usePreloadedQuery, PreloadedQuery , useRelayEnvironment } from 'react-relay';
 
-import { usePreloadedQuery, PreloadedQuery } from 'react-relay';
 
 import { Content } from '@workshop/ui';
+
+import { useLoaderData } from 'react-router-dom'
 
 import PostComposer from './PostComposer';
 import { FeedQuery } from './__generated__/FeedQuery.graphql';
 
 import FeedList from './FeedList';
 import { useNewPostSubscription } from './useNewPostSubscription';
-import { useLoaderData } from 'react-router-dom'
-import { useRelayEnvironment } from 'react-relay';
 
 type Props = {
   prepared: {
