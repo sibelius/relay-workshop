@@ -1,11 +1,11 @@
 /* eslint-disable */
-// eslint-disable-next-line
+ 
 import { graphql } from 'react-relay';
 import { SelectorStoreUpdater, RecordSourceSelectorProxy } from 'relay-runtime';
 
-// eslint-disable-next-line import/no-unresolved
+ 
 import { PostCommentCreateInput } from './__generated__/PostCommentCreateMutation.graphql';
-// eslint-disable-next-line import/no-unresolved
+ 
 import { PostCommentComposer_me } from './__generated__/PostCommentComposer_me.graphql';
 
 export const PostCommentCreate = graphql`
@@ -49,9 +49,9 @@ let tempID = 0;
 export const optimisticUpdater =
   (input: PostCommentCreateInput, me: PostCommentComposer_me) =>
   (
-    // eslint-disable-next-line
+     
     store: RecordSourceSelectorProxy,
   ) => {
-    // eslint-disable-next-line
+     
     const id = 'client:newComment:' + tempID++;
   };

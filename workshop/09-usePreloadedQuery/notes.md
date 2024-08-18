@@ -39,3 +39,4 @@ It receives a graphql query and also the return of a `preloadQuery` call
 - https://reactjs.org/docs/concurrent-mode-suspense.html
 - https://relay.dev/docs/en/api-reference#usepreloadedquery
 - https://relay.dev/docs/en/api-reference#preloadquery
+- https://reactrouter.com/en/main/start/overview

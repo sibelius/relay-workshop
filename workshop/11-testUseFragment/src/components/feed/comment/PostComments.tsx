@@ -1,4 +1,4 @@
-import React, { unstable_useTransition as useTransition } from 'react';
+import React, { useTransition } from 'react';
 import { graphql, useRefetchableFragment } from 'react-relay';
 import { Flex, Text } from 'rebass';
 import Button from '@mui/material/Button';
@@ -15,7 +15,7 @@ type Props = {
   post: PostComments_post$key;
 };
 const PostComments = (props: Props) => {
-  const [startTransition, isPending] = useTransition();
+  const [isPending, startTransition] = useTransition();
 
   const [post, refetch] = useRefetchableFragment<PostCommentsRefetchQuery, _>(
     graphql`

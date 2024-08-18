@@ -8,13 +8,11 @@ import Feed from './Feed';
 
 import { AppQuery } from './__generated__/AppQuery.graphql';
 
-type Props = {
-  prepared: {
-    appQuery: any;
-  };
-};
-// eslint-disable-next-line
-const App = ({ prepared }: Props) => {
+ 
+const App = () => {
+  // get data preloaded in router v6
+  const loadedData = {}
+  
   /**
    * TODO
    * use usePreloadedQuery instead of useLazyLoadQuery
@@ -28,6 +26,7 @@ const App = ({ prepared }: Props) => {
         }
       }
     `,
+    loadedData.appQuery,
   );
 
   return (

@@ -1,13 +1,11 @@
 import React from 'react';
 import CardContent from '@mui/material/CardContent';
-import { useFragment } from 'react-relay';
-import { graphql } from 'react-relay';
+import { useFragment, graphql } from 'react-relay';
 import styled from 'styled-components';
+import { Link as _Link } from 'react-router-dom'
 import { Text } from 'rebass';
 
 import { Card, CardActions } from '@workshop/ui';
-
-import { Link as _Link } from '@workshop/route';
 
 import PostLikeButton from '../like/PostLikeButton';
 import PostCommentComposer from '../comment/PostCommentComposer';
