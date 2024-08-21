@@ -1,34 +1,34 @@
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom';
+// import '@testing-library/jest-dom';
+import {expect, it, describe} from 'vitest'
 import React from 'react';
 // eslint-disable-next-line
-import { MockPayloadGenerator } from 'relay-test-utils';
+import { createMockEnvironment } from 'relay-test-utils';
 
 // eslint-disable-next-line
-import { loadQuery } from '@workshop/relay';
-
-import { JSResource } from '@workshop/route';
+import { loadQuery } from 'react-relay'
 
 // eslint-disable-next-line
-import { Environment } from '../../../../relay';
 import PostDetail from '../PostDetail';
 
 import { withProviders } from '../../../../../test/withProviders';
+import { RouteObject } from 'react-router-dom';
+import { Environment } from '../../../../relay';
+
+import PostDetailQuery from '../__generated__/PostDetailQuery.graphql';
 
 it.skip('should render post like button', async () => {
+  const environment = createMockEnvironment()
   const postId = 'postId';
 
-  const routes = [
+  const routes: RouteObject[] = [
     {
-      component: JSResource('Component', () => new Promise(resolve => resolve(PostDetail))),
+      element: <PostDetail />,
       path: '/post/:id',
     },
   ];
 
   const initialEntries = [`/post/${postId}`];
-
-  // eslint-disable-next-line
-  const PostDetailQuery = require('../__generated__/PostDetailQuery.graphql');
 
   // eslint-disable-next-line
   const query = PostDetailQuery;
@@ -43,13 +43,17 @@ it.skip('should render post like button', async () => {
    */
   // eslint-disable-next-line
   const customMockResolvers = {
-    Post: () => ({}),
+    Post: () => ({
+      content: 'Hallex Teste'
+    }),
   };
 
   /**
    * TODO
    * queue a pending operation, this would be a preloadQuery call
    */
+  environment.mock.queuePendingOperation(query, variables)
+  
 
   /**
    * TODO
@@ -60,6 +64,7 @@ it.skip('should render post like button', async () => {
     routes,
     initialEntries,
     Component: PostDetail,
+    environment: Environment
   });
 
   const prepared = {
@@ -67,10 +72,15 @@ it.skip('should render post like button', async () => {
      * TODO
      * preload query
      */
-    postDetailQuery: {},
+    postDetailQuery: loadQuery(
+      environment,
+      PostDetailQuery,
+      variables,
+      {fetchPolicy: 'store-and-network'}
+    ),
   };
 
-   
+  // eslint-disable-next-line
   const { debug, getByText } = render(<Root prepared={prepared} />);
 
   // uncomment to check DOM

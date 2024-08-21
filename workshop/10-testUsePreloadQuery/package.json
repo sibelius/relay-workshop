@@ -8,10 +8,15 @@
     "start": "rspack serve"
   },
   "devDependencies": {
-    "relay-compiler": "17.0.0",
+    "@vitejs/plugin-legacy": "^5.4.2",
+    "@vitejs/plugin-react": "^4.3.1",
+    "@vitejs/plugin-react-swc": "^3.7.0",
     "@workshop/babelweb": "workspace:*",
     "@workshop/relay": "workspace:*",
     "@workshop/rspack": "workspace:*",
-    "@workshop/ui": "workspace:*"
+    "@workshop/ui": "workspace:*",
+    "relay-compiler": "17.0.0",
+    "vite-plugin-relay": "^2.1.0",
+    "vitest": "^2.0.5"
   }
 }

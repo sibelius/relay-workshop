@@ -58,7 +58,7 @@ module.exports = {
     new rspack.EnvironmentPlugin({
       path: './.env',
     }),
-    new rspack.HtmlWebpackPlugin({
+    new rspack.HtmlRspackPlugin({
       template: './src/index.html',
     }),
     new rspack.ProvidePlugin({
