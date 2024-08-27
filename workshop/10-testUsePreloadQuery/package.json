@@ -5,18 +5,15 @@
     "copy-env": "cp .env.example .env",
     "relay": "relay-compiler",
     "relay:watch": "relay-compiler --watch",
-    "start": "rspack serve"
+    "start": "rspack serve",
+    "test": "NODE_ENV=development pnpm vitest"
   },
   "devDependencies": {
-    "@vitejs/plugin-legacy": "^5.4.2",
-    "@vitejs/plugin-react": "^4.3.1",
-    "@vitejs/plugin-react-swc": "^3.7.0",
     "@workshop/babelweb": "workspace:*",
     "@workshop/relay": "workspace:*",
     "@workshop/rspack": "workspace:*",
     "@workshop/ui": "workspace:*",
-    "relay-compiler": "17.0.0",
-    "vite-plugin-relay": "^2.1.0",
-    "vitest": "^2.0.5"
+    "@workshop/vitest": "workspace:*",
+    "relay-compiler": "17.0.0"
   }
 }

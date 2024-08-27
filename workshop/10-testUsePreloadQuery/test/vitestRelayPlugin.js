@@ -18,7 +18,8 @@ module.exports = {
         ],
         plugins: [
           [
-            'babel-plugin-relay',
+            // 'babel-plugin-relay',
+            'relay',
             {
               eagerEsModules: true,
             },
