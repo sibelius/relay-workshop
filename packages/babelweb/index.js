@@ -7,6 +7,7 @@ module.exports = api => {
     presets: [...babelCommons.presets],
     plugins: [
       ...babelCommons.plugins,
+
       // Applies the react-refresh Babel plugin on non-production modes only
       // ...(!api.env('production') && ['react-refresh/babel']),
     ],

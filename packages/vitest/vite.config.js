@@ -15,7 +15,7 @@ module.exports = defineConfig({
       },
     },
     environment: 'jsdom',
-    setupFiles: ['./vitest-setup.js'],
+    // setupFiles: ['./vitest-setup.js'],
   },
   plugins: [
     // commonjs({

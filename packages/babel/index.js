@@ -13,12 +13,7 @@ module.exports = {
     '@babel/preset-flow',
   ],
   plugins: [
-    [
-      'relay',
-      {
-        schema: '../server/schema/schema.graphql',
-      },
-    ],
+    'relay',
     '@babel/plugin-proposal-object-rest-spread',
     '@babel/plugin-proposal-class-properties',
     '@babel/plugin-proposal-export-default-from',

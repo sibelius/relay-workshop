@@ -23,7 +23,7 @@ module.exports = {
     // name: 'charge',
     environment: 'jsdom',
     globals: true,
-    setupFiles: ['dotenv/config', 'whatwg-fetch'],
+    setupFiles: ['dotenv/config', 'whatwg-fetch', '../../packages/vitest/vitest-setup.js'],
     // globalSetup: [
     //   '../testutils/src/vitest/globalSetup.ts',
     // ],
