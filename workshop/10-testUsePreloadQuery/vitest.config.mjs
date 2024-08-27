@@ -1,9 +1,10 @@
+// eslint-disable-next-line import/no-unresolved
 import { defineConfig } from 'vitest/config';
 
-import pkg from './package.json'
-import { vitestBaseConfig } from './vitest.config.global'
+import { vitestBaseConfig } from '@workshop/vitest'
 
-console.log(process.env.NODE_ENV)
+import pkg from './package.json'
+// eslint-disable-next-line import/namespace
 
 export default defineConfig({
   ...vitestBaseConfig,
