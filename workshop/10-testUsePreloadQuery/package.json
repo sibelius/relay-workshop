@@ -6,7 +6,7 @@
     "relay": "relay-compiler",
     "relay:watch": "relay-compiler --watch",
     "start": "rspack serve",
-    "test": "NODE_ENV=development pnpm vitest"
+    "test": "NODE_ENV=test pnpm vitest"
   },
   "devDependencies": {
     "@workshop/babelweb": "workspace:*",

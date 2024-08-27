@@ -1,90 +1,94 @@
-import { render } from '@testing-library/react';
-// import '@testing-library/jest-dom';
-import {expect, it, describe} from 'vitest'
+// eslint-disable-next-line import/namespace
+import { render, waitFor } from '@testing-library/react';
+import {vi} from 'vitest'
 import React from 'react';
 // eslint-disable-next-line
-import { createMockEnvironment } from 'relay-test-utils';
+import { createMockEnvironment, MockPayloadGenerator } from 'relay-test-utils';
 
 // eslint-disable-next-line
 import { loadQuery } from 'react-relay'
 
 // eslint-disable-next-line
+import { RouteObject } from 'react-router-dom';
 import PostDetail from '../PostDetail';
 
-import { withProviders } from '../../../../../test/withProviders';
-import { RouteObject } from 'react-router-dom';
-import { Environment } from '../../../../relay';
+import PostDetailQuery from '../__generated__/PostDetailQuery.graphql'
+import { withProviders } from '../../../../../test/withProviders'
 
-import PostDetailQuery from '../__generated__/PostDetailQuery.graphql';
-
-it.skip('should render post like button', async () => {
+it('should render post like button', async () => {
   const environment = createMockEnvironment()
   const postId = 'postId';
 
+  const variables = {
+    id: postId,
+  };
+  
   const routes: RouteObject[] = [
     {
       element: <PostDetail />,
-      path: '/post/:id',
+      path: `/post/${postId}`,
+      id: 'postDetail',
+      loader: () => {
+        return {
+          postDetailQuery: loadQuery(
+            environment,
+            PostDetailQuery,
+            variables,
+            { fetchPolicy: 'store-and-network' },
+          ),
+        }
+      },
     },
   ];
+  const loaderSpy = vi.spyOn(routes[0], 'loader')
 
   const initialEntries = [`/post/${postId}`];
 
   // eslint-disable-next-line
   const query = PostDetailQuery;
   // eslint-disable-next-line
-  const variables = {
-    id: postId,
-  };
 
   /**
    * TODO
    * mock content of Post
-   */
-  // eslint-disable-next-line
-  const customMockResolvers = {
-    Post: () => ({
-      content: 'Hallex Teste'
-    }),
-  };
+   */  
+  const expectedPostContent = 'Welcome to Relay Workshop'
+  const customMockResolvers = {}
 
   /**
    * TODO
    * queue a pending operation, this would be a preloadQuery call
    */
-  environment.mock.queuePendingOperation(query, variables)
   
-
+  /**
+   * TODO
+   * queue a resolver
+   */
+  
   /**
    * TODO
    * mock a queued operation
    */
-
   const Root = withProviders({
     routes,
     initialEntries,
-    Component: PostDetail,
-    environment: Environment
+    environment: environment,
   });
 
-  const prepared = {
-    /**
-     * TODO
-     * preload query
-     */
-    postDetailQuery: loadQuery(
-      environment,
-      PostDetailQuery,
-      variables,
-      {fetchPolicy: 'store-and-network'}
-    ),
-  };
+  const {getByText, debug, findByText} = render(
+    <Root />,
+  );
 
-  // eslint-disable-next-line
-  const { debug, getByText } = render(<Root prepared={prepared} />);
+  await waitFor(() => {
+    expect(loaderSpy).toHaveBeenCalledTimes(1)
+    expect(getByText(expectedPostContent)).toBeTruthy();
+  })
+  // or
+  // expect(await findByText('PostDetail')).toBeTruthy();
 
-  // uncomment to check DOM
   debug();
-
-  expect(getByText('Welcome to Relay Workshop')).toBeTruthy();
 });
+
+it('should render post not found', async () => {
+  // build the test to render mock result post not found
+})
