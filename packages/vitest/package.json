@@ -1,0 +1,17 @@
+{
+    "name": "@workshop/vitest",
+    "version": "1.0.0",
+    "main": "index.js",
+    "devDependencies": {
+        "@vitejs/plugin-legacy": "^5.4.2",
+        "@vitejs/plugin-react": "^4.3.1",
+        "@vitejs/plugin-react-swc": "^3.7.0",
+        "@workshop/babelweb": "workspace:*",
+        "vite-plugin-relay": "^2.1.0",
+        "vitest": "^2.0.5",
+        "whatwg-fetch": "^3.6.20"
+    },
+    "dependencies": {
+        "@vitest/ui": "^2.0.5"
+    }
+}
