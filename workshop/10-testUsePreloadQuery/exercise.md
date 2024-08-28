@@ -4,12 +4,12 @@ Learn how to test components using usePreloadedQuery with @testing-library
 
 ## Exercise
 
-- Add test inside __tests__/PostDetail.spec.tsx
-- try to render PostDetail component using @testing-library
-- use `withProviders` helper to add all Providers for the component you want to test
-- mock preloadQuery
-- call `preloadQuery` before rendering the component
-- assert post content
+- [ ] Add test inside __tests__/PostDetail.spec.tsx
+- [ ] try to render PostDetail component using @testing-library
+- [ ] use `withProviders` helper to add all Providers for the component you want to test
+- [ ] mock preloadQuery
+- [ ] call `preloadQuery` before rendering the component
+- [ ] assert post content
 
 ## Extras
 

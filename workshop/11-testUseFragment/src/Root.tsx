@@ -1,5 +1,6 @@
 import React from 'react';
 
+// eslint-disable-next-line import/namespace
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import { routes } from './routes';

@@ -1,6 +1,7 @@
 const path = require('path');
 
 const rspack = require('@rspack/core');
+const DotenvWebpackPlugin = require('dotenv-webpack');
 
 const cwd = process.cwd();
 const outputPath = path.join(cwd, 'build');
@@ -55,10 +56,13 @@ module.exports = {
     ],
   },
   plugins: [
-    new rspack.EnvironmentPlugin({
-      path: './.env',
-    }),
-    new rspack.HtmlWebpackPlugin({
+    // new rspack.EnvironmentPlugin({
+    //   path: './.env',
+    // }),
+    // new DotenvWebpackPlugin({
+    //   path: './.env',
+    // }),
+    new rspack.HtmlRspackPlugin({
       template: './src/index.html',
     }),
     new rspack.ProvidePlugin({

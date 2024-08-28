@@ -1,22 +1,17 @@
 /* eslint-disable relay/generated-flow-types */
 import React, { useCallback } from 'react';
-import { useFragment, graphql, useMutation, ConnectionHandler } from 'react-relay';
+import { useFragment, graphql, useMutation } from 'react-relay';
 import { Text } from 'rebass';
 import { Card, CardActions, theme, Button } from '@workshop/ui';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import IconButton from '@mui/material/IconButton';
 
-//import { useMutation } from 'react-relay';
-
-import { ROOT_ID } from 'relay-runtime';
-
 import { likeOptimisticResponse, PostLike } from './PostLikeMutation';
 import { unlikeOptimisticResponse, PostUnLike } from './PostUnLikeMutation';
 import { PostLikeMutation } from './__generated__/PostLikeMutation.graphql';
 import { PostUnLikeMutation } from './__generated__/PostUnLikeMutation.graphql';
 import { Post_post, Post_post$key } from './__generated__/Post_post.graphql';
-import { PostDelete } from './PostDeleteMutation';
 
 type Props = {
   post: Post_post;
@@ -44,7 +39,8 @@ const Post = (props: Props) => {
 
   /**
    * TODO
-   * Consume your deleteMutation here  */
+   * Consume your deleteMutation here
+   */
 
   function deletePost() {
     /**

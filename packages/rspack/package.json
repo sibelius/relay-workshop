@@ -5,6 +5,7 @@
   "devDependencies": {
     "@rspack/cli": "0.7.5",
     "@rspack/core": "0.7.5",
-    "@rspack/plugin-react-refresh": "^1.0.0"
+    "@rspack/plugin-react-refresh": "^1.0.0",
+    "rspack-plugin-dotenv": "^0.0.3"
   }
 }

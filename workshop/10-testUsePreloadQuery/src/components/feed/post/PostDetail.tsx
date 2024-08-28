@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { usePreloadedQuery, graphql } from 'react-relay';
+import { usePreloadedQuery, graphql, PreloadedQuery } from 'react-relay';
 
 import { Text } from 'rebass';
 
@@ -8,11 +8,16 @@ import { Card, Content, BackButton } from '@workshop/ui';
 
 import Post from './Post';
 import { PostDetailQuery } from './__generated__/PostDetailQuery.graphql';
+import { useLoaderData, useRouteLoaderData } from 'react-router-dom';
+
+type LoaderData = {
+  postDetailQuery: PreloadedQuery<PostDetailQuery>
+}
 
 const PostDetail = () => {
   // get data preloaded in router
-  const loadedData = {}
-
+  const loadedData = useLoaderData() as LoaderData
+  
   const data = usePreloadedQuery<PostDetailQuery>(
     graphql`
       query PostDetailQuery($id: ID!) {
@@ -27,6 +32,8 @@ const PostDetail = () => {
     loadedData.postDetailQuery,
   );
 
+  console.log({data})
+
   const { post, me } = data;
 
   if (!post) {
@@ -40,6 +47,7 @@ const PostDetail = () => {
   }
   return (
     <Content>
+      <h1>PostDetail</h1>
       <BackButton />
       <Post post={data.post} me={me} isDetail={true} />
     </Content>
