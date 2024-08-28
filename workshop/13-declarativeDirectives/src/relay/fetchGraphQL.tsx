@@ -9,13 +9,13 @@ const getToken = () => {
    * TODO
    * use your user token
    */
-  return 'JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlOWMyY2I0NTI5NjJiNmNjZTA3OGNmMCIsImlhdCI6MTU4NzI5MzM2NH0.ieeCANyYeNMwbSF2MH-lYFsLNO_ZWqWsP8H3M-KF7mA';
+  return 'JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OWZlMjkwY2YyMzdhNDdlZDgyZDcxYyIsImlhdCI6MTcyNDcyNjgwN30.G2sfYPtfWM34Vs5Z0N2Nu_1l_Jmlu8p3Pt-sMXDdxGc';
 };
 
 export const fetchGraphQL = async (request: RequestParameters, variables: Variables) => {
   const authorization = getToken();
 
-  const response = await fetch(config.GRAPHQL_URL, {
+  const response = await fetch(config.GRAPHQL_URL!, {
     method: 'POST',
     headers: {
       Accept: 'application/json',

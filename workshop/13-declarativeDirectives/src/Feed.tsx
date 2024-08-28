@@ -1,6 +1,7 @@
 /* eslint-disable relay/generated-flow-types */
 import React, { useCallback } from 'react';
 
+// eslint-disable-next-line import/namespace
 import { Flex } from 'rebass';
 import { Button } from '@workshop/ui';
 import { graphql, usePaginationFragment } from 'react-relay';
@@ -9,6 +10,7 @@ import Post from './Post';
 
 import { Feed_query, Feed_query$key } from './__generated__/Feed_query.graphql';
 import { FeedPaginationQuery } from './__generated__/FeedPaginationQuery.graphql';
+
 
 type Props = {
   query: Feed_query;
@@ -64,7 +66,8 @@ const Feed = (props: Props) => {
 
   /**
    * TODO
-   * Consume your createMutation here  */
+   * Consume your createMutation here 
+   */
 
   function CreateRandom() {
     /**
