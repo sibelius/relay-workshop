@@ -41,3 +41,4 @@ expect(mutationOperation.fragment.variables.input).toEqual({
 ## References
 
 - https://relay.dev/docs/en/testing-relay-components
+- https://legacy.reactjs.org/docs/test-utils.html

@@ -1,8 +1,10 @@
 import React from 'react';
 
+// eslint-disable-next-line import/namespace
 import { Flex, Text } from 'rebass';
 import { Content } from '@workshop/ui';
 import { graphql, PreloadedQuery, usePreloadedQuery } from 'react-relay';
+// eslint-disable-next-line import/namespace
 import { useLoaderData } from 'react-router-dom';
 
 import Feed from './Feed';
