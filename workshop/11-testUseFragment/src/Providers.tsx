@@ -12,10 +12,11 @@ const theme = getTheme();
 
 type Props = {
   children: React.ReactNode;
+  environment?: typeof Environment
 };
-const Providers = ({ children }: Props) => {
+const Providers = ({ children, environment }: Props) => {
   return (
-    <RelayEnvironmentProvider environment={Environment}>
+    <RelayEnvironmentProvider environment={environment ?? Environment}>
       <ThemeProvider theme={theme}>
         <StylesProvider injectFirst>
           <SnackbarProvider>{children}</SnackbarProvider>
