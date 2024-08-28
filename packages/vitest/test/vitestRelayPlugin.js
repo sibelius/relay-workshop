@@ -31,7 +31,7 @@ module.exports = {
       });
 
       if (!out?.code) {
-        throw new Error(`vite-plugin-relay: Failed to transform ${id}`);
+        throw new Error(`vite-plugin-relay: Failed to transform ${id}. Please check the source code and ensure it contains valid GraphQL syntax.`);
       }
 
       const code = out.code;

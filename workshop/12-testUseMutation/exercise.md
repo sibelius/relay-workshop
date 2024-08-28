@@ -29,5 +29,5 @@ await waitFor(() => environment.mock.getMostRecentOperation());
 const mutationOperation = environment.mock.getMostRecentOperation();
 ```
 
-### tricks for extra exercise: 
+### tricks for extra exercise
 Don't try to use the mock mutation response together with an `act` function asynchronous, the mutation response must be synchronous.
