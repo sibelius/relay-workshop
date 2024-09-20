@@ -906,81 +906,135 @@ importers:
 
   solutions/01-fetchGraphql:
     devDependencies:
-      webpack:
-        specifier: 5.91.0
-        version: 5.91.0(esbuild@0.23.0)(webpack-cli@5.1.4)
+      '@workshop/babelweb':
+        specifier: workspace:*
+        version: link:../../packages/babelweb
+      '@workshop/rspack':
+        specifier: workspace:*
+        version: link:../../packages/rspack
+      '@workshop/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
 
   solutions/02-useLazyLoadQuery:
     devDependencies:
+      '@workshop/babelweb':
+        specifier: workspace:*
+        version: link:../../packages/babelweb
+      '@workshop/rspack':
+        specifier: workspace:*
+        version: link:../../packages/rspack
+      '@workshop/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       relay-compiler:
-        specifier: 17.0.0
-        version: 17.0.0
-      webpack:
-        specifier: 5.91.0
-        version: 5.91.0(esbuild@0.23.0)(webpack-cli@5.1.4)
+        specifier: 18.0.0
+        version: 18.0.0
 
   solutions/03-useFragment:
     devDependencies:
+      '@workshop/babelweb':
+        specifier: workspace:*
+        version: link:../../packages/babelweb
+      '@workshop/rspack':
+        specifier: workspace:*
+        version: link:../../packages/rspack
+      '@workshop/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       relay-compiler:
         specifier: 17.0.0
         version: 17.0.0
-      webpack:
-        specifier: 5.91.0
-        version: 5.91.0(esbuild@0.23.0)(webpack-cli@5.1.4)
 
   solutions/04-usePaginationFragment:
     devDependencies:
+      '@workshop/babelweb':
+        specifier: workspace:*
+        version: link:../../packages/babelweb
+      '@workshop/rspack':
+        specifier: workspace:*
+        version: link:../../packages/rspack
+      '@workshop/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       relay-compiler:
         specifier: 17.0.0
         version: 17.0.0
-      webpack:
-        specifier: 5.91.0
-        version: 5.91.0(esbuild@0.23.0)(webpack-cli@5.1.4)
 
   solutions/05-useMutation:
     devDependencies:
+      '@workshop/babelweb':
+        specifier: workspace:*
+        version: link:../../packages/babelweb
+      '@workshop/rspack':
+        specifier: workspace:*
+        version: link:../../packages/rspack
+      '@workshop/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       relay-compiler:
         specifier: 17.0.0
         version: 17.0.0
-      webpack:
-        specifier: 5.91.0
-        version: 5.91.0(esbuild@0.23.0)(webpack-cli@5.1.4)
 
   solutions/06-mutationUpdater:
     devDependencies:
+      '@workshop/babelweb':
+        specifier: workspace:*
+        version: link:../../packages/babelweb
+      '@workshop/rspack':
+        specifier: workspace:*
+        version: link:../../packages/rspack
+      '@workshop/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       relay-compiler:
         specifier: 17.0.0
         version: 17.0.0
-      webpack:
-        specifier: 5.91.0
-        version: 5.91.0(esbuild@0.23.0)(webpack-cli@5.1.4)
 
   solutions/07-useRefetchableFragment:
     devDependencies:
+      '@workshop/babelweb':
+        specifier: workspace:*
+        version: link:../../packages/babelweb
+      '@workshop/rspack':
+        specifier: workspace:*
+        version: link:../../packages/rspack
+      '@workshop/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       relay-compiler:
         specifier: 17.0.0
         version: 17.0.0
-      webpack:
-        specifier: 5.91.0
-        version: 5.91.0(esbuild@0.23.0)(webpack-cli@5.1.4)
 
   solutions/08-useSubscription:
     devDependencies:
+      '@workshop/babelweb':
+        specifier: workspace:*
+        version: link:../../packages/babelweb
+      '@workshop/rspack':
+        specifier: workspace:*
+        version: link:../../packages/rspack
+      '@workshop/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       relay-compiler:
         specifier: 17.0.0
         version: 17.0.0
-      webpack:
-        specifier: 5.91.0
-        version: 5.91.0(esbuild@0.23.0)(webpack-cli@5.1.4)
 
   solutions/09-usePreloadedQuery:
     devDependencies:
+      '@workshop/babelweb':
+        specifier: workspace:*
+        version: link:../../packages/babelweb
+      '@workshop/rspack':
+        specifier: workspace:*
+        version: link:../../packages/rspack
+      '@workshop/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       relay-compiler:
         specifier: 17.0.0
         version: 17.0.0
-      webpack:
-        specifier: 5.91.0
-        version: 5.91.0(esbuild@0.23.0)(webpack-cli@5.1.4)
 
   solutions/10-testUsePreloadQuery:
     devDependencies:
@@ -10896,7 +10950,6 @@ packages:
 
   /chokidar@2.1.8:
     resolution: {integrity: sha512-ZmZUazfOzf0Nve7duiCKD23PFSCs4JPoYyccjUFF3aQkQadqBhfzhjkwBH2mNOG9cTBwhamM37EIsIkZw3nRgg==}
-    deprecated: Chokidar 2 does not receive security updates since 2019. Upgrade to chokidar 3 with 15x fewer dependencies
     requiresBuild: true
     dependencies:
       anymatch: 2.0.0
@@ -14973,7 +15026,7 @@ packages:
     resolution: {integrity: sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==}
     engines: {node: '>= 4.0'}
     os: [darwin]
-    deprecated: The v1 package contains DANGEROUS / INSECURE binaries. Upgrade to safe fsevents v2
+    deprecated: Upgrade to fsevents v2 to mitigate potential security issues
     requiresBuild: true
     dependencies:
       bindings: 1.5.0
@@ -23398,6 +23451,11 @@ packages:
   /relay-compiler@17.0.0:
     resolution: {integrity: sha512-U2e/R0o40HJOQ13pwkvToqWqk6J3ASMyHmcxixVMZKfcwcpsTTOiKob215ZRh+4bqPwkNy97+V9CuzJ5hJmGtw==}
     hasBin: true
+
+  /relay-compiler@18.0.0:
+    resolution: {integrity: sha512-sl9g6c/qMJrAc8usIeRp6L86D8kKSJGd+xTgMlZh0zXPO6kB1hGYGjjy1W0rOg+NE/yqNeREJxwvz5VxSGU92g==}
+    hasBin: true
+    dev: true
 
   /relay-config@12.0.1:
     resolution: {integrity: sha512-vq7GLLsGPpb/tZr9kmfbfe5sLO1cGa67jpCp4Xtk+N98fMInCu9YIH8R/FxxUhKVPnpLQf3ecmz+s+/MjzcnTQ==}
