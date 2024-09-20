@@ -1,82 +1,148 @@
-import { render } from '@testing-library/react';
-import '@testing-library/jest-dom';
+// eslint-disable-next-line import/namespace
+import { render, waitFor } from '@testing-library/react';
+import {vi} from 'vitest'
 import React from 'react';
+// eslint-disable-next-line
 import { createMockEnvironment, MockPayloadGenerator } from 'relay-test-utils';
 
-import { loadQuery } from 'react-relay';
+// eslint-disable-next-line
+import { loadQuery } from 'react-relay'
 
-import { JSResource } from '@workshop/route';
-
+// eslint-disable-next-line
+import { RouteObject } from 'react-router-dom';
 import PostDetail from '../PostDetail';
 
-import { withProviders } from '../../../../../test/withProviders';
+import PostDetailQuery from '../__generated__/PostDetailQuery.graphql'
+import { withProviders } from '../../../../../test/withProviders'
 
 it('should render post like button', async () => {
-  const environment = createMockEnvironment();
+  const environment = createMockEnvironment()
   const postId = 'postId';
 
-  const routes = [
-    {
-      component: JSResource('Component', () => new Promise(resolve => resolve(PostDetail))),
-      path: '/post/:id',
-      // TODO - make RouterRenderer work
-      // prepare: (params: { id: string }) => {
-      //   const PostDetailQuery = require('../__generated__/PostDetailQuery.graphql');
-      //
-      //   return {
-      //     postDetailQuery: loadQuery(
-      //       environment,
-      //       PostDetailQuery,
-      //       {
-      //         id: params.id,
-      //       },
-      //       {
-      //         fetchPolicy: 'store-or-network',
-      //       },
-      //     ),
-      //   };
-      // },
-    },
-  ];
-
-  const initialEntries = [`/post/${postId}`];
-
-  const PostDetailQuery = require('../__generated__/PostDetailQuery.graphql');
-
-  const query = PostDetailQuery;
   const variables = {
     id: postId,
   };
+  
+  const routes: RouteObject[] = [
+    {
+      element: <PostDetail />,
+      path: '/',
+      id: 'postDetail',
+      loader: () => {
+        return {
+          postDetailQuery: loadQuery(
+            environment,
+            PostDetailQuery,
+            variables,
+            { fetchPolicy: 'store-and-network' },
+          ),
+        }
+      },
+    },
+  ];
+  const loaderSpy = vi.spyOn(routes[0], 'loader')
 
+  const initialEntries = [`/`];
+
+  // eslint-disable-next-line
+  const query = PostDetailQuery;
+  // eslint-disable-next-line
+
+  /**
+   * TODO
+   * mock content of Post
+   */  
+  const expectedPostContent = 'Welcome to Relay Workshop'
   const customMockResolvers = {
     Post: () => ({
-      content: 'Welcome to Relay Workshop',
+      // id: 'postId',
+      content: expectedPostContent,
     }),
-  };
+    // unneed
+    // User: () => ({
+    //   id: '2',
+    //   name: 'Test User',
+    // }),
+  }
+
+  /**
+   * TODO
+   * queue a pending operation, this would be a preloadQuery call
+   */
 
   // queue pending operation
   environment.mock.queuePendingOperation(query, variables);
-
   // PostDetailQuery
   environment.mock.queueOperationResolver(operation => MockPayloadGenerator.generate(operation, customMockResolvers));
+  
+  /**
+   * TODO
+   * mock a queued operation
+   */
 
   const Root = withProviders({
     routes,
     initialEntries,
-    Component: PostDetail,
+    environment: environment,
   });
 
-  const prepared = {
-    postDetailQuery: loadQuery(environment, PostDetailQuery, variables, {
-      fetchPolicy: 'store-or-network',
-    }),
-  };
+  const {getByText, debug, findByText} = render(
+    <Root />,
+  );
 
-  // eslint-disable-next-line
-  const { debug, getByText } = render(<Root prepared={prepared} />);
+  await waitFor(() => {
+    expect(loaderSpy).toHaveBeenCalledTimes(1)
+    expect(getByText(expectedPostContent)).toBeTruthy();
+  })
+  // or
+  // expect(await findByText('PostDetail')).toBeTruthy();
 
-  // uncomment to check DOM
   // debug();
-
-  expect(getByText('Welcome to Relay Workshop')).toBeTruthy();
 });
+
+it('should render post not found', async () => {
+  const environment = createMockEnvironment()
+  const variables = {
+    id: 'postId',
+  }
+
+  const routes = [
+    {
+      element: <PostDetail />,
+      path: '/post/:id',
+      loader: () => ({
+        postDetailQuery: loadQuery(
+          environment,
+          PostDetailQuery,
+          variables,
+          { fetchPolicy: 'store-or-network' },
+        ),
+      }),
+    },
+  ]
+  const loaderSpy = vi.spyOn(routes[0], 'loader')
+
+  const mockResolverGetPostDetail = {
+    Post: () => null,
+  }
+
+  environment.mock.queuePendingOperation(PostDetailQuery, variables)
+  environment.mock.queueOperationResolver(operation => MockPayloadGenerator.generate(operation, mockResolverGetPostDetail))
+
+  const Root = withProviders({
+    environment,
+    routes,
+    initialEntries: [`/post/${variables.id}`],
+  })
+  
+  const { debug, getByText } = render(
+    <Root />,
+  )
+
+  await waitFor(() => {
+    expect(loaderSpy).toHaveBeenCalledTimes(1)
+    getByText('Post not found')
+  })
+
+  debug()
+})

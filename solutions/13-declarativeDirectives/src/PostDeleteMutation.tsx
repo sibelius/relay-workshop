@@ -1,12 +1,11 @@
-import { graphql } from 'react-relay';
+import { graphql } from 'relay-runtime'
 
-export const PostDelete = graphql`
-  mutation PostDeleteMutation($input: PostDeleteInput! $connections: [ID!]!) {
-    PostDelete(input: $input) {
-      postId @deleteEdge(connections: $connections)
-      error
-      success
-    } 
-  }
-`;
-
+export const PostDeleteMutation = graphql`
+    mutation PostDeleteMutation($connections: [ID!]!, $input: PostDeleteInput!) {
+        PostDelete(input: $input) {
+            postId @deleteEdge(connections: $connections)
+            error
+            success
+        }
+    }
+`

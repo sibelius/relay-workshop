@@ -1,11 +1,13 @@
 {
-  "name": "@solutions/1-fetchGraphql",
-  "version": "1.0.0",
-  "scripts": {
-    "copy-env": "cp .env.example .env",
-    "start": "webpack serve --hot"
-  },
-  "devDependencies": {
-    "webpack": "5.91.0"
-  }
+	"name": "@solutions/1-fetchGraphql",
+	"version": "1.0.0",
+	"scripts": {
+		"copy-env": "cp .env.example .env",
+		"start": "rspack serve"
+	},
+	"devDependencies": {
+		"@workshop/rspack": "workspace:*",
+		"@workshop/ui": "workspace:*",
+		"@workshop/babelweb": "workspace:*"
+	}
 }

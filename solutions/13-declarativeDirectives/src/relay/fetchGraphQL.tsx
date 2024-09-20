@@ -5,13 +5,17 @@ import config from '../config';
 
 // read from localstorage or cookie
 const getToken = () => {
-  return 'JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwYzBiYjk3YTBlYjA0MDAwOWQ0NzgwNiIsImlhdCI6MTY2NDMyMjkyOH0.2X9sahJYk7kp35huR6la9DyWtT8ADTSAC8B-uTT4NTk';
+  /**
+   * TODO
+   * use your user token
+   */
+  return 'JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OWZlMjkwY2YyMzdhNDdlZDgyZDcxYyIsImlhdCI6MTcyNDcyNjgwN30.G2sfYPtfWM34Vs5Z0N2Nu_1l_Jmlu8p3Pt-sMXDdxGc';
 };
 
 export const fetchGraphQL = async (request: RequestParameters, variables: Variables) => {
   const authorization = getToken();
 
-  const response = await fetch(config.GRAPHQL_URL as string, {
+  const response = await fetch(config.GRAPHQL_URL!, {
     method: 'POST',
     headers: {
       Accept: 'application/json',

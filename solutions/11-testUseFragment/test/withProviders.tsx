@@ -1,58 +1,46 @@
-import { createMemoryHistory } from 'history';
-
 import React, { Suspense } from 'react';
-import '@testing-library/jest-dom';
 
-import { RoutingContext, createRouter, JSResource } from '@workshop/route';
+// eslint-disable-next-line import/namespace
+import { createMemoryRouter, RouteObject, RouterProvider } from 'react-router-dom';
+
+import { RelayMockEnvironment } from 'relay-test-utils/lib/RelayModernMockEnvironment';
+import RelayModernEnvironment from 'relay-runtime/lib/store/RelayModernEnvironment';
 
 import ErrorBoundary from '../src/ErrorBoundaryRetry';
-import { Environment } from '../src/relay';
 import Providers from '../src/Providers';
-import { Route } from '../src/routes';
 
-type WithProviders = {
-  environment: typeof Environment;
-  Component: React.ComponentType;
-  initialEntries: string[];
-  routes: Route;
+import {routes as defaultRoutes}  from '../src/routes'
+
+export type WithProviders = {
+  Component: () => React.JSX.Element
+  environment: RelayMockEnvironment;
+  initialEntries?: string[];
+  routes?: RouteObject[];
 };
 export const withProviders = ({
-  environment = Environment,
   Component,
+  environment,
   initialEntries = ['/'],
   routes,
 }: WithProviders) => {
-  const defaultRoutes = [
-    {
-      path: '/',
-      exact: true,
-      component: JSResource('Component', () => new Promise(resolve => resolve(Component))),
-    },
-  ];
+  const testRoutes = routes;
 
-  const testRoutes = routes || defaultRoutes;
+  const router = createMemoryRouter(testRoutes || defaultRoutes, {
+    initialEntries,
+    initialIndex: 0,
+  })
 
-  const router = createRouter(
-    testRoutes,
-    createMemoryHistory({
-      initialEntries,
-      initialIndex: 0,
-    }),
-  );
-
-  return props => {
+  return () => {
     // TODO - make RouterRenderer work
     return (
-      <RoutingContext.Provider value={router.context}>
-        <Providers environment={environment}>
-          <ErrorBoundary>
-            <Suspense fallback={'Loading fallback...'}>
-              <Component {...props} />
-              {/*<RouterRenderer />*/}
-            </Suspense>
-          </ErrorBoundary>
-        </Providers>
-      </RoutingContext.Provider>
+      <Providers environment={environment as unknown as RelayModernEnvironment}>
+        <ErrorBoundary>
+          <Suspense fallback={'Loading fallback...'}>
+            <Component />
+            <RouterProvider router={router} />
+          </Suspense>
+        </ErrorBoundary>
+      </Providers>
     );
   };
 };

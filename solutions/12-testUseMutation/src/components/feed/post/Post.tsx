@@ -6,7 +6,7 @@ import { Text } from 'rebass';
 
 import { Card, CardActions } from '@workshop/ui';
 
-import { Link as _Link } from '@workshop/route';
+import { Link as _Link } from 'react-router-dom';
 
 import PostLikeButton from '../like/PostLikeButton';
 import PostCommentComposer from '../comment/PostCommentComposer';

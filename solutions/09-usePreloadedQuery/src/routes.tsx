@@ -1,48 +1,35 @@
+
+import React from 'react';
 import { loadQuery } from 'react-relay';
 
-import { JSResource } from '@workshop/route';
+import { RouteObject } from 'react-router-dom'
 
+import App from './App';
+import PostDetail from './components/feed/post/PostDetail';
+
+// eslint-disable-next-line
 import { Environment } from './relay';
 
-export const routes = [
+export const routes: RouteObject[] = [
   {
-    component: JSResource('App', () => import('./App')),
+    element: <App />,
     path: '/',
-    exact: true,
-    prepare: () => {
-      const AppQuery = require('./__generated__/AppQuery.graphql');
-
-      return {
-        appQuery: loadQuery(
-          Environment,
-          AppQuery,
-          {},
-          {
-            fetchPolicy: 'network-only',
-          },
-        ),
-      };
+    loader: () => {
+      /**
+       * TODO
+       * add preloadQuery to start fetching before component has mounted
+       */
     },
   },
   {
     path: '/post/:id',
-    exact: true,
-    component: JSResource('PostDetail', () => import('./components/feed/post/PostDetail')),
-    prepare: (params: { id: string }) => {
-      const PostDetailQuery = require('./components/feed/post/__generated__/PostDetailQuery.graphql');
-
-      return {
-        postDetailQuery: loadQuery(
-          Environment,
-          PostDetailQuery,
-          {
-            id: params.id,
-          },
-          {
-            fetchPolicy: 'store-or-network',
-          },
-        ),
-      };
+    element: <PostDetail />,
+    loader: ({ request, params, context }) => {
+      /**
+       * TODO
+       * add preloadQuery to start fetching before component has mounted
+       * use params as query variables
+       */
     },
   },
 ];

@@ -2,6 +2,7 @@ import React from 'react';
 
 import { usePreloadedQuery , graphql } from 'react-relay';
 
+import { useLoaderData } from 'react-router-dom';
 
 import { Text } from 'rebass';
 
@@ -10,12 +11,12 @@ import { Card, Content, BackButton } from '@workshop/ui';
 import Post from './Post';
 import { PostDetailQuery } from './__generated__/PostDetailQuery.graphql';
 
-type Props = {
-  prepared: {
-    postDetailQuery: PostDetailQuery;
-  };
+type LoadedData = {
+  postDetailQuery: PostDetailQuery;
 };
-const PostDetail = ({ prepared }: Props) => {
+const PostDetail = () => {
+  const loadedData = useLoaderData() as LoadedData
+
   const data = usePreloadedQuery<PostDetailQuery>(
     graphql`
       query PostDetailQuery($id: ID!) {
@@ -27,7 +28,7 @@ const PostDetail = ({ prepared }: Props) => {
         }
       }
     `,
-    prepared.postDetailQuery,
+    loadedData.postDetailQuery,
   );
 
   const { post, me } = data;

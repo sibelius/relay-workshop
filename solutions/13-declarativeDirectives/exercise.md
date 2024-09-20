@@ -4,12 +4,12 @@ Learn how to use declarative directives to modify GraphQL data and see the conne
 
 ## Exercise
 
-- run `pnpm get-token` to get an user token, put the token on Authorization header on Network Layer
-- Create a Post mutation using @appendEdge and @prependEdge to see the difference. 
+- [x] run `pnpm get-token` to get an user token, put the token on Authorization header on Network Layer
+- [x] Create a Post mutation using @appendEdge and @prependEdge to see the difference. 
 
 ## Extras
 
-- [ ] add deletePostMutation using @deleteEdge
+- [x] add deletePostMutation using @deleteEdge
 
 ## Code Helpers
 

@@ -9,7 +9,8 @@ import Post from './Post';
 
 import { Feed_query, Feed_query$key } from './__generated__/Feed_query.graphql';
 import { FeedPaginationQuery } from './__generated__/FeedPaginationQuery.graphql';
-import { PostCreate } from './PostCreateMutation';
+
+import {PostCreateMutation, postCreateOptimisticResponse} from './PostCreateMutation'
 
 type Props = {
   query: Feed_query;
@@ -44,8 +45,11 @@ const Feed = (props: Props) => {
   );
 
   const { posts } = data;
-  const connectionIDs = posts.__id
+
+  const [commitPostCreate, isCreatingPost] = useMutation(PostCreateMutation)
   /*
+  To have access of connections.
+  const connectionIDs = posts.__id
   OR
   const connectionIDs = ConnectionHandler.getConnectionID(
     ROOT_ID,
@@ -61,20 +65,28 @@ const Feed = (props: Props) => {
     loadNext(1);
   }, [isLoadingNext, loadNext]);
 
-  
-  const [createMutation] = useMutation(PostCreate)
+  /**
+   * TODO
+   * Consume your createMutation here  */
 
   function CreateRandom() {
-    createMutation({
-      variables: {
-        input: {
-          content: 'Teste',
-        },
-        connections: [connectionIDs],
+    /**
+     * TODO
+     * create a function to generate a random Post and use connections.
+     */
+    const  variables = {
+      input: {
+        content: 'Teste',
       },
+      connections: [posts.__id],
+    }
+      
+    commitPostCreate({
+      variables,
+      onError: (completed) => console.log(completed),
+      onCompleted: (completed) => console.log(completed),
     })
   }
-  
 
   return (
     <Flex flexDirection='column'>
@@ -85,7 +97,7 @@ const Feed = (props: Props) => {
         Load More
       </Button>
       <Button mt='10px' onClick={CreateRandom}>
-        Create New
+        {isCreatingPost ? 'Creating...' : 'Create New'}
       </Button>
     </Flex>
   );

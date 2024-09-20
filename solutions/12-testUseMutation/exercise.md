@@ -4,13 +4,13 @@ Learn how to test useMutation components
 
 ## Exercise
  
-- render PostLikeButton component using @testing-library (same as 11-testUseFragment exercise)
-- click on the like button
-- assert the mutation is called with the right variables
+- [x] render PostLikeButton component using @testing-library (same as 11-testUseFragment exercise)
+- [x] click on the like button
+- [x] assert the mutation is called with the right variables
 
 ## Extras
 
-- [ ] mock mutation response and assert the new likesCount in the DOM
+- [x] mock mutation response and assert the new likesCount in the DOM
 
 ## Code Helpers
 
@@ -28,3 +28,6 @@ await waitFor(() => environment.mock.getMostRecentOperation());
 ```jsx
 const mutationOperation = environment.mock.getMostRecentOperation();
 ```
+
+tricks for extra exercise:
+Don't try use the mock mutation response together an `act` function asynchronous, the mutation response must be a synchonous.
