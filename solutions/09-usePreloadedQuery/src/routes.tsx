@@ -1,48 +1,50 @@
-import { loadQuery } from 'react-relay';
+import React from "react";
+import { loadQuery } from "react-relay";
 
-import { JSResource } from '@workshop/route';
+import type { RouteObject } from "react-router-dom";
 
-import { Environment } from './relay';
+import { AppQuery } from "./__generated__/AppQuery.graphql";
+import { PostDetailQuery } from "./__generated__/AppQuery.graphql";
 
-export const routes = [
-  {
-    component: JSResource('App', () => import('./App')),
-    path: '/',
-    exact: true,
-    prepare: () => {
-      const AppQuery = require('./__generated__/AppQuery.graphql');
+import App from "./App";
+import PostDetail from "./components/feed/post/PostDetail";
 
-      return {
-        appQuery: loadQuery(
-          Environment,
-          AppQuery,
-          {},
-          {
-            fetchPolicy: 'network-only',
-          },
-        ),
-      };
-    },
-  },
-  {
-    path: '/post/:id',
-    exact: true,
-    component: JSResource('PostDetail', () => import('./components/feed/post/PostDetail')),
-    prepare: (params: { id: string }) => {
-      const PostDetailQuery = require('./components/feed/post/__generated__/PostDetailQuery.graphql');
+// eslint-disable-next-line
+import { Environment } from "./relay";
 
-      return {
-        postDetailQuery: loadQuery(
-          Environment,
-          PostDetailQuery,
-          {
-            id: params.id,
-          },
-          {
-            fetchPolicy: 'store-or-network',
-          },
-        ),
-      };
-    },
-  },
+export const routes: RouteObject[] = [
+	{
+		element: <App />,
+		path: "/",
+		loader: () => {
+			return {
+				appQuery: loadQuery(
+					Environment,
+					AppQuery,
+					{},
+					{
+						fetchPolicy: "network-only",
+					},
+				),
+			};
+		},
+	},
+	{
+		path: "/post/:id",
+		element: <PostDetail />,
+		loader: ({ request, params, context }) => {
+			return {
+				postDetailQuery: loadQuery(
+					Environment,
+					PostDetailQuery,
+					{
+						id: params.id,
+					},
+					{
+						fetchPolicy: "store-or-network",
+					},
+				),
+			};
+		},
+	},
 ];

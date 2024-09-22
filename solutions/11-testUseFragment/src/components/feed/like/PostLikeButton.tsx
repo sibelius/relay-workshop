@@ -2,7 +2,7 @@ import React from 'react';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
-import { useFragment , graphql , useMutation } from 'react-relay';
+import { useFragment , graphql , useMutation, UseMutationConfig } from 'react-relay';
 import IconButton from '@mui/material/IconButton';
 
 
@@ -21,6 +21,7 @@ type Props = {
   post: PostLikeButton_post$key;
 };
 const PostLikeButton = (props: Props) => {
+  // eslint-disable-next-line relay/generated-flow-types
   const post = useFragment<PostLikeButton_post$key>(
     graphql`
       fragment PostLikeButton_post on Post {
@@ -45,7 +46,7 @@ const PostLikeButton = (props: Props) => {
         },
       },
       optimisticResponse: post.meHasLiked ? unlikeOptimisticResponse(post) : likeOptimisticResponse(post),
-    };
+    } as  UseMutationConfig<PostLikeMutation> & UseMutationConfig<PostUnLikeMutation>;
 
     const mutationFn = post.meHasLiked ? postUnLike : postLike;
 

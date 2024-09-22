@@ -16,17 +16,12 @@ import { unlikeOptimisticResponse, PostUnLike } from './PostUnLikeMutation';
 import { PostLikeMutation } from './__generated__/PostLikeMutation.graphql';
 import { PostUnLikeMutation } from './__generated__/PostUnLikeMutation.graphql';
 import { Post_post, Post_post$key } from './__generated__/Post_post.graphql';
-import { PostDelete } from './PostDeleteMutation';
+import { PostDeleteMutation } from './PostDeleteMutation';
 
 type Props = {
-  post: Post_post
+  post: Post_post;
 };
 const Post = (props: Props) => {
-  const connectionIDs = ConnectionHandler.getConnectionID(
-    ROOT_ID,
-    'Feed_posts',
-  )
-
   const post = useFragment<Post_post$key>(
     graphql`
       fragment Post_post on Post {
@@ -42,19 +37,34 @@ const Post = (props: Props) => {
     props.post,
   );
 
+  const globalPostId = post.id
+  const [deletePostCommit, isDeletingPost] = useMutation(PostDeleteMutation)
+
   const [postLike] = useMutation<PostLikeMutation>(PostLike);
   const [postUnLike] = useMutation<PostUnLikeMutation>(PostUnLike);
-  const [postDeleteMutation] = useMutation(PostDelete)
 
   const Icon = post.meHasLiked ? FavoriteIcon : FavoriteBorderIcon;
 
+  /**
+   * TODO
+   * Consume your deleteMutation here  */
+
   function deletePost() {
-    postDeleteMutation({
+    /**
+     * TODO
+     * create a function to delete a post given its globalId and the posts connection.
+     */
+    const feedPostsConnectionId = ConnectionHandler.getConnectionID(ROOT_ID, 'Feed_posts')
+
+    console.log(feedPostsConnectionId)
+
+    if (!feedPostsConnectionId) throw new Error('Connection Feed_posts not found')
+    deletePostCommit({
       variables: {
         input: {
-          postId: post.id,
+          postId: globalPostId,
         },
-        connections: [connectionIDs],
+        connections: [feedPostsConnectionId],
       },
     })
   }
@@ -84,12 +94,9 @@ const Post = (props: Props) => {
           <Icon style={{ color: theme.relayDark }} />
         </IconButton>
         {post.likesCount > 0 ? <Text>{post.likesCount}</Text> : null}
-        
-        <Button onClick={deletePost}>
-          Delete Post
-        </Button>
+
+        <Button onClick={deletePost}>{isDeletingPost ? 'Deleting...' : 'Delete Post'}</Button>
       </CardActions>
-      
     </Card>
   );
 };

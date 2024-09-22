@@ -1,4 +1,3 @@
- 
 import React from 'react';
 
 import { Flex, Text } from 'rebass';
@@ -16,7 +15,6 @@ const App = () => {
         ...Feed_query
       }
     `,
-    {},
   );
 
   return (

@@ -1,16 +1,23 @@
+import React from 'react'
 import { loadQuery } from 'react-relay';
 
-import { JSResource } from '@workshop/route';
+import { RouteObject } from 'react-router-dom';
 
 import { Environment } from './relay';
 
-export const routes = [
+
+import AppQuery from './__generated__/AppQuery.graphql'
+import PostDetailQuery from './components/feed/post/__generated__/PostDetailQuery.graphql'
+
+import App from './App';
+import PostDetail from './components/feed/post/PostDetail';
+
+
+export const routes: RouteObject[] = [
   {
-    component: JSResource('App', () => import('./App')),
+    element: <App />,
     path: '/',
-    exact: true,
-    prepare: () => {
-      const AppQuery = require('./__generated__/AppQuery.graphql');
+    loader: () => {
 
       return {
         appQuery: loadQuery(
@@ -26,10 +33,8 @@ export const routes = [
   },
   {
     path: '/post/:id',
-    exact: true,
-    component: JSResource('PostDetail', () => import('./components/feed/post/PostDetail')),
-    prepare: (params: { id: string }) => {
-      const PostDetailQuery = require('./components/feed/post/__generated__/PostDetailQuery.graphql');
+    element: <PostDetail />,
+    loader: ({ params }) => {
 
       return {
         postDetailQuery: loadQuery(

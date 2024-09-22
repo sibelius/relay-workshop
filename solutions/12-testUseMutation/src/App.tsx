@@ -1,19 +1,23 @@
 import React from 'react';
 
+// eslint-disable-next-line import/namespace
 import { Flex, Text } from 'rebass';
 import { Content } from '@workshop/ui';
-import { graphql, usePreloadedQuery } from 'react-relay';
+import { graphql, PreloadedQuery, usePreloadedQuery } from 'react-relay';
+// eslint-disable-next-line import/namespace
+import { useLoaderData } from 'react-router-dom';
 
 import Feed from './Feed';
 
 import { AppQuery } from './__generated__/AppQuery.graphql';
 
-type Props = {
-  prepared: {
-    appQuery: any;
-  };
+type LoaderData = {
+  appQuery: PreloadedQuery<AppQuery>;
 };
-const App = ({ prepared }: Props) => {
+
+const App = () => {
+  const loadedData = useLoaderData() as LoaderData
+
   const query = usePreloadedQuery<AppQuery>(
     graphql`
       query AppQuery {
@@ -23,7 +27,7 @@ const App = ({ prepared }: Props) => {
         }
       }
     `,
-    prepared.appQuery,
+    loadedData.appQuery,
   );
 
   return (

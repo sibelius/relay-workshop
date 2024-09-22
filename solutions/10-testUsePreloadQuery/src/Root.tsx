@@ -1,21 +1,18 @@
 import React from 'react';
 
-import { RouterRenderer, RoutingContext, createRouter } from '@workshop/route';
-
-import { createBrowserHistory } from 'history';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import { routes } from './routes';
 
 import Providers from './Providers';
 
-const router = createRouter(routes, createBrowserHistory());
+// const router = createRouter(routes, createBrowserHistory());
+const router = createBrowserRouter(routes)
 
 const Root = () => {
   return (
     <Providers>
-      <RoutingContext.Provider value={router.context}>
-        <RouterRenderer />
-      </RoutingContext.Provider>
+      <RouterProvider router={router} />
     </Providers>
   );
 };

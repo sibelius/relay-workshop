@@ -1,14 +1,19 @@
 {
-  "name": "@solutions/11-testUseFragment",
+  "name": "@workshop/11-testUseFragment",
   "version": "1.0.0",
   "scripts": {
     "copy-env": "cp .env.example .env",
     "relay": "relay-compiler",
     "relay:watch": "relay-compiler --watch",
-    "start": "webpack serve --hot"
+    "start": "rspack serve",
+    "test": "NODE_ENV=development pnpm vitest"
   },
   "devDependencies": {
     "relay-compiler": "17.0.0",
-    "webpack": "5.91.0"
+    "@workshop/babelweb": "workspace:*",
+    "@workshop/relay": "workspace:*",
+    "@workshop/rspack": "workspace:*",
+    "@workshop/ui": "workspace:*",
+    "@workshop/vitest": "workspace:*"
   }
 }

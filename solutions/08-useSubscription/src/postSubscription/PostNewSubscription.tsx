@@ -1,7 +1,11 @@
-import { graphql } from 'react-relay';
-import { ConnectionHandler, RecordSourceSelectorProxy, ROOT_ID } from 'relay-runtime';
+import { graphql } from "react-relay";
+import {
+	ConnectionHandler,
+	ROOT_ID,
+	type RecordSourceSelectorProxy,
+} from "relay-runtime";
 
-import { connectionUpdater } from '@workshop/relay';
+import { connectionUpdater } from "react-relay";
 
 export const PostNew = graphql`
   subscription PostNewSubscription($input: PostNewInput!) {
@@ -22,25 +26,33 @@ export const PostNew = graphql`
 `;
 
 export const updater = (store: RecordSourceSelectorProxy) => {
-  const postNode = store.getRootField('PostNew').getLinkedRecord('post');
+	const postNode = store.getRootField("PostNew").getLinkedRecord("post");
 
-  const postId = postNode.getValue('id');
+	const postId = postNode.getValue("id");
 
-  const postStore = store.get(postId);
+	const postStore = store.get(postId);
 
-  // avoid mutation + subscription update
-  if (!postStore) {
-    const postConnection = ConnectionHandler.getConnection(store.getRoot(), 'Feed_posts');
+	// avoid mutation + subscription update
+	if (!postStore) {
+		const postConnection = ConnectionHandler.getConnection(
+			store.getRoot(),
+			"Feed_posts",
+		);
 
-    // create user edge
-    const postEdge = ConnectionHandler.createEdge(store, postConnection, postNode, 'PostEdge');
+		// create user edge
+		const postEdge = ConnectionHandler.createEdge(
+			store,
+			postConnection,
+			postNode,
+			"PostEdge",
+		);
 
-    connectionUpdater({
-      store,
-      parentId: ROOT_ID,
-      connectionName: 'Feed_posts',
-      edge: postEdge,
-      before: true,
-    });
-  }
+		connectionUpdater({
+			store,
+			parentId: ROOT_ID,
+			connectionName: "Feed_posts",
+			edge: postEdge,
+			before: true,
+		});
+	}
 };

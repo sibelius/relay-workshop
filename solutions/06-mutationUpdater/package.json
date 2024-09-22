@@ -1,14 +1,16 @@
 {
-  "name": "@solutions/6-useMutation",
-  "version": "1.0.0",
-  "scripts": {
-    "copy-env": "cp .env.example .env",
-    "relay": "relay-compiler",
-    "relay:watch": "relay-compiler --watch",
-    "start": "webpack serve --hot"
-  },
-  "devDependencies": {
-    "relay-compiler": "17.0.0",
-    "webpack": "5.91.0"
-  }
+	"name": "@solutions/6-useMutation",
+	"version": "1.0.0",
+	"scripts": {
+		"copy-env": "cp .env.example .env",
+		"relay": "relay-compiler",
+		"relay:watch": "relay-compiler --watch",
+		"start": "rspack serve"
+	},
+	"devDependencies": {
+		"relay-compiler": "17.0.0",
+		"@workshop/rspack": "workspace:*",
+		"@workshop/ui": "workspace:*",
+		"@workshop/babelweb": "workspace:*"
+	}
 }

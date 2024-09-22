@@ -1,21 +1,24 @@
-import React from 'react';
+import React from "react";
 
-import { Flex, Text } from 'rebass';
-import { Content } from '@workshop/ui';
-import { graphql, usePreloadedQuery } from 'react-relay';
+import { Content } from "@workshop/ui";
+import { graphql, useLazyLoadQuery } from "react-relay";
+import { Flex, Text } from "rebass";
 
-import Feed from './Feed';
+import { useLoaderData } from "react-router-dom";
+import Feed from "./Feed";
 
-import { AppQuery } from './__generated__/AppQuery.graphql';
+import type { AppQuery } from "./__generated__/AppQuery.graphql";
 
-type Props = {
-  prepared: {
-    appQuery: any;
-  };
-};
-const App = ({ prepared }: Props) => {
-  const query = usePreloadedQuery<AppQuery>(
-    graphql`
+const App = () => {
+	// get data preloaded in router v6
+	const loadedData = useLoaderData();
+
+	/**
+	 * TODO
+	 * use usePreloadedQuery instead of useLazyLoadQuery
+	 */
+	const query = useLazyLoadQuery<AppQuery>(
+		graphql`
       query AppQuery {
         ...Feed_query
         me {
@@ -23,17 +26,17 @@ const App = ({ prepared }: Props) => {
         }
       }
     `,
-    prepared.appQuery,
-  );
+		loadedData.appQuery,
+	);
 
-  return (
-    <Content>
-      <Flex flexDirection='column'>
-        <Text>Posts</Text>
-        <Feed query={query} />
-      </Flex>
-    </Content>
-  );
+	return (
+		<Content>
+			<Flex flexDirection="column">
+				<Text>Posts</Text>
+				<Feed query={query} />
+			</Flex>
+		</Content>
+	);
 };
 
 export default App;

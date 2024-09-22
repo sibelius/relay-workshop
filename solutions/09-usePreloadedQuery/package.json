@@ -1,14 +1,20 @@
 {
-  "name": "@solutions/9-usePreloadedQuery",
+  "name": "@workshop/09-usePreloadedQuery",
   "version": "1.0.0",
   "scripts": {
     "copy-env": "cp .env.example .env",
     "relay": "relay-compiler",
     "relay:watch": "relay-compiler --watch",
-    "start": "webpack serve --hot"
+    "start": "rspack serve"
   },
   "devDependencies": {
-    "relay-compiler": "17.0.0",
-    "webpack": "5.91.0"
+    "@workshop/babelweb": "workspace:*",
+    "@workshop/relay": "workspace:*",
+    "@workshop/rspack": "workspace:*",
+    "@workshop/ui": "workspace:*",
+    "relay-compiler": "17.0.0"
+  },
+  "dependencies": {
+    "graphql-ws": "5.16.0"
   }
 }

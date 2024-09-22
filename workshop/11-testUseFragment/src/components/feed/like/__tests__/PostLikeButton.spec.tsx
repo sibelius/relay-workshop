@@ -1,89 +1,101 @@
-import { render } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import React from 'react';
+import { render } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import React from "react";
 
 // eslint-disable-next-line
-import { createMockEnvironment, MockPayloadGenerator } from 'relay-test-utils';
+import {
+	type PreloadedQuery,
+	graphql,
+	loadQuery,
+	usePreloadedQuery,
+} from "react-relay";
 // eslint-disable-next-line
-import { usePreloadedQuery, graphql, PreloadedQuery, loadQuery } from 'react-relay';
+import { MockPayloadGenerator, createMockEnvironment } from "relay-test-utils";
 
 // eslint-disable-next-line
-import { OperationType } from 'relay-runtime';
-import PostLikeButton from '../PostLikeButton';
+import type { OperationType } from "relay-runtime";
+import PostLikeButton from "../PostLikeButton";
 
-import { WithProviders, withProviders } from '../../../../../test/withProviders';
+import {
+	type WithProviders,
+	withProviders,
+} from "../../../../../test/withProviders";
 
 // eslint-disable-next-line import/no-unresolved
-import PostLikeButtonSpecQuery from './__generated__/PostLikeButtonSpecQuery.graphql';
+import PostLikeButtonSpecQuery from "./__generated__/PostLikeButtonSpecQuery.graphql";
 
-type RootProps = Pick<WithProviders, 'environment'> & {
-  preloadedQuery: PreloadedQuery<OperationType>
-}
-
-// eslint-disable-next-line
-export const getRoot = ({preloadedQuery, environment }: RootProps) => {
-  const UseQueryWrapper = () => {
-    /**
-     * TODO
-     * add usePreloadQuery of a test operation
-     */
-    const data = {
-      post: {}
-    }
-
-    return <PostLikeButton post={data.post} />;
-  };
-
-  return withProviders({
-    Component: UseQueryWrapper,
-    environment,
-  });
+type RootProps = Pick<WithProviders, "environment"> & {
+	preloadedQuery: PreloadedQuery<OperationType>;
 };
 
-it('should render post like button and likes count', async () => {
-  const environment = createMockEnvironment()
-  // eslint-disable-next-line
+// eslint-disable-next-line
+// biome-ignore lint/suspicious/noExportsInTest: <explanation>
+export const getRoot = ({ preloadedQuery, environment }: RootProps) => {
+	const UseQueryWrapper = () => {
+		/**
+		 * TODO
+		 * add usePreloadQuery of a test operation
+		 */
+		const data = {
+			post: {},
+		};
 
-  const postId = 'postId';
-  // eslint-disable-next-line
-  const variables = {
-    id: postId,
-  };
+		return <PostLikeButton post={data.post} />;
+	};
 
-  /**
-   * TODO
-   * properly mock resolvers
-   */
-  const customMockResolvers = {}
+	return withProviders({
+		Component: UseQueryWrapper,
+		environment,
+	});
+};
 
+it("should render post like button and likes count", async () => {
+	const environment = createMockEnvironment();
+	// eslint-disable-next-line
 
-  /**
-   * TODO
-   * queue a pending operation, this would be a preloadQuery call
-   */
+	const postId = "postId";
+	// eslint-disable-next-line
+	const variables = {
+		id: postId,
+	};
 
-  /**
-   * TODO
-   * mock a queued operation
-   */
+	/**
+	 * TODO
+	 * properly mock resolvers
+	 */
+	const customMockResolvers = {};
 
-  /**
-   * TODO
-   * preloadQuery test GraphQL operation
-   */
+	/**
+	 * TODO
+	 * queue a pending operation, this would be a preloadQuery call
+	 */
 
-  const Root = getRoot({
-    preloadedQuery,
-    environment,
-  });
+	/**
+	 * TODO
+	 * mock a queued operation
+	 */
 
-  const { debug, findByText } = render(<Root />);
+	/**
+	 * TODO
+	 * preloadQuery test GraphQL operation
+	 */
+	const preloadedQuery = {};
 
-  expect(await findByText('10')).toBeTruthy()
+	const Root = getRoot({
+		preloadedQuery,
+		environment,
+	});
 
-  debug();
+	const { debug, findByText } = render(<Root />);
+
+	expect(await findByText("10")).toBeTruthy();
+
+	debug();
 });
 
-it('should non-render post likesCount if is equal zero', async () => {
-  // build a likesCount test -> extra exercise
-})
+it("should non-render post likesCount if is equal zero", async () => {
+	/**
+	 * TODO
+	 * build a likesCount test is zero
+	 */
+});
