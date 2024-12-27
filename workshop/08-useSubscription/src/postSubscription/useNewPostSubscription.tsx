@@ -10,7 +10,7 @@ import { GraphQLSubscriptionConfig } from 'relay-runtime';
 
 import { AppQueryResponse } from '../__generated__/AppQuery.graphql';
 
-import { PostNew, updater } from './PostNewSubscription';
+import { PostNew, updater } from './PostNewSubscription.tsx';
 import { PostNewSubscription, PostNewSubscriptionResponse } from './__generated__/PostNewSubscription.graphql';
 
 // TODO - use @inline for me

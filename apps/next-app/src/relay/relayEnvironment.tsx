@@ -1,6 +1,6 @@
 import { Environment, RecordSource, Store } from 'relay-runtime';
 
-import { createNetwork } from './environment';
+import { createNetwork } from './environment.tsx';
   
 const IS_SERVER = typeof window === typeof undefined;
 const CLIENT_DEBUG = false;

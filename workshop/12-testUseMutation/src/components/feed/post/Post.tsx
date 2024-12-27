@@ -8,11 +8,11 @@ import { Card, CardActions } from '@workshop/ui';
 
 import { Link as _Link } from 'react-router-dom';
 
-import PostLikeButton from '../like/PostLikeButton';
-import PostCommentComposer from '../comment/PostCommentComposer';
-import PostComments from '../comment/PostComments';
+import PostLikeButton from '../like/PostLikeButton.tsx';
+import PostCommentComposer from '../comment/PostCommentComposer.tsx';
+import PostComments from '../comment/PostComments.tsx';
 
-import PostHeader from './PostHeader';
+import PostHeader from './PostHeader.tsx';
 import { Post_post$key } from './__generated__/Post_post.graphql';
 import { Post_me$key } from './__generated__/Post_me.graphql';
 

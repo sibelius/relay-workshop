@@ -4,7 +4,7 @@ import { Flex, Text } from 'rebass';
 import { Content } from '@workshop/ui';
 import { graphql, useLazyLoadQuery } from 'react-relay';
 
-import Feed from './Feed';
+import Feed from './Feed.tsx';
 
 import { AppQuery } from './__generated__/AppQuery.graphql';
 

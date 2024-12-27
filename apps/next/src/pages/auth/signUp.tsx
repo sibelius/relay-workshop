@@ -11,12 +11,12 @@ import Link from 'next/link';
 
 import { useRouter } from 'next/router';
 
-import { UserRegisterWithEmail } from '../../components/auth/UserRegisterWithEmailMutation';
+import { UserRegisterWithEmail } from '../../components/auth/UserRegisterWithEmailMutation.tsx';
 import {
   UserRegisterWithEmailMutation,
   UserRegisterWithEmailMutation$data,
 } from '../../__generated__/UserRegisterWithEmailMutation.graphql';
-import AuthRoot from '../../components/auth/AuthRoot';
+import AuthRoot from '../../components/auth/AuthRoot.tsx';
 
 type Values = {
   name: string;

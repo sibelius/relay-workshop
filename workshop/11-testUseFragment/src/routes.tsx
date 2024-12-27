@@ -8,8 +8,8 @@ import AppQuery from './__generated__/AppQuery.graphql'
 
 import PostDetailQuery from './components/feed/post/__generated__/PostDetailQuery.graphql'
 
-import PostDetail from './components/feed/post/PostDetail'
-import App from './App'
+import PostDetail from './components/feed/post/PostDetail.tsx'
+import App from './App.tsx'
 
 export const routes: RouteObject[] = [
   {

@@ -1,9 +1,9 @@
 import { subscriptionWithClientId } from 'graphql-relay-subscription';
 
-import PostType from '../PostType';
-import pubSub, { EVENTS } from '../../../pubSub';
-import * as PostLoader from '../PostLoader';
-import { type GraphQLContext } from '../../../graphql/types';
+import PostType from '../PostType.ts';
+import pubSub, { EVENTS } from '../../../pubSub.ts';
+import * as PostLoader from '../PostLoader.ts';
+import { type GraphQLContext } from '../../../graphql/types.ts';
 
 type PostNew = {
   postId: string;

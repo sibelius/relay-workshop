@@ -7,7 +7,7 @@ import { graphql, PreloadedQuery, usePreloadedQuery } from 'react-relay';
 // eslint-disable-next-line import/namespace
 import { useLoaderData } from 'react-router-dom';
 
-import Feed from './Feed';
+import Feed from './Feed.tsx';
 
 import { AppQuery } from './__generated__/AppQuery.graphql';
 

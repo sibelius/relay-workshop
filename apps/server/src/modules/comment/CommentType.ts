@@ -3,18 +3,18 @@ import { globalIdField } from 'graphql-relay';
 
 import { connectionDefinitions, objectIdResolver, timestampResolver } from '@entria/graphql-mongo-helpers';
 
-import { nodeInterface, registerTypeLoader } from '../node/typeRegister';
+import { nodeInterface, registerTypeLoader } from '../node/typeRegister.ts';
 
-import { type GraphQLContext } from '../../graphql/types';
-import UserType from '../user/UserType';
-import * as UserLoader from '../user/UserLoader';
-import * as PostLoader from '../post/PostLoader';
+import { type GraphQLContext } from '../../graphql/types.ts';
+import UserType from '../user/UserType.ts';
+import * as UserLoader from '../user/UserLoader.ts';
+import * as PostLoader from '../post/PostLoader.ts';
 
-import LikeModel from '../like/LikeModel';
-import PostType from '../post/PostType';
+import LikeModel from '../like/LikeModel.ts';
+import PostType from '../post/PostType.ts';
 
-import { type IComment } from './CommentModel';
-import { load } from './CommentLoader';
+import { type IComment } from './CommentModel.ts';
+import { load } from './CommentLoader.ts';
 
 const CommentType = new GraphQLObjectType<IComment, GraphQLContext>({
   name: 'Comment',

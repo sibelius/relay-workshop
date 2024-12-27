@@ -1,6 +1,6 @@
 import { Environment, Network, RecordSource, Store } from 'relay-runtime';
 
-import { fetchGraphQL } from './fetchGraphQL';
+import { fetchGraphQL } from './fetchGraphQL.tsx';
 
 const network = Network.create(fetchGraphQL);
 

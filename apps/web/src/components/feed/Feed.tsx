@@ -4,11 +4,11 @@ import { graphql , usePreloadedQuery, PreloadedQuery } from 'react-relay';
 
 import { Content } from '@workshop/ui';
 
-import PostComposer from './PostComposer';
+import PostComposer from './PostComposer.tsx';
 import { FeedQuery } from './__generated__/FeedQuery.graphql';
 
-import FeedList from './FeedList';
-import { useNewPostSubscription } from './useNewPostSubscription';
+import FeedList from './FeedList.tsx';
+import { useNewPostSubscription } from './useNewPostSubscription.tsx';
 
 type Props = {
   prepared: {

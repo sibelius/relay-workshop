@@ -3,14 +3,14 @@ import { mutationWithClientMutationId } from 'graphql-relay';
 
 import { errorField, successField, getObjectId } from '@entria/graphql-mongo-helpers';
 
-import PostModel from '../../post/PostModel';
+import PostModel from '../../post/PostModel.ts';
 
-import * as PostLoader from '../../post/PostLoader';
+import * as PostLoader from '../../post/PostLoader.ts';
 
-import { type GraphQLContext } from '../../../graphql/types';
-import PostType from '../../post/PostType';
+import { type GraphQLContext } from '../../../graphql/types.ts';
+import PostType from '../../post/PostType.ts';
 
-import LikeModel from '../LikeModel';
+import LikeModel from '../LikeModel.ts';
 
 type Args = {
   post: string;

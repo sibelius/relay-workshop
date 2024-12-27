@@ -4,10 +4,10 @@ import { Text } from 'rebass';
 import { Card, CardActions } from '@workshop/ui';
 
 import { Post_post, Post_post$key } from './__generated__/Post_post.graphql';
-import PostCommentComposer from './comment/PostCommentComposer';
-import PostLikeButton from './like/PostLikeButton';
+import PostCommentComposer from './comment/PostCommentComposer.tsx';
+import PostLikeButton from './like/PostLikeButton.tsx';
 import { Post_me, Post_me$key } from './__generated__/Post_me.graphql';
-import PostComments from './comment/PostComments';
+import PostComments from './comment/PostComments.tsx';
 
 type Props = {
   post: Post_post;

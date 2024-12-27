@@ -9,8 +9,8 @@ import IconButton from '@mui/material/IconButton';
 import { usePreloadedQuery , graphql } from 'react-relay';
 
 
-import { useLogout } from '../auth/security';
-import { useAuth } from '../../core/useAuth';
+import { useLogout } from '../auth/security.tsx';
+import { useAuth } from '../../core/useAuth.tsx';
 
 import { FeedQuery } from './__generated__/FeedQuery.graphql';
 

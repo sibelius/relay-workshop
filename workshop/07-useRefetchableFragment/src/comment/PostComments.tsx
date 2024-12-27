@@ -6,7 +6,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 
 import { theme } from '@workshop/ui';
 
-import UserAvatar from './UserAvatar';
+import UserAvatar from './UserAvatar.tsx';
 
 import { PostComments_post$key } from './__generated__/PostComments_post.graphql';
 

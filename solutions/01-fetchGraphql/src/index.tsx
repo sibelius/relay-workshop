@@ -2,7 +2,7 @@ import React from 'react';
 import 'isomorphic-fetch';
 import ReactDOM from 'react-dom';
 
-import App from './App';
+import App from './App.tsx';
 
 const container = document.getElementById('root');
 

@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-import { config } from './config';
+import { config } from './config.ts';
 
 export const connectDatabase = async (): Promise<void> => {
   // eslint-disable-next-line no-console

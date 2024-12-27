@@ -1,9 +1,9 @@
 import { createLoader } from '@entria/graphql-mongo-helpers';
 
-import { registerLoader } from '../loader/loaderRegister';
+import { registerLoader } from '../loader/loaderRegister.ts';
 
-import PostModel from './PostModel';
-import { postFilterMapping } from './PostFilterInputType';
+import PostModel from './PostModel.ts';
+import { postFilterMapping } from './PostFilterInputType.ts';
 
 const {
   Wrapper: Post,

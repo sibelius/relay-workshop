@@ -11,12 +11,12 @@ import Divider from '@mui/material/Divider';
 
 import { TextFieldMaterial } from '@workshop/ui';
 
-import UserAvatar from './UserAvatar';
+import UserAvatar from './UserAvatar.tsx';
 
 import { PostCommentComposer_post$key } from './__generated__/PostCommentComposer_post.graphql';
 
 import { PostCommentCreateMutation } from './__generated__/PostCommentCreateMutation.graphql';
-import { PostCommentCreate, updater, optimisticUpdater } from './PostCommentCreateMutation';
+import { PostCommentCreate, updater, optimisticUpdater } from './PostCommentCreateMutation.tsx';
 import { PostCommentComposer_me$key } from './__generated__/PostCommentComposer_me.graphql';
 
 type Props = {

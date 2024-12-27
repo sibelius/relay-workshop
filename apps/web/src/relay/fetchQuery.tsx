@@ -1,11 +1,11 @@
 import { RequestParameters, Variables, UploadableMap } from 'relay-runtime';
 
-import config from '../config';
+import config from '../config.tsx';
 
-import { getToken } from '../components/auth/security';
+import { getToken } from '../components/auth/security.tsx';
 
-import { handleData, getRequestBody, getHeaders, isMutation } from './helpers';
-import fetchWithRetries from './fetchWithRetries';
+import { handleData, getRequestBody, getHeaders, isMutation } from './helpers.tsx';
+import fetchWithRetries from './fetchWithRetries.tsx';
 
 // Define a function that fetches the results of a request (query/mutation/etc)
 // and returns its results as a Promise:

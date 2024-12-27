@@ -2,7 +2,7 @@ import { NextComponentType, NextPageContext } from 'next';
 import { Suspense, useMemo } from 'react';
 import { useRelayEnvironment, RelayEnvironmentProvider } from 'react-relay';
 
-import { createEnvironment } from './relayEnvironment';
+import { createEnvironment } from './relayEnvironment.tsx';
 
 export function ReactRelayContainer({ Component, props }: {Component: NextComponentType<NextPageContext, any, any>, props: any}) {
   const environment = useMemo(() => createEnvironment(), []);

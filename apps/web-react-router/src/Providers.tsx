@@ -7,7 +7,7 @@ import { getTheme } from '@workshop/ui';
 
 import { SnackbarProvider } from 'notistack';
 
-import { createEnvironment } from './relay/relayEnvironment';
+import { createEnvironment } from './relay/relayEnvironment.tsx';
 
 const theme = getTheme();
 

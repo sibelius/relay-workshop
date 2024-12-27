@@ -6,9 +6,9 @@ import { BackButtonNext, Card, Content } from '@workshop/ui';
 
 import React from 'react';
 
-import Post from '../../components/post/Post';
-import { getPreloadedQuery } from '../../relay/getPreloadedQuery';
-import RootLayout from '../../components/feed/RootLayout';
+import Post from '../../components/post/Post.tsx';
+import { getPreloadedQuery } from '../../relay/getPreloadedQuery.tsx';
+import RootLayout from '../../components/feed/RootLayout.tsx';
 
 const idPostQuery = graphql`
   query IdPostQuery($id: ID!) @preloadable {

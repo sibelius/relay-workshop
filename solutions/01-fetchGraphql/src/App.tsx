@@ -3,7 +3,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { Flex, Text } from 'rebass';
 import { Card, Content, Button } from '@workshop/ui';
 
-import { fetchGraphQL } from './fetchGraphQL';
+import { fetchGraphQL } from './fetchGraphQL.tsx';
 
 const App = () => {
   const [posts, setPosts] = useState([]);

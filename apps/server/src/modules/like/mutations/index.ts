@@ -1,8 +1,8 @@
-import PostLike from './PostLikeMutation';
-import PostUnLike from './PostUnLikeMutation';
+import PostLike from './PostLikeMutation.ts';
+import PostUnLike from './PostUnLikeMutation.ts';
 
-import CommentLike from './CommentLikeMutation';
-import CommentUnLike from './CommentUnLikeMutation';
+import CommentLike from './CommentLikeMutation.ts';
+import CommentUnLike from './CommentUnLikeMutation.ts';
 
 export default {
   PostLike,

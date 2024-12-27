@@ -8,9 +8,9 @@ import { usePreloadedQuery, graphql , loadQuery } from 'react-relay';
 import { getMutationOperationVariables } from '@workshop/test';
 
 import { environment } from '../../../../relay';
-import PostLikeButton from '../PostLikeButton';
+import PostLikeButton from '../PostLikeButton.tsx';
 
-import { withProviders } from '../../../../../test/withProviders';
+import { withProviders } from '../../../../../test/withProviders.tsx';
 
 import { PostLikeButtonSpecQuery } from './__generated__/PostLikeButtonSpecQuery.graphql';
 

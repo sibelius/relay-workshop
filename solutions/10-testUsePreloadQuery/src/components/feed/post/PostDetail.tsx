@@ -6,7 +6,7 @@ import { Text } from 'rebass';
 
 import { Card, Content, BackButton } from '@workshop/ui';
 
-import Post from './Post';
+import Post from './Post.tsx';
 import { PostDetailQuery } from './__generated__/PostDetailQuery.graphql';
 import { useLoaderData, useRouteLoaderData } from 'react-router-dom';
 

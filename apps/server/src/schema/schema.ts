@@ -1,8 +1,8 @@
 import { GraphQLSchema } from 'graphql';
 
-import QueryType from './QueryType';
-import MutationType from './MutationType';
-import SubscriptionType from './SubscriptionType';
+import QueryType from './QueryType.ts';
+import MutationType from './MutationType.ts';
+import SubscriptionType from './SubscriptionType.ts';
 
 export const schema = new GraphQLSchema({
   query: QueryType,

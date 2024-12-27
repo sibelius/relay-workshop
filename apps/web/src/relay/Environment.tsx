@@ -1,9 +1,9 @@
 // import { installRelayDevTools } from 'relay-devtools';
 import { Environment, Network, RecordSource, Store } from 'relay-runtime';
 
-import cacheHandler from './cacheHandler';
-import { relayTransactionLogger } from './relayTransactionLogger';
-import { setupSubscription } from './setupSubscription';
+import cacheHandler from './cacheHandler.tsx';
+import { relayTransactionLogger } from './relayTransactionLogger.tsx';
+import { setupSubscription } from './setupSubscription.tsx';
 
 const __DEV__ = process.env.NODE_ENV === 'development';
 // if (__DEV__) {

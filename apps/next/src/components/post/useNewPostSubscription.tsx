@@ -9,7 +9,7 @@ import { useSubscription } from 'react-relay';
 
 import { GraphQLSubscriptionConfig } from 'relay-runtime';
 
-import { PostNew, updater } from './PostNewSubscription';
+import { PostNew, updater } from './PostNewSubscription.tsx';
 import { PostNewSubscription, PostNewSubscriptionResponse } from './__generated__/PostNewSubscription.graphql';
 import { FeedQueryResponse } from './__generated__/FeedQuery.graphql';
 

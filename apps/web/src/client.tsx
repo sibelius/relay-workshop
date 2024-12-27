@@ -5,8 +5,8 @@ import { createBrowserHistory } from 'history';
 
 import { RoutingContext, createRouter } from '@workshop/route';
 
-import App from './App';
-import { routes } from './routes';
+import App from './App.tsx';
+import { routes } from './routes.tsx';
 
 // hydrate(
 //   <App />,

@@ -1,5 +1,5 @@
-import UserLoginWithEmail from './UserLoginWithEmailMutation';
-import UserRegisterWithEmail from './UserRegisterWithEmailMutation';
+import UserLoginWithEmail from './UserLoginWithEmailMutation.ts';
+import UserRegisterWithEmail from './UserRegisterWithEmailMutation.ts';
 
 export default {
   UserLoginWithEmail,

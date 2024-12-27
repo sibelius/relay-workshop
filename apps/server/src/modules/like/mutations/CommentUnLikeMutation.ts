@@ -3,14 +3,14 @@ import { mutationWithClientMutationId } from 'graphql-relay';
 
 import { errorField, successField, getObjectId } from '@entria/graphql-mongo-helpers';
 
-import CommentModel from '../../comment/CommentModel';
+import CommentModel from '../../comment/CommentModel.ts';
 
-import * as CommentLoader from '../../comment/CommentLoader';
+import * as CommentLoader from '../../comment/CommentLoader.ts';
 
-import { type GraphQLContext } from '../../../graphql/types';
-import CommentType from '../../comment/CommentType';
+import { type GraphQLContext } from '../../../graphql/types.ts';
+import CommentType from '../../comment/CommentType.ts';
 
-import LikeModel from '../LikeModel';
+import LikeModel from '../LikeModel.ts';
 
 type Args = {
   comment: string;

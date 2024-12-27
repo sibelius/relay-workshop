@@ -1,9 +1,9 @@
 import React, { Suspense } from 'react';
 
-import Providers from './Providers';
-import App from './App';
-import Loading from './Loading';
-import ErrorBoundaryRetry from './ErrorBoundaryRetry';
+import Providers from './Providers.tsx';
+import App from './App.tsx';
+import Loading from './Loading.tsx';
+import ErrorBoundaryRetry from './ErrorBoundaryRetry.tsx';
 
 const Root = () => {
   return (

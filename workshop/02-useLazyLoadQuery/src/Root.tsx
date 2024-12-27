@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Providers from './Providers';
-import App from './App';
+import Providers from './Providers.tsx';
+import App from './App.tsx';
 
 const Root = () => {
   /**

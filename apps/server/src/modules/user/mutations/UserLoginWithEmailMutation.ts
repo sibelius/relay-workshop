@@ -3,13 +3,13 @@ import { mutationWithClientMutationId } from 'graphql-relay';
 
 import { errorField, successField } from '@entria/graphql-mongo-helpers';
 
-import { generateToken } from '../../../auth';
+import { generateToken } from '../../../auth.ts';
 
-import UserModel from '../UserModel';
+import UserModel from '../UserModel.ts';
 
-import * as UserLoader from '../UserLoader';
-import UserType from '../UserType';
-import { config } from '../../../config';
+import * as UserLoader from '../UserLoader.ts';
+import UserType from '../UserType.ts';
+import { config } from '../../../config.ts';
 
 export default mutationWithClientMutationId({
   name: 'UserLoginWithEmail',

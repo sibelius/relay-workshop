@@ -8,9 +8,9 @@ import { loadQuery } from 'react-relay';
 import { JSResource } from '@workshop/route';
 
 import { environment } from '../../../../relay';
-import PostDetail from '../PostDetail';
+import PostDetail from '../PostDetail.tsx';
 
-import { withProviders } from '../../../../../test/withProviders';
+import { withProviders } from '../../../../../test/withProviders.tsx';
 
 it.skip('should render post like button', async () => {
   const environment = createMockEnvironment();

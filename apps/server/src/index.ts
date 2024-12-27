@@ -1,3 +1,3 @@
-export { schema } from './schema/schema';
-export { getUser } from './auth';
-export { getContext } from './getContext';
+export { schema } from './schema/schema.ts';
+export { getUser } from './auth.ts';
+export { getContext } from './getContext.ts';

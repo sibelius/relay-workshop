@@ -1,4 +1,4 @@
-import config from './config';
+import config from './config.tsx';
 
 export const fetchGraphQL = async (query: string, variables: object = {}) => {
   const response = await fetch(config.GRAPHQL_URL, {

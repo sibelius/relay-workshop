@@ -6,11 +6,11 @@ import { Content } from '@workshop/ui';
 
 import { useLoaderData } from 'react-router-dom'
 
-import PostComposer from './PostComposer';
+import PostComposer from './PostComposer.tsx';
 import { FeedQuery } from './__generated__/FeedQuery.graphql';
 
-import FeedList from './FeedList';
-import { useNewPostSubscription } from './useNewPostSubscription';
+import FeedList from './FeedList.tsx';
+import { useNewPostSubscription } from './useNewPostSubscription.tsx';
 
 type Props = {
   prepared: {

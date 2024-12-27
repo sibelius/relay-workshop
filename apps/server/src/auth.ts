@@ -1,8 +1,8 @@
 import jwt from 'jsonwebtoken';
 
 // import { User } from './model';
-import { config } from './config';
-import User, { type IUser } from './modules/user/UserModel';
+import { config } from './config.ts';
+import User, { type IUser } from './modules/user/UserModel.ts';
 
 export const getUser = async (token: string | null | undefined) => {
   if (!token) return { user: null };

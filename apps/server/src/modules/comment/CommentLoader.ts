@@ -1,9 +1,9 @@
 import { createLoader } from '@entria/graphql-mongo-helpers';
 
-import { registerLoader } from '../loader/loaderRegister';
+import { registerLoader } from '../loader/loaderRegister.ts';
 
-import CommentModel from './CommentModel';
-import { commentFilterMapping } from './CommentFilterInputType';
+import CommentModel from './CommentModel.ts';
+import { commentFilterMapping } from './CommentFilterInputType.ts';
 
 const {
   Wrapper: Comment,

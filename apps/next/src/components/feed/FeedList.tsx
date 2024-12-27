@@ -5,7 +5,7 @@ import InfiniteScroll from 'react-infinite-scroller';
 import CircularProgress from '@mui/material/CircularProgress';
 import { Flex } from 'rebass';
 
-import Post from '../post/Post';
+import Post from '../post/Post.tsx';
 
 import { FeedList_query$key } from './__generated__/FeedList_query.graphql';
 import { FeedListPaginationQuery } from './__generated__/FeedListPaginationQuery.graphql';

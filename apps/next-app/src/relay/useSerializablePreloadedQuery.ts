@@ -5,8 +5,8 @@ import { useMemo } from 'react';
 import { PreloadedQuery, PreloadFetchPolicy } from 'react-relay';
 import { ConcreteRequest, IEnvironment, OperationType } from 'relay-runtime';
 
-import { responseCache } from './environment';
-import type { SerializablePreloadedQuery } from './loadSerializableQuery';
+import { responseCache } from './environment.tsx';
+import type { SerializablePreloadedQuery } from './loadSerializableQuery.ts';
 
 // This hook convert serializable preloaded query
 // into Relay's PreloadedQuery object.

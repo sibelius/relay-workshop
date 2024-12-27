@@ -1,7 +1,7 @@
 import React from 'react';
 import { RouterRenderer } from '@workshop/route';
 
-import Providers from './Providers';
+import Providers from './Providers.tsx';
 
 const App = () => {
   return (

@@ -11,12 +11,12 @@ import { useHistory, Link } from '@workshop/route';
 
 import { useMutation } from 'react-relay';
 
-import { UserRegisterWithEmail } from './UserRegisterWithEmailMutation';
+import { UserRegisterWithEmail } from './UserRegisterWithEmailMutation.tsx';
 import {
   UserRegisterWithEmailMutation,
   UserRegisterWithEmailMutationResponse,
 } from './__generated__/UserRegisterWithEmailMutation.graphql';
-import { updateToken } from './security';
+import { updateToken } from './security.tsx';
 
 type Values = {
   name: string;

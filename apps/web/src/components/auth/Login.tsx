@@ -16,8 +16,8 @@ import {
   UserLoginWithEmailMutation,
   UserLoginWithEmailMutationResponse,
 } from './__generated__/UserLoginWithEmailMutation.graphql';
-import { UserLoginWithEmail } from './UserLoginWithEmailMutation';
-import { updateToken } from './security';
+import { UserLoginWithEmail } from './UserLoginWithEmailMutation.tsx';
+import { updateToken } from './security.tsx';
 
 type Values = {
   email: string;

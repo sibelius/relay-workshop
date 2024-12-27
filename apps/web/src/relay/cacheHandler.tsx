@@ -1,7 +1,7 @@
 import { QueryResponseCache, FetchFunction } from 'relay-runtime';
 
-import fetchQuery from './fetchQuery';
-import { isMutation, isQuery, forceFetch } from './helpers';
+import fetchQuery from './fetchQuery.tsx';
+import { isMutation, isQuery, forceFetch } from './helpers.tsx';
 
 const oneMinute = 60 * 1000;
 const queryResponseCache = new QueryResponseCache({ size: 250, ttl: oneMinute });
