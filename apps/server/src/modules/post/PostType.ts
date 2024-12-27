@@ -11,7 +11,7 @@ import {
 
 import { nodeInterface, registerTypeLoader } from '../node/typeRegister';
 
-import { GraphQLContext } from '../../graphql/types';
+import { type GraphQLContext } from '../../graphql/types';
 import UserType from '../user/UserType';
 import * as UserLoader from '../user/UserLoader';
 
@@ -20,7 +20,7 @@ import CommentModel from '../comment/CommentModel';
 import * as CommentLoader from '../comment/CommentLoader';
 import { CommentConnection } from '../comment/CommentType';
 
-import { IPost } from './PostModel';
+import { type IPost } from './PostModel';
 import { load } from './PostLoader';
 
 const PostType = new GraphQLObjectType<IPost, GraphQLContext>({

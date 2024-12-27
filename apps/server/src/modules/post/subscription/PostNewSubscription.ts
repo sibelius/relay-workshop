@@ -3,7 +3,7 @@ import { subscriptionWithClientId } from 'graphql-relay-subscription';
 import PostType from '../PostType';
 import pubSub, { EVENTS } from '../../../pubSub';
 import * as PostLoader from '../PostLoader';
-import { GraphQLContext } from '../../../graphql/types';
+import { type GraphQLContext } from '../../../graphql/types';
 
 type PostNew = {
   postId: string;

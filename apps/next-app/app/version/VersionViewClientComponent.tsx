@@ -5,7 +5,7 @@ import { Suspense } from 'react';
 import { RelayEnvironmentProvider } from 'react-relay';
 
 import VersionView from '../../src/components/version/VersionView';
-import { SerializablePreloadedQuery } from '../../src/relay/loadSerializableQuery';
+import { type SerializablePreloadedQuery } from '../../src/relay/loadSerializableQuery';
 import VersionViewQueryNode, { VersionViewQuery } from '../../src/__generated__/VersionViewQuery.graphql';
 import { getCurrentEnvironment } from '../../src/relay/environment';
 

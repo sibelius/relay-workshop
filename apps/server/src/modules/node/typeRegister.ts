@@ -2,7 +2,7 @@ import { GraphQLObjectType } from 'graphql';
 
 import { fromGlobalId, nodeDefinitions } from 'graphql-relay';
 
-import { GraphQLContext } from '../../graphql/types';
+import { type GraphQLContext } from '../../graphql/types';
 
 type Load = (context: GraphQLContext, id: string) => any;
 type TypeLoaders = {

@@ -1,6 +1,6 @@
-import User, { IUser } from '../UserModel';
+import User, { type IUser } from '../UserModel';
 import { getCounter } from '../../../../test';
-import { DeepPartial } from '../../../../test/deepPartial';
+import { type DeepPartial } from '../../../../test/deepPartial';
 
 export const createUser = (args: DeepPartial<IUser> = {}) => {
   const i = getCounter('user');

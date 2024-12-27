@@ -11,7 +11,7 @@ import { usePreloadedQuery, graphql, PreloadedQuery, loadQuery } from 'react-rel
 import { OperationType } from 'relay-runtime';
 import PostLikeButton from '../PostLikeButton';
 
-import { WithProviders, withProviders } from '../../../../../test/withProviders';
+import { type WithProviders, withProviders } from '../../../../../test/withProviders';
 
 // eslint-disable-next-line import/no-unresolved
 import PostLikeButtonSpecQuery from './__generated__/PostLikeButtonSpecQuery.graphql';

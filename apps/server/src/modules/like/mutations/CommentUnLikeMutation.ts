@@ -7,7 +7,7 @@ import CommentModel from '../../comment/CommentModel';
 
 import * as CommentLoader from '../../comment/CommentLoader';
 
-import { GraphQLContext } from '../../../graphql/types';
+import { type GraphQLContext } from '../../../graphql/types';
 import CommentType from '../../comment/CommentType';
 
 import LikeModel from '../LikeModel';

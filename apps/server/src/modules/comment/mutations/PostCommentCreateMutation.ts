@@ -8,7 +8,7 @@ import PostModel from '../../post/PostModel';
 import * as PostLoader from '../../post/PostLoader';
 import PostType from '../../post/PostType';
 
-import { GraphQLContext } from '../../../graphql/types';
+import { type GraphQLContext } from '../../../graphql/types';
 
 import CommentModel from '../CommentModel';
 import * as CommentLoader from '../CommentLoader';

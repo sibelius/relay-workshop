@@ -12,7 +12,7 @@ import StylesProvider from '@mui/styles/StylesProvider';
 
 import { SnackbarProvider } from 'notistack';
 
-import { SerializablePreloadedQuery } from '../src/relay/loadSerializableQuery';
+import { type SerializablePreloadedQuery } from '../src/relay/loadSerializableQuery';
 import FeedViewQueryNode, { FeedViewQuery } from '../src/__generated__/FeedViewQuery.graphql';
 import { getCurrentEnvironment } from '../src/relay/environment';
 import useSerializablePreloadedQuery from '../src/relay/useSerializablePreloadedQuery';

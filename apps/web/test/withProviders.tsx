@@ -8,7 +8,7 @@ import { RoutingContext, createRouter, JSResource } from '@workshop/route';
 import ErrorBoundary from '../src/ErrorBoundary';
 import { Environment } from '../src/relay';
 import Providers from '../src/Providers';
-import { Route } from '../src/routes';
+import { type Route } from '../src/routes';
 
 type WithProviders = {
   environment: typeof Environment;
