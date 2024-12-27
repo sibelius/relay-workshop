@@ -5,7 +5,7 @@ import { connectionDefinitions, objectIdResolver, timestampResolver } from '@ent
 
 import { nodeInterface, registerTypeLoader } from '../node/typeRegister';
 
-import { GraphQLContext } from '../../graphql/types';
+import { type GraphQLContext } from '../../graphql/types';
 import UserType from '../user/UserType';
 import * as UserLoader from '../user/UserLoader';
 import * as PostLoader from '../post/PostLoader';
@@ -13,7 +13,7 @@ import * as PostLoader from '../post/PostLoader';
 import LikeModel from '../like/LikeModel';
 import PostType from '../post/PostType';
 
-import { IComment } from './CommentModel';
+import { type IComment } from './CommentModel';
 import { load } from './CommentLoader';
 
 const CommentType = new GraphQLObjectType<IComment, GraphQLContext>({

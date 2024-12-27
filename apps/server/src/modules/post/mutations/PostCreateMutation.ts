@@ -8,7 +8,7 @@ import PostModel from '../PostModel';
 import * as PostLoader from '../PostLoader';
 import { PostConnection } from '../PostType';
 
-import { GraphQLContext } from '../../../graphql/types';
+import { type GraphQLContext } from '../../../graphql/types';
 import pubSub, { EVENTS } from '../../../pubSub';
 
 type Args = {

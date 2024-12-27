@@ -5,7 +5,7 @@ import { errorField, successField } from '@entria/graphql-mongo-helpers';
 
 import * as PostLoader from '../PostLoader';
 
-import { GraphQLContext } from '../../../graphql/types';
+import { type GraphQLContext } from '../../../graphql/types';
 import PostModel from '../PostModel';
 
 type Args = {

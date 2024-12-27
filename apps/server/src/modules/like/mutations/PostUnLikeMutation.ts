@@ -7,7 +7,7 @@ import PostModel from '../../post/PostModel';
 
 import * as PostLoader from '../../post/PostLoader';
 
-import { GraphQLContext } from '../../../graphql/types';
+import { type GraphQLContext } from '../../../graphql/types';
 import PostType from '../../post/PostType';
 
 import LikeModel from '../LikeModel';
