@@ -5,12 +5,12 @@ import { Flex } from 'rebass';
 import { Button } from '@workshop/ui';
 import { graphql, useMutation, usePaginationFragment } from 'react-relay';
 
-import Post from './Post';
+import Post from './Post.tsx';
 
 import { Feed_query, Feed_query$key } from './__generated__/Feed_query.graphql';
 import { FeedPaginationQuery } from './__generated__/FeedPaginationQuery.graphql';
 
-import {PostCreateMutation, postCreateOptimisticResponse} from './PostCreateMutation'
+import {PostCreateMutation, postCreateOptimisticResponse} from './PostCreateMutation.tsx'
 
 type Props = {
   query: Feed_query;

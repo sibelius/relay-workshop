@@ -7,7 +7,7 @@ import { usePreloadedQuery, graphql , loadQuery } from 'react-relay';
 
 import { getMutationOperationVariables } from '@workshop/test';
 
-import PostLikeButton from '../PostLikeButton';
+import PostLikeButton from '../PostLikeButton.tsx';
 
 import { withProviders } from '../../../../../test/withProviders';
 

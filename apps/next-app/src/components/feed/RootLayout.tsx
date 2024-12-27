@@ -6,7 +6,7 @@ import { Text } from 'rebass';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import IconButton from '@mui/material/IconButton';
 
-import { useLogout } from '../auth/useLogout';
+import { useLogout } from '../auth/useLogout.tsx';
 
 type Props = {
   children: React.ReactNode;

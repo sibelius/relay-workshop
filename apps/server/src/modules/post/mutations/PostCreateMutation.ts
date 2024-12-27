@@ -3,13 +3,13 @@ import { mutationWithClientMutationId, toGlobalId } from 'graphql-relay';
 
 import { errorField, successField } from '@entria/graphql-mongo-helpers';
 
-import PostModel from '../PostModel';
+import PostModel from '../PostModel.ts';
 
-import * as PostLoader from '../PostLoader';
-import { PostConnection } from '../PostType';
+import * as PostLoader from '../PostLoader.ts';
+import { PostConnection } from '../PostType.ts';
 
-import { type GraphQLContext } from '../../../graphql/types';
-import pubSub, { EVENTS } from '../../../pubSub';
+import { type GraphQLContext } from '../../../graphql/types.ts';
+import pubSub, { EVENTS } from '../../../pubSub.ts';
 
 type Args = {
   content: string;

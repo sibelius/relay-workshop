@@ -1,9 +1,9 @@
 import { graphql } from 'graphql';
 
 import { clearDbAndRestartCounters, connectMongoose, disconnectMongoose, sanitizeTestObject } from '../../../test';
-import { createUser } from '../../modules/user/fixture/createUser';
-import { schema } from '../schema';
-import { getContext } from '../../getContext';
+import { createUser } from '../../modules/user/fixture/createUser.ts';
+import { schema } from '../schema.ts';
+import { getContext } from '../../getContext.ts';
 
 beforeAll(connectMongoose);
 

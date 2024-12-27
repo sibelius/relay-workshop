@@ -13,11 +13,11 @@ import { useSnackbar } from 'notistack';
 
 import { useRouter } from 'next/router';
 
-import { config } from '../../config';
+import { config } from '../../config.tsx';
 
 
-import AuthRoot from '../../components/auth/AuthRoot';
-import { UserLoginWithEmail } from '../../components/auth/UserLoginWithEmailMutation';
+import AuthRoot from '../../components/auth/AuthRoot.tsx';
+import { UserLoginWithEmail } from '../../components/auth/UserLoginWithEmailMutation.tsx';
 import {
   UserLoginWithEmailMutation$data,
   UserLoginWithEmailMutation,

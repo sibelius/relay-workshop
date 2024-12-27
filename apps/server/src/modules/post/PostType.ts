@@ -9,19 +9,19 @@ import {
   withFilter,
 } from '@entria/graphql-mongo-helpers';
 
-import { nodeInterface, registerTypeLoader } from '../node/typeRegister';
+import { nodeInterface, registerTypeLoader } from '../node/typeRegister.ts';
 
-import { type GraphQLContext } from '../../graphql/types';
-import UserType from '../user/UserType';
-import * as UserLoader from '../user/UserLoader';
+import { type GraphQLContext } from '../../graphql/types.ts';
+import UserType from '../user/UserType.ts';
+import * as UserLoader from '../user/UserLoader.ts';
 
-import LikeModel from '../like/LikeModel';
-import CommentModel from '../comment/CommentModel';
-import * as CommentLoader from '../comment/CommentLoader';
-import { CommentConnection } from '../comment/CommentType';
+import LikeModel from '../like/LikeModel.ts';
+import CommentModel from '../comment/CommentModel.ts';
+import * as CommentLoader from '../comment/CommentLoader.ts';
+import { CommentConnection } from '../comment/CommentType.ts';
 
-import { type IPost } from './PostModel';
-import { load } from './PostLoader';
+import { type IPost } from './PostModel.ts';
+import { load } from './PostLoader.ts';
 
 const PostType = new GraphQLObjectType<IPost, GraphQLContext>({
   name: 'Post',

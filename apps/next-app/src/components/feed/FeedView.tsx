@@ -5,13 +5,13 @@ import { Content } from '@workshop/ui';
 
 import React from 'react';
 
-import PostComposer from '../post/PostComposer';
+import PostComposer from '../post/PostComposer.tsx';
 
 import { FeedViewQuery } from '../../__generated__/FeedViewQuery.graphql';
 
-import FeedList from './FeedList';
+import FeedList from './FeedList.tsx';
 
-import RootLayout from './RootLayout';
+import RootLayout from './RootLayout.tsx';
 
 const FeedView: NextPage = (props: { queryRef: PreloadedQuery<FeedViewQuery> }) => {
   const query = usePreloadedQuery<any>(

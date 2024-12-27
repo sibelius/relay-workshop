@@ -6,7 +6,7 @@ import { Card, TextArea, CardActions } from '@workshop/ui';
 
 import { useMutation } from 'react-relay';
 
-import { PostCreate, updater } from './PostCreateMutation';
+import { PostCreate, updater } from './PostCreateMutation.tsx';
 import { PostCreateMutation } from './__generated__/PostCreateMutation.graphql';
 
 const PostComposer = () => {

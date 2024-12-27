@@ -6,7 +6,7 @@ import { Flex } from 'rebass';
 import { Button } from '@workshop/ui';
 import { graphql, usePaginationFragment } from 'react-relay';
 
-import Post from './Post';
+import Post from './Post.tsx';
 
 import { Feed_query, Feed_query$key } from './__generated__/Feed_query.graphql';
 import { FeedPaginationQuery } from './__generated__/FeedPaginationQuery.graphql';

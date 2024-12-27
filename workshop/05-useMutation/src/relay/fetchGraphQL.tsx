@@ -1,7 +1,7 @@
 import { RequestParameters } from 'relay-runtime/lib/util/RelayConcreteNode';
 import { Variables } from 'relay-runtime/lib/util/RelayRuntimeTypes';
 
-import config from '../config';
+import config from '../config.tsx';
 
 // read from localstorage or cookie
 const getToken = () => {

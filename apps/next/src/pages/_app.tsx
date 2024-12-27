@@ -5,7 +5,7 @@ import StylesProvider from '@mui/styles/StylesProvider';
 import { getTheme } from '@workshop/ui';
 import { SnackbarProvider } from 'notistack';
 
-import { ReactRelayContainer } from '../relay/ReactRelayContainer';
+import { ReactRelayContainer } from '../relay/ReactRelayContainer.tsx';
 
 const theme = getTheme();
 

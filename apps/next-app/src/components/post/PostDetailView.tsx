@@ -6,10 +6,10 @@ import { Text } from 'rebass';
 
 import React from 'react';
 
-import RootLayout from '../feed/RootLayout';
+import RootLayout from '../feed/RootLayout.tsx';
 import { FeedViewQuery } from '../../__generated__/FeedViewQuery.graphql';
 
-import Post from './Post';
+import Post from './Post.tsx';
 
 const PostDetailView: NextPage = (props: { queryRef: PreloadedQuery<FeedViewQuery> }) => {
   const query = usePreloadedQuery(

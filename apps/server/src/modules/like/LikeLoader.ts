@@ -1,9 +1,9 @@
 import { createLoader } from '@entria/graphql-mongo-helpers';
 
-import { registerLoader } from '../loader/loaderRegister';
+import { registerLoader } from '../loader/loaderRegister.ts';
 
-import LikeModel from './LikeModel';
-import { likeFilterMapping } from './LikeFilterInputType';
+import LikeModel from './LikeModel.ts';
+import { likeFilterMapping } from './LikeFilterInputType.ts';
 
 const {
   Wrapper: Like,

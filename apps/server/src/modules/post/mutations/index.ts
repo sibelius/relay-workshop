@@ -1,5 +1,5 @@
-import PostCreate from './PostCreateMutation';
-import PostDelete from './PostDeleteMutation';
+import PostCreate from './PostCreateMutation.ts';
+import PostDelete from './PostDeleteMutation.ts';
 
 export default {
   PostCreate,

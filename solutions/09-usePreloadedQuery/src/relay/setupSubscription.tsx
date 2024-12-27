@@ -1,9 +1,9 @@
 import { SubscribeFunction, Observable, RequestParameters, Variables } from 'relay-runtime';
 import { createClient } from 'graphql-ws'
 
-import config from '../config';
+import config from '../config.tsx';
 
-import { getToken } from './getToken';
+import { getToken } from './getToken.tsx';
 
 export const setupSubscription = () => {
   const authorization = getToken();

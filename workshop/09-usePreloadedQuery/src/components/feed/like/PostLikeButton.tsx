@@ -10,8 +10,8 @@ import { Text } from 'rebass';
 
 import { theme } from '@workshop/ui';
 
-import { likeOptimisticResponse, PostLike } from './PostLikeMutation';
-import { PostUnLike, unlikeOptimisticResponse } from './PostUnLikeMutation';
+import { likeOptimisticResponse, PostLike } from './PostLikeMutation.tsx';
+import { PostUnLike, unlikeOptimisticResponse } from './PostUnLikeMutation.tsx';
 import { PostLikeMutation } from './__generated__/PostLikeMutation.graphql';
 import { PostUnLikeMutation } from './__generated__/PostUnLikeMutation.graphql';
 import { PostLikeButton_post$key } from './__generated__/PostLikeButton_post.graphql';

@@ -1,7 +1,7 @@
 import { GraphQLResponse, OperationType, RequestParameters, VariablesOf } from 'relay-runtime';
 import { ConcreteRequest } from 'relay-runtime/lib/util/RelayConcreteNode';
 
-import { networkFetch } from './environment';
+import { networkFetch } from './environment.tsx';
 
 export interface SerializablePreloadedQuery<TRequest extends ConcreteRequest, TQuery extends OperationType> {
   params: TRequest['params'];

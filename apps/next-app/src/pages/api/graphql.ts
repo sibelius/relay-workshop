@@ -9,8 +9,8 @@ import { schema, getContext, getUser } from '@workshop/server';
 
 import { serialize } from 'cookie';
 
-import connectMongoDB from '../../connectMongoDB';
-import { config } from '../../config';
+import connectMongoDB from '../../connectMongoDB.ts';
+import { config } from '../../config.tsx';
 
 export const setCookie = (res: NextApiResponse) => (cookieName: string, token: string) => {
   res.setHeader(

@@ -1,9 +1,9 @@
 import { RequestParameters } from 'relay-runtime/lib/util/RelayConcreteNode';
 import { Variables } from 'relay-runtime/lib/util/RelayRuntimeTypes';
 
-import config from '../config';
+import config from '../config.tsx';
 
-import { getToken } from './getToken';
+import { getToken } from './getToken.tsx';
 
 export const fetchGraphQL = async (request: RequestParameters, variables: Variables) => {
   const authorization = getToken();

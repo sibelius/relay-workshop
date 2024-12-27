@@ -1,7 +1,7 @@
 import { RequestParameters } from 'relay-runtime/lib/util/RelayConcreteNode';
 import { Variables } from 'relay-runtime/lib/util/RelayRuntimeTypes';
 
-import config from '../config';
+import config from '../config.tsx';
 
 export const fetchGraphQL = async (request: RequestParameters, variables: Variables) => {
   const response = await fetch(config.GRAPHQL_URL, {

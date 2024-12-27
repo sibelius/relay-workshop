@@ -7,7 +7,7 @@ import { loadQuery } from 'react-relay';
 
 import { JSResource } from '@workshop/route';
 
-import PostDetail from '../../../pages/post/[id]';
+import PostDetail from '../../../pages/post/[id].tsx';
 
 import { withProviders } from '../../../../../test/withProviders';
 

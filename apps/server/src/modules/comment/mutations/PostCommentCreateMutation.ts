@@ -3,16 +3,16 @@ import { mutationWithClientMutationId, toGlobalId } from 'graphql-relay';
 
 import { errorField, successField, getObjectId } from '@entria/graphql-mongo-helpers';
 
-import PostModel from '../../post/PostModel';
+import PostModel from '../../post/PostModel.ts';
 
-import * as PostLoader from '../../post/PostLoader';
-import PostType from '../../post/PostType';
+import * as PostLoader from '../../post/PostLoader.ts';
+import PostType from '../../post/PostType.ts';
 
-import { type GraphQLContext } from '../../../graphql/types';
+import { type GraphQLContext } from '../../../graphql/types.ts';
 
-import CommentModel from '../CommentModel';
-import * as CommentLoader from '../CommentLoader';
-import { CommentConnection } from '../CommentType';
+import CommentModel from '../CommentModel.ts';
+import * as CommentLoader from '../CommentLoader.ts';
+import { CommentConnection } from '../CommentType.ts';
 
 type Args = {
   post: string;

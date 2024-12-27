@@ -1,8 +1,8 @@
 import { createClient } from 'graphql-ws';
 import { Observable, RequestParameters, Variables } from 'relay-runtime';
 
-import { getToken } from '../components/auth/security';
-import config from '../config';
+import { getToken } from '../components/auth/security.tsx';
+import config from '../config.tsx';
 
 export const setupSubscription = (request: RequestParameters, variables: Variables) => {
   const query = request.text;

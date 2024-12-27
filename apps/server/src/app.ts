@@ -8,9 +8,9 @@ import koaPlayground from 'graphql-playground-middleware-koa';
 
 import { getGraphQLParameters, processRequest, renderGraphiQL, sendResult, shouldRenderGraphiQL } from 'graphql-helix';
 
-import { schema } from './schema/schema';
-import { getUser } from './auth';
-import { getContext } from './getContext';
+import { schema } from './schema/schema.ts';
+import { getUser } from './auth.ts';
+import { getContext } from './getContext.ts';
 
 const router = new Router();
 

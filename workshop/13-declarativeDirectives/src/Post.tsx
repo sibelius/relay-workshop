@@ -7,8 +7,8 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import IconButton from '@mui/material/IconButton';
 
-import { likeOptimisticResponse, PostLike } from './PostLikeMutation';
-import { unlikeOptimisticResponse, PostUnLike } from './PostUnLikeMutation';
+import { likeOptimisticResponse, PostLike } from './PostLikeMutation.tsx';
+import { unlikeOptimisticResponse, PostUnLike } from './PostUnLikeMutation.tsx';
 import { PostLikeMutation } from './__generated__/PostLikeMutation.graphql';
 import { PostUnLikeMutation } from './__generated__/PostUnLikeMutation.graphql';
 import { Post_post, Post_post$key } from './__generated__/Post_post.graphql';

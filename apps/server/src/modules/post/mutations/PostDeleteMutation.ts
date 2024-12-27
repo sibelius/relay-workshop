@@ -3,10 +3,10 @@ import { fromGlobalId, mutationWithClientMutationId, toGlobalId } from 'graphql-
 
 import { errorField, successField } from '@entria/graphql-mongo-helpers';
 
-import * as PostLoader from '../PostLoader';
+import * as PostLoader from '../PostLoader.ts';
 
-import { type GraphQLContext } from '../../../graphql/types';
-import PostModel from '../PostModel';
+import { type GraphQLContext } from '../../../graphql/types.ts';
+import PostModel from '../PostModel.ts';
 
 type Args = {
   postId: string;

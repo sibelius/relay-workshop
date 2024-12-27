@@ -2,11 +2,11 @@ import { GraphQLObjectType, GraphQLNonNull, GraphQLString } from 'graphql';
 
 import { connectionArgs } from '@entria/graphql-mongo-helpers';
 
-import { nodesField, nodeField } from '../modules/node/typeRegister';
-import UserType from '../modules/user/UserType';
-import * as UserLoader from '../modules/user/UserLoader';
-import { PostConnection } from '../modules/post/PostType';
-import * as PostLoader from '../modules/post/PostLoader';
+import { nodesField, nodeField } from '../modules/node/typeRegister.ts';
+import UserType from '../modules/user/UserType.ts';
+import * as UserLoader from '../modules/user/UserLoader.ts';
+import { PostConnection } from '../modules/post/PostType.ts';
+import * as PostLoader from '../modules/post/PostLoader.ts';
 
 import pkg from '../../package.json';
 

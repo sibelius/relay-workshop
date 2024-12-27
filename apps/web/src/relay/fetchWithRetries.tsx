@@ -1,4 +1,4 @@
-import ExecutionEnvironment from './ExecuteEnvironment';
+import ExecutionEnvironment from './ExecuteEnvironment.tsx';
 
 export type InitWithRetries = {
   body?: unknown;

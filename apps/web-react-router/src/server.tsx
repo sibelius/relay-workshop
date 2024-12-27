@@ -8,8 +8,8 @@ import { renderToString } from 'react-dom/server';
 
 import { createRouter, getMockHistory, RoutingContext } from '@workshop/route';
 
-import App from './App';
-import { routes } from './routes';
+import App from './App.tsx';
+import { routes } from './routes.tsx';
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 

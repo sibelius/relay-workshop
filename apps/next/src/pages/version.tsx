@@ -3,7 +3,7 @@ import { graphql, usePreloadedQuery } from 'react-relay';
 
 import { Flex } from 'rebass';
 
-import { getPreloadedQuery } from '../relay/getPreloadedQuery';
+import { getPreloadedQuery } from '../relay/getPreloadedQuery.tsx';
 
 const versionQuery = graphql`
   query versionQuery @preloadable {

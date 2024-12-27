@@ -10,10 +10,10 @@ import { loadQuery } from 'react-relay'
 
 // eslint-disable-next-line
 import { RouteObject } from 'react-router-dom';
-import PostDetail from '../PostDetail';
+import PostDetail from '../PostDetail.tsx';
 
 import PostDetailQuery from '../__generated__/PostDetailQuery.graphql'
-import { withProviders } from '../../../../../test/withProviders'
+import { withProviders } from '../../../../../test/withProviders.tsx'
 
 it('should render post like button', async () => {
   const environment = createMockEnvironment()

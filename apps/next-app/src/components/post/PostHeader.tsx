@@ -3,7 +3,7 @@ import { useFragment , graphql } from 'react-relay';
 
 import { Text, Flex } from 'rebass';
 
-import UserAvatar from '../UserAvatar';
+import UserAvatar from '../UserAvatar.tsx';
 
 import { PostHeader_user$key } from './__generated__/PostHeader_user.graphql';
 

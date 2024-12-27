@@ -1,5 +1,5 @@
-import ExecutionEnvironment from './ExecuteEnvironment';
-import { HttpError } from './HttpError';
+import ExecutionEnvironment from './ExecuteEnvironment.tsx';
+import { HttpError } from './HttpError.ts';
 
 export type InitWithRetries = RequestInit & {
   fetchTimeout?: number;

@@ -1,6 +1,6 @@
 import { GraphQLObjectType } from 'graphql';
 
-import PostNew from '../modules/post/subscription/PostNewSubscription';
+import PostNew from '../modules/post/subscription/PostNewSubscription.ts';
 
 const SubscriptionType = new GraphQLObjectType({
   name: 'Subscription',

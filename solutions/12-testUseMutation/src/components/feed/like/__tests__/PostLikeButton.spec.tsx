@@ -10,19 +10,19 @@ import { usePreloadedQuery, graphql, PreloadedQuery, loadQuery, RelayEnvironment
 
 // eslint-disable-next-line
 import { OperationType } from 'relay-runtime';
-import PostLikeButton from '../PostLikeButton';
+import PostLikeButton from '../PostLikeButton.tsx';
 
-import { type WithProviders, withProviders } from '../../../../../test/withProviders';
+import { type WithProviders, withProviders } from '../../../../../test/withProviders.tsx';
 
 // eslint-disable-next-line import/no-unresolved
 import PostLikeButtonSpecQuery from './__generated__/PostLikeButtonSpecQuery.graphql';
-import Providers from '../../../../Providers';
-import ErrorBoundary from '../../../../ErrorBoundaryRetry';
+import Providers from '../../../../Providers.tsx';
+import ErrorBoundary from '../../../../ErrorBoundaryRetry.tsx';
 import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 import RelayModernEnvironment from 'relay-runtime/lib/store/RelayModernEnvironment';
 import AppQuery from '../../../../__generated__/AppQuery.graphql'
 
-import App from '../../../../App'
+import App from '../../../../App.tsx'
 
 type RootProps = Pick<WithProviders, 'environment'> & {
   preloadedQuery: PreloadedQuery<OperationType>

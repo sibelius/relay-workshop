@@ -3,10 +3,10 @@ import { graphql, usePreloadedQuery } from 'react-relay';
 import { Content } from '@workshop/ui';
 import React from 'react';
 
-import { getPreloadedQuery } from '../relay/getPreloadedQuery';
-import FeedList from '../components/feed/FeedList';
-import RootLayout from '../components/feed/RootLayout';
-import PostComposer from '../components/post/PostComposer';
+import { getPreloadedQuery } from '../relay/getPreloadedQuery.tsx';
+import FeedList from '../components/feed/FeedList.tsx';
+import RootLayout from '../components/feed/RootLayout.tsx';
+import PostComposer from '../components/post/PostComposer.tsx';
 
 const pagesIndexQuery = graphql`
   query pagesIndexQuery @preloadable {

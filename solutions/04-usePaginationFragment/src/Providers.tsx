@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import StylesProvider from '@mui/styles/StylesProvider';
 import { getTheme } from '@workshop/ui';
 
-import Environment from './relay/Environment';
+import Environment from './relay/Environment.tsx';
 
 const theme = getTheme();
 

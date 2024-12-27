@@ -8,12 +8,12 @@ import {
   Link,
 } from 'react-router-dom';
 
-import App from './App';
-import { routes } from './routes';
-import Feed from './components/feed/Feed';
-import { getPreloadedQuery } from './relay/getPreloadedQuery';
+import App from './App.tsx';
+import { routes } from './routes.tsx';
+import Feed from './components/feed/Feed.tsx';
+import { getPreloadedQuery } from './relay/getPreloadedQuery.tsx';
 import FeedQuery from './components/feed/__generated__/FeedQuery.graphql';
-import Providers from './Providers';
+import Providers from './Providers.tsx';
 
 const router = createBrowserRouter([
   {

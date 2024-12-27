@@ -1,6 +1,6 @@
 import { Environment, RecordSource, Store , RelayFeatureFlags } from 'relay-runtime';
 
-import { createNetwork } from './network';
+import { createNetwork } from './network.tsx';
 
 RelayFeatureFlags.ENABLE_RELAY_RESOLVERS = true;
   
