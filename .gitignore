@@ -75,3 +75,4 @@ differencify_reports
 .yarn
 .yarnrc
 yarn.lock
+node-compile-cache
