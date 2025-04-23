@@ -4,15 +4,15 @@
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
-    "@mui/icons-material": "^5.16.7",
-    "@mui/material": "^5.16.7",
-    "@mui/styled-engine-sc": "6.0.0-alpha.18",
-    "@mui/styles": "^5.16.7",
-    "styled-components": "6.1.12"
+    "@mui/icons-material": "^7.0.2",
+    "@mui/material": "^7.0.2",
+    "@mui/styled-engine-sc": "7.0.2",
+    "@mui/styles": "^6.4.8",
+    "styled-components": "6.1.17"
   },
   "peerDependencies": {
-    "react": "^17.0.0 || ^18.0.0",
-    "react-dom": "^17.0.0 || ^18.0.0"
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   },
   "main": "src/index.tsx"
 }
